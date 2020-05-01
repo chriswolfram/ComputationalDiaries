@@ -26,7 +26,7 @@ normalStarMap = <|
 	"EtaTauri"->Entity["Star","Alcyone"],
 	"AlphaTauri"->Entity["Star","Aldebaran"],
 	"BetaTauri"->Entity["Star","Alnath"],
-	"XiTauri"->Entity["Star","XiTauri"],
+	"ZetaTauri"->Entity["Star","ZetaTauri"],
 	"EtaGeminorum"->Entity["Star","Propus"],
 	"MuGeminorum"->Entity["Star","Tejat"],
 	"GammaGeminorum"->Entity["Star","Alhena"],

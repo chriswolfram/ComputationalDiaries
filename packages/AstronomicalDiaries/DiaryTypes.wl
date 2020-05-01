@@ -11,7 +11,7 @@ ClearAll["AstronomicalDiaries`DiaryTypes`*"];
 DiaryDistance::usage = "Represents a distance on the sky measured in cubits (ku\[SHacek]) and fingers (\[SHacek]i or u)";
 DiaryDisplacement::usage = "Represents a displacment between two astronomical objects.";
 DiaryDate::usage = "Represents a date that can use both Babylonian and Julian calendars.";
-DiaryEvent::usage = "Represents an event recorded in the Astronomical Diares."
+DiaryEvent::usage = "Represents an event recorded in the Astronomical Diares.";
 
 
 Begin["`Private`"];
@@ -70,9 +70,9 @@ DiaryDisplacement::invalid = "`` is not a valid DiaryDisplacement.";
 (*Accessors*)
 
 
-latitudeRelations = {"Above","Below","North","South"};
 longitudeRelations = {"InFrontOf","Behind","East","West"};
-negativeRelations = {"InFrontOf","West","Below","South"};
+latitudeRelations = {"Above","Below","North","South"};
+negativeRelations = {"InFrontOf","East","North","Above"};
 
 
 DiaryDisplacement[data_Association]["Data"] := data
@@ -130,7 +130,7 @@ DiaryDate::invalid = "`` is not a valid DiaryDate.";
 DiaryDate[data_Association]["Data"] := data
 DiaryDate[data_Association]["JulianDate"] := 
 	If[MissingQ[data["JulianYear"]]||MissingQ[data["JulianMonth"]]||MissingQ[data["JulianDay"]],
-		Missing["Underspecified"],
+		Missing[],
 		DateObject[
 			{data["JulianYear"]-Boole[Negative[data["JulianYear"]]],data["JulianMonth"],data["JulianDay"]},
 			"Day",
@@ -204,7 +204,7 @@ DiaryEvent[d:Except[KeyValuePattern[{
 		"Provenance"->_,
 		"Content"->_
 	}]]] :=
-		(Message[DiaryDate::invalid, {d}]; Missing["InvalidDiaryEvent"])
+		(Message[DiaryEvent::invalid, {d}]; Missing["InvalidDiaryEvent"])
 
 
 (* ::Subsection:: *)
@@ -242,7 +242,7 @@ DiaryDisplacement /:
 			{
 				{"distances: ",
 					Row[{If[MissingQ[#],Missing[],#["TotalCubits"]]&/@dis["Distances"]," cubits"}]},
-				{"relation: ",dis["Relations"]}
+				{"relations: ",dis["Relations"]}
 			},
 			{},
 			StandardForm

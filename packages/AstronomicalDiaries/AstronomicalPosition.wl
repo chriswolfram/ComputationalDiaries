@@ -89,6 +89,8 @@ AstronomicalPosition[obj_, jd_?NumberQ] :=
 	]
 AstronomicalPosition[obj_, date_?DateObjectQ] := AstronomicalPosition[obj,JulianDate[date]]
 AstronomicalPosition[obj_, date_DiaryDate] := AstronomicalPosition[obj,date["JulianDate"]]
+AstronomicalPosition[obj_, date_?MissingQ] := date
+AstronomicalPosition[obj_?MissingQ, date_] := obj
 
 
 (* ::Subsection:: *)
