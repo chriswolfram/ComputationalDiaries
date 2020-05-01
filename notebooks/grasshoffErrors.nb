@@ -1,0 +1,159 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6125,        151]
+NotebookOptionsPosition[      5241,        128]
+NotebookOutlinePosition[      5636,        144]
+CellTagsIndexPosition[      5593,        141]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["All MJDs are off by a few days", "Subsection",
+ CellChangeTimes->{{3.797263530059305*^9, 
+  3.797263542587265*^9}},ExpressionUUID->"f858aa7f-bdcf-48c5-b519-\
+bdfdea9f077c"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+This event combines an appearance of Saturn in Leo with a relation to \
+\[Alpha] Leonis\
+\>", "Subsection",
+ CellChangeTimes->{{3.7972635446611547`*^9, 
+  3.79726360347581*^9}},ExpressionUUID->"ddee5878-6118-4807-a46e-\
+541fe2817375"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Select", "[", 
+  RowBox[{"allEvents", ",", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"#rel", "===", "\"\<is_standing_in\>\""}], "&&", 
+     RowBox[{"!", 
+      RowBox[{"MissingQ", "[", "#kus", "]"}]}]}], "&"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.797263209258638*^9, 3.7972632691283913`*^9}},
+ CellLabel->"In[29]:=",ExpressionUUID->"3f78ec45-9446-4d99-ba8b-f13c011d777a"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\[LeftAssociation]", 
+   RowBox[{
+    RowBox[{"\<\"j\"\>", "\[Rule]", 
+     RowBox[{"-", "143"}]}], ",", 
+    RowBox[{"\<\"m\"\>", "\[Rule]", "8"}], ",", 
+    RowBox[{"\<\"rel2\"\>", "\[Rule]", 
+     RowBox[{"Missing", "[", "\<\"Unspecified\"\>", "]"}]}], ",", 
+    RowBox[{"\<\"kusd20\"\>", "\[Rule]", "3.2`"}], ",", 
+    RowBox[{"\<\"balanced\"\>", "\[Rule]", 
+     RowBox[{"Missing", "[", "\<\"Unspecified\"\>", "]"}]}], ",", 
+    RowBox[{"\<\"kus\"\>", "\[Rule]", "3"}], ",", 
+    RowBox[{"\<\"obj2\"\>", "\[Rule]", "\<\"leo\"\>"}], ",", 
+    RowBox[{"\<\"kus2d24\"\>", "\[Rule]", 
+     RowBox[{"Missing", "[", "\<\"Unspecified\"\>", "]"}]}], ",", 
+    RowBox[{"\<\"id\"\>", "\[Rule]", "3837"}], ",", 
+    RowBox[{"\<\"kusp2\"\>", "\[Rule]", 
+     RowBox[{"Missing", "[", "\<\"Unspecified\"\>", "]"}]}], ",", 
+    RowBox[{"\<\"day\"\>", "\[Rule]", "10"}], ",", 
+    RowBox[{"\<\"number\"\>", "\[Rule]", "3837"}], ",", 
+    RowBox[{"\<\"kus2\"\>", "\[Rule]", 
+     RowBox[{"Missing", "[", "\<\"Unspecified\"\>", "]"}]}], ",", 
+    RowBox[{"\<\"shift\"\>", "\[Rule]", 
+     RowBox[{"Missing", "[", "\<\"Unspecified\"\>", "]"}]}], ",", 
+    RowBox[{"\<\"event-type\"\>", "\[Rule]", "\<\"configuration\"\>"}], ",", 
+    RowBox[{"\<\"king\"\>", "\[Rule]", "\<\"seleucid_era\"\>"}], ",", 
+    RowBox[{"\<\"obj1\"\>", "\[Rule]", "\<\"saturn\"\>"}], ",", 
+    RowBox[{"\<\"mjd\"\>", "\[Rule]", 
+     RowBox[{"-", "730942"}]}], ",", 
+    RowBox[{"\<\"kusfrac2\"\>", "\[Rule]", 
+     RowBox[{"Missing", "[", "\<\"Unspecified\"\>", "]"}]}], ",", 
+    RowBox[{"\<\"kusfrac\"\>", "\[Rule]", 
+     RowBox[{"Missing", "[", "\<\"Unspecified\"\>", "]"}]}], ",", 
+    RowBox[{"\<\"kus2d20\"\>", "\[Rule]", 
+     RowBox[{"Missing", "[", "\<\"Unspecified\"\>", "]"}]}], ",", 
+    RowBox[{"\<\"kusd24\"\>", "\[Rule]", "3.16667`"}], ",", 
+    RowBox[{"\<\"time\"\>", "\[Rule]", "\<\"beginning_of_night\"\>"}], ",", 
+    RowBox[{"\<\"kusp\"\>", "\[Rule]", "\<\"kus\"\>"}], ",", 
+    RowBox[{"\<\"type_filter_key\"\>", "\[Rule]", "\<\"configuration\"\>"}], 
+    ",", 
+    RowBox[{"\<\"si2\"\>", "\[Rule]", 
+     RowBox[{"Missing", "[", "\<\"Unspecified\"\>", "]"}]}], ",", 
+    RowBox[{"\<\"lfdnr\"\>", "\[Rule]", "22"}], ",", 
+    RowBox[{"\<\"torel\"\>", "\[Rule]", 
+     RowBox[{"Missing", "[", "\<\"Unspecified\"\>", "]"}]}], ",", 
+    RowBox[{"\<\"month\"\>", "\[Rule]", "5"}], ",", 
+    RowBox[{"\<\"rel\"\>", "\[Rule]", "\<\"is_standing_in\"\>"}], ",", 
+    RowBox[{"\<\"year_filter_key\"\>", "\[Rule]", "168"}], ",", 
+    RowBox[{"\<\"table\"\>", "\[Rule]", "\<\"pl143A\"\>"}], ",", 
+    RowBox[{"\<\"si\"\>", "\[Rule]", "4"}], ",", 
+    RowBox[{"\<\"sip\"\>", "\[Rule]", "\<\"u\"\>"}], ",", 
+    RowBox[{"\<\"sip2\"\>", "\[Rule]", 
+     RowBox[{"Missing", "[", "\<\"Unspecified\"\>", "]"}]}], ",", 
+    RowBox[{"\<\"t\"\>", "\[Rule]", "20"}], ",", 
+    RowBox[{"\<\"type\"\>", "\[Rule]", "\<\"event\"\>"}], ",", 
+    RowBox[{"\<\"year\"\>", "\[Rule]", "168"}]}], "\[RightAssociation]"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.797263231677473*^9, 3.7972632694164343`*^9}},
+ CellLabel->"Out[29]=",ExpressionUUID->"c5ebbcb8-bf79-423f-afb8-3e7f52e1f568"]
+}, Open  ]],
+
+Cell["\<\
+Line 26 of http://oracc.iaas.upenn.edu/adsd/adart3/X301431/html\
+\>", "Text",
+ CellChangeTimes->{{3.797263518781362*^9, 
+  3.79726352226775*^9}},ExpressionUUID->"aa7583a1-bb3a-4085-ac26-\
+98bf936b563f"],
+
+Cell["\<\
+[... Night of the 10th,] beginning of the night, the moon was 2 cubits [...] \
+the lower star of the horn of Capricorn; the north wind blew. The 10th, \
+Saturn\[CloseCurlyQuote]s [first appearance] in Leo, 3 cubits 4 fingers \
+behind \[Alpha] Le[onis ...]\
+\>", "Text",
+ CellChangeTimes->{
+  3.797263579556368*^9},ExpressionUUID->"e8e35395-f4c8-40d1-9b4d-\
+836ddb636f01"]
+}, Open  ]]
+},
+WindowSize->{808, 905},
+WindowMargins->{{156, Automatic}, {Automatic, 24}},
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (March 18, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"6d65c72d-ce71-47b3-8314-c93b392fea74"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 178, 3, 54, "Subsection",ExpressionUUID->"f858aa7f-bdcf-48c5-b519-bdfdea9f077c"],
+Cell[CellGroupData[{
+Cell[761, 27, 244, 6, 38, "Subsection",ExpressionUUID->"ddee5878-6118-4807-a46e-541fe2817375"],
+Cell[CellGroupData[{
+Cell[1030, 37, 397, 9, 30, "Input",ExpressionUUID->"3f78ec45-9446-4d99-ba8b-f13c011d777a"],
+Cell[1430, 48, 3184, 59, 228, "Output",ExpressionUUID->"c5ebbcb8-bf79-423f-afb8-3e7f52e1f568"]
+}, Open  ]],
+Cell[4629, 110, 212, 5, 35, "Text",ExpressionUUID->"aa7583a1-bb3a-4085-ac26-98bf936b563f"],
+Cell[4844, 117, 381, 8, 58, "Text",ExpressionUUID->"e8e35395-f4c8-40d1-9b4d-836ddb636f01"]
+}, Open  ]]
+}
+]
+*)
+

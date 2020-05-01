@@ -9,8 +9,7 @@ ClearAll["AstronomicalDiaries`DiaryTypes`*"];
 
 
 DiaryDistance::usage = "Represents a distance on the sky measured in cubits (ku\[SHacek]) and fingers (\[SHacek]i or u)";
-DiaryDisplacment::usage = "Represents a displacment between two astronomical objects.";
-DiaryDirection::usage = "Represents a direction in which an observation was made.";
+DiaryDisplacement::usage = "Represents a displacment between two astronomical objects.";
 DiaryDate::usage = "Represents a date that can use both Babylonian and Julian calendars.";
 DiaryEvent::usage = "Represents an event recorded in the Astronomical Diares."
 
@@ -25,15 +24,32 @@ Begin["`Private`"];
 DiaryDistance::invalid = "`` is not a valid DiaryDistance.";
 
 
+(* ::Subsubsection:: *)
+(*Accessors*)
+
+
 DiaryDistance[data_Association]["Data"] := data
 DiaryDistance[data_Association]["Cubits"] := data["Cubits"]
 DiaryDistance[data_Association]["Fingers"] := data["Fingers"]
 DiaryDistance[data_Association]["TotalCubits"] :=
-	If[MissingQ[data["Cubits"]],data["Cubits"],
-		data["Cubits"]+If[MissingQ[data["Fingers"]],0,data["Fingers"]]/24
+	If[MissingQ[data["Cubits"]]&&MissingQ[data["Fingers"]],Missing[],
+		If[MissingQ[data["Cubits"]],0,data["Cubits"]]+If[MissingQ[data["Fingers"]],0,data["Fingers"]]/24
 	]
 DiaryDistance[data_Association]["Degrees"] :=
-	If[MissingQ[data["TotalCubits"]],Missing[],2*data["TotalCubits"]]
+	With[{cubits = DiaryDistance[data]["TotalCubits"]},
+		If[MissingQ[cubits],Missing[],2*cubits]
+	]
+
+
+(* ::Subsection:: *)
+(*Constructors*)
+
+
+DiaryDistance[{cubits_,fingers_}] := DiaryDistance[<|"Cubits"->cubits,"Fingers"->fingers|>]
+
+
+(* ::Subsection:: *)
+(*Verifiers*)
 
 
 DiaryDistance[d:Except[KeyValuePattern[{
@@ -47,38 +63,57 @@ DiaryDistance[d:Except[KeyValuePattern[{
 (*DiaryDisplacement*)
 
 
-DiaryDisplacment::invalid = "`` is not a valid DiaryDisplacment.";
+DiaryDisplacement::invalid = "`` is not a valid DiaryDisplacement.";
 
 
-DiaryDisplacment[data_Association]["Data"] := data
-DiaryDisplacment[data_Association]["Distance"] := data["Distance"]
-DiaryDisplacment[data_Association]["Relation"] := data["Relation"]
+(* ::Subsubsection:: *)
+(*Accessors*)
 
 
-DiaryDisplacment[d:Except[KeyValuePattern[{
-		"Distance"->_DiaryDistance|_Missing,
-		"Relation"->"Above"|"Below"|"InFrontOf"|"Behind"|_Missing
+latitudeRelations = {"Above","Below","North","South"};
+longitudeRelations = {"InFrontOf","Behind","East","West"};
+negativeRelations = {"InFrontOf","West","Below","South"};
+
+
+DiaryDisplacement[data_Association]["Data"] := data
+DiaryDisplacement[data_Association]["Distances"] := data["Distances"]
+DiaryDisplacement[data_Association]["Relations"] := data["Relations"]
+DiaryDisplacement[data_Association]["EclipticDisplacement",agg_] :=
+	Module[{distRelPairs},
+		distRelPairs = Transpose[{data["Distances"],data["Relations"]}];
+		{
+			agg[If[MemberQ[negativeRelations,#[[2]]],-1,1]*#[[1]]["Degrees"]&/@
+				Select[distRelPairs, MemberQ[longitudeRelations,#[[2]]]&]],
+			agg[If[MemberQ[negativeRelations,#[[2]]],-1,1]*#[[1]]["Degrees"]&/@
+				Select[distRelPairs, MemberQ[latitudeRelations,#[[2]]]&]]
+		}
+	]
+(dd:DiaryDisplacement[data_Association])["EclipticDisplacement"] :=
+	dd["EclipticDisplacement", If[Length[#]=!=1,Missing[],#[[1]]]&]
+
+
+(* ::Subsubsection:: *)
+(*Constructors*)
+
+
+DiaryDisplacement[{{dist1_,rel1_},{dist2_,rel2_}}] :=
+	DiaryDisplacement[<|
+		"Distances"->{dist1,dist2},
+		"Relations"->{rel1,rel2}
+	|>]
+
+
+(* ::Subsubsection:: *)
+(*Verifiers*)
+
+
+DiaryDisplacement[d:Except[KeyValuePattern[{
+		"Distances"->{_DiaryDistance, _DiaryDistance},
+		"Relations"->{
+			"InFrontOf"|"Behind"|"East"|"West"|"Above"|"Below"|"North"|"South"|_Missing,
+			"InFrontOf"|"Behind"|"East"|"West"|"Above"|"Below"|"North"|"South"|_Missing}
 	}]]] :=
-		(Message[DiaryDisplacment::invalid, {d}]; Missing["InvalidDiaryDisplacment"])
-
-
-(* ::Subsection:: *)
-(*DiaryDirection*)
-
-
-DiaryDirection::invalid = "`` is not a valid DiaryDirection.";
-
-
-DiaryDirection[data_Association]["Data"] := data
-DiaryDirection[data_Association]["Distance"] := data["Distance"]
-DiaryDirection[data_Association]["Direction"] := data["Direction"]
-
-
-DiaryDirection[d:Except[KeyValuePattern[{
-		"Distance"->_DiaryDistance|_Missing,
-		"Direction"->"West"|"North"|"South"|"East"|_Missing
-	}]]] :=
-		(Message[DiaryDirection::invalid, {d}]; Missing["InvalidDiaryDirection"])
+		(Message[DiaryDisplacement::invalid, {d}]; Missing["InvalidDiaryDisplacement"])
 
 
 (* ::Subsection:: *)
@@ -86,6 +121,10 @@ DiaryDirection[d:Except[KeyValuePattern[{
 
 
 DiaryDate::invalid = "`` is not a valid DiaryDate.";
+
+
+(* ::Subsubsection:: *)
+(*Accessors*)
 
 
 DiaryDate[data_Association]["Data"] := data
@@ -102,6 +141,14 @@ DiaryDate[data_Association]["JulianDate"] :=
 DiaryDate[data_Association]["BabylonianMonth"] := data["BabylonianMonth"]
 DiaryDate[data_Association]["BabylonianDay"] := data["BabylonianDay"]
 DiaryDate[data_Association]["Time"] := data["Time"]
+
+
+(* ::Subsubsection:: *)
+(*Constructors*)
+
+
+(* ::Subsubsection:: *)
+(*Verifiers*)
 
 
 dateTimes = {
@@ -134,10 +181,22 @@ DiaryDate[d:Except[KeyValuePattern[{
 DiaryEvent::invalid = "`` is not a valid DiaryEvent.";
 
 
+(* ::Subsubsection:: *)
+(*Accessors*)
+
+
 DiaryEvent[data_Association]["Data"] := data
 DiaryEvent[data_Association]["Type"] := data["Type"]
 DiaryEvent[data_Association]["Provenance"] := data["Provenance"]
 DiaryEvent[data_Association]["Content"] := data["Content"]
+
+
+(* ::Subsubsection:: *)
+(*Constructors*)
+
+
+(* ::Subsubsection:: *)
+(*Verifiers*)
 
 
 DiaryEvent[d:Except[KeyValuePattern[{
@@ -169,10 +228,10 @@ DiaryDistance /:
 		]
 
 
-DiaryDisplacment /:
-	MakeBoxes[dis:DiaryDisplacment[_Association],StandardForm] :=
+DiaryDisplacement /:
+	MakeBoxes[dis:DiaryDisplacement[_Association],StandardForm] :=
 		BoxForm`ArrangeSummaryBox[
-			DiaryDisplacment,
+			DiaryDisplacement,
 			dist,
 			Graphics[{
 					{Orange,Dashing[0.1],Line[{{-0.5,-0.5},{0.5,0.5}}]},
@@ -181,38 +240,9 @@ DiaryDisplacment /:
 				Background->Transparent
 			],
 			{
-				{"distance: ",Row[{
-					If[MissingQ[dis["Distance"]],dis["Distance"],dis["Distance"]["TotalCubits"]],
-					" cubits"}]},
-				{"relation: ",dis["Relation"]}
-			},
-			{},
-			StandardForm
-		]
-
-
-DiaryDirection /:
-	MakeBoxes[dir:DiaryDirection[_Association],StandardForm] :=
-		BoxForm`ArrangeSummaryBox[
-			DiaryDirection,
-			dist,
-			Graphics[{
-					Circle[],
-					Orange,
-					Arrowheads[Large],
-					Arrow[{{0,0},
-						0.9*Normalize@
-							Switch[dir["Direction"],"North",{0,1},"South",{0,-1},"East",{1,0},"West",{-1,0},_,{1,1}]
-					}]},
-				ImageSize->30,
-				PlotRange->All,
-				Background->Transparent
-			],
-			{
-				{"distance: ",Row[{
-					If[MissingQ[dir["Distance"]],dir["Distance"],dir["Distance"]["TotalCubits"]],
-					" cubits"}]},
-				{"direction: ",dir["Direction"]}
+				{"distances: ",
+					Row[{If[MissingQ[#],Missing[],#["TotalCubits"]]&/@dis["Distances"]," cubits"}]},
+				{"relation: ",dis["Relations"]}
 			},
 			{},
 			StandardForm
