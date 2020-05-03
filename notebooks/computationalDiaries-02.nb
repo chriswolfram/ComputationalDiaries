@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     48123,       1205]
-NotebookOptionsPosition[     37312,       1027]
-NotebookOutlinePosition[     37704,       1043]
-CellTagsIndexPosition[     37661,       1040]
+NotebookDataLength[     95477,       2294]
+NotebookOptionsPosition[     81570,       2064]
+NotebookOutlinePosition[     81962,       2080]
+CellTagsIndexPosition[     81919,       2077]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -732,18 +732,16 @@ Cell[BoxData[
   RowBox[{"<|", "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"\"\<BabylonianYear\>\"", "\[Rule]", 
-     RowBox[{
-      RowBox[{"{", 
-       RowBox[{"_String", 
-        RowBox[{"(*", "King", "*)"}], ",", "_Integer"}], 
-       RowBox[{"(*", 
-        RowBox[{"Year", " ", "number"}], "*)"}], "}"}], "|", "_Missing"}]}], 
-    ",", "\[IndentingNewLine]", 
+     RowBox[{"_Integer", 
+      RowBox[{"(*", 
+       RowBox[{"SE", " ", "year", " ", "number"}], "*)"}], "|", 
+      "_Missing"}]}], ",", "\[IndentingNewLine]", 
     RowBox[{"\"\<BabylonianMonth\>\"", "\[Rule]", 
      RowBox[{"_String", "|", "_Missing"}]}], ",", "\[IndentingNewLine]", 
     RowBox[{"\"\<BabylonianDay\>\"", "\[Rule]", 
      RowBox[{"_Integer", "|", "_Missing"}]}], ",", "\[IndentingNewLine]", 
-    RowBox[{"\"\<JulianYear\>\"", "\[Rule]", "_Integer"}], 
+    RowBox[{"\"\<JulianYear\>\"", "\[Rule]", 
+     RowBox[{"_Integer", "|", "_Missing"}]}], 
     RowBox[{"(*", 
      RowBox[{"Year", " ", "AD"}], "*)"}], ",", "\[IndentingNewLine]", 
     RowBox[{"\"\<JulianMonth\>\"", "\[Rule]", 
@@ -758,13 +756,18 @@ Cell[BoxData[
       "\"\<Sunset\>\"", "|", "_Missing"}]}]}], "\[IndentingNewLine]", "|>"}], 
   "]"}]], "Input",
  CellChangeTimes->{{3.797459673640414*^9, 3.7974598609706497`*^9}, {
-  3.797459892061439*^9, 
-  3.797459906313053*^9}},ExpressionUUID->"6b0d8826-3c4a-443b-b3ef-\
+  3.797459892061439*^9, 3.797459906313053*^9}, {3.797476751601321*^9, 
+  3.797476755254485*^9}, {3.7975200468594418`*^9, 
+  3.79752004843102*^9}},ExpressionUUID->"6b0d8826-3c4a-443b-b3ef-\
 4dffe36253a6"],
 
-Cell["Note: King names must be canonicalized.", "Text",
- CellChangeTimes->{{3.7974603233879633`*^9, 
-  3.797460336247151*^9}},ExpressionUUID->"d537e753-5ada-4f28-a8ab-\
+Cell["\<\
+Note: Babylonian year perhaps should use regnal years, but I can\
+\[CloseCurlyQuote]t find a computer readable version of the \
+\>", "Text",
+ CellChangeTimes->{{3.7974603233879633`*^9, 3.797460336247151*^9}, {
+  3.797476886410499*^9, 
+  3.797476916338276*^9}},ExpressionUUID->"d537e753-5ada-4f28-a8ab-\
 c01f225e950c"]
 }, Open  ]],
 
@@ -822,46 +825,47 @@ Cell["DiaryDisplacement", "Subsubsection",
 6041078a4689"],
 
 Cell["\<\
-Used to represent the displacement between two objects. Generally used for \
-observations in the main body of each month.\
+Represents the displacement between two objects in the sky. Generally used \
+for observations in the main body of each month.\
 \>", "Text",
- CellChangeTimes->{{3.797460119036388*^9, 
-  3.797460149609516*^9}},ExpressionUUID->"00b56e42-12dc-4973-8896-\
+ CellChangeTimes->{{3.797460119036388*^9, 3.797460149609516*^9}, {
+  3.797461891415578*^9, 
+  3.79746190677826*^9}},ExpressionUUID->"00b56e42-12dc-4973-8896-\
 f68f9366f4cd"],
 
 Cell[BoxData[
  RowBox[{"DiaryDisplacement", "[", 
   RowBox[{"<|", "\[IndentingNewLine]", 
    RowBox[{
-    RowBox[{"\"\<ObjectA\>\"", "\[Rule]", 
-     RowBox[{"_Entity", "|", "_Missing"}]}], ",", "\[IndentingNewLine]", 
-    RowBox[{"\"\<ObjectB\>\"", "\[Rule]", 
-     RowBox[{"_Entity", "|", "_Missing"}]}], ",", "\[IndentingNewLine]", 
     RowBox[{"\"\<Distances\>\"", "\[Rule]", 
-     RowBox[{"{", 
+     RowBox[{"{", "\[IndentingNewLine]", 
       RowBox[{
        RowBox[{"_DiaryDistance", "|", "_Missing"}], 
        RowBox[{"(*", 
         RowBox[{"Longitudinal", " ", "distance", " ", 
          RowBox[{"(", 
-          RowBox[{"with", " ", "sign"}], ")"}]}], "*)"}], ",", 
+          RowBox[{"without", " ", "sign"}], ")"}]}], "*)"}], ",", 
        RowBox[{"_DiaryDistance", "|", "_Missing"}]}], 
       RowBox[{"(*", 
        RowBox[{"Latitudinal", " ", "distance", " ", 
         RowBox[{"(", 
-         RowBox[{"with", " ", "sign"}], ")"}]}], "*)"}], "}"}]}], ",", 
+         RowBox[{"without", " ", "sign"}], ")"}]}], "*)"}], "}"}]}], ",", 
     "\[IndentingNewLine]", 
     RowBox[{"\"\<Relations\>\"", "\[Rule]", 
-     RowBox[{"{", 
+     RowBox[{"{", "\[IndentingNewLine]", 
       RowBox[{
-      "\"\<InFrontOf\>\"", "|", "\"\<Behind\>\"", "|", "\"\<East\>\"", "|", 
-       "\"\<West\>\"", "|", "\"\<Above\>\"", "|", "\"\<Below\>\"", "|", 
-       "\"\<North\>\"", "|", "\"\<South\>\"", "|", 
-       RowBox[{"_Missing", ".."}]}], "}"}]}]}], "\[IndentingNewLine]", "|>"}],
-   "]"}]], "Input",
+       RowBox[{
+       "\"\<InFrontOf\>\"", "|", "\"\<Behind\>\"", "|", "\"\<East\>\"", "|", 
+        "\"\<West\>\"", "|", "_Missing"}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+       "\"\<Above\>\"", "|", "\"\<Below\>\"", "|", "\"\<North\>\"", "|", 
+        "\"\<South\>\"", "|", "_Missing"}]}], "}"}]}]}], 
+   "\[IndentingNewLine]", "|>"}], "]"}]], "Input",
  CellChangeTimes->{{3.797459922603895*^9, 3.797460005667961*^9}, {
   3.797460161393219*^9, 3.797460164313847*^9}, {3.797460356530446*^9, 
-  3.797460398257455*^9}},ExpressionUUID->"9e0c181e-79f1-465b-838b-\
+  3.797460398257455*^9}, {3.797472731707035*^9, 3.797472733947974*^9}, {
+  3.797473098244583*^9, 3.797473120600277*^9}, {3.797519427931817*^9, 
+  3.797519428367592*^9}},ExpressionUUID->"9e0c181e-79f1-465b-838b-\
 6bd3d3d83cb0"]
 }, Open  ]],
 
@@ -881,11 +885,15 @@ Cell["Represents a duration. Often used for Lunar Six quantities.", "Text",
 Cell[BoxData[
  RowBox[{"DiaryDuration", "[", 
   RowBox[{"{", 
-   RowBox[{"(*", "Degrees", "*)"}], ",", 
-   RowBox[{"(*", "Ninda", "*)"}], "}"}], "]"}]], "Input",
+   RowBox[{"(*", 
+    RowBox[{"Degrees", "/", "U\[CapitalSHacek]"}], "*)"}], ",", 
+   RowBox[{"(*", 
+    RowBox[{"ArcMinutes", "/", "NINDA"}], "*)"}], "}"}], "]"}]], "Input",
  CellChangeTimes->{{3.797439153441389*^9, 3.797439156554582*^9}, {
   3.797439395426174*^9, 3.7974394077353973`*^9}, {3.7974604049125633`*^9, 
-  3.797460407341399*^9}},ExpressionUUID->"9319b198-275f-4096-9588-\
+  3.797460407341399*^9}, {3.7974717194367237`*^9, 3.797471742930794*^9}, {
+  3.797472742277362*^9, 
+  3.797472742770088*^9}},ExpressionUUID->"9319b198-275f-4096-9588-\
 1b806a51f9f8"]
 }, Open  ]],
 
@@ -993,6 +1001,1024 @@ in MarketRates observations.)\
  CellChangeTimes->{{3.797433437351351*^9, 
   3.7974334644452963`*^9}},ExpressionUUID->"83e1123c-3cf9-4e4a-b16d-\
 b016fa7c960c"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Examples", "Title",
+ CellChangeTimes->{{3.7974613755503693`*^9, 
+  3.797461378233253*^9}},ExpressionUUID->"9dbd193f-f2e9-47ff-b65f-\
+edba0f427fc6"],
+
+Cell["Load the paclet:", "Text",
+ CellChangeTimes->{{3.7974613808205223`*^9, 
+  3.797461383014279*^9}},ExpressionUUID->"9426ddf0-ea80-44c6-a556-\
+9b4ebecb00c3"],
+
+Cell[BoxData["Quit"], "Input",
+ CellChangeTimes->{{3.797462619524046*^9, 3.797462622958151*^9}},
+ CellLabel->"In[37]:=",ExpressionUUID->"956daa4e-b9f4-4f2d-be26-1f5b5f0f8515"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"PacletDirectoryLoad", "[", 
+  RowBox[{"FileNameJoin", "[", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"ParentDirectory", "@", 
+      RowBox[{"NotebookDirectory", "[", "]"}]}], ",", "\"\<packages\>\""}], 
+    "}"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7970049170244207`*^9, 3.7970049772041807`*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"e1c16a09-4421-4e48-b70c-b8bbff524649"],
+
+Cell[BoxData[
+ RowBox[{"{", "\<\"/Users/christopher/git/ComputationalDiaries/packages\"\>", 
+  "}"}]], "Output",
+ CellChangeTimes->{3.7972812785225277`*^9, 3.797281813076733*^9, 
+  3.797461388319816*^9, 3.7974625523619013`*^9, 3.797462627761323*^9, 
+  3.797520693857059*^9},
+ CellLabel->"Out[1]=",ExpressionUUID->"e3d10b78-00d0-4b6e-9d6e-510694660319"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Get", "[", "\"\<ComputationalDiaries`\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.797004979575989*^9, 3.797005001743125*^9}, {
+  3.79746138595471*^9, 3.797461391360634*^9}, {3.7974625143763113`*^9, 
+  3.7974625154184103`*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"9514cbc7-e21a-444d-977c-118db1090fd9"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DiaryDistance", "[", 
+  RowBox[{"{", 
+   RowBox[{"4", ",", "3"}], "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7974806086529493`*^9, 3.797480615811222*^9}},
+ CellLabel->
+  "In[431]:=",ExpressionUUID->"533eaa30-dc72-4285-ac95-bdb63394d312"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["DiaryDistance",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    
+    TemplateBox[{
+      PaneSelectorBox[{False -> GridBox[{{
+            GraphicsBox[{{
+               Dashing[0.1], 
+               RGBColor[1, 0.5, 0], 
+               LineBox[{{-0.5, 0}, {0.5, 0}}]}, 
+              LineBox[{{-0.5, -0.1}, {-0.5, 0.1}}], 
+              LineBox[{{0.5, -0.1}, {0.5, 0.1}}]}, ImageSize -> 30, 
+             Background -> GrayLevel[0, 0]], 
+            GridBox[{{
+               TagBox["\"cubits: \"", "SummaryItem"], 
+               TagBox["4", "SummaryItem"]}, {
+               TagBox["\"fingers: \"", "SummaryItem"], 
+               TagBox["3", "SummaryItem"]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}], True -> GridBox[{{
+            GraphicsBox[{{
+               Dashing[0.1], 
+               RGBColor[1, 0.5, 0], 
+               LineBox[{{-0.5, 0}, {0.5, 0}}]}, 
+              LineBox[{{-0.5, -0.1}, {-0.5, 0.1}}], 
+              LineBox[{{0.5, -0.1}, {0.5, 0.1}}]}, ImageSize -> 30, 
+             Background -> GrayLevel[0, 0]], 
+            GridBox[{{
+               TagBox["\"cubits: \"", "SummaryItem"], 
+               TagBox["4", "SummaryItem"]}, {
+               TagBox["\"fingers: \"", "SummaryItem"], 
+               TagBox["3", "SummaryItem"]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, 
+             GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  ComputationalDiaries`DiaryTypes`DiaryDistance[{4, 3}],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{{3.797480611620562*^9, 3.7974806161661863`*^9}},
+ CellLabel->
+  "Out[431]=",ExpressionUUID->"34acde06-fc50-465a-aca5-8dcccaa70866"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DiaryDuration", "[", 
+  RowBox[{"{", 
+   RowBox[{"2", ",", "3"}], "}"}], "]"}]], "Input",
+ CellLabel->
+  "In[562]:=",ExpressionUUID->"bfc26a31-063a-4843-8eec-ed512b185a18"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["DiaryDuration",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    
+    TemplateBox[{
+      PaneSelectorBox[{False -> GridBox[{{
+            GraphicsBox[{
+              CircleBox[{0, 0}], 
+              RGBColor[1, 0.5, 0], 
+              EdgeForm[
+               GrayLevel[0]], 
+              DiskBox[{0, 0}, 1, 
+               
+               NCache[{Rational[1, 2] Pi, 0.25}, {1.5707963267948966`, 
+                0.25}]]}, ImageSize -> 30, Background -> GrayLevel[0, 0]], 
+            GridBox[{{
+               TagBox["\"degrees: \"", "SummaryItem"], 
+               TagBox["2", "SummaryItem"]}, {
+               TagBox["\"NINDA: \"", "SummaryItem"], 
+               TagBox["3", "SummaryItem"]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}], True -> GridBox[{{
+            GraphicsBox[{
+              CircleBox[{0, 0}], 
+              RGBColor[1, 0.5, 0], 
+              EdgeForm[
+               GrayLevel[0]], 
+              DiskBox[{0, 0}, 1, 
+               
+               NCache[{Rational[1, 2] Pi, 0.25}, {1.5707963267948966`, 
+                0.25}]]}, ImageSize -> 30, Background -> GrayLevel[0, 0]], 
+            GridBox[{{
+               TagBox["\"degrees: \"", "SummaryItem"], 
+               TagBox["2", "SummaryItem"]}, {
+               TagBox["\"NINDA: \"", "SummaryItem"], 
+               TagBox["3", "SummaryItem"]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  ComputationalDiaries`DiaryTypes`DiaryDuration[{2, 3}],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{3.797480567367082*^9, 3.797481383413219*^9},
+ CellLabel->
+  "Out[562]=",ExpressionUUID->"bafe48db-a4b7-46b4-8783-a2df14c10d71"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DiaryCapacity", "[", 
+  RowBox[{"{", 
+   RowBox[{"4", ",", "5", ",", "2", ",", "4"}], "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.797481972436411*^9, 3.7974819755605593`*^9}},
+ CellLabel->
+  "In[810]:=",ExpressionUUID->"708416d8-e4d0-4e09-b5bc-ab567a2026ae"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["DiaryCapacity",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    
+    TemplateBox[{
+      PaneSelectorBox[{False -> GridBox[{{
+            GraphicsBox[{
+              RGBColor[1, 0.5, 0], 
+              RectangleBox[{0, 0}, {1, 0.7}], 
+              GrayLevel[0], 
+              LineBox[{{0, 1}, {0, 0}, {1, 0}, {1, 1}}], 
+              LineBox[{{0, 0.7}, {1, 0.7}}]}, ImageSize -> 30, Background -> 
+             GrayLevel[0, 0]], 
+            GridBox[{{
+               TagBox["\"kur: \"", "SummaryItem"], 
+               TagBox["4", "SummaryItem"]}, {
+               TagBox["\"p\[ABar]n: \"", "SummaryItem"], 
+               TagBox["5", "SummaryItem"]}, {
+               TagBox["\"s\:016bt: \"", "SummaryItem"], 
+               TagBox["2", "SummaryItem"]}, {
+               TagBox["\"qa: \"", "SummaryItem"], 
+               TagBox["4", "SummaryItem"]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}], True -> GridBox[{{
+            GraphicsBox[{
+              RGBColor[1, 0.5, 0], 
+              RectangleBox[{0, 0}, {1, 0.7}], 
+              GrayLevel[0], 
+              LineBox[{{0, 1}, {0, 0}, {1, 0}, {1, 1}}], 
+              LineBox[{{0, 0.7}, {1, 0.7}}]}, ImageSize -> 30, Background -> 
+             GrayLevel[0, 0]], 
+            GridBox[{{
+               TagBox["\"kur: \"", "SummaryItem"], 
+               TagBox["4", "SummaryItem"]}, {
+               TagBox["\"p\[ABar]n: \"", "SummaryItem"], 
+               TagBox["5", "SummaryItem"]}, {
+               TagBox["\"s\:016bt: \"", "SummaryItem"], 
+               TagBox["2", "SummaryItem"]}, {
+               TagBox["\"qa: \"", "SummaryItem"], 
+               TagBox["4", "SummaryItem"]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  ComputationalDiaries`DiaryTypes`DiaryCapacity[{4, 5, 2, 4}],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{{3.797481975895199*^9, 3.797482015713236*^9}},
+ CellLabel->
+  "Out[810]=",ExpressionUUID->"100ae140-d2fd-4171-ac40-5bef7fc46c99"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DiaryDuration", "[", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "3"}], "}"}], "]"}], "[", "\"\<Minutes\>\"", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.7974625209457893`*^9, 3.797462528666872*^9}, {
+  3.7974712874999123`*^9, 3.797471298545374*^9}, {3.797471871403577*^9, 
+  3.7974719022831373`*^9}, {3.797471943495913*^9, 3.797471946263774*^9}, {
+  3.797483247813878*^9, 3.797483252519289*^9}},
+ CellLabel->
+  "In[811]:=",ExpressionUUID->"cbbda735-11b9-4661-ac41-f79df7b58633"],
+
+Cell[BoxData[
+ TemplateBox[{
+   FractionBox["41", "5"], "\"min\"", "minutes", "\"Minutes\""},
+  "Quantity"]], "Output",
+ CellChangeTimes->{3.7974832527690697`*^9},
+ CellLabel->
+  "Out[811]=",ExpressionUUID->"f60c174f-7c69-4484-b53c-447696113fbe"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DiaryDisplacement", "[", 
+  RowBox[{"<|", 
+   RowBox[{
+    RowBox[{"\"\<ObjectA\>\"", "\[Rule]", 
+     TemplateBox[{"\"Mars\"", 
+       RowBox[{"Entity", "[", 
+         RowBox[{"\"Planet\"", ",", "\"Mars\""}], "]"}], 
+       "\"Entity[\\\"Planet\\\", \\\"Mars\\\"]\"", "\"planet\""},
+      "Entity"]}], ",", 
+    RowBox[{"\"\<ObjectB\>\"", "\[Rule]", 
+     TemplateBox[{"\"Antares\"", 
+       RowBox[{"Entity", "[", 
+         RowBox[{"\"Star\"", ",", "\"Antares\""}], "]"}], 
+       "\"Entity[\\\"Star\\\", \\\"Antares\\\"]\"", "\"star\""},
+      "Entity"]}], ",", 
+    RowBox[{"\"\<Distances\>\"", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"DiaryDistance", "[", 
+        RowBox[{"{", 
+         RowBox[{"2", ",", 
+          RowBox[{"Missing", "[", "]"}]}], "}"}], "]"}], ",", 
+       RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], "}"}]}], ",", 
+    RowBox[{"\"\<Relations\>\"", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"\"\<West\>\"", ",", "\"\<Below\>\""}], "}"}]}]}], "|>"}], 
+  "]"}]], "Input",
+ CellLabel->
+  "In[489]:=",ExpressionUUID->"d356fc4c-0e1b-4c1a-89ed-c118f22f196c"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["DiaryDisplacement",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    
+    TemplateBox[{
+      PaneSelectorBox[{False -> GridBox[{{
+            GraphicsBox[{{
+               RGBColor[1, 0.5, 0], 
+               Dashing[0.1], 
+               LineBox[{{-0.5, -0.5}, {0.5, 0.5}}]}, 
+              CircleBox[{0, 0}], 
+              RGBColor[1, 0, 0], 
+              PointBox[{-0.5, -0.5}], 
+              RGBColor[0, 0, 1], 
+              PointBox[{0.5, 0.5}]}, ImageSize -> 30, Background -> 
+             GrayLevel[0, 0]], 
+            GridBox[{{
+               TagBox["\"distances: \"", "SummaryItem"], 
+               TagBox[
+                TemplateBox[{
+                  RowBox[{"{", 
+                    RowBox[{"2", ",", 
+                    RowBox[{"Missing", "[", "]"}]}], "}"}], "\" cubits\""}, 
+                 "RowDefault"], "SummaryItem"]}, {
+               TagBox["\"relations: \"", "SummaryItem"], 
+               TagBox[
+                RowBox[{"{", 
+                  RowBox[{"\"West\"", ",", "\"Below\""}], "}"}], 
+                "SummaryItem"]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}], True -> GridBox[{{
+            GraphicsBox[{{
+               RGBColor[1, 0.5, 0], 
+               Dashing[0.1], 
+               LineBox[{{-0.5, -0.5}, {0.5, 0.5}}]}, 
+              CircleBox[{0, 0}], 
+              RGBColor[1, 0, 0], 
+              PointBox[{-0.5, -0.5}], 
+              RGBColor[0, 0, 1], 
+              PointBox[{0.5, 0.5}]}, ImageSize -> 30, Background -> 
+             GrayLevel[0, 0]], 
+            GridBox[{{
+               TagBox["\"distances: \"", "SummaryItem"], 
+               TagBox[
+                TemplateBox[{
+                  RowBox[{"{", 
+                    RowBox[{"2", ",", 
+                    RowBox[{"Missing", "[", "]"}]}], "}"}], "\" cubits\""}, 
+                 "RowDefault"], "SummaryItem"]}, {
+               TagBox["\"relations: \"", "SummaryItem"], 
+               TagBox[
+                RowBox[{"{", 
+                  RowBox[{"\"West\"", ",", "\"Below\""}], "}"}], 
+                "SummaryItem"]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  ComputationalDiaries`DiaryTypes`Private`dist,
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{3.7974807731660757`*^9},
+ CellLabel->
+  "Out[489]=",ExpressionUUID->"66a4d773-1052-47cb-bef3-49547eb570d2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DiaryDisplacement", "[", 
+   RowBox[{"<|", 
+    RowBox[{
+     RowBox[{"\"\<Distances\>\"", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"DiaryDistance", "[", 
+         RowBox[{"{", 
+          RowBox[{"2", ",", 
+           RowBox[{"Missing", "[", "]"}]}], "}"}], "]"}], ",", 
+        RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], "}"}]}], ",", 
+     
+     RowBox[{"\"\<Relations\>\"", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<West\>\"", ",", "\"\<Below\>\""}], "}"}]}]}], "|>"}], 
+   "]"}], "[", "\"\<Degrees\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.797474119534255*^9, 3.79747417122167*^9}, {
+  3.797474252212201*^9, 3.797474296626438*^9}, {3.797474396106667*^9, 
+  3.797474401639328*^9}, {3.797519501708392*^9, 3.7975195355764627`*^9}, {
+  3.797519570433153*^9, 3.797519574177524*^9}},
+ CellLabel->"In[81]:=",ExpressionUUID->"3b1addd1-0305-4d05-ade6-4ef341c07ea1"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"-", "4"}], ",", "0"}], "}"}]], "Output",
+ CellChangeTimes->{{3.797474264619361*^9, 3.7974742969062643`*^9}, {
+  3.797474392336331*^9, 3.797474401993608*^9}, {3.7975194980504913`*^9, 
+  3.797519536274267*^9}, {3.797519572492167*^9, 3.7975195767151613`*^9}},
+ CellLabel->"Out[81]=",ExpressionUUID->"303f4286-f160-4135-845f-a1fa150378df"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DiaryDisplacement", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"DiaryDistance", "[", 
+      RowBox[{"{", 
+       RowBox[{"2", ",", 
+        RowBox[{"Missing", "[", "]"}]}], "}"}], "]"}], ",", 
+     "\"\<InFrontOf\>\""}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}], ",", 
+     "\"\<Above\>\""}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7975198265500727`*^9, 3.7975198767115602`*^9}},
+ CellLabel->"In[15]:=",ExpressionUUID->"04aaf0f1-4347-4658-9676-7ce3ac81631c"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["DiaryDisplacement",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    
+    TemplateBox[{
+      PaneSelectorBox[{False -> GridBox[{{
+            GraphicsBox[{{
+               RGBColor[1, 0.5, 0], 
+               Dashing[0.1], 
+               LineBox[{{-0.5, -0.5}, {0.5, 0.5}}]}, 
+              CircleBox[{0, 0}], 
+              RGBColor[1, 0, 0], 
+              PointBox[{-0.5, -0.5}], 
+              RGBColor[0, 0, 1], 
+              PointBox[{0.5, 0.5}]}, ImageSize -> 30, Background -> 
+             GrayLevel[0, 0]], 
+            GridBox[{{
+               TagBox["\"distances: \"", "SummaryItem"], 
+               TagBox[
+                TemplateBox[{
+                  RowBox[{"{", 
+                    RowBox[{"2", ",", 
+                    RowBox[{"Missing", "[", "]"}]}], "}"}], "\" cubits\""}, 
+                 "RowDefault"], "SummaryItem"]}, {
+               TagBox["\"relations: \"", "SummaryItem"], 
+               TagBox[
+                RowBox[{"{", 
+                  RowBox[{"\"InFrontOf\"", ",", "\"Above\""}], "}"}], 
+                "SummaryItem"]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}], True -> GridBox[{{
+            GraphicsBox[{{
+               RGBColor[1, 0.5, 0], 
+               Dashing[0.1], 
+               LineBox[{{-0.5, -0.5}, {0.5, 0.5}}]}, 
+              CircleBox[{0, 0}], 
+              RGBColor[1, 0, 0], 
+              PointBox[{-0.5, -0.5}], 
+              RGBColor[0, 0, 1], 
+              PointBox[{0.5, 0.5}]}, ImageSize -> 30, Background -> 
+             GrayLevel[0, 0]], 
+            GridBox[{{
+               TagBox["\"distances: \"", "SummaryItem"], 
+               TagBox[
+                TemplateBox[{
+                  RowBox[{"{", 
+                    RowBox[{"2", ",", 
+                    RowBox[{"Missing", "[", "]"}]}], "}"}], "\" cubits\""}, 
+                 "RowDefault"], "SummaryItem"]}, {
+               TagBox["\"relations: \"", "SummaryItem"], 
+               TagBox[
+                RowBox[{"{", 
+                  RowBox[{"\"InFrontOf\"", ",", "\"Above\""}], "}"}], 
+                "SummaryItem"]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  ComputationalDiaries`DiaryTypes`Private`dist,
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{{3.797519861822023*^9, 3.7975198769814157`*^9}},
+ CellLabel->"Out[15]=",ExpressionUUID->"18798519-e12c-46cb-bc33-7be585d22823"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DiaryDisplacement", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     InterpretationBox[
+      RowBox[{
+       TagBox["DiaryDistance",
+        "SummaryHead"], "[", 
+       DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = 
+        "Ready"}, 
+        TemplateBox[{
+          PaneSelectorBox[{False -> GridBox[{{
+                GraphicsBox[{{
+                   Dashing[0.1], 
+                   RGBColor[1, 0.5, 0], 
+                   LineBox[{{-0.5, 0}, {0.5, 0}}]}, 
+                  LineBox[{{-0.5, -0.1}, {-0.5, 0.1}}], 
+                  LineBox[{{0.5, -0.1}, {0.5, 0.1}}]}, ImageSize -> 30, 
+                 Background -> GrayLevel[0, 0]], 
+                GridBox[{{
+                   TagBox["\"cubits: \"", "SummaryItem"], 
+                   TagBox[
+                    RowBox[{"Missing", "[", "]"}], "SummaryItem"]}, {
+                   TagBox["\"fingers: \"", "SummaryItem"], 
+                   TagBox["4", "SummaryItem"]}}, 
+                 GridBoxAlignment -> {
+                  "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+                 False, GridBoxItemSize -> {
+                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                 GridBoxSpacings -> {
+                  "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                 BaseStyle -> {
+                  ShowStringCharacters -> False, NumberMarks -> False, 
+                   PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+              GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+              BaselinePosition -> {1, 1}], True -> GridBox[{{
+                GraphicsBox[{{
+                   Dashing[0.1], 
+                   RGBColor[1, 0.5, 0], 
+                   LineBox[{{-0.5, 0}, {0.5, 0}}]}, 
+                  LineBox[{{-0.5, -0.1}, {-0.5, 0.1}}], 
+                  LineBox[{{0.5, -0.1}, {0.5, 0.1}}]}, ImageSize -> 30, 
+                 Background -> GrayLevel[0, 0]], 
+                GridBox[{{
+                   TagBox["\"cubits: \"", "SummaryItem"], 
+                   TagBox[
+                    RowBox[{"Missing", "[", "]"}], "SummaryItem"]}, {
+                   TagBox["\"fingers: \"", "SummaryItem"], 
+                   TagBox["4", "SummaryItem"]}}, 
+                 GridBoxAlignment -> {
+                  "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+                 False, GridBoxItemSize -> {
+                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                 GridBoxSpacings -> {
+                  "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                 BaseStyle -> {
+                  ShowStringCharacters -> False, NumberMarks -> False, 
+                   PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+              GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+              BaselinePosition -> {1, 1}]}, 
+           Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+         "SummaryPanel"],
+        DynamicModuleValues:>{}], "]"}],
+      DiaryDistance[{
+        Missing[], 4}],
+      Editable->False,
+      SelectWithContents->True,
+      Selectable->False], ",", "\"\<Behind\>\""}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     InterpretationBox[
+      RowBox[{
+       TagBox["DiaryDistance",
+        "SummaryHead"], "[", 
+       DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = 
+        "Ready"}, 
+        TemplateBox[{
+          PaneSelectorBox[{False -> GridBox[{{
+                GraphicsBox[{{
+                   Dashing[0.1], 
+                   RGBColor[1, 0.5, 0], 
+                   LineBox[{{-0.5, 0}, {0.5, 0}}]}, 
+                  LineBox[{{-0.5, -0.1}, {-0.5, 0.1}}], 
+                  LineBox[{{0.5, -0.1}, {0.5, 0.1}}]}, ImageSize -> 30, 
+                 Background -> GrayLevel[0, 0]], 
+                GridBox[{{
+                   TagBox["\"cubits: \"", "SummaryItem"], 
+                   TagBox[
+                    FractionBox["1", "2"], "SummaryItem"]}, {
+                   TagBox["\"fingers: \"", "SummaryItem"], 
+                   TagBox[
+                    RowBox[{"Missing", "[", "\"Unmentioned\"", "]"}], 
+                    "SummaryItem"]}}, 
+                 GridBoxAlignment -> {
+                  "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+                 False, GridBoxItemSize -> {
+                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                 GridBoxSpacings -> {
+                  "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                 BaseStyle -> {
+                  ShowStringCharacters -> False, NumberMarks -> False, 
+                   PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+              GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+              BaselinePosition -> {1, 1}], True -> GridBox[{{
+                GraphicsBox[{{
+                   Dashing[0.1], 
+                   RGBColor[1, 0.5, 0], 
+                   LineBox[{{-0.5, 0}, {0.5, 0}}]}, 
+                  LineBox[{{-0.5, -0.1}, {-0.5, 0.1}}], 
+                  LineBox[{{0.5, -0.1}, {0.5, 0.1}}]}, ImageSize -> 30, 
+                 Background -> GrayLevel[0, 0]], 
+                GridBox[{{
+                   TagBox["\"cubits: \"", "SummaryItem"], 
+                   TagBox[
+                    FractionBox["1", "2"], "SummaryItem"]}, {
+                   TagBox["\"fingers: \"", "SummaryItem"], 
+                   TagBox[
+                    RowBox[{"Missing", "[", "\"Unmentioned\"", "]"}], 
+                    "SummaryItem"]}}, 
+                 GridBoxAlignment -> {
+                  "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+                 False, GridBoxItemSize -> {
+                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                 GridBoxSpacings -> {
+                  "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                 BaseStyle -> {
+                  ShowStringCharacters -> False, NumberMarks -> False, 
+                   PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+              GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+              BaselinePosition -> {1, 1}]}, 
+           Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+         "SummaryPanel"],
+        DynamicModuleValues:>{}], "]"}],
+      DiaryDistance[{
+        Rational[1, 2], 
+        Missing["Unmentioned"]}],
+      Editable->False,
+      SelectWithContents->True,
+      Selectable->False], ",", "\"\<Above\>\""}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.797519942818883*^9, 3.797519943657544*^9}},
+ CellLabel->"In[18]:=",ExpressionUUID->"64e12660-1221-4971-9faa-b42ce361e6b0"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["DiaryDisplacement",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    
+    TemplateBox[{
+      PaneSelectorBox[{False -> GridBox[{{
+            GraphicsBox[{{
+               RGBColor[1, 0.5, 0], 
+               Dashing[0.1], 
+               LineBox[{{-0.5, -0.5}, {0.5, 0.5}}]}, 
+              CircleBox[{0, 0}], 
+              RGBColor[1, 0, 0], 
+              PointBox[{-0.5, -0.5}], 
+              RGBColor[0, 0, 1], 
+              PointBox[{0.5, 0.5}]}, ImageSize -> 30, Background -> 
+             GrayLevel[0, 0]], 
+            GridBox[{{
+               TagBox["\"distances: \"", "SummaryItem"], 
+               TagBox[
+                TemplateBox[{
+                  RowBox[{"{", 
+                    RowBox[{
+                    FractionBox["1", "6"], ",", 
+                    FractionBox["1", "2"]}], "}"}], "\" cubits\""}, 
+                 "RowDefault"], "SummaryItem"]}, {
+               TagBox["\"relations: \"", "SummaryItem"], 
+               TagBox[
+                RowBox[{"{", 
+                  RowBox[{"\"Behind\"", ",", "\"Above\""}], "}"}], 
+                "SummaryItem"]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}], True -> GridBox[{{
+            GraphicsBox[{{
+               RGBColor[1, 0.5, 0], 
+               Dashing[0.1], 
+               LineBox[{{-0.5, -0.5}, {0.5, 0.5}}]}, 
+              CircleBox[{0, 0}], 
+              RGBColor[1, 0, 0], 
+              PointBox[{-0.5, -0.5}], 
+              RGBColor[0, 0, 1], 
+              PointBox[{0.5, 0.5}]}, ImageSize -> 30, Background -> 
+             GrayLevel[0, 0]], 
+            GridBox[{{
+               TagBox["\"distances: \"", "SummaryItem"], 
+               TagBox[
+                TemplateBox[{
+                  RowBox[{"{", 
+                    RowBox[{
+                    FractionBox["1", "6"], ",", 
+                    FractionBox["1", "2"]}], "}"}], "\" cubits\""}, 
+                 "RowDefault"], "SummaryItem"]}, {
+               TagBox["\"relations: \"", "SummaryItem"], 
+               TagBox[
+                RowBox[{"{", 
+                  RowBox[{"\"Behind\"", ",", "\"Above\""}], "}"}], 
+                "SummaryItem"]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  ComputationalDiaries`DiaryTypes`Private`dist,
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{3.797519911980009*^9, 3.79751994395461*^9},
+ CellLabel->"Out[18]=",ExpressionUUID->"faba1b1d-16ce-4ef0-bbb3-d79b3b94803f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MatchQ", "[", 
+  RowBox[{"\"\<IV\>\"", ",", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+     "Alternatives", "@@", "ComputationalDiaries`DiaryTypes`Private`months"}],
+      ")"}], "|", "_Missing"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.79752060030023*^9, 3.797520644416519*^9}},
+ CellLabel->"In[36]:=",ExpressionUUID->"197b4f26-1ba4-4b16-a328-8a316285801b"],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{{3.797520629339995*^9, 3.797520644660798*^9}},
+ CellLabel->"Out[36]=",ExpressionUUID->"52cf2e72-942a-4b33-a217-29200e1c2733"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"KeyValueMap", "[", 
+  RowBox[{"{", "\n", "\t\t", 
+   RowBox[{
+    RowBox[{"\"\<BabylonianYear\>\"", "\[Rule]", 
+     RowBox[{"_Integer", "|", "_Missing"}]}], ",", "\n", "\t\t", 
+    RowBox[{"\"\<BabylonianMonth\>\"", "\[Rule]", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+       "Alternatives", "@@", 
+        "ComputationalDiaries`DiaryTypes`Private`months"}], ")"}], "|", 
+      "_Missing"}]}], ",", "\n", "\t\t", 
+    RowBox[{"\"\<BabylonianDay\>\"", "\[Rule]", 
+     RowBox[{"_Integer", "|", "_Missing"}]}], ",", "\n", "\t\t", 
+    RowBox[{"\"\<JulianYear\>\"", "\[Rule]", 
+     RowBox[{"_Integer", "|", "_Missing"}]}], ",", "\n", "\t\t", 
+    RowBox[{"\"\<JulianMonth\>\"", "\[Rule]", 
+     RowBox[{"_Integer", "|", "_Missing"}]}], ",", "\n", "\t\t", 
+    RowBox[{"\"\<JulianDay\>\"", "\[Rule]", 
+     RowBox[{"_Integer", "|", "_Missing"}]}], ",", "\n", "\t\t", 
+    RowBox[{"\"\<Time\>\"", "\[Rule]", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+       "Alternatives", "@@", 
+        "ComputationalDiaries`DiaryTypes`Private`times"}], ")"}], "|", 
+      "_Missing"}]}]}], "\n", "\t", "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.797520673643754*^9, 
+  3.7975206788242283`*^9}},ExpressionUUID->"b45be006-fe5b-4c20-89a7-\
+1e8372423789"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DiaryDate", "[", 
+  RowBox[{"\[LeftAssociation]", 
+   RowBox[{
+    RowBox[{"\"\<JulianYear\>\"", "\[Rule]", 
+     RowBox[{"-", "381"}]}], ",", 
+    RowBox[{"\"\<JulianMonth\>\"", "\[Rule]", "7"}], ",", 
+    RowBox[{"\"\<JulianDay\>\"", "\[Rule]", "4"}], ",", 
+    RowBox[{"\"\<BabylonianYear\>\"", "\[Rule]", "238"}], ",", 
+    RowBox[{"\"\<BabylonianMonth\>\"", "\[Rule]", "\"\<IV\>\""}], ",", 
+    RowBox[{"\"\<BabylonianDay\>\"", "\[Rule]", "1"}], ",", 
+    RowBox[{"\"\<Time\>\"", "\[Rule]", 
+     RowBox[{"Missing", "[", "]"}]}]}], "\[RightAssociation]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.797520192790822*^9, 3.797520200979885*^9}, {
+  3.797520455391261*^9, 3.797520502186195*^9}, {3.797520551798684*^9, 
+  3.797520596297535*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"1d3af997-d021-4972-a0d7-c70ebbd5f8f5"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["DiaryDate",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    
+    TemplateBox[{
+      PaneSelectorBox[{False -> GridBox[{{
+            StyleBox["\"\|012000\"", 24, StripOnInput -> False], 
+            GridBox[{{
+               TagBox["\"Julian date: \"", "SummaryItem"], 
+               TagBox[
+                TemplateBox[{
+                  RowBox[{"\"Sat 4 Jul -382 12:00:01\"", 
+                    StyleBox[
+                    RowBox[{"\"GMT+\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    "3.`", NumberMarks -> False, StripOnInput -> False]}], 
+                    FontColor -> GrayLevel[0.5]], 
+                    StyleBox[
+                    
+                    RowBox[{
+                    "\[ThinSpace]", "(", "\[InvisibleSpace]", "\"Julian\"", 
+                    "\"calendar\"", "\[InvisibleSpace]", ")"}], FontColor -> 
+                    GrayLevel[0.5]]}], 
+                  RowBox[{"DateObject", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "382"}], ",", "7", ",", "4", ",", "12", ",", 
+                    "0", ",", "1"}], "}"}], ",", "\"Instant\"", ",", 
+                    "\"Julian\"", ",", "3.`"}], "]"}]}, "DateObject", 
+                 Editable -> False], "SummaryItem"]}, {
+               TagBox["\"Babylonian month: \"", "SummaryItem"], 
+               TagBox["\"IV\"", "SummaryItem"]}, {
+               TagBox["\"Babylonian day: \"", "SummaryItem"], 
+               TagBox["1", "SummaryItem"]}, {
+               TagBox["\"Time: \"", "SummaryItem"], 
+               TagBox[
+                RowBox[{"Missing", "[", "]"}], "SummaryItem"]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}], True -> GridBox[{{
+            StyleBox["\"\|012000\"", 24, StripOnInput -> False], 
+            GridBox[{{
+               TagBox["\"Julian date: \"", "SummaryItem"], 
+               TagBox[
+                TemplateBox[{
+                  RowBox[{"\"Sat 4 Jul -382 12:00:01\"", 
+                    StyleBox[
+                    RowBox[{"\"GMT+\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    "3.`", NumberMarks -> False, StripOnInput -> False]}], 
+                    FontColor -> GrayLevel[0.5]], 
+                    StyleBox[
+                    
+                    RowBox[{
+                    "\[ThinSpace]", "(", "\[InvisibleSpace]", "\"Julian\"", 
+                    "\"calendar\"", "\[InvisibleSpace]", ")"}], FontColor -> 
+                    GrayLevel[0.5]]}], 
+                  RowBox[{"DateObject", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "382"}], ",", "7", ",", "4", ",", "12", ",", 
+                    "0", ",", "1"}], "}"}], ",", "\"Instant\"", ",", 
+                    "\"Julian\"", ",", "3.`"}], "]"}]}, "DateObject", 
+                 Editable -> False], "SummaryItem"]}, {
+               TagBox["\"Babylonian month: \"", "SummaryItem"], 
+               TagBox["\"IV\"", "SummaryItem"]}, {
+               TagBox["\"Babylonian day: \"", "SummaryItem"], 
+               TagBox["1", "SummaryItem"]}, {
+               TagBox["\"Time: \"", "SummaryItem"], 
+               TagBox[
+                RowBox[{"Missing", "[", "]"}], "SummaryItem"]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  ComputationalDiaries`DiaryTypes`DiaryDate[
+   Association[
+   "JulianYear" -> -381, "JulianMonth" -> 7, "JulianDay" -> 4, 
+    "BabylonianYear" -> 238, "BabylonianMonth" -> "IV", "BabylonianDay" -> 1, 
+    "Time" -> Missing[]]],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{
+  3.797520201569213*^9, {3.7975204557606363`*^9, 3.797520502478895*^9}, {
+   3.797520570301648*^9, 3.7975205940056543`*^9}, 3.797520698358118*^9},
+ CellLabel->"Out[3]=",ExpressionUUID->"baf3782d-9ca4-4157-9cf3-eef0a7abd076"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1010,17 +2036,28 @@ Cell["Make intermediate format to make inputting easier", "Item",
   3.797460760114184*^9}},ExpressionUUID->"9a3e0c07-2e8c-4bc6-a7ac-\
 cbe4d7bf9d2e"],
 
-Cell["Normalize data", "Item",
+Cell["Import and analyze data", "Item",
  CellChangeTimes->{{3.797438444749978*^9, 3.7974384521153307`*^9}, {
   3.7974394391960583`*^9, 3.797439442278674*^9}, {3.797460763208254*^9, 
-  3.797460776260193*^9}},ExpressionUUID->"9a3b7575-46eb-44ed-80e0-\
+  3.797460776260193*^9}, {3.7974834155146637`*^9, 
+  3.797483423106606*^9}},ExpressionUUID->"9a3b7575-46eb-44ed-80e0-\
 308bfd440055"],
 
-Cell["Implement format", "Item",
+Cell["Automatic data collection", "Item",
  CellChangeTimes->{{3.797438444749978*^9, 3.7974384521153307`*^9}, {
   3.7974394391960583`*^9, 3.797439442278674*^9}, {3.797460763208254*^9, 
-  3.7974607814388523`*^9}},ExpressionUUID->"96149eb6-1f90-40b1-bde0-\
-3127fbca4af4"]
+  3.7974607814388523`*^9}, {3.797463470730631*^9, 3.797463474974806*^9}, {
+  3.7974836061918097`*^9, 
+  3.7974836061980867`*^9}},ExpressionUUID->"c8bfb6b1-81f5-4377-8f46-\
+e3716a249200"],
+
+Cell["Make DiaryObservation file", "Item",
+ CellChangeTimes->{{3.797438444749978*^9, 3.7974384521153307`*^9}, {
+  3.7974394391960583`*^9, 3.797439442278674*^9}, {3.797460763208254*^9, 
+  3.7974607814388523`*^9}, {3.797463470730631*^9, 3.797463474974806*^9}, {
+  3.7974836065750504`*^9, 
+  3.797483612316136*^9}},ExpressionUUID->"9489096b-5f40-4875-8bb6-\
+5c4e84005b6e"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
@@ -1160,50 +2197,102 @@ Cell[25727, 709, 159, 3, 67, "Section",ExpressionUUID->"a0871d91-a78d-4afc-963b-
 Cell[CellGroupData[{
 Cell[25911, 716, 237, 4, 45, "Subsubsection",ExpressionUUID->"cc0215c6-0d7f-491c-9e9e-79cde4bf984a"],
 Cell[26151, 722, 228, 5, 35, "Text",ExpressionUUID->"827be8d7-5a5d-4e51-9318-a16270afc59b"],
-Cell[26382, 729, 1600, 33, 220, "Input",ExpressionUUID->"6b0d8826-3c4a-443b-b3ef-4dffe36253a6"],
-Cell[27985, 764, 183, 3, 35, "Text",ExpressionUUID->"d537e753-5ada-4f28-a8ab-c01f225e950c"]
+Cell[26382, 729, 1640, 32, 220, "Input",ExpressionUUID->"6b0d8826-3c4a-443b-b3ef-4dffe36253a6"],
+Cell[28025, 763, 327, 7, 35, "Text",ExpressionUUID->"d537e753-5ada-4f28-a8ab-c01f225e950c"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[28205, 772, 164, 3, 45, "Subsubsection",ExpressionUUID->"71de7ee5-4c6f-4d4e-9abf-62ab59bd2cab"],
-Cell[28372, 777, 268, 6, 35, "Text",ExpressionUUID->"65973c62-dc19-429c-b600-bcb09f0b1b5c"],
-Cell[28643, 785, 391, 10, 32, "Input",ExpressionUUID->"c7fb67c0-9c77-4295-8f1d-5ce751b61e36"],
-Cell[29037, 797, 189, 3, 35, "Text",ExpressionUUID->"96ce7ec2-42ff-491a-89e1-33bb9dfa9692"],
-Cell[29229, 802, 233, 5, 32, "Input",ExpressionUUID->"2176cfe3-8ae2-4632-bddf-80986bcb54e2"],
-Cell[29465, 809, 192, 3, 35, "Text",ExpressionUUID->"25b7fce6-7e55-42e3-a959-522a0d6e5175"]
+Cell[28389, 775, 164, 3, 45, "Subsubsection",ExpressionUUID->"71de7ee5-4c6f-4d4e-9abf-62ab59bd2cab"],
+Cell[28556, 780, 268, 6, 35, "Text",ExpressionUUID->"65973c62-dc19-429c-b600-bcb09f0b1b5c"],
+Cell[28827, 788, 391, 10, 32, "Input",ExpressionUUID->"c7fb67c0-9c77-4295-8f1d-5ce751b61e36"],
+Cell[29221, 800, 189, 3, 35, "Text",ExpressionUUID->"96ce7ec2-42ff-491a-89e1-33bb9dfa9692"],
+Cell[29413, 805, 233, 5, 32, "Input",ExpressionUUID->"2176cfe3-8ae2-4632-bddf-80986bcb54e2"],
+Cell[29649, 812, 192, 3, 35, "Text",ExpressionUUID->"25b7fce6-7e55-42e3-a959-522a0d6e5175"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[29694, 817, 244, 4, 45, "Subsubsection",ExpressionUUID->"998d7cd5-1ec8-4f85-b8f9-6041078a4689"],
-Cell[29941, 823, 271, 6, 58, "Text",ExpressionUUID->"00b56e42-12dc-4973-8896-f68f9366f4cd"],
-Cell[30215, 831, 1483, 33, 199, "Input",ExpressionUUID->"9e0c181e-79f1-465b-838b-6bd3d3d83cb0"]
+Cell[29878, 820, 244, 4, 45, "Subsubsection",ExpressionUUID->"998d7cd5-1ec8-4f85-b8f9-6041078a4689"],
+Cell[30125, 826, 323, 7, 58, "Text",ExpressionUUID->"00b56e42-12dc-4973-8896-f68f9366f4cd"],
+Cell[30451, 835, 1509, 33, 178, "Input",ExpressionUUID->"9e0c181e-79f1-465b-838b-6bd3d3d83cb0"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[31735, 869, 243, 4, 45, "Subsubsection",ExpressionUUID->"007526d0-8f7f-4494-b81a-aa9ff6a563a0"],
-Cell[31981, 875, 201, 3, 35, "Text",ExpressionUUID->"37b74485-c12c-4114-a066-67af144a9a41"],
-Cell[32185, 880, 386, 8, 30, "Input",ExpressionUUID->"9319b198-275f-4096-9588-1b806a51f9f8"]
+Cell[31997, 873, 243, 4, 45, "Subsubsection",ExpressionUUID->"007526d0-8f7f-4494-b81a-aa9ff6a563a0"],
+Cell[32243, 879, 201, 3, 35, "Text",ExpressionUUID->"37b74485-c12c-4114-a066-67af144a9a41"],
+Cell[32447, 884, 561, 12, 33, "Input",ExpressionUUID->"9319b198-275f-4096-9588-1b806a51f9f8"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[32608, 893, 166, 3, 45, "Subsubsection",ExpressionUUID->"18679887-08d9-48d4-8781-65377449ab24"],
-Cell[32777, 898, 247, 6, 35, "Text",ExpressionUUID->"2d092bee-b0a9-470a-bf28-5b63fb7bdb20"],
-Cell[33027, 906, 431, 11, 30, "Input",ExpressionUUID->"ccda53b2-3056-46d3-be7e-7068b16f71cb"],
-Cell[33461, 919, 378, 8, 58, "Text",ExpressionUUID->"90a0e840-40ff-4919-bebe-7229b39f4586"]
+Cell[33045, 901, 166, 3, 45, "Subsubsection",ExpressionUUID->"18679887-08d9-48d4-8781-65377449ab24"],
+Cell[33214, 906, 247, 6, 35, "Text",ExpressionUUID->"2d092bee-b0a9-470a-bf28-5b63fb7bdb20"],
+Cell[33464, 914, 431, 11, 30, "Input",ExpressionUUID->"ccda53b2-3056-46d3-be7e-7068b16f71cb"],
+Cell[33898, 927, 378, 8, 58, "Text",ExpressionUUID->"90a0e840-40ff-4919-bebe-7229b39f4586"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[33888, 933, 219, 4, 67, "Section",ExpressionUUID->"ef21525d-2df1-4b33-ab95-73ac1fe08e1b"],
-Cell[34110, 939, 467, 9, 58, "Text",ExpressionUUID->"03bc0aa7-bb12-4b38-9d79-fa8428adf493"],
-Cell[34580, 950, 183, 4, 30, "Input",ExpressionUUID->"8ccf5f85-30be-4b57-ad27-aebfa10da920"],
-Cell[34766, 956, 336, 7, 58, "Text",ExpressionUUID->"4604365a-4550-4121-aa7d-a4e0f5d2bbb3"],
-Cell[35105, 965, 202, 4, 30, "Input",ExpressionUUID->"6a65d237-f493-4609-8850-228e051ca56a"],
-Cell[35310, 971, 389, 8, 58, "Text",ExpressionUUID->"aeb45fac-ea48-4d14-884f-fa7aa201fd17"],
-Cell[35702, 981, 203, 4, 30, "Input",ExpressionUUID->"29808246-f7ae-457f-ba84-1d015304a6e4"],
-Cell[35908, 987, 336, 7, 58, "Text",ExpressionUUID->"83e1123c-3cf9-4e4a-b16d-b016fa7c960c"]
+Cell[34325, 941, 219, 4, 67, "Section",ExpressionUUID->"ef21525d-2df1-4b33-ab95-73ac1fe08e1b"],
+Cell[34547, 947, 467, 9, 58, "Text",ExpressionUUID->"03bc0aa7-bb12-4b38-9d79-fa8428adf493"],
+Cell[35017, 958, 183, 4, 30, "Input",ExpressionUUID->"8ccf5f85-30be-4b57-ad27-aebfa10da920"],
+Cell[35203, 964, 336, 7, 58, "Text",ExpressionUUID->"4604365a-4550-4121-aa7d-a4e0f5d2bbb3"],
+Cell[35542, 973, 202, 4, 30, "Input",ExpressionUUID->"6a65d237-f493-4609-8850-228e051ca56a"],
+Cell[35747, 979, 389, 8, 58, "Text",ExpressionUUID->"aeb45fac-ea48-4d14-884f-fa7aa201fd17"],
+Cell[36139, 989, 203, 4, 30, "Input",ExpressionUUID->"29808246-f7ae-457f-ba84-1d015304a6e4"],
+Cell[36345, 995, 336, 7, 58, "Text",ExpressionUUID->"83e1123c-3cf9-4e4a-b16d-b016fa7c960c"]
+}, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[36281, 999, 154, 3, 67, "Section",ExpressionUUID->"8f36905f-ebcd-4549-a316-9075f8575f1d"],
+Cell[36730, 1008, 153, 3, 98, "Title",ExpressionUUID->"9dbd193f-f2e9-47ff-b65f-edba0f427fc6"],
+Cell[36886, 1013, 160, 3, 35, "Text",ExpressionUUID->"9426ddf0-ea80-44c6-a556-9b4ebecb00c3"],
+Cell[37049, 1018, 175, 2, 30, "Input",ExpressionUUID->"956daa4e-b9f4-4f2d-be26-1f5b5f0f8515"],
 Cell[CellGroupData[{
-Cell[36460, 1006, 292, 4, 32, "Item",ExpressionUUID->"9a3e0c07-2e8c-4bc6-a7ac-cbe4d7bf9d2e"],
-Cell[36755, 1012, 255, 4, 32, "Item",ExpressionUUID->"9a3b7575-46eb-44ed-80e0-308bfd440055"],
-Cell[37013, 1018, 259, 4, 32, "Item",ExpressionUUID->"96149eb6-1f90-40b1-bde0-3127fbca4af4"]
+Cell[37249, 1024, 411, 9, 30, "Input",ExpressionUUID->"e1c16a09-4421-4e48-b70c-b8bbff524649"],
+Cell[37663, 1035, 352, 6, 34, "Output",ExpressionUUID->"e3d10b78-00d0-4b6e-9d6e-510694660319"]
+}, Open  ]],
+Cell[38030, 1044, 329, 5, 30, "Input",ExpressionUUID->"9514cbc7-e21a-444d-977c-118db1090fd9"],
+Cell[CellGroupData[{
+Cell[38384, 1053, 264, 6, 30, "Input",ExpressionUUID->"533eaa30-dc72-4285-ac95-bdb63394d312"],
+Cell[38651, 1061, 3108, 67, 66, "Output",ExpressionUUID->"34acde06-fc50-465a-aca5-8dcccaa70866"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[41796, 1133, 196, 5, 30, "Input",ExpressionUUID->"bfc26a31-063a-4843-8eec-ed512b185a18"],
+Cell[41995, 1140, 3164, 70, 67, "Output",ExpressionUUID->"bafe48db-a4b7-46b4-8783-a2df14c10d71"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[45196, 1215, 284, 6, 30, "Input",ExpressionUUID->"708416d8-e4d0-4e09-b5bc-ab567a2026ae"],
+Cell[45483, 1223, 3486, 74, 90, "Output",ExpressionUUID->"100ae140-d2fd-4171-ac40-5bef7fc46c99"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[49006, 1302, 508, 11, 30, "Input",ExpressionUUID->"cbbda735-11b9-4661-ac41-f79df7b58633"],
+Cell[49517, 1315, 246, 6, 56, "Output",ExpressionUUID->"f60c174f-7c69-4484-b53c-447696113fbe"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[49800, 1326, 1137, 29, 89, "Input",ExpressionUUID->"d356fc4c-0e1b-4c1a-89ed-c118f22f196c"],
+Cell[50940, 1357, 3861, 88, 67, "Output",ExpressionUUID->"66a4d773-1052-47cb-bef3-49547eb570d2"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[54838, 1450, 944, 22, 73, "Input",ExpressionUUID->"3b1addd1-0305-4d05-ade6-4ef341c07ea1"],
+Cell[55785, 1474, 387, 7, 34, "Output",ExpressionUUID->"303f4286-f160-4135-845f-a1fa150378df"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[56209, 1486, 568, 15, 52, "Input",ExpressionUUID->"04aaf0f1-4347-4658-9676-7ce3ac81631c"],
+Cell[56780, 1503, 3891, 87, 67, "Output",ExpressionUUID->"18798519-e12c-46cb-bc33-7be585d22823"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[60708, 1595, 7122, 149, 135, "Input",ExpressionUUID->"64e12660-1221-4971-9faa-b42ce361e6b0"],
+Cell[67833, 1746, 3942, 89, 74, "Output",ExpressionUUID->"faba1b1d-16ce-4ef0-bbb3-d79b3b94803f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[71812, 1840, 386, 9, 32, "Input",ExpressionUUID->"197b4f26-1ba4-4b16-a328-8a316285801b"],
+Cell[72201, 1851, 176, 2, 34, "Output",ExpressionUUID->"52cf2e72-942a-4b33-a217-29200e1c2733"]
+}, Open  ]],
+Cell[72392, 1856, 1278, 30, 220, "Input",ExpressionUUID->"b45be006-fe5b-4c20-89a7-1e8372423789"],
+Cell[CellGroupData[{
+Cell[73695, 1890, 847, 17, 73, "Input",ExpressionUUID->"1d3af997-d021-4972-a0d7-c70ebbd5f8f5"],
+Cell[74545, 1909, 5414, 111, 103, "Output",ExpressionUUID->"baf3782d-9ca4-4157-9cf3-eef0a7abd076"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[79996, 2025, 154, 3, 67, "Section",ExpressionUUID->"8f36905f-ebcd-4549-a316-9075f8575f1d"],
+Cell[CellGroupData[{
+Cell[80175, 2032, 292, 4, 32, "Item",ExpressionUUID->"9a3e0c07-2e8c-4bc6-a7ac-cbe4d7bf9d2e"],
+Cell[80470, 2038, 315, 5, 32, "Item",ExpressionUUID->"9a3b7575-46eb-44ed-80e0-308bfd440055"],
+Cell[80788, 2045, 370, 6, 32, "Item",ExpressionUUID->"c8bfb6b1-81f5-4377-8f46-e3716a249200"],
+Cell[81161, 2053, 369, 6, 32, "Item",ExpressionUUID->"9489096b-5f40-4875-8bb6-5c4e84005b6e"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
