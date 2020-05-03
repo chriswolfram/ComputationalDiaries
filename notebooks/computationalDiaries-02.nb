@@ -1,0 +1,1213 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     48123,       1205]
+NotebookOptionsPosition[     37312,       1027]
+NotebookOutlinePosition[     37704,       1043]
+CellTagsIndexPosition[     37661,       1040]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Specification", "Title",
+ CellChangeTimes->{{3.7974483049483833`*^9, 
+  3.797448306482032*^9}},ExpressionUUID->"74eabab2-7f2a-44c0-bd89-\
+72bf5d051f26"],
+
+Cell[CellGroupData[{
+
+Cell["Diary stores", "Section",
+ CellChangeTimes->{{3.79743558678614*^9, 3.797435588345066*^9}, {
+  3.797438258245072*^9, 
+  3.797438260119966*^9}},ExpressionUUID->"3ecb18b0-e465-4f45-863e-\
+5b089996a022"],
+
+Cell["\<\
+Represents all data about the diaries. Stores the data about observations as \
+well as information about how complete the data is.\
+\>", "Text",
+ CellChangeTimes->{{3.7974357209711847`*^9, 
+  3.7974357482606173`*^9}},ExpressionUUID->"7dc9e25c-9320-4205-93d0-\
+df21033798e3"],
+
+Cell[BoxData[
+ RowBox[{"<|", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"\"\<Observations\>\"", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"_DiaryObservation", "..."}], "}"}]}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"\"\<Progress\>\"", "\[Rule]", 
+    RowBox[{"<|", "\[IndentingNewLine]", 
+     RowBox[{"(*", "OraccID", "*)"}], 
+     RowBox[{"\[Rule]", 
+      RowBox[{"(*", "status", "*)"}], 
+      RowBox[{",", "\[IndentingNewLine]", 
+       RowBox[{"\"\<X301581\>\"", "\[Rule]", 
+        RowBox[{
+        "\"\<Incomplete\>\"", "|", "\"\<Complete\>\"", "|", 
+         "\"\<Reviewed\>\""}]}], ",", "\[IndentingNewLine]", "..."}]}], 
+     "\[IndentingNewLine]", "|>"}]}]}], "\[IndentingNewLine]", 
+  "|>"}]], "Input",
+ CellChangeTimes->{{3.797435589066576*^9, 3.797435625021626*^9}, {
+  3.797435659982901*^9, 3.797435714152219*^9}, {3.7974382544395514`*^9, 
+  3.797438255746964*^9}},ExpressionUUID->"f92c75a5-289f-4d49-b5fb-\
+eca3af5cb659"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["DiaryObservation", "Section",
+ CellChangeTimes->{{3.7973922735595837`*^9, 3.797392274963992*^9}, {
+  3.7973927151716747`*^9, 
+  3.797392718973041*^9}},ExpressionUUID->"c4a39ebe-5a98-4b32-b2ba-\
+566d4edc22fe"],
+
+Cell["Represents an observation.", "Text",
+ CellChangeTimes->{{3.797392306340971*^9, 3.797392314192327*^9}, {
+  3.7973927212378407`*^9, 
+  3.7973927275769444`*^9}},ExpressionUUID->"a4fb04a2-b288-4289-97e9-\
+7c6b046084b1"],
+
+Cell[BoxData[
+ RowBox[{"DiaryObservation", "[", 
+  RowBox[{"<|", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\"\<Type\>\"", "\[Rule]", "String"}], 
+    RowBox[{"(*", 
+     RowBox[{"The", " ", "type", " ", "of", " ", "observation", " ", 
+      RowBox[{"(", 
+       RowBox[{
+       "RelativePosition", ",", " ", "WindDirection", ",", " ", "etc"}], 
+       ")"}]}], "*)"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"\"\<Content\>\"", "\[Rule]", 
+     RowBox[{"<|", "...", "|>"}]}], 
+    RowBox[{"(*", 
+     RowBox[{
+     "The", " ", "content", " ", "of", " ", "the", " ", "observation"}], 
+     "*)"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"\"\<Date\>\"", "\[Rule]", 
+     RowBox[{"DiaryDate", "[", "...", "]"}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"\"\<Provenance\>\"", "\[Rule]", 
+     RowBox[{"<|", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"\"\<Creator\>\"", "\[Rule]", "String"}], 
+       RowBox[{"(*", 
+        RowBox[{"Creator", " ", "name"}], "*)"}], ",", "\[IndentingNewLine]", 
+       
+       RowBox[{"\"\<TabletID\>\"", "\[Rule]", "String"}], 
+       RowBox[{"(*", 
+        RowBox[{"Oracc", " ", "ID", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"for", " ", "example"}], ",", " ", "X301440"}], ")"}]}], 
+        "*)"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"\"\<LineNumber\>\"", "\[Rule]", "Integer"}], 
+       RowBox[{"(*", 
+        RowBox[{"The", " ", "line", " ", "number", " ", "in", " ", "Oracc"}], 
+        "*)"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"\"\<Reviewed\>\"", "\[Rule]", 
+        RowBox[{"True", "|", "False"}]}], 
+       RowBox[{"(*", 
+        RowBox[{"Whether", " ", "this", " ", "observation", " ", "reviewed"}],
+         "*)"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"\"\<Notes\>\"", "\[Rule]", "String"}]}], 
+      RowBox[{"(*", 
+       RowBox[{
+       "Any", " ", "notes", " ", "about", " ", "the", " ", "provenance"}], 
+       "*)"}], "\[IndentingNewLine]", "|>"}]}]}], "\[IndentingNewLine]", 
+   "|>"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7973922758280373`*^9, 3.7973923033950567`*^9}, {
+  3.797392728857288*^9, 3.7973927316806717`*^9}, {3.797392812711532*^9, 
+  3.7973928330585012`*^9}, {3.797393093697571*^9, 3.797393253547406*^9}, {
+  3.7973932843758173`*^9, 3.7973933776088533`*^9}, {3.7973939276806087`*^9, 
+  3.797393953372869*^9}, {3.797394172272964*^9, 3.797394172873623*^9}, {
+  3.797394433443324*^9, 3.797394433581871*^9}, {3.7974319342805777`*^9, 
+  3.797431988959741*^9}, {3.797432074816818*^9, 3.797432093256646*^9}, {
+  3.797438437000703*^9, 
+  3.797438437717176*^9}},ExpressionUUID->"593f9729-b9aa-47dd-906e-\
+5aee43cce65d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Observation types", "Section",
+ CellChangeTimes->{{3.797393400442222*^9, 3.7973934172222767`*^9}, {
+  3.79743235007224*^9, 
+  3.7974323536670732`*^9}},ExpressionUUID->"a2c04ac0-cda9-4492-bb46-\
+24a66bef36a5"],
+
+Cell[CellGroupData[{
+
+Cell["General astronomical", "Subsection",
+ CellChangeTimes->{{3.797448397225029*^9, 
+  3.797448400210499*^9}},ExpressionUUID->"7a9306cc-204a-42f3-81b7-\
+114b4e683214"],
+
+Cell[CellGroupData[{
+
+Cell["RelativePosition", "Subsubsection",
+ CellChangeTimes->{{3.797393419067314*^9, 
+  3.797393421087329*^9}},ExpressionUUID->"ee6608f1-0ce3-42e5-9d76-\
+45211d24670d"],
+
+Cell["\<\
+Represent the relative position of two objects as usually written in the main \
+body of each month.\
+\>", "Text",
+ CellChangeTimes->{{3.797432103235896*^9, 
+  3.7974321237053423`*^9}},ExpressionUUID->"7e6d68e6-e08e-4517-b76c-\
+5e6fff9107e3"],
+
+Cell[BoxData[
+ RowBox[{"<|", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"\"\<ObjectA\>\"", "\[Rule]", 
+    RowBox[{"_Entity", "|", "_Missing"}]}], 
+   RowBox[{"(*", 
+    RowBox[{"Primary", " ", "object"}], "*)"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<ObjectB\>\"", "\[Rule]", 
+    RowBox[{"_Entity", "|", "_Missing"}]}], 
+   RowBox[{"(*", 
+    RowBox[{"Secondary", " ", "object"}], "*)"}], ",", "\[IndentingNewLine]", 
+   
+   RowBox[{"\"\<Displacement\>\"", "\[Rule]", 
+    RowBox[{"DiaryDisplacement", "[", "...", "]"}]}]}], "\[IndentingNewLine]",
+   "|>"}]], "Input",
+ CellChangeTimes->{{3.7974302419082317`*^9, 3.797430243156679*^9}, {
+  3.7974302919647083`*^9, 3.797430338462481*^9}, {3.7974315400302753`*^9, 
+  3.7974315561340017`*^9}, {3.7974388755482283`*^9, 
+  3.7974388758747597`*^9}},ExpressionUUID->"04db72c6-6d0f-4d71-b625-\
+8c9b165150aa"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["ZodiacalPosition", "Subsubsection",
+ CellChangeTimes->{{3.7974315987773733`*^9, 
+  3.797431606779961*^9}},ExpressionUUID->"1df8e477-dba4-4d7a-930a-\
+7004118f7d5f"],
+
+Cell["\<\
+Represents an observation that an object was in a sign of the zodiac. This \
+should be used for end of month summaries as well as for things like first \
+appearances.\
+\>", "Text",
+ CellChangeTimes->{{3.797431629891464*^9, 3.797431637279646*^9}, {
+  3.797431806041522*^9, 3.797431852558798*^9}, {3.797432137342852*^9, 
+  3.797432167695026*^9}},ExpressionUUID->"0a8a9541-2a37-4fb3-a4b9-\
+3e63f809577f"],
+
+Cell[BoxData[
+ RowBox[{"<|", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"\"\<Object\>\"", "\[Rule]", 
+    RowBox[{"_Entity", "|", "_Missing"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\"\<Sign\>\"", "_Entity"}], "|", "_Missing"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"\"\<Entry\>\"", "\[Rule]", 
+    RowBox[{"True", "|", "False"}]}]}], 
+  RowBox[{"(*", 
+   RowBox[{
+   "whether", " ", "this", " ", "is", " ", "the", " ", "first", " ", "day", 
+    " ", "when", " ", "this", " ", "object", " ", "entered", " ", 
+    RowBox[{"(", "\"\<reached\>\"", ")"}], " ", "this", " ", "sign"}], "*)"}],
+   "\[IndentingNewLine]", "|>"}]], "Input",
+ CellChangeTimes->{{3.7974316078110228`*^9, 3.7974316282029953`*^9}, {
+  3.7974424907262707`*^9, 3.7974425339900007`*^9}, {3.79744329963461*^9, 
+  3.7974433091398706`*^9}},ExpressionUUID->"9f5f2fdc-c389-4ad3-b338-\
+5642ce164774"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Eclipse [INCOMPLETE]", "Subsubsection",
+ CellChangeTimes->{{3.797449582005628*^9, 3.797449583652937*^9}, {
+  3.797449703564156*^9, 
+  3.797449705647344*^9}},ExpressionUUID->"002f81d4-35fb-46f0-9f39-\
+46ab3a526339"],
+
+Cell["Represents an observation of an eclipse.", "Text",
+ CellChangeTimes->{{3.797449585881143*^9, 3.797449589989753*^9}, {
+  3.797449637275177*^9, 
+  3.797449644047441*^9}},ExpressionUUID->"93e114f6-42cd-4907-81f4-\
+91520271ef28"],
+
+Cell[BoxData[
+ RowBox[{"<|", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"\"\<Observed\>\"", "\[Rule]", 
+    RowBox[{"True", "|", "False"}]}], ",", "\[IndentingNewLine]", 
+   "\"\<MoonriseToSunset\>\""}], 
+  RowBox[{"(*", 
+   RowBox[{
+   "can", " ", "just", " ", "use", " ", "a", " ", "MoonriseToSunset", " ", 
+    "observation", " ", "instead"}], "*)"}], "\[IndentingNewLine]", 
+  "|>"}]], "Input",
+ CellChangeTimes->{{3.797449648610705*^9, 
+  3.797449728847986*^9}},ExpressionUUID->"32a4fc6c-3c8e-4789-b34b-\
+46fb83c8ff11"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["NotVisible", "Subsubsection",
+ CellChangeTimes->{{3.7974488003124523`*^9, 3.7974488017859583`*^9}, {
+  3.79744886361979*^9, 3.7974488763417387`*^9}, {3.797459587799707*^9, 
+  3.797459598131404*^9}},ExpressionUUID->"b5547223-cd3b-4c04-83db-\
+f22d1f192af8"],
+
+Cell["\<\
+Represents a note that an object was not visible. This is common in end of \
+month summaries when the sign of the zodiac would otherwise be recorded.\
+\>", "Text",
+ CellChangeTimes->{{3.797448802944077*^9, 
+  3.797448832848884*^9}},ExpressionUUID->"c524b9cf-5ea9-4ccb-888a-\
+f67efdd2410f"],
+
+Cell[BoxData[
+ RowBox[{"<|", "\[IndentingNewLine]", 
+  RowBox[{"\"\<Object\>\"", "\[Rule]", 
+   RowBox[{"_Entity", "|", "_Missing"}]}], "\[IndentingNewLine]", 
+  "|>"}]], "Input",
+ CellChangeTimes->{{3.7974488339668703`*^9, 
+  3.797448843122617*^9}},ExpressionUUID->"859ffa55-c010-4643-a900-\
+dd2156063dee"]
+}, Open  ]]
+}, Open  ]],
+
+Cell["Planetary (\[OpenCurlyDoubleQuote]Greek-Letter\[CloseCurlyDoubleQuote]) \
+phenomena [INCOMPLETE]", "Subsection",
+ CellChangeTimes->{{3.797448465439765*^9, 3.797448485157131*^9}, {
+  3.7974497355092907`*^9, 
+  3.7974497376062593`*^9}},ExpressionUUID->"c175e2be-9bf9-4ae6-97e3-\
+502a5d5d6913"],
+
+Cell[CellGroupData[{
+
+Cell["Lunar Six", "Subsection",
+ CellChangeTimes->{{3.797448404800642*^9, 
+  3.79744840770376*^9}},ExpressionUUID->"9a015daa-4b75-4bf5-b601-\
+d9855d9b9146"],
+
+Cell[CellGroupData[{
+
+Cell["SunsetToMoonset", "Subsubsection",
+ CellChangeTimes->{{3.797438761299049*^9, 
+  3.797438764108233*^9}},ExpressionUUID->"04fcc2d7-0ec1-424b-b953-\
+db8b58c4f1ad"],
+
+Cell["\<\
+The duration between sunset to moonset recorded at the beginning of the month.\
+\>", "Text",
+ CellChangeTimes->{{3.7974387681097183`*^9, 3.797438815721243*^9}, {
+  3.797438977144226*^9, 
+  3.797438988365494*^9}},ExpressionUUID->"ee50a313-1145-4343-a3df-\
+571be4d120fe"],
+
+Cell[BoxData[
+ RowBox[{"<|", "\[IndentingNewLine]", 
+  RowBox[{"\"\<Duration\>\"", "\[Rule]", 
+   RowBox[{
+    RowBox[{"DiaryDuration", "[", "...", "]"}], "|", "_Missing"}]}], 
+  "\[IndentingNewLine]", "|>"}]], "Input",
+ CellChangeTimes->{{3.797438817035221*^9, 
+  3.797438838269622*^9}},ExpressionUUID->"af96c323-a587-4ff5-9c67-\
+466c6adb47f3"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["MoonsetToSunrise", "Subsubsection",
+ CellChangeTimes->{{3.7974389212244596`*^9, 
+  3.79743892460367*^9}},ExpressionUUID->"312286fb-68b9-45e8-aacf-\
+cc4e1f9044f7"],
+
+Cell["The duration between moonset and sunrise.", "Text",
+ CellChangeTimes->{{3.7974387681097183`*^9, 3.797438815721243*^9}, {
+  3.797438941552126*^9, 
+  3.797438944271781*^9}},ExpressionUUID->"a1c9e418-bccc-457c-87db-\
+c14fe311869c"],
+
+Cell[BoxData[
+ RowBox[{"<|", "\[IndentingNewLine]", 
+  RowBox[{"\"\<Duration\>\"", "\[Rule]", 
+   RowBox[{
+    RowBox[{"DiaryDuration", "[", "...", "]"}], "|", "_Missing"}]}], 
+  "\[IndentingNewLine]", "|>"}]], "Input",
+ CellChangeTimes->{{3.797438817035221*^9, 
+  3.797438838269622*^9}},ExpressionUUID->"4361c064-14cf-46b6-ad8f-\
+cf7d4b79b61d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["SunriseToMoonset", "Subsubsection",
+ CellChangeTimes->{{3.7974389212244596`*^9, 3.79743892460367*^9}, {
+  3.797438956262776*^9, 
+  3.79743895842909*^9}},ExpressionUUID->"95655cc9-dc74-4f01-89ff-\
+ab7a2fb9dfca"],
+
+Cell["The duration between sunrise and moonset.", "Text",
+ CellChangeTimes->{{3.7974387681097183`*^9, 3.797438815721243*^9}, {
+  3.797438941552126*^9, 3.797438944271781*^9}, {3.797438993176894*^9, 
+  3.7974389965158567`*^9}},ExpressionUUID->"ba0b4ec2-24f0-4de0-9b6f-\
+5e3467f1fd0a"],
+
+Cell[BoxData[
+ RowBox[{"<|", "\[IndentingNewLine]", 
+  RowBox[{"\"\<Duration\>\"", "\[Rule]", 
+   RowBox[{
+    RowBox[{"DiaryDuration", "[", "...", "]"}], "|", "_Missing"}]}], 
+  "\[IndentingNewLine]", "|>"}]], "Input",
+ CellChangeTimes->{{3.797438817035221*^9, 
+  3.797438838269622*^9}},ExpressionUUID->"2bed1477-f38e-41f9-acdb-\
+24a970fd1713"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["MoonriseToSunset", "Subsubsection",
+ CellChangeTimes->{{3.7974389212244596`*^9, 3.79743892460367*^9}, {
+  3.797438956262776*^9, 3.79743895842909*^9}, {3.79743901204202*^9, 
+  3.797439015265204*^9}},ExpressionUUID->"bd20be5a-667c-46e0-a70e-\
+082f3513afb9"],
+
+Cell["The duration between moonrise and sunset.", "Text",
+ CellChangeTimes->{{3.7974387681097183`*^9, 3.797438815721243*^9}, {
+  3.797438941552126*^9, 3.797438944271781*^9}, {3.797438993176894*^9, 
+  3.79743902009618*^9}},ExpressionUUID->"24b485af-8b5d-42c0-ab5e-\
+b5955ff32864"],
+
+Cell[BoxData[
+ RowBox[{"<|", "\[IndentingNewLine]", 
+  RowBox[{"\"\<Duration\>\"", "\[Rule]", 
+   RowBox[{
+    RowBox[{"DiaryDuration", "[", "...", "]"}], "|", "_Missing"}]}], 
+  "\[IndentingNewLine]", "|>"}]], "Input",
+ CellChangeTimes->{{3.797438817035221*^9, 
+  3.797438838269622*^9}},ExpressionUUID->"81a0eb53-af06-4701-b5da-\
+433f846db26a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["SunsetToMoonrise", "Subsubsection",
+ CellChangeTimes->{{3.7974389212244596`*^9, 3.79743892460367*^9}, {
+  3.797438956262776*^9, 3.79743895842909*^9}, {3.79743901204202*^9, 
+  3.7974390326429043`*^9}},ExpressionUUID->"22964bab-5bb5-4e3c-8229-\
+d3cb38d4f52b"],
+
+Cell["The duration between sunset and moonrise.", "Text",
+ CellChangeTimes->{{3.7974387681097183`*^9, 3.797438815721243*^9}, {
+  3.797438941552126*^9, 3.797438944271781*^9}, {3.797438993176894*^9, 
+  3.7974390364380836`*^9}},ExpressionUUID->"45eec69d-a97d-4279-957b-\
+50235d2f0854"],
+
+Cell[BoxData[
+ RowBox[{"<|", "\[IndentingNewLine]", 
+  RowBox[{"\"\<Duration\>\"", "\[Rule]", 
+   RowBox[{
+    RowBox[{"DiaryDuration", "[", "...", "]"}], "|", "_Missing"}]}], 
+  "\[IndentingNewLine]", "|>"}]], "Input",
+ CellChangeTimes->{{3.797438817035221*^9, 
+  3.797438838269622*^9}},ExpressionUUID->"88fd49c4-c0c7-4760-b94f-\
+49142b063de3"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["MoonriseToSunrise", "Subsubsection",
+ CellChangeTimes->{{3.7974389212244596`*^9, 3.79743892460367*^9}, {
+  3.797438956262776*^9, 3.79743895842909*^9}, {3.79743901204202*^9, 
+  3.7974390326429043`*^9}, {3.797439107136971*^9, 
+  3.797439109927928*^9}},ExpressionUUID->"e961924a-baea-446b-bcfa-\
+188240cf6afe"],
+
+Cell["\<\
+The duration between moonrise and sunrise recorded at the end of the month.\
+\>", "Text",
+ CellChangeTimes->{{3.7974387681097183`*^9, 3.797438815721243*^9}, {
+  3.797438941552126*^9, 3.797438944271781*^9}, {3.797438993176894*^9, 
+  3.797439049496264*^9}, {3.797439112311372*^9, 
+  3.7974391162540817`*^9}},ExpressionUUID->"5abbf6f8-0880-44ba-b0e4-\
+29c45884e548"],
+
+Cell[BoxData[
+ RowBox[{"<|", "\[IndentingNewLine]", 
+  RowBox[{"\"\<Duration\>\"", "\[Rule]", 
+   RowBox[{
+    RowBox[{"DiaryDuration", "[", "...", "]"}], "|", "_Missing"}]}], 
+  "\[IndentingNewLine]", "|>"}]], "Input",
+ CellChangeTimes->{{3.797438817035221*^9, 
+  3.797438838269622*^9}},ExpressionUUID->"d43f362e-8743-45dd-a160-\
+9e9b40527ed6"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Weather", "Subsection",
+ CellChangeTimes->{{3.797448411947627*^9, 
+  3.797448412828981*^9}},ExpressionUUID->"b118e88f-e931-4c26-be5d-\
+d1d3dfe7b38f"],
+
+Cell[CellGroupData[{
+
+Cell["WindDirection", "Subsubsection",
+ CellChangeTimes->{{3.797432209289385*^9, 
+  3.797432210941553*^9}},ExpressionUUID->"dd3b6a72-45d8-40dd-b17c-\
+a1f00518cdfe"],
+
+Cell["\<\
+Represents an observation that \[OpenCurlyDoubleQuote]the __ wind blew\
+\[CloseCurlyDoubleQuote]. See the Weather observation type for things like \
+\[OpenCurlyDoubleQuote]gusty wind blew\[CloseCurlyDoubleQuote].\
+\>", "Text",
+ CellChangeTimes->{{3.797432324717141*^9, 
+  3.797432369833552*^9}},ExpressionUUID->"e4abc345-20fb-42ab-bec2-\
+8accf37e18ef"],
+
+Cell[BoxData[
+ RowBox[{"<|", "\[IndentingNewLine]", 
+  RowBox[{"\"\<Direction\>\"", "\[Rule]", 
+   RowBox[{
+   "\"\<North\>\"", "|", "\"\<South\>\"", "|", "\"\<East\>\"", "|", 
+    "\"\<West\>\"", "|", "_Missing"}]}], "\[IndentingNewLine]", 
+  "|>"}]], "Input",
+ CellChangeTimes->{{3.797432212762022*^9, 
+  3.797432229665361*^9}},ExpressionUUID->"0a9614b4-7b2c-4a0e-884d-\
+49c4f45df52b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Weather", "Subsubsection",
+ CellChangeTimes->{{3.797432373339862*^9, 
+  3.797432374182548*^9}},ExpressionUUID->"9b81ba93-7337-4a28-b376-\
+c2bdbe8069b7"],
+
+Cell["Represents generalized weather.", "Text",
+ CellChangeTimes->{{3.797432376167693*^9, 3.79743237917871*^9}, {
+  3.797432539422337*^9, 3.797432549759663*^9}, {3.797432954570837*^9, 
+  3.797432955072064*^9}},ExpressionUUID->"66344ae3-780d-455c-baba-\
+6e0b069c71e8"],
+
+Cell["\<\
+Note: better tags could likely be made with heavier reference to the original \
+Akkadian terms.\
+\>", "Text",
+ CellChangeTimes->{{3.7974329567949867`*^9, 3.797432999605731*^9}, {
+  3.797449190529254*^9, 
+  3.797449199134108*^9}},ExpressionUUID->"b0a2a116-086c-4988-8d45-\
+f351bf91909f"],
+
+Cell[BoxData[
+ RowBox[{"<|", "\[IndentingNewLine]", 
+  RowBox[{"\"\<Tags\>\"", "\[Rule]", 
+   RowBox[{"{", 
+    RowBox[{
+    "\"\<Mist\>\"", "|", "\"\<Rain\>\"", "|", "\"\<Clouds\>\"", "|", 
+     "\"\<ThinClouds\>\"", "|", "\"\<CrossingClouds\>\"", "|", 
+     "\"\<HeavyClouds\>\"", "|", "\"\<Fog\>\"", "|", "\"\<HeavyFog\>\"", "|", 
+     "\"\<Lightning\>\"", "|", "\"\<Thunder\>\"", "|", "\"\<Haze\>\"", "|", 
+     "\"\<Mud\>\"", "|", "\"\<ThickRain\>\"", "|", "\"\<Hail\>\"", "|", 
+     "\"\<Dew\>\"", "|", "\"\<Cloudburst\>\"", "|", "\"\<Cold\>\"", "|", 
+     "\"\<ColdWind\>\"", "|", "\"\<Overcast\>\"", "|", 
+     RowBox[{"{", 
+      RowBox[{"\"\<Rainbow\>\"", ",", 
+       RowBox[{
+       "\"\<North\>\"", "|", "\"\<South\>\"", "|", "\"\<East\>\"", "|", 
+        "\"\<West\>\"", "|", "_Missing"}]}], "}"}], "|", 
+     RowBox[{"{", 
+      RowBox[{"\"\<Halo\>\"", ",", 
+       RowBox[{
+       "\"\<North\>\"", "|", "\"\<South\>\"", "|", "\"\<East\>\"", "|", 
+        "\"\<West\>\"", "|", "_Missing"}]}], "}"}]}], "}"}]}], 
+  "\[IndentingNewLine]", "|>"}]], "Input",
+ CellChangeTimes->{{3.7974325539707327`*^9, 3.797432611306116*^9}, {
+   3.79743264699408*^9, 3.797432786373022*^9}, {3.797432819005589*^9, 
+   3.797432932851713*^9}, 
+   3.79743300409529*^9},ExpressionUUID->"a6fd6a97-6e53-40da-af56-\
+f365fb706817"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Miscellaneous", "Subsection",
+ CellChangeTimes->{{3.797448419207546*^9, 
+  3.797448440107333*^9}},ExpressionUUID->"fb803416-58fd-4112-93e4-\
+8e44f45d771c"],
+
+Cell[CellGroupData[{
+
+Cell["MarketRates", "Subsubsection",
+ CellChangeTimes->{{3.7974330151724243`*^9, 3.797433020596053*^9}, {
+  3.797433255516506*^9, 
+  3.797433255951427*^9}},ExpressionUUID->"5a3a0b25-fb9e-4db6-bd1c-\
+6dac38bc777d"],
+
+Cell["\<\
+Represents the prices of various commodities mentioned in the end of month \
+summaries. The quantity of each commodity is the amount that can be bought \
+for 1 shekel of silver. This is essentially the reciprocal of the price.\
+\>", "Text",
+ CellChangeTimes->{{3.797433023855864*^9, 3.797433037074688*^9}, {
+  3.797433221496324*^9, 
+  3.79743325376048*^9}},ExpressionUUID->"590992ae-99ce-4cc9-ba4d-\
+d844ac4be09d"],
+
+Cell["\<\
+Note: these keys rely on the translations from Sachs and Hunger. They note \
+that the translations for \
+\[OpenCurlyDoubleQuote]Cress\[CloseCurlyDoubleQuote] and \
+\[OpenCurlyDoubleQuote]Mustard\[CloseCurlyDoubleQuote] are uncertain.\
+\>", "Text",
+ CellChangeTimes->{{3.7974331402177877`*^9, 
+  3.7974331838830633`*^9}},ExpressionUUID->"4dba8917-b869-4002-a5a1-\
+e9028a8cdfd5"],
+
+Cell[BoxData[
+ RowBox[{"<|", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"\"\<Barley\>\"", "\[Rule]", 
+    RowBox[{"_DiaryCapacity", "|", "_Missing"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Dates\>\"", "\[Rule]", 
+    RowBox[{"_DiaryCapacity", "|", "_Missing"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Mustard\>\"", "\[Rule]", 
+    RowBox[{"_DiaryCapacity", "|", "_Missing"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Cress\>\"", "\[Rule]", 
+    RowBox[{"_DiaryCapacity", "|", "_Missing"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Sesame\>\"", "\[Rule]", 
+    RowBox[{"_DiaryCapacity", "|", "_Missing"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Wool\>\"", "\[Rule]", 
+    RowBox[{"_Integer", "|", "_Rational", "|", "_Missing"}]}]}], 
+  RowBox[{"(*", 
+   RowBox[{"Weight", " ", "in", " ", "minas", " ", 
+    RowBox[{"(", 
+     RowBox[{"approximately", " ", "pounds"}], ")"}]}], "*)"}], 
+  "\[IndentingNewLine]", "|>"}]], "Input",
+ CellChangeTimes->{{3.7974330420804243`*^9, 3.7974330441199007`*^9}, {
+  3.7974331053643627`*^9, 3.7974331309942904`*^9}, {3.7974331930056877`*^9, 
+  3.7974331933618927`*^9}, {3.797433291930066*^9, 3.797433316850112*^9}, {
+  3.7974336371972933`*^9, 3.7974336449055567`*^9}, {3.797434197041657*^9, 
+  3.797434197159266*^9}},ExpressionUUID->"3e7a900b-07b6-4f2e-bdd7-\
+d6f41e4368c6"],
+
+Cell["The following is used to mark when sales were \
+\[OpenCurlyDoubleQuote]cut off\[CloseCurlyDoubleQuote]:", "Text",
+ CellChangeTimes->{{3.797433478076645*^9, 3.79743348840047*^9}, 
+   3.797433527245875*^9},ExpressionUUID->"5cc90fc3-7ac3-4570-867c-\
+7e581a5659e8"],
+
+Cell[BoxData[
+ RowBox[{"Missing", "[", "\"\<SalesCutOff\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.797433473116701*^9, 
+  3.797433476990945*^9}},ExpressionUUID->"9a911061-3405-4c88-bd3e-\
+e22919888807"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["RiverLevel [INCOMPLETE]", "Subsubsection",
+ CellChangeTimes->{{3.797433926919815*^9, 3.79743392983318*^9}, {
+  3.797434082585252*^9, 
+  3.797434084287414*^9}},ExpressionUUID->"de8d5ac2-02cc-4b4d-b406-\
+a448caf4eca6"],
+
+Cell["\<\
+Represents the river level. Generally mentioned in the end of month summary, \
+but some diaries mention the river level throughout.\
+\>", "Text",
+ CellChangeTimes->{{3.797433931683427*^9, 
+  3.797433967093807*^9}},ExpressionUUID->"ab04fa1b-b8ce-41d7-8bf6-\
+9d3e702fd21e"],
+
+Cell[BoxData[
+ RowBox[{"<|", "|>"}]], "Input",
+ CellChangeTimes->{{3.797433971584566*^9, 3.797433975696795*^9}, {
+  3.797434081364634*^9, 
+  3.797434088373549*^9}},ExpressionUUID->"bf3b8fcb-2583-44ca-85a2-\
+4f98b80c4f0f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["HistoricalEvent", "Subsubsection",
+ CellChangeTimes->{{3.7974341114160433`*^9, 
+  3.797434113314052*^9}},ExpressionUUID->"1c0654cf-ea49-4f65-82f3-\
+66781588718b"],
+
+Cell["\<\
+Represents a historical event, often mentioned at the end of the month.\
+\>", "Text",
+ CellChangeTimes->{{3.797434115122274*^9, 
+  3.7974341329184*^9}},ExpressionUUID->"9eac7459-45de-445e-990b-19dfa0a39865"],
+
+Cell["Note: Akkadian should probably also be included.", "Text",
+ CellChangeTimes->{{3.797434210641227*^9, 
+  3.797434227202951*^9}},ExpressionUUID->"32e372c2-63be-4a82-801b-\
+7a0bd9de622f"],
+
+Cell[BoxData[
+ RowBox[{"<|", "\[IndentingNewLine]", 
+  RowBox[{"\"\<Translation\>\"", "\[Rule]"}], 
+  RowBox[{"(*", 
+   RowBox[{
+   "The", " ", "historical", " ", "event", " ", "in", " ", "english", " ", 
+    "as", " ", "it", " ", "appears", " ", "in", " ", "Oracc"}], "*)"}], 
+  "\[IndentingNewLine]", "|>"}]], "Input",
+ CellChangeTimes->{{3.797434168711289*^9, 
+  3.797434234784*^9}},ExpressionUUID->"1de81523-376f-4f24-ae48-a168d481b3e9"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Error", "Subsubsection",
+ CellChangeTimes->{{3.797430596285667*^9, 
+  3.797430598027914*^9}},ExpressionUUID->"85d4f658-526d-48e7-adb1-\
+8f7fd1376123"],
+
+Cell["\<\
+Represents an error in the original diaries. For example, when the wrong day \
+is written, or when they write \[OpenCurlyDoubleQuote]west\
+\[CloseCurlyDoubleQuote] instead \[OpenCurlyDoubleQuote]south\
+\[CloseCurlyDoubleQuote], etc. These are often errors which make it so that \
+it is impossible to encode observations because they do not follow the \
+standard structure.\
+\>", "Text",
+ CellChangeTimes->{{3.797430599572757*^9, 3.7974306684471416`*^9}, {
+  3.79743801925882*^9, 
+  3.797438068484395*^9}},ExpressionUUID->"130206cc-6198-4819-93a8-\
+eba68650b879"],
+
+Cell[BoxData[
+ RowBox[{"<|", "\[IndentingNewLine]", 
+  RowBox[{"\"\<Note\>\"", "\[Rule]", "String"}], "\[IndentingNewLine]", 
+  "|>"}]], "Input",
+ CellChangeTimes->{{3.7974306717102222`*^9, 
+  3.797430683260509*^9}},ExpressionUUID->"faa5f289-d120-4ce5-ab5e-\
+3fc5e99bbb59"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Helper types", "Section",
+ CellChangeTimes->{{3.7974315694358664`*^9, 
+  3.797431571701715*^9}},ExpressionUUID->"a0871d91-a78d-4afc-963b-\
+d73ce34b107d"],
+
+Cell[CellGroupData[{
+
+Cell["DiaryDate", "Subsubsection",
+ CellChangeTimes->{{3.797431576290443*^9, 3.797431577427896*^9}, {
+   3.797448992292183*^9, 3.7974489939410057`*^9}, 
+   3.7974599109849253`*^9},ExpressionUUID->"cc0215c6-0d7f-491c-9e9e-\
+79cde4bf984a"],
+
+Cell["\<\
+Represents a date in a combination of the Julian and Babylonian calendars.\
+\>", "Text",
+ CellChangeTimes->{{3.7974596761275187`*^9, 
+  3.7974596868288918`*^9}},ExpressionUUID->"827be8d7-5a5d-4e51-9318-\
+a16270afc59b"],
+
+Cell[BoxData[
+ RowBox[{"DiaryDate", "[", 
+  RowBox[{"<|", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\"\<BabylonianYear\>\"", "\[Rule]", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"_String", 
+        RowBox[{"(*", "King", "*)"}], ",", "_Integer"}], 
+       RowBox[{"(*", 
+        RowBox[{"Year", " ", "number"}], "*)"}], "}"}], "|", "_Missing"}]}], 
+    ",", "\[IndentingNewLine]", 
+    RowBox[{"\"\<BabylonianMonth\>\"", "\[Rule]", 
+     RowBox[{"_String", "|", "_Missing"}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"\"\<BabylonianDay\>\"", "\[Rule]", 
+     RowBox[{"_Integer", "|", "_Missing"}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"\"\<JulianYear\>\"", "\[Rule]", "_Integer"}], 
+    RowBox[{"(*", 
+     RowBox[{"Year", " ", "AD"}], "*)"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"\"\<JulianMonth\>\"", "\[Rule]", 
+     RowBox[{"_Integer", "|", "_Missing"}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"\"\<JulianDay\>\"", "\[Rule]", 
+     RowBox[{"_Integer", "|", "_Missing"}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"\"\<Time\>\"", "\[Rule]", 
+     RowBox[{
+     "\"\<BeginningOfTheNight\>\"", "|", "\"\<FirstPartOfTheNight\>\"", "|", 
+      "\"\<MiddlePartOfTheNight\>\"", "|", "\"\<LastPartOfTheNight\>\"", "|", 
+      "\"\<Morning\>\"", "|", "\"\<Noon\>\"", "|", "\"\<Afternoon\>\"", "|", 
+      "\"\<Sunset\>\"", "|", "_Missing"}]}]}], "\[IndentingNewLine]", "|>"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.797459673640414*^9, 3.7974598609706497`*^9}, {
+  3.797459892061439*^9, 
+  3.797459906313053*^9}},ExpressionUUID->"6b0d8826-3c4a-443b-b3ef-\
+4dffe36253a6"],
+
+Cell["Note: King names must be canonicalized.", "Text",
+ CellChangeTimes->{{3.7974603233879633`*^9, 
+  3.797460336247151*^9}},ExpressionUUID->"d537e753-5ada-4f28-a8ab-\
+c01f225e950c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["DiaryDistance", "Subsubsection",
+ CellChangeTimes->{{3.797460183785812*^9, 
+  3.797460185887301*^9}},ExpressionUUID->"71de7ee5-4c6f-4d4e-9abf-\
+62ab59bd2cab"],
+
+Cell["\<\
+Represents a distance in the sky in cubits \
+(K\[CapitalUGrave]\[CapitalSHacek]) and fingers (\[CapitalSHacek]I or U).\
+\>", "Text",
+ CellChangeTimes->{{3.797460187526264*^9, 
+  3.797460275243538*^9}},ExpressionUUID->"65973c62-dc19-429c-b600-\
+bcb09f0b1b5c"],
+
+Cell[BoxData[
+ RowBox[{"DiaryDistance", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"_Integer", "|", "_Missing"}], 
+    RowBox[{"(*", "cubits", "*)"}], ",", 
+    RowBox[{"_Integer", "|", "_Missing"}]}], 
+   RowBox[{"(*", "fingers", "*)"}], "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.797460207330296*^9, 
+  3.797460225578044*^9}},ExpressionUUID->"c7fb67c0-9c77-4295-8f1d-\
+5ce751b61e36"],
+
+Cell["Can also represent non-numerical distances.", "Text",
+ CellChangeTimes->{{3.7974602787778883`*^9, 
+  3.7974602944780397`*^9}},ExpressionUUID->"96ce7ec2-42ff-491a-89e1-\
+33bb9dfa9692"],
+
+Cell[BoxData[
+ RowBox[{"DiaryDistance", "[", 
+  RowBox[{"\"\<ALittle\>\"", "|", "..."}], "]"}]], "Input",
+ CellChangeTimes->{{3.7974602953676167`*^9, 
+  3.797460301888508*^9}},ExpressionUUID->"2176cfe3-8ae2-4632-bddf-\
+80986bcb54e2"],
+
+Cell["Note: more non-numerical distances should be added.", "Text",
+ CellChangeTimes->{{3.797460304431591*^9, 
+  3.79746031462118*^9}},ExpressionUUID->"25b7fce6-7e55-42e3-a959-\
+522a0d6e5175"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["DiaryDisplacement", "Subsubsection",
+ CellChangeTimes->{{3.797431581400763*^9, 3.79743158715449*^9}, {
+   3.797448995001017*^9, 3.7974489976248837`*^9}, 
+   3.7974603918587303`*^9},ExpressionUUID->"998d7cd5-1ec8-4f85-b8f9-\
+6041078a4689"],
+
+Cell["\<\
+Used to represent the displacement between two objects. Generally used for \
+observations in the main body of each month.\
+\>", "Text",
+ CellChangeTimes->{{3.797460119036388*^9, 
+  3.797460149609516*^9}},ExpressionUUID->"00b56e42-12dc-4973-8896-\
+f68f9366f4cd"],
+
+Cell[BoxData[
+ RowBox[{"DiaryDisplacement", "[", 
+  RowBox[{"<|", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\"\<ObjectA\>\"", "\[Rule]", 
+     RowBox[{"_Entity", "|", "_Missing"}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"\"\<ObjectB\>\"", "\[Rule]", 
+     RowBox[{"_Entity", "|", "_Missing"}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"\"\<Distances\>\"", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"_DiaryDistance", "|", "_Missing"}], 
+       RowBox[{"(*", 
+        RowBox[{"Longitudinal", " ", "distance", " ", 
+         RowBox[{"(", 
+          RowBox[{"with", " ", "sign"}], ")"}]}], "*)"}], ",", 
+       RowBox[{"_DiaryDistance", "|", "_Missing"}]}], 
+      RowBox[{"(*", 
+       RowBox[{"Latitudinal", " ", "distance", " ", 
+        RowBox[{"(", 
+         RowBox[{"with", " ", "sign"}], ")"}]}], "*)"}], "}"}]}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"\"\<Relations\>\"", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+      "\"\<InFrontOf\>\"", "|", "\"\<Behind\>\"", "|", "\"\<East\>\"", "|", 
+       "\"\<West\>\"", "|", "\"\<Above\>\"", "|", "\"\<Below\>\"", "|", 
+       "\"\<North\>\"", "|", "\"\<South\>\"", "|", 
+       RowBox[{"_Missing", ".."}]}], "}"}]}]}], "\[IndentingNewLine]", "|>"}],
+   "]"}]], "Input",
+ CellChangeTimes->{{3.797459922603895*^9, 3.797460005667961*^9}, {
+  3.797460161393219*^9, 3.797460164313847*^9}, {3.797460356530446*^9, 
+  3.797460398257455*^9}},ExpressionUUID->"9e0c181e-79f1-465b-838b-\
+6bd3d3d83cb0"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["DiaryDuration", "Subsubsection",
+ CellChangeTimes->{{3.797439127231242*^9, 3.7974391296318693`*^9}, {
+   3.797439413363776*^9, 3.7974394153551807`*^9}, 
+   3.7974604035684767`*^9},ExpressionUUID->"007526d0-8f7f-4494-b81a-\
+aa9ff6a563a0"],
+
+Cell["Represents a duration. Often used for Lunar Six quantities.", "Text",
+ CellChangeTimes->{{3.797439135464995*^9, 
+  3.797439152281291*^9}},ExpressionUUID->"37b74485-c12c-4114-a066-\
+67af144a9a41"],
+
+Cell[BoxData[
+ RowBox[{"DiaryDuration", "[", 
+  RowBox[{"{", 
+   RowBox[{"(*", "Degrees", "*)"}], ",", 
+   RowBox[{"(*", "Ninda", "*)"}], "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.797439153441389*^9, 3.797439156554582*^9}, {
+  3.797439395426174*^9, 3.7974394077353973`*^9}, {3.7974604049125633`*^9, 
+  3.797460407341399*^9}},ExpressionUUID->"9319b198-275f-4096-9588-\
+1b806a51f9f8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["DiaryCapacity", "Subsubsection",
+ CellChangeTimes->{{3.797433537553678*^9, 
+  3.7974335574030037`*^9}},ExpressionUUID->"18679887-08d9-48d4-8781-\
+65377449ab24"],
+
+Cell["\<\
+Represents an amount of barely, dates, mustard, cress, or sesame in \
+MarketRates observations.\
+\>", "Text",
+ CellChangeTimes->{{3.797433654785697*^9, 
+  3.7974336844428787`*^9}},ExpressionUUID->"2d092bee-b0a9-470a-bf28-\
+5b63fb7bdb20"],
+
+Cell[BoxData[
+ RowBox[{"DiaryCapacity", "[", 
+  RowBox[{"{", 
+   RowBox[{"(*", "kur", "*)"}], 
+   RowBox[{",", 
+    RowBox[{"(*", "p\[ABar]n", "*)"}], ",", 
+    RowBox[{"(*", "s\:016bt", "*)"}], ","}], 
+   RowBox[{"(*", "qa", "*)"}], "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.797433558797442*^9, 3.797433563726047*^9}, {
+  3.79743375304687*^9, 
+  3.797433818182581*^9}},ExpressionUUID->"ccda53b2-3056-46d3-be7e-\
+7068b16f71cb"],
+
+Cell["\<\
+Each commodity is 0 if unmentioned in the diary (instead of Missing[\
+\[OpenCurlyDoubleQuote]Unmentioned\[CloseCurlyDoubleQuote]]) and only \
+_Missing if explicitly destroyed.\
+\>", "Text",
+ CellChangeTimes->{{3.797433854157608*^9, 3.797433887688014*^9}, {
+  3.7974604416019583`*^9, 
+  3.7974604507428923`*^9}},ExpressionUUID->"90a0e840-40ff-4919-bebe-\
+7229b39f4586"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Generalized missing types", "Section",
+ CellChangeTimes->{{3.797392840929358*^9, 3.797392843091023*^9}, {
+  3.797433431232345*^9, 
+  3.797433433756551*^9}},ExpressionUUID->"ef21525d-2df1-4b33-ab95-\
+73ac1fe08e1b"],
+
+Cell["\<\
+Represents data that is missing for an unspecified or unknown reason. Use \
+Missing[\[OpenCurlyDoubleQuote]Unmentioned\[CloseCurlyDoubleQuote]] if it is \
+clearly not mentioned, and Missing[] only for cases where it is not clear \
+what kind of Missing[...] to use.\
+\>", "Text",
+ CellChangeTimes->{{3.797392846866292*^9, 3.7973928982856617`*^9}, {
+  3.7973930081469707`*^9, 
+  3.797393037117581*^9}},ExpressionUUID->"03bc0aa7-bb12-4b38-9d79-\
+fa8428adf493"],
+
+Cell[BoxData[
+ RowBox[{"Missing", "[", "]"}]], "Input",
+ CellChangeTimes->{{3.7973928444175243`*^9, 
+  3.797392845446162*^9}},ExpressionUUID->"8ccf5f85-30be-4b57-ad27-\
+aebfa10da920"],
+
+Cell["\<\
+Represents data that was clearly destroyed on the original tablet. For \
+example \[OpenCurlyDoubleQuote]the moon was [...] cubits ahead of \[Beta] \
+Capricorni\[CloseCurlyDoubleQuote]:\
+\>", "Text",
+ CellChangeTimes->{{3.7973929029810343`*^9, 
+  3.797392957298431*^9}},ExpressionUUID->"4604365a-4550-4121-aa7d-\
+a4e0f5d2bbb3"],
+
+Cell[BoxData[
+ RowBox[{"Missing", "[", "\"\<Destroyed\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.797392905783638*^9, 
+  3.797392909401063*^9}},ExpressionUUID->"6a65d237-f493-4609-8850-\
+228e051ca56a"],
+
+Cell["\<\
+Represents data that was explicitly not mentioned. For example, \
+\[OpenCurlyDoubleQuote]the moon was ahead of \[Beta] Capricorni\
+\[CloseCurlyDoubleQuote] (where the distance is missing):\
+\>", "Text",
+ CellChangeTimes->{{3.7973929938595047`*^9, 3.797393004490753*^9}, {
+  3.797393045392212*^9, 
+  3.797393075607524*^9}},ExpressionUUID->"aeb45fac-ea48-4d14-884f-\
+fa7aa201fd17"],
+
+Cell[BoxData[
+ RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.797392960489554*^9, 
+  3.79739298621043*^9}},ExpressionUUID->"29808246-f7ae-457f-ba84-\
+1d015304a6e4"],
+
+Cell["\<\
+There are other missing types that are specific to observation types (for \
+example, Missing[\[OpenCurlyDoubleQuote]SalesCutOff\[CloseCurlyDoubleQuote]] \
+in MarketRates observations.)\
+\>", "Text",
+ CellChangeTimes->{{3.797433437351351*^9, 
+  3.7974334644452963`*^9}},ExpressionUUID->"83e1123c-3cf9-4e4a-b16d-\
+b016fa7c960c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Ideas", "Section",
+ CellChangeTimes->{{3.7974384435907297`*^9, 
+  3.7974384440832376`*^9}},ExpressionUUID->"8f36905f-ebcd-4549-a316-\
+9075f8575f1d"],
+
+Cell[CellGroupData[{
+
+Cell["Make intermediate format to make inputting easier", "Item",
+ CellChangeTimes->{{3.797438444749978*^9, 3.7974384521153307`*^9}, {
+  3.7974394391960583`*^9, 3.797439442278674*^9}, {3.7974607601137953`*^9, 
+  3.797460760114184*^9}},ExpressionUUID->"9a3e0c07-2e8c-4bc6-a7ac-\
+cbe4d7bf9d2e"],
+
+Cell["Normalize data", "Item",
+ CellChangeTimes->{{3.797438444749978*^9, 3.7974384521153307`*^9}, {
+  3.7974394391960583`*^9, 3.797439442278674*^9}, {3.797460763208254*^9, 
+  3.797460776260193*^9}},ExpressionUUID->"9a3b7575-46eb-44ed-80e0-\
+308bfd440055"],
+
+Cell["Implement format", "Item",
+ CellChangeTimes->{{3.797438444749978*^9, 3.7974384521153307`*^9}, {
+  3.7974394391960583`*^9, 3.797439442278674*^9}, {3.797460763208254*^9, 
+  3.7974607814388523`*^9}},ExpressionUUID->"96149eb6-1f90-40b1-bde0-\
+3127fbca4af4"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 905},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (March 18, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"646e0613-bb88-4143-a942-9a1579f2d337"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 158, 3, 98, "Title",ExpressionUUID->"74eabab2-7f2a-44c0-bd89-72bf5d051f26"],
+Cell[CellGroupData[{
+Cell[763, 29, 205, 4, 67, "Section",ExpressionUUID->"3ecb18b0-e465-4f45-863e-5b089996a022"],
+Cell[971, 35, 284, 6, 58, "Text",ExpressionUUID->"7dc9e25c-9320-4205-93d0-df21033798e3"],
+Cell[1258, 43, 948, 22, 178, "Input",ExpressionUUID->"f92c75a5-289f-4d49-b5fb-eca3af5cb659"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2243, 70, 214, 4, 67, "Section",ExpressionUUID->"c4a39ebe-5a98-4b32-b2ba-566d4edc22fe"],
+Cell[2460, 76, 221, 4, 35, "Text",ExpressionUUID->"a4fb04a2-b288-4289-97e9-7c6b046084b1"],
+Cell[2684, 82, 2648, 57, 262, "Input",ExpressionUUID->"593f9729-b9aa-47dd-906e-5aee43cce65d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5369, 144, 214, 4, 67, "Section",ExpressionUUID->"a2c04ac0-cda9-4492-bb46-24a66bef36a5"],
+Cell[CellGroupData[{
+Cell[5608, 152, 168, 3, 54, "Subsection",ExpressionUUID->"7a9306cc-204a-42f3-81b7-114b4e683214"],
+Cell[CellGroupData[{
+Cell[5801, 159, 167, 3, 45, "Subsubsection",ExpressionUUID->"ee6608f1-0ce3-42e5-9d76-45211d24670d"],
+Cell[5971, 164, 251, 6, 35, "Text",ExpressionUUID->"7e6d68e6-e08e-4517-b76c-5e6fff9107e3"],
+Cell[6225, 172, 862, 19, 115, "Input",ExpressionUUID->"04db72c6-6d0f-4d71-b625-8c9b165150aa"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7124, 196, 169, 3, 45, "Subsubsection",ExpressionUUID->"1df8e477-dba4-4d7a-930a-7004118f7d5f"],
+Cell[7296, 201, 411, 8, 58, "Text",ExpressionUUID->"0a8a9541-2a37-4fb3-a4b9-3e63f809577f"],
+Cell[7710, 211, 889, 19, 136, "Input",ExpressionUUID->"9f5f2fdc-c389-4ad3-b338-5642ce164774"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8636, 235, 220, 4, 45, "Subsubsection",ExpressionUUID->"002f81d4-35fb-46f0-9f39-46ab3a526339"],
+Cell[8859, 241, 231, 4, 35, "Text",ExpressionUUID->"93e114f6-42cd-4907-81f4-91520271ef28"],
+Cell[9093, 247, 527, 13, 94, "Input",ExpressionUUID->"32a4fc6c-3c8e-4789-b34b-46fb83c8ff11"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9657, 265, 261, 4, 45, "Subsubsection",ExpressionUUID->"b5547223-cd3b-4c04-83db-f22d1f192af8"],
+Cell[9921, 271, 299, 6, 58, "Text",ExpressionUUID->"c524b9cf-5ea9-4ccb-888a-f67efdd2410f"],
+Cell[10223, 279, 307, 7, 73, "Input",ExpressionUUID->"859ffa55-c010-4643-a900-dd2156063dee"]
+}, Open  ]]
+}, Open  ]],
+Cell[10557, 290, 297, 5, 54, "Subsection",ExpressionUUID->"c175e2be-9bf9-4ae6-97e3-502a5d5d6913"],
+Cell[CellGroupData[{
+Cell[10879, 299, 156, 3, 38, "Subsection",ExpressionUUID->"9a015daa-4b75-4bf5-b601-d9855d9b9146"],
+Cell[CellGroupData[{
+Cell[11060, 306, 166, 3, 45, "Subsubsection",ExpressionUUID->"04fcc2d7-0ec1-424b-b953-db8b58c4f1ad"],
+Cell[11229, 311, 279, 6, 35, "Text",ExpressionUUID->"ee50a313-1145-4343-a3df-571be4d120fe"],
+Cell[11511, 319, 345, 8, 73, "Input",ExpressionUUID->"af96c323-a587-4ff5-9c67-466c6adb47f3"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11893, 332, 168, 3, 45, "Subsubsection",ExpressionUUID->"312286fb-68b9-45e8-aacf-cc4e1f9044f7"],
+Cell[12064, 337, 234, 4, 35, "Text",ExpressionUUID->"a1c9e418-bccc-457c-87db-c14fe311869c"],
+Cell[12301, 343, 345, 8, 73, "Input",ExpressionUUID->"4361c064-14cf-46b6-ad8f-cf7d4b79b61d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12683, 356, 216, 4, 45, "Subsubsection",ExpressionUUID->"95655cc9-dc74-4f01-89ff-ab7a2fb9dfca"],
+Cell[12902, 362, 282, 4, 35, "Text",ExpressionUUID->"ba0b4ec2-24f0-4de0-9b6f-5e3467f1fd0a"],
+Cell[13187, 368, 345, 8, 73, "Input",ExpressionUUID->"2bed1477-f38e-41f9-acdb-24a970fd1713"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13569, 381, 261, 4, 45, "Subsubsection",ExpressionUUID->"bd20be5a-667c-46e0-a70e-082f3513afb9"],
+Cell[13833, 387, 279, 4, 35, "Text",ExpressionUUID->"24b485af-8b5d-42c0-ab5e-b5955ff32864"],
+Cell[14115, 393, 345, 8, 73, "Input",ExpressionUUID->"81a0eb53-af06-4701-b5da-433f846db26a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14497, 406, 263, 4, 45, "Subsubsection",ExpressionUUID->"22964bab-5bb5-4e3c-8229-d3cb38d4f52b"],
+Cell[14763, 412, 282, 4, 35, "Text",ExpressionUUID->"45eec69d-a97d-4279-957b-50235d2f0854"],
+Cell[15048, 418, 345, 8, 73, "Input",ExpressionUUID->"88fd49c4-c0c7-4760-b94f-49142b063de3"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15430, 431, 313, 5, 45, "Subsubsection",ExpressionUUID->"e961924a-baea-446b-bcfa-188240cf6afe"],
+Cell[15746, 438, 373, 7, 35, "Text",ExpressionUUID->"5abbf6f8-0880-44ba-b0e4-29c45884e548"],
+Cell[16122, 447, 345, 8, 73, "Input",ExpressionUUID->"d43f362e-8743-45dd-a160-9e9b40527ed6"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16516, 461, 155, 3, 54, "Subsection",ExpressionUUID->"b118e88f-e931-4c26-be5d-d1d3dfe7b38f"],
+Cell[CellGroupData[{
+Cell[16696, 468, 164, 3, 45, "Subsubsection",ExpressionUUID->"dd3b6a72-45d8-40dd-b17c-a1f00518cdfe"],
+Cell[16863, 473, 362, 7, 58, "Text",ExpressionUUID->"e4abc345-20fb-42ab-bec2-8accf37e18ef"],
+Cell[17228, 482, 387, 9, 73, "Input",ExpressionUUID->"0a9614b4-7b2c-4a0e-884d-49c4f45df52b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17652, 496, 158, 3, 45, "Subsubsection",ExpressionUUID->"9b81ba93-7337-4a28-b376-c2bdbe8069b7"],
+Cell[17813, 501, 267, 4, 35, "Text",ExpressionUUID->"66344ae3-780d-455c-baba-6e0b069c71e8"],
+Cell[18083, 507, 296, 7, 35, "Text",ExpressionUUID->"b0a2a116-086c-4988-8d45-f351bf91909f"],
+Cell[18382, 516, 1318, 27, 157, "Input",ExpressionUUID->"a6fd6a97-6e53-40da-af56-f365fb706817"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19749, 549, 161, 3, 54, "Subsection",ExpressionUUID->"fb803416-58fd-4112-93e4-8e44f45d771c"],
+Cell[CellGroupData[{
+Cell[19935, 556, 213, 4, 45, "Subsubsection",ExpressionUUID->"5a3a0b25-fb9e-4db6-bd1c-6dac38bc777d"],
+Cell[20151, 562, 424, 8, 81, "Text",ExpressionUUID->"590992ae-99ce-4cc9-ba4d-d844ac4be09d"],
+Cell[20578, 572, 387, 8, 58, "Text",ExpressionUUID->"4dba8917-b869-4002-a5a1-e9028a8cdfd5"],
+Cell[20968, 582, 1348, 25, 178, "Input",ExpressionUUID->"3e7a900b-07b6-4f2e-bdd7-d6f41e4368c6"],
+Cell[22319, 609, 267, 4, 35, "Text",ExpressionUUID->"5cc90fc3-7ac3-4570-867c-7e581a5659e8"],
+Cell[22589, 615, 204, 4, 30, "Input",ExpressionUUID->"9a911061-3405-4c88-bd3e-e22919888807"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22830, 624, 222, 4, 45, "Subsubsection",ExpressionUUID->"de8d5ac2-02cc-4b4d-b406-a448caf4eca6"],
+Cell[23055, 630, 281, 6, 58, "Text",ExpressionUUID->"ab04fa1b-b8ce-41d7-8bf6-9d3e702fd21e"],
+Cell[23339, 638, 221, 5, 30, "Input",ExpressionUUID->"bf3b8fcb-2583-44ca-85a2-4f98b80c4f0f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[23597, 648, 168, 3, 45, "Subsubsection",ExpressionUUID->"1c0654cf-ea49-4f65-82f3-66781588718b"],
+Cell[23768, 653, 217, 4, 35, "Text",ExpressionUUID->"9eac7459-45de-445e-990b-19dfa0a39865"],
+Cell[23988, 659, 190, 3, 35, "Text",ExpressionUUID->"32e372c2-63be-4a82-801b-7a0bd9de622f"],
+Cell[24181, 664, 441, 9, 73, "Input",ExpressionUUID->"1de81523-376f-4f24-ae48-a168d481b3e9"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24659, 678, 156, 3, 45, "Subsubsection",ExpressionUUID->"85d4f658-526d-48e7-adb1-8f7fd1376123"],
+Cell[24818, 683, 572, 11, 81, "Text",ExpressionUUID->"130206cc-6198-4819-93a8-eba68650b879"],
+Cell[25393, 696, 273, 6, 73, "Input",ExpressionUUID->"faa5f289-d120-4ce5-ab5e-3fc5e99bbb59"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[25727, 709, 159, 3, 67, "Section",ExpressionUUID->"a0871d91-a78d-4afc-963b-d73ce34b107d"],
+Cell[CellGroupData[{
+Cell[25911, 716, 237, 4, 45, "Subsubsection",ExpressionUUID->"cc0215c6-0d7f-491c-9e9e-79cde4bf984a"],
+Cell[26151, 722, 228, 5, 35, "Text",ExpressionUUID->"827be8d7-5a5d-4e51-9318-a16270afc59b"],
+Cell[26382, 729, 1600, 33, 220, "Input",ExpressionUUID->"6b0d8826-3c4a-443b-b3ef-4dffe36253a6"],
+Cell[27985, 764, 183, 3, 35, "Text",ExpressionUUID->"d537e753-5ada-4f28-a8ab-c01f225e950c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28205, 772, 164, 3, 45, "Subsubsection",ExpressionUUID->"71de7ee5-4c6f-4d4e-9abf-62ab59bd2cab"],
+Cell[28372, 777, 268, 6, 35, "Text",ExpressionUUID->"65973c62-dc19-429c-b600-bcb09f0b1b5c"],
+Cell[28643, 785, 391, 10, 32, "Input",ExpressionUUID->"c7fb67c0-9c77-4295-8f1d-5ce751b61e36"],
+Cell[29037, 797, 189, 3, 35, "Text",ExpressionUUID->"96ce7ec2-42ff-491a-89e1-33bb9dfa9692"],
+Cell[29229, 802, 233, 5, 32, "Input",ExpressionUUID->"2176cfe3-8ae2-4632-bddf-80986bcb54e2"],
+Cell[29465, 809, 192, 3, 35, "Text",ExpressionUUID->"25b7fce6-7e55-42e3-a959-522a0d6e5175"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[29694, 817, 244, 4, 45, "Subsubsection",ExpressionUUID->"998d7cd5-1ec8-4f85-b8f9-6041078a4689"],
+Cell[29941, 823, 271, 6, 58, "Text",ExpressionUUID->"00b56e42-12dc-4973-8896-f68f9366f4cd"],
+Cell[30215, 831, 1483, 33, 199, "Input",ExpressionUUID->"9e0c181e-79f1-465b-838b-6bd3d3d83cb0"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31735, 869, 243, 4, 45, "Subsubsection",ExpressionUUID->"007526d0-8f7f-4494-b81a-aa9ff6a563a0"],
+Cell[31981, 875, 201, 3, 35, "Text",ExpressionUUID->"37b74485-c12c-4114-a066-67af144a9a41"],
+Cell[32185, 880, 386, 8, 30, "Input",ExpressionUUID->"9319b198-275f-4096-9588-1b806a51f9f8"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[32608, 893, 166, 3, 45, "Subsubsection",ExpressionUUID->"18679887-08d9-48d4-8781-65377449ab24"],
+Cell[32777, 898, 247, 6, 35, "Text",ExpressionUUID->"2d092bee-b0a9-470a-bf28-5b63fb7bdb20"],
+Cell[33027, 906, 431, 11, 30, "Input",ExpressionUUID->"ccda53b2-3056-46d3-be7e-7068b16f71cb"],
+Cell[33461, 919, 378, 8, 58, "Text",ExpressionUUID->"90a0e840-40ff-4919-bebe-7229b39f4586"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[33888, 933, 219, 4, 67, "Section",ExpressionUUID->"ef21525d-2df1-4b33-ab95-73ac1fe08e1b"],
+Cell[34110, 939, 467, 9, 58, "Text",ExpressionUUID->"03bc0aa7-bb12-4b38-9d79-fa8428adf493"],
+Cell[34580, 950, 183, 4, 30, "Input",ExpressionUUID->"8ccf5f85-30be-4b57-ad27-aebfa10da920"],
+Cell[34766, 956, 336, 7, 58, "Text",ExpressionUUID->"4604365a-4550-4121-aa7d-a4e0f5d2bbb3"],
+Cell[35105, 965, 202, 4, 30, "Input",ExpressionUUID->"6a65d237-f493-4609-8850-228e051ca56a"],
+Cell[35310, 971, 389, 8, 58, "Text",ExpressionUUID->"aeb45fac-ea48-4d14-884f-fa7aa201fd17"],
+Cell[35702, 981, 203, 4, 30, "Input",ExpressionUUID->"29808246-f7ae-457f-ba84-1d015304a6e4"],
+Cell[35908, 987, 336, 7, 58, "Text",ExpressionUUID->"83e1123c-3cf9-4e4a-b16d-b016fa7c960c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[36281, 999, 154, 3, 67, "Section",ExpressionUUID->"8f36905f-ebcd-4549-a316-9075f8575f1d"],
+Cell[CellGroupData[{
+Cell[36460, 1006, 292, 4, 32, "Item",ExpressionUUID->"9a3e0c07-2e8c-4bc6-a7ac-cbe4d7bf9d2e"],
+Cell[36755, 1012, 255, 4, 32, "Item",ExpressionUUID->"9a3b7575-46eb-44ed-80e0-308bfd440055"],
+Cell[37013, 1018, 259, 4, 32, "Item",ExpressionUUID->"96149eb6-1f90-40b1-bde0-3127fbca4af4"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
