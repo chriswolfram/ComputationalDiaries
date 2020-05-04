@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     42588,        787]
-NotebookOptionsPosition[     41064,        754]
-NotebookOutlinePosition[     41458,        770]
-CellTagsIndexPosition[     41415,        767]
+NotebookDataLength[     42688,        787]
+NotebookOptionsPosition[     41164,        754]
+NotebookOutlinePosition[     41558,        770]
+CellTagsIndexPosition[     41515,        767]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -54,67 +54,68 @@ http://oracc.museum.upenn.edu/adsd/adart1/tei/X103422.xml\
 76599a24003f"],
 
 Cell[BoxData[
- RowBox[{
-  RowBox[{"Table", "[", 
-   RowBox[{
-    RowBox[{"Module", "[", 
-     RowBox[{
-      RowBox[{"{", "ids", "}"}], ",", "\[IndentingNewLine]", 
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"Module", "[", 
       RowBox[{
-       RowBox[{"ids", "=", 
-        RowBox[{"Keys", "@", 
-         RowBox[{
-          RowBox[{"Import", "[", 
-           RowBox[{
-            RowBox[{
-             RowBox[{"StringTemplate", "[", 
-              RowBox[{"FileNameJoin", "[", 
-               RowBox[{"{", 
-                RowBox[{
-                "dataDirectory", ",", "\"\<adsd\>\"", ",", "\"\<adsd`1`\>\"", 
-                 ",", "\"\<adart`1`\>\"", ",", "\"\<corpus.json\>\""}], "}"}],
-                "]"}], "]"}], "[", "i", "]"}], ",", "\"\<RawJSON\>\""}], 
-           "]"}], "[", "\"\<members\>\"", "]"}]}]}], ";", 
-       "\[IndentingNewLine]", 
+       RowBox[{"{", "ids", "}"}], ",", "\[IndentingNewLine]", 
        RowBox[{
-        RowBox[{
-         RowBox[{"URLDownload", "[", 
+        RowBox[{"ids", "=", 
+         RowBox[{"Keys", "@", 
           RowBox[{
-           RowBox[{"<|", 
+           RowBox[{"Import", "[", 
             RowBox[{
-             RowBox[{"\"\<Scheme\>\"", "\[Rule]", "\"\<http\>\""}], ",", 
              RowBox[{
-             "\"\<Domain\>\"", "\[Rule]", "\"\<oracc.museum.upenn.edu\>\""}], 
-             ",", 
-             RowBox[{"\"\<Path\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"\"\<adsd\>\"", ",", 
-                RowBox[{
-                 RowBox[{"StringTemplate", "[", "\"\<adart``\>\"", "]"}], "[",
-                  "i", "]"}], ",", "\"\<tei\>\"", ",", 
-                RowBox[{
-                 RowBox[{"StringTemplate", "[", "\"\<``.xml\>\"", "]"}], "[", 
-                 "#", "]"}]}], "}"}]}]}], "|>"}], ",", "\[IndentingNewLine]", 
-           
-           RowBox[{"FileNameJoin", "[", 
-            RowBox[{"{", 
+              RowBox[{"StringTemplate", "[", 
+               RowBox[{"FileNameJoin", "[", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "dataDirectory", ",", "\"\<adsd\>\"", ",", "\"\<adsd`1`\>\"",
+                   ",", "\"\<adart`1`\>\"", ",", "\"\<corpus.json\>\""}], 
+                 "}"}], "]"}], "]"}], "[", "i", "]"}], ",", 
+             "\"\<RawJSON\>\""}], "]"}], "[", "\"\<members\>\"", "]"}]}]}], 
+        ";", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"URLDownload", "[", 
+           RowBox[{
+            RowBox[{"<|", 
              RowBox[{
-             "dataDirectory", ",", "\"\<adsdTEI\>\"", ",", "\"\<rawXML\>\"", 
-              ",", 
+              RowBox[{"\"\<Scheme\>\"", "\[Rule]", "\"\<http\>\""}], ",", 
               RowBox[{
-               RowBox[{"StringTemplate", "[", "\"\<``.xml\>\"", "]"}], "[", 
-               "#", "]"}]}], "}"}], "]"}]}], "]"}], "&"}], "/@", "ids"}]}]}], 
-     "\[IndentingNewLine]", "]"}], ",", "\[IndentingNewLine]", 
-    RowBox[{"{", 
-     RowBox[{"i", ",", 
-      RowBox[{"{", 
-       RowBox[{"1", ",", "2", ",", "3"}], "}"}]}], "}"}]}], 
-   "\[IndentingNewLine]", "]"}], ";"}]], "Input",
+              "\"\<Domain\>\"", "\[Rule]", "\"\<oracc.museum.upenn.edu\>\""}],
+               ",", 
+              RowBox[{"\"\<Path\>\"", "\[Rule]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<adsd\>\"", ",", 
+                 RowBox[{
+                  RowBox[{"StringTemplate", "[", "\"\<adart``\>\"", "]"}], 
+                  "[", "i", "]"}], ",", "\"\<tei\>\"", ",", 
+                 RowBox[{
+                  RowBox[{"StringTemplate", "[", "\"\<``.xml\>\"", "]"}], "[",
+                   "#", "]"}]}], "}"}]}]}], "|>"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"FileNameJoin", "[", 
+             RowBox[{"{", 
+              RowBox[{
+              "dataDirectory", ",", "\"\<adsdTEI\>\"", ",", "\"\<rawXML\>\"", 
+               ",", 
+               RowBox[{
+                RowBox[{"StringTemplate", "[", "\"\<``.xml\>\"", "]"}], "[", 
+                "#", "]"}]}], "}"}], "]"}]}], "]"}], "&"}], "/@", "ids"}]}]}],
+       "\[IndentingNewLine]", "]"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", 
+       RowBox[{"{", 
+        RowBox[{"1", ",", "2", ",", "3"}], "}"}]}], "}"}]}], 
+    "\[IndentingNewLine]", "]"}], ";"}], "*)"}]], "Input",
  CellChangeTimes->{{3.7946110925865498`*^9, 3.794611100772735*^9}, {
    3.794611279773676*^9, 3.79461133423495*^9}, {3.794611377985879*^9, 
    3.794611412748191*^9}, {3.7946114502593307`*^9, 3.794611530457073*^9}, {
-   3.7946115632015057`*^9, 3.794611587214808*^9}, 
-   3.794611897332617*^9},ExpressionUUID->"ec8bde36-0305-43c6-b20a-\
+   3.7946115632015057`*^9, 3.794611587214808*^9}, 3.794611897332617*^9, 
+   3.797560715707591*^9},ExpressionUUID->"ec8bde36-0305-43c6-b20a-\
 c7f9ee65207f"]
 }, Open  ]],
 
@@ -141,8 +142,7 @@ Cell[BoxData[
          "\"\<*.xml\>\""}], "}"}], "]"}], "]"}]}], "]"}]}], ";"}]], "Input",
  CellChangeTimes->{{3.794611915926258*^9, 3.7946119386485786`*^9}, {
   3.794651052490196*^9, 3.7946510699911013`*^9}},
- CellLabel->
-  "In[774]:=",ExpressionUUID->"13b5484d-826f-4310-9be8-d459289b184c"],
+ CellLabel->"In[74]:=",ExpressionUUID->"13b5484d-826f-4310-9be8-d459289b184c"],
 
 Cell[BoxData[
  RowBox[{
@@ -776,18 +776,18 @@ Cell[919, 33, 251, 4, 34, "Output",ExpressionUUID->"677e9044-d077-44dd-bed2-3983
 Cell[CellGroupData[{
 Cell[1207, 42, 156, 3, 54, "Subsection",ExpressionUUID->"4b355c21-7794-4ef0-aeca-c874d671c237"],
 Cell[1366, 47, 262, 6, 35, "Text",ExpressionUUID->"6d2022d4-2be3-4aeb-be84-76599a24003f"],
-Cell[1631, 55, 2556, 62, 220, "Input",ExpressionUUID->"ec8bde36-0305-43c6-b20a-c7f9ee65207f"]
+Cell[1631, 55, 2660, 63, 199, "Input",ExpressionUUID->"ec8bde36-0305-43c6-b20a-c7f9ee65207f"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4224, 122, 160, 3, 54, "Subsection",ExpressionUUID->"c1a3fcc7-c9b9-4ae6-b018-b182882c8961"],
-Cell[4387, 127, 668, 17, 52, "Input",ExpressionUUID->"13b5484d-826f-4310-9be8-d459289b184c"],
-Cell[5058, 146, 5940, 134, 566, "Code",ExpressionUUID->"43a163d8-af5c-4659-a64c-efb7aafdbff1"],
-Cell[11001, 282, 433, 12, 30, "Input",ExpressionUUID->"85b1433b-7313-444f-9644-7666f834906e"],
+Cell[4328, 123, 160, 3, 54, "Subsection",ExpressionUUID->"c1a3fcc7-c9b9-4ae6-b018-b182882c8961"],
+Cell[4491, 128, 664, 16, 52, "Input",ExpressionUUID->"13b5484d-826f-4310-9be8-d459289b184c"],
+Cell[5158, 146, 5940, 134, 566, "Code",ExpressionUUID->"43a163d8-af5c-4659-a64c-efb7aafdbff1"],
+Cell[11101, 282, 433, 12, 30, "Input",ExpressionUUID->"85b1433b-7313-444f-9644-7666f834906e"],
 Cell[CellGroupData[{
-Cell[11459, 298, 749, 17, 52, "Input",ExpressionUUID->"a077b437-0e36-4d40-a015-218f3a27effd"],
-Cell[12211, 317, 28555, 425, 1610, "Output",ExpressionUUID->"4afc95f6-a9c8-4929-8d39-de0eeb6cd44a"]
+Cell[11559, 298, 749, 17, 52, "Input",ExpressionUUID->"a077b437-0e36-4d40-a015-218f3a27effd"],
+Cell[12311, 317, 28555, 425, 1610, "Output",ExpressionUUID->"4afc95f6-a9c8-4929-8d39-de0eeb6cd44a"]
 }, Open  ]],
-Cell[40781, 745, 267, 6, 30, "Input",ExpressionUUID->"310d54be-7915-4721-aba7-1104aaddce54"]
+Cell[40881, 745, 267, 6, 30, "Input",ExpressionUUID->"310d54be-7915-4721-aba7-1104aaddce54"]
 }, Open  ]]
 }
 ]
