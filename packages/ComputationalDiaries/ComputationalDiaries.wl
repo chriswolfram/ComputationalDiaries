@@ -3,6 +3,7 @@
 BeginPackage["ComputationalDiaries`",{
 	"ComputationalDiaries`Constants`",
 	"ComputationalDiaries`DiaryTypes`",
+	"ComputationalDiaries`DiaryObservation`",
 	"ComputationalDiaries`AstronomicalPosition`"
 }];
 

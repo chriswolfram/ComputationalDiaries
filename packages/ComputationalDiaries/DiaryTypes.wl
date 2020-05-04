@@ -175,12 +175,15 @@ DiaryDisplacement[data_]["Degrees"] :=
 (*Verifiers*)
 
 
-dd:DiaryDisplacement[Except[<|
-		"Distances"->{_DiaryDistance|_Missing,_DiaryDistance|_Missing},
-		"Relations"->{
-			"InFrontOf"|"Behind"|"East"|"West"|_Missing,
-			"Above"|"Below"|"North"|"South"|_Missing}
-	|>]] :=
+dd:DiaryDisplacement[Except[
+		<|
+			"Distances"->{_DiaryDistance|_Missing,_DiaryDistance|_Missing},
+			"Relations"->{
+				"InFrontOf"|"Behind"|"East"|"West"|_Missing,
+				"Above"|"Below"|"North"|"South"|_Missing}
+		|> |
+		{{_,_},{_,_}} (*Constructor*)
+	]] :=
 	(Message[DiaryDisplacement::invalid, Hold[dd]]; Missing["InvalidDiaryDisplacement"])
 
 

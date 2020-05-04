@@ -10,13 +10,32 @@ GetNormalStars::usage = "GetNormalStars[] returns the list of normal stars.
 GetNormalStars[\!\(\*
 StyleBox[\"name\",\nFontSlant->\"Italic\"]\)] returrns the normal star associated with the name \!\(\*
 StyleBox[\"name\",\nFontSlant->\"Italic\"]\).";
+NormalStarQ::usage =
+	"NormalStarQ[\!\(\*
+StyleBox[\"obj\",\nFontSlant->\"Italic\"]\)] returns True if \!\(\*
+StyleBox[\"obj\",\nFontSlant->\"Italic\"]\)\!\(\*
+StyleBox[\" \",\nFontSlant->\"Plain\"]\)\!\(\*
+StyleBox[\"is\",\nFontSlant->\"Plain\"]\)\!\(\*
+StyleBox[\" \",\nFontSlant->\"Plain\"]\)\!\(\*
+StyleBox[\"a\",\nFontSlant->\"Plain\"]\)\!\(\*
+StyleBox[\" \",\nFontSlant->\"Plain\"]\)\!\(\*
+StyleBox[\"normal\",\nFontSlant->\"Plain\"]\)\!\(\*
+StyleBox[\" \",\nFontSlant->\"Plain\"]\)\!\(\*
+StyleBox[\"star\",\nFontSlant->\"Plain\"]\)\!\(\*
+StyleBox[\" \",\nFontSlant->\"Plain\"]\)\!\(\*
+StyleBox[\"and\",\nFontSlant->\"Plain\"]\)\!\(\*
+StyleBox[\" \",\nFontSlant->\"Plain\"]\)\!\(\*
+StyleBox[\"False\",\nFontSlant->\"Plain\"]\)\!\(\*
+StyleBox[\" \",\nFontSlant->\"Plain\"]\)\!\(\*
+StyleBox[\"otherwise\",\nFontSlant->\"Plain\"]\)\!\(\*
+StyleBox[\".\",\nFontSlant->\"Plain\"]\)";
 
 
 Begin["`Private`"];
 
 
 (* ::Subsection:: *)
-(*GetNormalStars*)
+(*Normal stars*)
 
 
 normalStarMap = <|
@@ -58,6 +77,9 @@ normalStarMap = <|
 
 GetNormalStars[] := Values[normalStarMap]
 GetNormalStars[name_String] := normalStarMap[name]
+
+
+NormalStarQ[obj_] := MemberQ[Values[normalStarMap],obj]
 
 
 (* ::Subsection:: *)

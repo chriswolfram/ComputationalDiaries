@@ -10,17 +10,17 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    177092,       3580]
-NotebookOptionsPosition[    169725,       3452]
-NotebookOutlinePosition[    170119,       3468]
-CellTagsIndexPosition[    170076,       3465]
+NotebookDataLength[    141022,       2977]
+NotebookOptionsPosition[    134048,       2856]
+NotebookOutlinePosition[    134443,       2872]
+CellTagsIndexPosition[    134400,       2869]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 Cell[BoxData["Quit"], "Input",
  CellChangeTimes->{{3.797281807838131*^9, 3.79728180815731*^9}},
- CellLabel->"In[79]:=",ExpressionUUID->"fb9ca211-a049-4043-aced-2daa5e233548"],
+ CellLabel->"In[16]:=",ExpressionUUID->"fb9ca211-a049-4043-aced-2daa5e233548"],
 
 Cell[CellGroupData[{
 
@@ -41,8 +41,9 @@ Cell[BoxData[
  CellChangeTimes->{3.7972812785225277`*^9, 3.797281813076733*^9, 
   3.797302039372039*^9, 3.7973022140435553`*^9, 3.797302472560651*^9, 
   3.797309354656045*^9, 3.7973901775157623`*^9, 3.797518977878366*^9, 
-  3.797519802896625*^9, 3.7975200663909273`*^9},
- CellLabel->"Out[1]=",ExpressionUUID->"c5c36a71-5ab9-4636-8894-7c7562d2ebc5"]
+  3.797519802896625*^9, 3.7975200663909273`*^9, 3.7975522526272078`*^9, 
+  3.7975530634413433`*^9},
+ CellLabel->"Out[1]=",ExpressionUUID->"76722355-59f0-4ad3-87eb-c878fa55f105"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -72,8 +73,9 @@ Cell[BoxData["\<\"/Users/christopher/git/ComputationalDiaries/data\"\>"], \
   3.797130136609578*^9, 3.797253974397472*^9, 3.797254067729087*^9, 
   3.797255355273785*^9, 3.7972812914523077`*^9, 3.79728183171178*^9, 
   3.797283145780713*^9, 3.797284360422477*^9, 3.797291282639927*^9, 
-  3.797291933797834*^9, 3.797293636518643*^9},
- CellLabel->"Out[3]=",ExpressionUUID->"65c36863-d17b-46c3-a82c-8ecb1352940e"]
+  3.797291933797834*^9, 3.797293636518643*^9, 3.797552257815431*^9, 
+  3.797553068014432*^9},
+ CellLabel->"Out[3]=",ExpressionUUID->"7489750b-e408-4e02-95c8-0f16a706dfb8"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -104,7 +106,7 @@ Cell[BoxData[
        "}"}], "]"}], ",", "\"\<RawJSON\>\""}], "]"}]}], ";"}]], "Input",
  CellChangeTimes->{{3.796516964350016*^9, 3.796516971916195*^9}, {
   3.797035627332296*^9, 3.79703564316883*^9}},
- CellLabel->"In[16]:=",ExpressionUUID->"210b63ea-4116-4c76-8b02-9c66a799ddce"],
+ CellLabel->"In[13]:=",ExpressionUUID->"210b63ea-4116-4c76-8b02-9c66a799ddce"],
 
 Cell[BoxData[
  RowBox[{
@@ -140,7 +142,7 @@ Cell[BoxData[
    3.797036277192354*^9}, {3.797036326378798*^9, 3.7970363282362967`*^9}, {
    3.79703658043611*^9, 3.7970366318852177`*^9}, {3.79707911520969*^9, 
    3.797079117030714*^9}, 3.797079733415413*^9, 3.797281871392289*^9},
- CellLabel->"In[17]:=",ExpressionUUID->"ac6e2124-22e5-47df-841c-acda56a86c0f"],
+ CellLabel->"In[14]:=",ExpressionUUID->"ac6e2124-22e5-47df-841c-acda56a86c0f"],
 
 Cell[BoxData[
  RowBox[{
@@ -148,7 +150,7 @@ Cell[BoxData[
    RowBox[{"Catenate", "[", 
     RowBox[{"Values", "/@", "tabletEvents"}], "]"}]}], ";"}]], "Input",
  CellChangeTimes->{{3.795792343629406*^9, 3.795792353552887*^9}},
- CellLabel->"In[18]:=",ExpressionUUID->"c0862039-b95c-4c3d-9bc5-62e4186ed44e"]
+ CellLabel->"In[15]:=",ExpressionUUID->"c0862039-b95c-4c3d-9bc5-62e4186ed44e"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -254,7 +256,7 @@ Cell[BoxData[
         "\"constellation\""},
        "Entity"]}]}], "\n", "|>"}]}], ";"}]], "Code",
  CellChangeTimes->{{3.797039716779807*^9, 3.797039772703434*^9}},
- CellLabel->"In[19]:=",ExpressionUUID->"072e9d2f-4539-4fd4-908a-9ebb3306f26f"],
+ CellLabel->"In[16]:=",ExpressionUUID->"072e9d2f-4539-4fd4-908a-9ebb3306f26f"],
 
 Cell[BoxData[
  RowBox[{
@@ -407,7 +409,7 @@ Cell[BoxData[
   3.7970391639486227`*^9, 3.797039308561749*^9}, {3.797039531528192*^9, 
   3.797039531938788*^9}, {3.7970397285567503`*^9, 3.797039769041082*^9}, {
   3.797309307748146*^9, 3.797309308641007*^9}},
- CellLabel->"In[20]:=",ExpressionUUID->"a9ec18df-f115-4b50-8c88-7f37811a4028"],
+ CellLabel->"In[17]:=",ExpressionUUID->"a9ec18df-f115-4b50-8c88-7f37811a4028"],
 
 Cell[BoxData[
  RowBox[{
@@ -425,7 +427,7 @@ Cell[BoxData[
  CellChangeTimes->{{3.797039395223124*^9, 3.797039445740569*^9}, {
   3.797039825357445*^9, 3.797039833416079*^9}, {3.797128752396216*^9, 
   3.797128757197699*^9}},
- CellLabel->"In[21]:=",ExpressionUUID->"daf05c61-0b28-4f09-9c5a-dfd2a10a4a66"],
+ CellLabel->"In[18]:=",ExpressionUUID->"daf05c61-0b28-4f09-9c5a-dfd2a10a4a66"],
 
 Cell[BoxData[
  RowBox[{
@@ -445,7 +447,7 @@ Cell[BoxData[
      "\"\<middle_part_of_night\>\"", "\[Rule]", 
       "\"\<MiddlePartOfTheNight\>\""}]}], "\n", "|>"}]}], ";"}]], "Code",
  CellChangeTimes->{{3.797078840094582*^9, 3.797078879489855*^9}},
- CellLabel->"In[23]:=",ExpressionUUID->"7f294beb-ee61-4089-938c-944b9a265eab"],
+ CellLabel->"In[19]:=",ExpressionUUID->"7f294beb-ee61-4089-938c-944b9a265eab"],
 
 Cell[BoxData[
  RowBox[{
@@ -458,7 +460,21 @@ Cell[BoxData[
      RowBox[{"\"\<in_front_of\>\"", "\[Rule]", "\"\<InFrontOf\>\""}]}], "\n", 
     "|>"}]}], ";"}]], "Code",
  CellChangeTimes->{{3.7970794323041363`*^9, 3.797079466897105*^9}},
- CellLabel->"In[24]:=",ExpressionUUID->"82fda1da-ea35-41b1-8427-3833f797c28b"]
+ CellLabel->"In[20]:=",ExpressionUUID->"82fda1da-ea35-41b1-8427-3833f797c28b"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"horizontalRelations", "=", 
+   RowBox[{
+   "\"\<InFrontOf\>\"", "|", "\"\<Behind\>\"", "|", "\"\<West\>\"", "|", 
+    "\"\<East\>\""}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"verticalRelations", "=", 
+   RowBox[{
+   "\"\<Above\>\"", "|", "\"\<Below\>\"", "|", "\"\<North\>\"", "|", 
+    "\"\<South\>\""}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.797552057045825*^9, 3.7975520851305637`*^9}},
+ CellLabel->"In[21]:=",ExpressionUUID->"c7937336-cf34-4cda-af0a-3c3d3fc051cd"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -468,11 +484,9 @@ Cell["Parsing", "Subsection",
   3.797079941686915*^9}},ExpressionUUID->"8c921b93-9c88-4b92-b79b-\
 f5a37a95b05c"],
 
-Cell[CellGroupData[{
-
 Cell[BoxData[
  RowBox[{
-  RowBox[{"grasshoffEvents", " ", "=", " ", 
+  RowBox[{"grasshoffObservations", " ", "=", " ", 
    RowBox[{"Catenate", "@", 
     RowBox[{"KeyValueMap", "[", 
      RowBox[{
@@ -483,70 +497,38 @@ Cell[BoxData[
         RowBox[{
          RowBox[{"Function", "[", 
           RowBox[{"e", ",", "\n", "\t\t", 
-           RowBox[{"If", "[", 
-            RowBox[{
+           RowBox[{"Catch", "@", 
+            RowBox[{"If", "[", 
              RowBox[{
-              RowBox[{"MissingQ", "[", 
-               RowBox[{"e", "[", "\"\<rel\>\"", "]"}], "]"}], " ", "||", " ", 
-              
               RowBox[{
-               RowBox[{"e", "[", "\"\<rel\>\"", "]"}], "===", 
-               "\"\<is_standing_in\>\""}]}], ",", "\n", "\t\t\t", "Nothing", 
-             ",", "\n", "\t\t\t", 
-             RowBox[{"DiaryObservation", "[", 
-              RowBox[{"<|", "\n", "\t\t\t\t", 
+               RowBox[{"MissingQ", "[", 
+                RowBox[{"e", "[", "\"\<rel\>\"", "]"}], "]"}], " ", "||", " ", 
                RowBox[{
+                RowBox[{"e", "[", "\"\<rel\>\"", "]"}], "===", 
+                "\"\<is_standing_in\>\""}]}], ",", "\n", "\t\t\t", "Nothing", 
+              ",", "\n", "\t\t\t", 
+              RowBox[{"DiaryObservation", "[", 
+               RowBox[{"<|", "\n", "\t\t\t\t", 
                 RowBox[{
-                "\"\<Type\>\"", "\[Rule]", "\"\<RelativePosition\>\""}], ",", 
-                "\n", "\t\t\t\t", 
-                RowBox[{"\"\<Provenance\>\"", "\[Rule]", 
-                 RowBox[{"<|", "\n", "\t\t\t\t\t", 
-                  RowBox[{
-                   RowBox[{"\"\<Tablet\>\"", "\[Rule]", "tablet"}], ",", "\n",
-                    "\t\t\t\t\t", 
-                   RowBox[{"\"\<Line\>\"", "\[Rule]", 
-                    RowBox[{"e", "[", "\"\<lfdnr\>\"", "]"}]}], ",", "\n", 
-                   "\t\t\t\t\t", 
-                   RowBox[{
-                   "\"\<Creator\>\"", "\[Rule]", "\"\<Topoi Processor\>\""}], 
-                   ",", "\n", "\t\t\t\t\t", 
-                   RowBox[{"\"\<Reviewed\>\"", "\[Rule]", "False"}], ",", 
-                   "\n", "\t\t\t\t\t", 
-                   RowBox[{
-                   "\"\<Notes\>\"", "\[Rule]", 
-                    "\"\<Automatically generated from Topoi data\>\""}]}], 
-                  "\n", "\t\t\t\t", "|>"}]}], ",", "\n", "\t\t\t\t", 
-                RowBox[{"\"\<Content\>\"", "\[Rule]", 
-                 RowBox[{"<|", "\n", "\t\t\t\t\t", 
-                  RowBox[{
-                   RowBox[{"\"\<Source\>\"", "\[Rule]", 
-                    RowBox[{"Lookup", "[", 
-                    RowBox[{"objectMapping", ",", 
-                    RowBox[{"e", "[", "\"\<obj1\>\"", "]"}], ",", 
-                    RowBox[{"Missing", "[", "]"}]}], "]"}]}], ",", "\n", 
-                   "\t\t\t\t\t", 
-                   RowBox[{"\"\<Target\>\"", "\[Rule]", 
-                    RowBox[{"Lookup", "[", 
-                    RowBox[{"objectMapping", ",", 
-                    RowBox[{"e", "[", "\"\<obj2\>\"", "]"}], ",", 
-                    RowBox[{"Missing", "[", "]"}]}], "]"}]}], ",", "\n", 
-                   "\t\t\t\t\t", 
-                   RowBox[{"\"\<Date\>\"", "\[Rule]", 
-                    RowBox[{"DiaryDate", "[", 
-                    RowBox[{"<|", "\n", "\t\t\t\t\t\t", 
+                 RowBox[{
+                 "\"\<Type\>\"", "\[Rule]", "\"\<RelativePosition\>\""}], ",",
+                  "\n", "\t\t\t\t", 
+                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
+                  RowBox[{"DiaryDate", "[", 
+                   RowBox[{"<|", "\n", "\t\t\t\t\t", 
                     RowBox[{
                     RowBox[{"\"\<JulianYear\>\"", "\[Rule]", 
                     RowBox[{"e", "[", "\"\<j\>\"", "]"}]}], ",", "\n", 
-                    "\t\t\t\t\t\t", 
+                    "\t\t\t\t\t", 
                     RowBox[{"\"\<JulianMonth\>\"", "\[Rule]", 
                     RowBox[{"e", "[", "\"\<m\>\"", "]"}]}], ",", "\n", 
-                    "\t\t\t\t\t\t", 
+                    "\t\t\t\t\t", 
                     RowBox[{"\"\<JulianDay\>\"", "\[Rule]", 
                     RowBox[{"e", "[", "\"\<t\>\"", "]"}]}], ",", "\n", 
-                    "\t\t\t\t\t\t", 
+                    "\t\t\t\t\t", 
                     RowBox[{"\"\<BabylonianYear\>\"", "\[Rule]", 
-                    RowBox[{"Missing", "[", "]"}]}], ",", "\n", 
-                    "\t\t\t\t\t\t", 
+                    RowBox[{"Missing", "[", "]"}]}], ",", "\n", "\t\t\t\t\t", 
+                    
                     RowBox[{
                     RowBox[{"\"\<BabylonianMonth\>\"", "\[Rule]", 
                     RowBox[{"e", "[", "\"\<month\>\"", "]"}]}], "/.", 
@@ -558,18 +540,84 @@ Cell[BoxData[
                     RowBox[{"(*", 
                     RowBox[{
                     "wrong", " ", "when", " ", "extra", " ", "month", " ", 
-                    "VI2"}], "*)"}], ",", "\n", "\t\t\t\t\t\t", 
+                    "VI2"}], "*)"}], ",", "\n", "\t\t\t\t\t", 
                     RowBox[{"\"\<BabylonianDay\>\"", "\[Rule]", 
                     RowBox[{"e", "[", "\"\<day\>\"", "]"}]}], ",", "\n", 
-                    "\t\t\t\t\t\t", 
+                    "\t\t\t\t\t", 
                     RowBox[{"\"\<Time\>\"", "\[Rule]", 
                     RowBox[{"Lookup", "[", 
                     RowBox[{"timeMapping", ",", 
                     RowBox[{"e", "[", "\"\<time\>\"", "]"}], ",", 
                     RowBox[{"Missing", "[", "]"}]}], "]"}]}]}], "\n", 
-                    "\t\t\t\t\t", "|>"}], "]"}]}], ",", "\n", "\t\t\t\t\t", 
-                   RowBox[{"\"\<Displacement\>\"", "\[Rule]", 
-                    RowBox[{"DiaryDisplacement", "[", 
+                    "\t\t\t\t", "|>"}], "]"}]}], ",", "\n", "\t\t\t\t", 
+                 RowBox[{"\"\<Provenance\>\"", "\[Rule]", 
+                  RowBox[{"<|", "\n", "\t\t\t\t\t", 
+                   RowBox[{
+                    RowBox[{"\"\<Tablet\>\"", "\[Rule]", "tablet"}], ",", 
+                    "\n", "\t\t\t\t\t", 
+                    RowBox[{"\"\<Line\>\"", "\[Rule]", 
+                    RowBox[{"e", "[", "\"\<lfdnr\>\"", "]"}]}], ",", "\n", 
+                    "\t\t\t\t\t", 
+                    RowBox[{
+                    "\"\<Creator\>\"", "\[Rule]", "\"\<Topoi Processor\>\""}],
+                     ",", "\n", "\t\t\t\t\t", 
+                    RowBox[{"\"\<Reviewed\>\"", "\[Rule]", "False"}], ",", 
+                    "\n", "\t\t\t\t\t", 
+                    RowBox[{
+                    "\"\<Notes\>\"", "\[Rule]", 
+                    "\"\<Automatically generated from Topoi data\>\""}]}], 
+                   "\n", "\t\t\t\t", "|>"}]}], ",", "\n", "\t\t\t\t", 
+                 RowBox[{"\"\<Content\>\"", "\[Rule]", 
+                  RowBox[{"<|", "\n", "\t\t\t\t\t", 
+                   RowBox[{
+                    RowBox[{"\"\<ObjectA\>\"", "\[Rule]", 
+                    RowBox[{"Lookup", "[", 
+                    RowBox[{"objectMapping", ",", 
+                    RowBox[{"e", "[", "\"\<obj1\>\"", "]"}], ",", 
+                    RowBox[{"Missing", "[", "]"}]}], "]"}]}], ",", "\n", 
+                    "\t\t\t\t\t", 
+                    RowBox[{"\"\<ObjectB\>\"", "\[Rule]", 
+                    RowBox[{"Lookup", "[", 
+                    RowBox[{"objectMapping", ",", 
+                    RowBox[{"e", "[", "\"\<obj2\>\"", "]"}], ",", 
+                    RowBox[{"Missing", "[", "]"}]}], "]"}]}], ",", "\n", 
+                    "\t\t\t\t\t", 
+                    RowBox[{"\"\<Displacement\>\"", "\[Rule]", 
+                    RowBox[{"DiaryDisplacement", "[", "\n", "\t\t\t\t\t\t", 
+                    RowBox[{
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"AllTrue", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"e", "[", "\"\<rel\>\"", "]"}], ",", 
+                    RowBox[{"e", "[", "\"\<rel2\>\"", "]"}]}], "}"}], ",", 
+                    RowBox[{"MatchQ", "[", "horizontalRelations", "]"}]}], 
+                    "]"}], " ", "||", " ", "\n", "\t\t\t\t\t\t\t\t", 
+                    RowBox[{"AllTrue", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"e", "[", "\"\<rel\>\"", "]"}], ",", 
+                    RowBox[{"e", "[", "\"\<rel2\>\"", "]"}]}], "}"}], ",", 
+                    RowBox[{"MatchQ", "[", "verticalRelations", "]"}]}], 
+                    "]"}]}], ",", "\n", "\t\t\t\t\t\t\t", 
+                    RowBox[{"Throw", "[", "Nothing", "]"}], ",", "\n", 
+                    "\t\t\t\t\t\t\t", 
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"MatchQ", "[", 
+                    RowBox[{
+                    RowBox[{"e", "[", "\"\<rel2\>\"", "]"}], ",", 
+                    "horizontalRelations"}], "]"}], "||", 
+                    RowBox[{"MatchQ", "[", 
+                    RowBox[{
+                    RowBox[{"e", "[", "\"\<rel\>\"", "]"}], ",", 
+                    "verticalRelations"}], "]"}]}], ",", "Reverse", ",", 
+                    "Identity"}], "]"}]}], "\n", "\t\t\t\t\t\t", "]"}], "@", 
                     RowBox[{"{", "\n", "\t\t\t\t\t\t", 
                     RowBox[{
                     RowBox[{"{", "\n", "\t\t\t\t\t\t\t", 
@@ -581,8 +629,8 @@ Cell[BoxData[
                     RowBox[{
                     RowBox[{"MissingQ", "[", 
                     RowBox[{"e", "[", "\"\<kus\>\"", "]"}], "]"}], ",", 
-                    RowBox[{"Missing", "[", "]"}], ",", "\n", 
-                    "\t\t\t\t\t\t\t\t\t", 
+                    RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}], ",",
+                     "\n", "\t\t\t\t\t\t\t\t\t", 
                     RowBox[{
                     RowBox[{"e", "[", "\"\<kus\>\"", "]"}], "+", 
                     RowBox[{"If", "[", 
@@ -610,8 +658,8 @@ Cell[BoxData[
                     RowBox[{
                     RowBox[{"MissingQ", "[", 
                     RowBox[{"e", "[", "\"\<kus2\>\"", "]"}], "]"}], ",", 
-                    RowBox[{"Missing", "[", "]"}], ",", "\n", 
-                    "\t\t\t\t\t\t\t\t\t", 
+                    RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}], ",",
+                     "\n", "\t\t\t\t\t\t\t\t\t", 
                     RowBox[{
                     RowBox[{"e", "[", "\"\<kus2\>\"", "]"}], "+", 
                     RowBox[{"If", "[", 
@@ -629,9 +677,9 @@ Cell[BoxData[
                     RowBox[{"directionMapping", ",", 
                     RowBox[{"e", "[", "\"\<rel2\>\"", "]"}], ",", 
                     RowBox[{"Missing", "[", "]"}]}], "]"}]}], "\n", 
-                    "\t\t\t\t\t\t", "}"}]}], "\n", "\t\t\t\t\t", "}"}], 
+                    "\t\t\t\t\t\t", "}"}]}], "\n", "\t\t\t\t\t", "}"}]}], 
                     "]"}]}]}], "\n", "\t\t\t\t", "|>"}]}]}], "\n", "\t\t\t", 
-               "|>"}], "]"}]}], "\n", "\t\t", "]"}]}], "\n", "\t", "]"}], "/@", 
+                "|>"}], "]"}]}], "\n", "\t\t", "]"}]}]}], "\n", "\t", "]"}], "/@", 
          RowBox[{"Values", "[", "events", "]"}]}]}], "]"}], ",", "\n", "\t", 
       "tabletEvents"}], "\n", "]"}]}]}], ";"}]], "Code",
  CellChangeTimes->{{3.797036709992796*^9, 3.79703674922814*^9}, {
@@ -658,350 +706,26 @@ Cell[BoxData[
    3.7972825796534443`*^9, 3.797282602135437*^9}, {3.797291302561594*^9, 
    3.797291307935342*^9}, {3.797520855464389*^9, 3.7975208635899267`*^9}, {
    3.7975209027402897`*^9, 3.7975209612353563`*^9}, {3.79752103996741*^9, 
-   3.797521041259182*^9}},ExpressionUUID->"d977d37a-9b79-4752-9988-\
+   3.797521041259182*^9}, {3.79755194122827*^9, 3.7975520535648813`*^9}, {
+   3.797552095746962*^9, 3.797552167180348*^9}, {3.797553123034279*^9, 
+   3.797553125529146*^9}, {3.797553253840932*^9, 3.797553263369026*^9}, {
+   3.797553500186604*^9, 3.797553535953216*^9}, {3.7975537260541*^9, 
+   3.797553733049069*^9}, {3.797553798868661*^9, 
+   3.797553802082985*^9}},ExpressionUUID->"d977d37a-9b79-4752-9988-\
 15864392bf38"],
 
 Cell[BoxData[
- TemplateBox[{
-  "DiaryDisplacement", "invalid", 
-   "\"\\!\\(\\*RowBox[{\\\"Hold\\\", \\\"[\\\", RowBox[{\\\"DiaryDisplacement\
-\\\", \\\"[\\\", RowBox[{\\\"{\\\", RowBox[{RowBox[{\\\"{\\\", \
-RowBox[{InterpretationBox[RowBox[{TagBox[\\\"DiaryDistance\\\", \
-\\\"SummaryHead\\\"], \\\"[\\\", DynamicModuleBox[{Typeset`open$$ = False, \
-Set[Typeset`embedState$$, \\\"Ready\\\"]}, \
-TemplateBox[List[PaneSelectorBox[List[Rule[False, \
-GridBox[List[List[GraphicsBox[List[List[Dashing[0.1`], RGBColor[1, 0.5`, 0], \
-LineBox[List[List[-0.5`, 0], List[0.5`, 0]]]], LineBox[List[List[-0.5`, \
--0.1`], List[-0.5`, 0.1`]]], LineBox[List[List[0.5`, -0.1`], List[0.5`, \
-0.1`]]]], Rule[ImageSize, 30], Rule[Background, GrayLevel[0, 0]]], \
-GridBox[List[List[TagBox[\\\"\\\\\\\"cubits: \\\\\\\"\\\", \
-\\\"SummaryItem\\\"], TagBox[FractionBox[\\\"3\\\", \\\"2\\\"], \
-\\\"SummaryItem\\\"]], List[TagBox[\\\"\\\\\\\"fingers: \\\\\\\"\\\", \
-\\\"SummaryItem\\\"], TagBox[RowBox[List[\\\"Missing\\\", \\\"[\\\", \
-\\\"]\\\"]], \\\"SummaryItem\\\"]]], Rule[GridBoxAlignment, \
-List[Rule[\\\"Columns\\\", List[List[Left]]], Rule[\\\"Rows\\\", \
-List[List[Automatic]]]]], Rule[AutoDelete, False], Rule[GridBoxItemSize, \
-List[Rule[\\\"Columns\\\", List[List[Automatic]]], Rule[\\\"Rows\\\", \
-List[List[Automatic]]]]], Rule[GridBoxSpacings, List[Rule[\\\"Columns\\\", \
-List[List[2]]], Rule[\\\"Rows\\\", List[List[Automatic]]]]], Rule[BaseStyle, \
-List[Rule[ShowStringCharacters, False], Rule[NumberMarks, False], \
-Rule[PrintPrecision, 3], Rule[ShowSyntaxStyles, False]]]]]], \
-Rule[GridBoxAlignment, List[Rule[\\\"Rows\\\", List[List[Top]]]]], \
-Rule[AutoDelete, False], Rule[GridBoxItemSize, List[Rule[\\\"Columns\\\", \
-List[List[Automatic]]], Rule[\\\"Rows\\\", List[List[Automatic]]]]], \
-Rule[BaselinePosition, List[1, 1]]]], Rule[True, \
-GridBox[List[List[GraphicsBox[List[List[Dashing[0.1`], RGBColor[1, 0.5`, 0], \
-LineBox[List[List[-0.5`, 0], List[0.5`, 0]]]], LineBox[List[List[-0.5`, \
--0.1`], List[-0.5`, 0.1`]]], LineBox[List[List[0.5`, -0.1`], List[0.5`, \
-0.1`]]]], Rule[ImageSize, 30], Rule[Background, GrayLevel[0, 0]]], \
-GridBox[List[List[TagBox[\\\"\\\\\\\"cubits: \\\\\\\"\\\", \
-\\\"SummaryItem\\\"], TagBox[FractionBox[\\\"3\\\", \\\"2\\\"], \
-\\\"SummaryItem\\\"]], List[TagBox[\\\"\\\\\\\"fingers: \\\\\\\"\\\", \
-\\\"SummaryItem\\\"], TagBox[RowBox[List[\\\"Missing\\\", \\\"[\\\", \
-\\\"]\\\"]], \\\"SummaryItem\\\"]]], Rule[GridBoxAlignment, \
-List[Rule[\\\"Columns\\\", List[List[Left]]], Rule[\\\"Rows\\\", \
-List[List[Automatic]]]]], Rule[AutoDelete, False], Rule[GridBoxItemSize, \
-List[Rule[\\\"Columns\\\", List[List[Automatic]]], Rule[\\\"Rows\\\", \
-List[List[Automatic]]]]], Rule[GridBoxSpacings, List[Rule[\\\"Columns\\\", \
-List[List[2]]], Rule[\\\"Rows\\\", List[List[Automatic]]]]], Rule[BaseStyle, \
-List[Rule[ShowStringCharacters, False], Rule[NumberMarks, False], \
-Rule[PrintPrecision, 3], Rule[ShowSyntaxStyles, False]]]]]], \
-Rule[GridBoxAlignment, List[Rule[\\\"Rows\\\", List[List[Top]]]]], \
-Rule[AutoDelete, False], Rule[GridBoxItemSize, List[Rule[\\\"Columns\\\", \
-List[List[Automatic]]], Rule[\\\"Rows\\\", List[List[Automatic]]]]], \
-Rule[BaselinePosition, List[1, 1]]]]], Dynamic[Typeset`open$$], \
-Rule[ImageSize, Automatic]]], \\\"SummaryPanel\\\"], \
-RuleDelayed[DynamicModuleValues, List[]]], \\\"]\\\"}], \
-DiaryDistance[List[Rational[3, 2], Missing[]]], Rule[Selectable, False], \
-Rule[Editable, False], Rule[SelectWithContents, True]], \\\",\\\", \\\"\\\\\\\
-\"Behind\\\\\\\"\\\"}], \\\"}\\\"}], \\\",\\\", RowBox[{\\\"{\\\", \
-RowBox[{InterpretationBox[RowBox[{TagBox[\\\"DiaryDistance\\\", \
-\\\"SummaryHead\\\"], \\\"[\\\", DynamicModuleBox[{Typeset`open$$ = False, \
-Set[Typeset`embedState$$, \\\"Ready\\\"]}, \
-TemplateBox[List[PaneSelectorBox[List[Rule[False, \
-GridBox[List[List[GraphicsBox[List[List[Dashing[0.1`], RGBColor[1, 0.5`, 0], \
-LineBox[List[List[-0.5`, 0], List[0.5`, 0]]]], LineBox[List[List[-0.5`, \
--0.1`], List[-0.5`, 0.1`]]], LineBox[List[List[0.5`, -0.1`], List[0.5`, \
-0.1`]]]], Rule[ImageSize, 30], Rule[Background, GrayLevel[0, 0]]], \
-GridBox[List[List[TagBox[\\\"\\\\\\\"cubits: \\\\\\\"\\\", \
-\\\"SummaryItem\\\"], TagBox[FractionBox[\\\"9\\\", \\\"2\\\"], \
-\\\"SummaryItem\\\"]], List[TagBox[\\\"\\\\\\\"fingers: \\\\\\\"\\\", \
-\\\"SummaryItem\\\"], TagBox[RowBox[List[\\\"Missing\\\", \\\"[\\\", \
-\\\"]\\\"]], \\\"SummaryItem\\\"]]], Rule[GridBoxAlignment, \
-List[Rule[\\\"Columns\\\", List[List[Left]]], Rule[\\\"Rows\\\", \
-List[List[Automatic]]]]], Rule[AutoDelete, False], Rule[GridBoxItemSize, \
-List[Rule[\\\"Columns\\\", List[List[Automatic]]], Rule[\\\"Rows\\\", \
-List[List[Automatic]]]]], Rule[GridBoxSpacings, List[Rule[\\\"Columns\\\", \
-List[List[2]]], Rule[\\\"Rows\\\", List[List[Automatic]]]]], Rule[BaseStyle, \
-List[Rule[ShowStringCharacters, False], Rule[NumberMarks, False], \
-Rule[PrintPrecision, 3], Rule[ShowSyntaxStyles, False]]]]]], \
-Rule[GridBoxAlignment, List[Rule[\\\"Rows\\\", List[List[Top]]]]], \
-Rule[AutoDelete, False], Rule[GridBoxItemSize, List[Rule[\\\"Columns\\\", \
-List[List[Automatic]]], Rule[\\\"Rows\\\", List[List[Automatic]]]]], \
-Rule[BaselinePosition, List[1, 1]]]], Rule[True, \
-GridBox[List[List[GraphicsBox[List[List[Dashing[0.1`], RGBColor[1, 0.5`, 0], \
-LineBox[List[List[-0.5`, 0], List[0.5`, 0]]]], LineBox[List[List[-0.5`, \
--0.1`], List[-0.5`, 0.1`]]], LineBox[List[List[0.5`, -0.1`], List[0.5`, \
-0.1`]]]], Rule[ImageSize, 30], Rule[Background, GrayLevel[0, 0]]], \
-GridBox[List[List[TagBox[\\\"\\\\\\\"cubits: \\\\\\\"\\\", \
-\\\"SummaryItem\\\"], TagBox[FractionBox[\\\"9\\\", \\\"2\\\"], \
-\\\"SummaryItem\\\"]], List[TagBox[\\\"\\\\\\\"fingers: \\\\\\\"\\\", \
-\\\"SummaryItem\\\"], TagBox[RowBox[List[\\\"Missing\\\", \\\"[\\\", \
-\\\"]\\\"]], \\\"SummaryItem\\\"]]], Rule[GridBoxAlignment, \
-List[Rule[\\\"Columns\\\", List[List[Left]]], Rule[\\\"Rows\\\", \
-List[List[Automatic]]]]], Rule[AutoDelete, False], Rule[GridBoxItemSize, \
-List[Rule[\\\"Columns\\\", List[List[Automatic]]], Rule[\\\"Rows\\\", \
-List[List[Automatic]]]]], Rule[GridBoxSpacings, List[Rule[\\\"Columns\\\", \
-List[List[2]]], Rule[\\\"Rows\\\", List[List[Automatic]]]]], Rule[BaseStyle, \
-List[Rule[ShowStringCharacters, False], Rule[NumberMarks, False], \
-Rule[PrintPrecision, 3], Rule[ShowSyntaxStyles, False]]]]]], \
-Rule[GridBoxAlignment, List[Rule[\\\"Rows\\\", List[List[Top]]]]], \
-Rule[AutoDelete, False], Rule[GridBoxItemSize, List[Rule[\\\"Columns\\\", \
-List[List[Automatic]]], Rule[\\\"Rows\\\", List[List[Automatic]]]]], \
-Rule[BaselinePosition, List[1, 1]]]]], Dynamic[Typeset`open$$], \
-Rule[ImageSize, Automatic]]], \\\"SummaryPanel\\\"], \
-RuleDelayed[DynamicModuleValues, List[]]], \\\"]\\\"}], \
-DiaryDistance[List[Rational[9, 2], Missing[]]], Rule[Selectable, False], \
-Rule[Editable, False], Rule[SelectWithContents, True]], \\\",\\\", \\\"\\\\\\\
-\"South\\\\\\\"\\\"}], \\\"}\\\"}]}], \\\"}\\\"}], \\\"]\\\"}], \
-\\\"]\\\"}]\\) is not a valid DiaryDisplacement.\"", 2, 26, 9, 
-   18668714734494815129, "Local", 
-   "ComputationalDiaries`DiaryTypes`DiaryDisplacement"},
-  "MessageTemplate2"]], "Message", "MSG",
- CellChangeTimes->{3.797520888440975*^9, 3.7975209366078176`*^9},
- CellLabel->
-  "During evaluation of \
-In[26]:=",ExpressionUUID->"e304036d-d292-44fc-8a8b-d66d601c1b06"],
-
-Cell[BoxData[
- TemplateBox[{
-  "DiaryDisplacement", "invalid", 
-   "\"\\!\\(\\*RowBox[{\\\"Hold\\\", \\\"[\\\", RowBox[{\\\"DiaryDisplacement\
-\\\", \\\"[\\\", RowBox[{\\\"{\\\", RowBox[{RowBox[{\\\"{\\\", \
-RowBox[{InterpretationBox[RowBox[{TagBox[\\\"DiaryDistance\\\", \
-\\\"SummaryHead\\\"], \\\"[\\\", DynamicModuleBox[{Typeset`open$$ = False, \
-Set[Typeset`embedState$$, \\\"Ready\\\"]}, \
-TemplateBox[List[PaneSelectorBox[List[Rule[False, \
-GridBox[List[List[GraphicsBox[List[List[Dashing[0.1`], RGBColor[1, 0.5`, 0], \
-LineBox[List[List[-0.5`, 0], List[0.5`, 0]]]], LineBox[List[List[-0.5`, \
--0.1`], List[-0.5`, 0.1`]]], LineBox[List[List[0.5`, -0.1`], List[0.5`, \
-0.1`]]]], Rule[ImageSize, 30], Rule[Background, GrayLevel[0, 0]]], \
-GridBox[List[List[TagBox[\\\"\\\\\\\"cubits: \\\\\\\"\\\", \
-\\\"SummaryItem\\\"], TagBox[\\\"2\\\", \\\"SummaryItem\\\"]], List[TagBox[\\\
-\"\\\\\\\"fingers: \\\\\\\"\\\", \\\"SummaryItem\\\"], \
-TagBox[RowBox[List[\\\"Missing\\\", \\\"[\\\", \\\"]\\\"]], \\\"SummaryItem\\\
-\"]]], Rule[GridBoxAlignment, List[Rule[\\\"Columns\\\", List[List[Left]]], \
-Rule[\\\"Rows\\\", List[List[Automatic]]]]], Rule[AutoDelete, False], \
-Rule[GridBoxItemSize, List[Rule[\\\"Columns\\\", List[List[Automatic]]], \
-Rule[\\\"Rows\\\", List[List[Automatic]]]]], Rule[GridBoxSpacings, List[Rule[\
-\\\"Columns\\\", List[List[2]]], Rule[\\\"Rows\\\", List[List[Automatic]]]]], \
-Rule[BaseStyle, List[Rule[ShowStringCharacters, False], Rule[NumberMarks, \
-False], Rule[PrintPrecision, 3], Rule[ShowSyntaxStyles, False]]]]]], \
-Rule[GridBoxAlignment, List[Rule[\\\"Rows\\\", List[List[Top]]]]], \
-Rule[AutoDelete, False], Rule[GridBoxItemSize, List[Rule[\\\"Columns\\\", \
-List[List[Automatic]]], Rule[\\\"Rows\\\", List[List[Automatic]]]]], \
-Rule[BaselinePosition, List[1, 1]]]], Rule[True, \
-GridBox[List[List[GraphicsBox[List[List[Dashing[0.1`], RGBColor[1, 0.5`, 0], \
-LineBox[List[List[-0.5`, 0], List[0.5`, 0]]]], LineBox[List[List[-0.5`, \
--0.1`], List[-0.5`, 0.1`]]], LineBox[List[List[0.5`, -0.1`], List[0.5`, \
-0.1`]]]], Rule[ImageSize, 30], Rule[Background, GrayLevel[0, 0]]], \
-GridBox[List[List[TagBox[\\\"\\\\\\\"cubits: \\\\\\\"\\\", \
-\\\"SummaryItem\\\"], TagBox[\\\"2\\\", \\\"SummaryItem\\\"]], List[TagBox[\\\
-\"\\\\\\\"fingers: \\\\\\\"\\\", \\\"SummaryItem\\\"], \
-TagBox[RowBox[List[\\\"Missing\\\", \\\"[\\\", \\\"]\\\"]], \\\"SummaryItem\\\
-\"]]], Rule[GridBoxAlignment, List[Rule[\\\"Columns\\\", List[List[Left]]], \
-Rule[\\\"Rows\\\", List[List[Automatic]]]]], Rule[AutoDelete, False], \
-Rule[GridBoxItemSize, List[Rule[\\\"Columns\\\", List[List[Automatic]]], \
-Rule[\\\"Rows\\\", List[List[Automatic]]]]], Rule[GridBoxSpacings, List[Rule[\
-\\\"Columns\\\", List[List[2]]], Rule[\\\"Rows\\\", List[List[Automatic]]]]], \
-Rule[BaseStyle, List[Rule[ShowStringCharacters, False], Rule[NumberMarks, \
-False], Rule[PrintPrecision, 3], Rule[ShowSyntaxStyles, False]]]]]], \
-Rule[GridBoxAlignment, List[Rule[\\\"Rows\\\", List[List[Top]]]]], \
-Rule[AutoDelete, False], Rule[GridBoxItemSize, List[Rule[\\\"Columns\\\", \
-List[List[Automatic]]], Rule[\\\"Rows\\\", List[List[Automatic]]]]], \
-Rule[BaselinePosition, List[1, 1]]]]], Dynamic[Typeset`open$$], \
-Rule[ImageSize, Automatic]]], \\\"SummaryPanel\\\"], \
-RuleDelayed[DynamicModuleValues, List[]]], \\\"]\\\"}], DiaryDistance[List[2, \
-Missing[]]], Rule[Selectable, False], Rule[Editable, False], \
-Rule[SelectWithContents, True]], \\\",\\\", \\\"\\\\\\\"Behind\\\\\\\"\\\"}], \
-\\\"}\\\"}], \\\",\\\", RowBox[{\\\"{\\\", \
-RowBox[{InterpretationBox[RowBox[{TagBox[\\\"DiaryDistance\\\", \
-\\\"SummaryHead\\\"], \\\"[\\\", DynamicModuleBox[{Typeset`open$$ = False, \
-Set[Typeset`embedState$$, \\\"Ready\\\"]}, \
-TemplateBox[List[PaneSelectorBox[List[Rule[False, \
-GridBox[List[List[GraphicsBox[List[List[Dashing[0.1`], RGBColor[1, 0.5`, 0], \
-LineBox[List[List[-0.5`, 0], List[0.5`, 0]]]], LineBox[List[List[-0.5`, \
--0.1`], List[-0.5`, 0.1`]]], LineBox[List[List[0.5`, -0.1`], List[0.5`, \
-0.1`]]]], Rule[ImageSize, 30], Rule[Background, GrayLevel[0, 0]]], \
-GridBox[List[List[TagBox[\\\"\\\\\\\"cubits: \\\\\\\"\\\", \
-\\\"SummaryItem\\\"], TagBox[\\\"3\\\", \\\"SummaryItem\\\"]], List[TagBox[\\\
-\"\\\\\\\"fingers: \\\\\\\"\\\", \\\"SummaryItem\\\"], \
-TagBox[RowBox[List[\\\"Missing\\\", \\\"[\\\", \\\"]\\\"]], \\\"SummaryItem\\\
-\"]]], Rule[GridBoxAlignment, List[Rule[\\\"Columns\\\", List[List[Left]]], \
-Rule[\\\"Rows\\\", List[List[Automatic]]]]], Rule[AutoDelete, False], \
-Rule[GridBoxItemSize, List[Rule[\\\"Columns\\\", List[List[Automatic]]], \
-Rule[\\\"Rows\\\", List[List[Automatic]]]]], Rule[GridBoxSpacings, List[Rule[\
-\\\"Columns\\\", List[List[2]]], Rule[\\\"Rows\\\", List[List[Automatic]]]]], \
-Rule[BaseStyle, List[Rule[ShowStringCharacters, False], Rule[NumberMarks, \
-False], Rule[PrintPrecision, 3], Rule[ShowSyntaxStyles, False]]]]]], \
-Rule[GridBoxAlignment, List[Rule[\\\"Rows\\\", List[List[Top]]]]], \
-Rule[AutoDelete, False], Rule[GridBoxItemSize, List[Rule[\\\"Columns\\\", \
-List[List[Automatic]]], Rule[\\\"Rows\\\", List[List[Automatic]]]]], \
-Rule[BaselinePosition, List[1, 1]]]], Rule[True, \
-GridBox[List[List[GraphicsBox[List[List[Dashing[0.1`], RGBColor[1, 0.5`, 0], \
-LineBox[List[List[-0.5`, 0], List[0.5`, 0]]]], LineBox[List[List[-0.5`, \
--0.1`], List[-0.5`, 0.1`]]], LineBox[List[List[0.5`, -0.1`], List[0.5`, \
-0.1`]]]], Rule[ImageSize, 30], Rule[Background, GrayLevel[0, 0]]], \
-GridBox[List[List[TagBox[\\\"\\\\\\\"cubits: \\\\\\\"\\\", \
-\\\"SummaryItem\\\"], TagBox[\\\"3\\\", \\\"SummaryItem\\\"]], List[TagBox[\\\
-\"\\\\\\\"fingers: \\\\\\\"\\\", \\\"SummaryItem\\\"], \
-TagBox[RowBox[List[\\\"Missing\\\", \\\"[\\\", \\\"]\\\"]], \\\"SummaryItem\\\
-\"]]], Rule[GridBoxAlignment, List[Rule[\\\"Columns\\\", List[List[Left]]], \
-Rule[\\\"Rows\\\", List[List[Automatic]]]]], Rule[AutoDelete, False], \
-Rule[GridBoxItemSize, List[Rule[\\\"Columns\\\", List[List[Automatic]]], \
-Rule[\\\"Rows\\\", List[List[Automatic]]]]], Rule[GridBoxSpacings, List[Rule[\
-\\\"Columns\\\", List[List[2]]], Rule[\\\"Rows\\\", List[List[Automatic]]]]], \
-Rule[BaseStyle, List[Rule[ShowStringCharacters, False], Rule[NumberMarks, \
-False], Rule[PrintPrecision, 3], Rule[ShowSyntaxStyles, False]]]]]], \
-Rule[GridBoxAlignment, List[Rule[\\\"Rows\\\", List[List[Top]]]]], \
-Rule[AutoDelete, False], Rule[GridBoxItemSize, List[Rule[\\\"Columns\\\", \
-List[List[Automatic]]], Rule[\\\"Rows\\\", List[List[Automatic]]]]], \
-Rule[BaselinePosition, List[1, 1]]]]], Dynamic[Typeset`open$$], \
-Rule[ImageSize, Automatic]]], \\\"SummaryPanel\\\"], \
-RuleDelayed[DynamicModuleValues, List[]]], \\\"]\\\"}], DiaryDistance[List[3, \
-Missing[]]], Rule[Selectable, False], Rule[Editable, False], \
-Rule[SelectWithContents, True]], \\\",\\\", \\\"\\\\\\\"North\\\\\\\"\\\"}], \
-\\\"}\\\"}]}], \\\"}\\\"}], \\\"]\\\"}], \\\"]\\\"}]\\) is not a valid \
-DiaryDisplacement.\"", 2, 26, 10, 18668714734494815129, "Local", 
-   "ComputationalDiaries`DiaryTypes`DiaryDisplacement"},
-  "MessageTemplate2"]], "Message", "MSG",
- CellChangeTimes->{3.797520888440975*^9, 3.7975209366487217`*^9},
- CellLabel->
-  "During evaluation of \
-In[26]:=",ExpressionUUID->"35a0630e-fbc5-49ea-bff5-1711d3ae0112"],
-
-Cell[BoxData[
- TemplateBox[{
-  "DiaryDisplacement", "invalid", 
-   "\"\\!\\(\\*RowBox[{\\\"Hold\\\", \\\"[\\\", RowBox[{\\\"DiaryDisplacement\
-\\\", \\\"[\\\", RowBox[{\\\"{\\\", RowBox[{RowBox[{\\\"{\\\", \
-RowBox[{InterpretationBox[RowBox[{TagBox[\\\"DiaryDistance\\\", \
-\\\"SummaryHead\\\"], \\\"[\\\", DynamicModuleBox[{Typeset`open$$ = False, \
-Set[Typeset`embedState$$, \\\"Ready\\\"]}, \
-TemplateBox[List[PaneSelectorBox[List[Rule[False, \
-GridBox[List[List[GraphicsBox[List[List[Dashing[0.1`], RGBColor[1, 0.5`, 0], \
-LineBox[List[List[-0.5`, 0], List[0.5`, 0]]]], LineBox[List[List[-0.5`, \
--0.1`], List[-0.5`, 0.1`]]], LineBox[List[List[0.5`, -0.1`], List[0.5`, \
-0.1`]]]], Rule[ImageSize, 30], Rule[Background, GrayLevel[0, 0]]], \
-GridBox[List[List[TagBox[\\\"\\\\\\\"cubits: \\\\\\\"\\\", \
-\\\"SummaryItem\\\"], TagBox[\\\"1\\\", \\\"SummaryItem\\\"]], List[TagBox[\\\
-\"\\\\\\\"fingers: \\\\\\\"\\\", \\\"SummaryItem\\\"], \
-TagBox[RowBox[List[\\\"Missing\\\", \\\"[\\\", \\\"]\\\"]], \\\"SummaryItem\\\
-\"]]], Rule[GridBoxAlignment, List[Rule[\\\"Columns\\\", List[List[Left]]], \
-Rule[\\\"Rows\\\", List[List[Automatic]]]]], Rule[AutoDelete, False], \
-Rule[GridBoxItemSize, List[Rule[\\\"Columns\\\", List[List[Automatic]]], \
-Rule[\\\"Rows\\\", List[List[Automatic]]]]], Rule[GridBoxSpacings, List[Rule[\
-\\\"Columns\\\", List[List[2]]], Rule[\\\"Rows\\\", List[List[Automatic]]]]], \
-Rule[BaseStyle, List[Rule[ShowStringCharacters, False], Rule[NumberMarks, \
-False], Rule[PrintPrecision, 3], Rule[ShowSyntaxStyles, False]]]]]], \
-Rule[GridBoxAlignment, List[Rule[\\\"Rows\\\", List[List[Top]]]]], \
-Rule[AutoDelete, False], Rule[GridBoxItemSize, List[Rule[\\\"Columns\\\", \
-List[List[Automatic]]], Rule[\\\"Rows\\\", List[List[Automatic]]]]], \
-Rule[BaselinePosition, List[1, 1]]]], Rule[True, \
-GridBox[List[List[GraphicsBox[List[List[Dashing[0.1`], RGBColor[1, 0.5`, 0], \
-LineBox[List[List[-0.5`, 0], List[0.5`, 0]]]], LineBox[List[List[-0.5`, \
--0.1`], List[-0.5`, 0.1`]]], LineBox[List[List[0.5`, -0.1`], List[0.5`, \
-0.1`]]]], Rule[ImageSize, 30], Rule[Background, GrayLevel[0, 0]]], \
-GridBox[List[List[TagBox[\\\"\\\\\\\"cubits: \\\\\\\"\\\", \
-\\\"SummaryItem\\\"], TagBox[\\\"1\\\", \\\"SummaryItem\\\"]], List[TagBox[\\\
-\"\\\\\\\"fingers: \\\\\\\"\\\", \\\"SummaryItem\\\"], \
-TagBox[RowBox[List[\\\"Missing\\\", \\\"[\\\", \\\"]\\\"]], \\\"SummaryItem\\\
-\"]]], Rule[GridBoxAlignment, List[Rule[\\\"Columns\\\", List[List[Left]]], \
-Rule[\\\"Rows\\\", List[List[Automatic]]]]], Rule[AutoDelete, False], \
-Rule[GridBoxItemSize, List[Rule[\\\"Columns\\\", List[List[Automatic]]], \
-Rule[\\\"Rows\\\", List[List[Automatic]]]]], Rule[GridBoxSpacings, List[Rule[\
-\\\"Columns\\\", List[List[2]]], Rule[\\\"Rows\\\", List[List[Automatic]]]]], \
-Rule[BaseStyle, List[Rule[ShowStringCharacters, False], Rule[NumberMarks, \
-False], Rule[PrintPrecision, 3], Rule[ShowSyntaxStyles, False]]]]]], \
-Rule[GridBoxAlignment, List[Rule[\\\"Rows\\\", List[List[Top]]]]], \
-Rule[AutoDelete, False], Rule[GridBoxItemSize, List[Rule[\\\"Columns\\\", \
-List[List[Automatic]]], Rule[\\\"Rows\\\", List[List[Automatic]]]]], \
-Rule[BaselinePosition, List[1, 1]]]]], Dynamic[Typeset`open$$], \
-Rule[ImageSize, Automatic]]], \\\"SummaryPanel\\\"], \
-RuleDelayed[DynamicModuleValues, List[]]], \\\"]\\\"}], DiaryDistance[List[1, \
-Missing[]]], Rule[Selectable, False], Rule[Editable, False], \
-Rule[SelectWithContents, True]], \\\",\\\", \
-\\\"\\\\\\\"InFrontOf\\\\\\\"\\\"}], \\\"}\\\"}], \\\",\\\", \
-RowBox[{\\\"{\\\", RowBox[{InterpretationBox[RowBox[{TagBox[\\\"DiaryDistance\
-\\\", \\\"SummaryHead\\\"], \\\"[\\\", DynamicModuleBox[{Typeset`open$$ = \
-False, Set[Typeset`embedState$$, \\\"Ready\\\"]}, \
-TemplateBox[List[PaneSelectorBox[List[Rule[False, \
-GridBox[List[List[GraphicsBox[List[List[Dashing[0.1`], RGBColor[1, 0.5`, 0], \
-LineBox[List[List[-0.5`, 0], List[0.5`, 0]]]], LineBox[List[List[-0.5`, \
--0.1`], List[-0.5`, 0.1`]]], LineBox[List[List[0.5`, -0.1`], List[0.5`, \
-0.1`]]]], Rule[ImageSize, 30], Rule[Background, GrayLevel[0, 0]]], \
-GridBox[List[List[TagBox[\\\"\\\\\\\"cubits: \\\\\\\"\\\", \
-\\\"SummaryItem\\\"], TagBox[RowBox[List[\\\"Missing\\\", \\\"[\\\", \
-\\\"]\\\"]], \\\"SummaryItem\\\"]], List[TagBox[\\\"\\\\\\\"fingers: \\\\\\\"\
-\\\", \\\"SummaryItem\\\"], TagBox[RowBox[List[\\\"Missing\\\", \\\"[\\\", \\\
-\"]\\\"]], \\\"SummaryItem\\\"]]], Rule[GridBoxAlignment, \
-List[Rule[\\\"Columns\\\", List[List[Left]]], Rule[\\\"Rows\\\", \
-List[List[Automatic]]]]], Rule[AutoDelete, False], Rule[GridBoxItemSize, \
-List[Rule[\\\"Columns\\\", List[List[Automatic]]], Rule[\\\"Rows\\\", \
-List[List[Automatic]]]]], Rule[GridBoxSpacings, List[Rule[\\\"Columns\\\", \
-List[List[2]]], Rule[\\\"Rows\\\", List[List[Automatic]]]]], Rule[BaseStyle, \
-List[Rule[ShowStringCharacters, False], Rule[NumberMarks, False], \
-Rule[PrintPrecision, 3], Rule[ShowSyntaxStyles, False]]]]]], \
-Rule[GridBoxAlignment, List[Rule[\\\"Rows\\\", List[List[Top]]]]], \
-Rule[AutoDelete, False], Rule[GridBoxItemSize, List[Rule[\\\"Columns\\\", \
-List[List[Automatic]]], Rule[\\\"Rows\\\", List[List[Automatic]]]]], \
-Rule[BaselinePosition, List[1, 1]]]], Rule[True, \
-GridBox[List[List[GraphicsBox[List[List[Dashing[0.1`], RGBColor[1, 0.5`, 0], \
-LineBox[List[List[-0.5`, 0], List[0.5`, 0]]]], LineBox[List[List[-0.5`, \
--0.1`], List[-0.5`, 0.1`]]], LineBox[List[List[0.5`, -0.1`], List[0.5`, \
-0.1`]]]], Rule[ImageSize, 30], Rule[Background, GrayLevel[0, 0]]], \
-GridBox[List[List[TagBox[\\\"\\\\\\\"cubits: \\\\\\\"\\\", \
-\\\"SummaryItem\\\"], TagBox[RowBox[List[\\\"Missing\\\", \\\"[\\\", \
-\\\"]\\\"]], \\\"SummaryItem\\\"]], List[TagBox[\\\"\\\\\\\"fingers: \\\\\\\"\
-\\\", \\\"SummaryItem\\\"], TagBox[RowBox[List[\\\"Missing\\\", \\\"[\\\", \\\
-\"]\\\"]], \\\"SummaryItem\\\"]]], Rule[GridBoxAlignment, \
-List[Rule[\\\"Columns\\\", List[List[Left]]], Rule[\\\"Rows\\\", \
-List[List[Automatic]]]]], Rule[AutoDelete, False], Rule[GridBoxItemSize, \
-List[Rule[\\\"Columns\\\", List[List[Automatic]]], Rule[\\\"Rows\\\", \
-List[List[Automatic]]]]], Rule[GridBoxSpacings, List[Rule[\\\"Columns\\\", \
-List[List[2]]], Rule[\\\"Rows\\\", List[List[Automatic]]]]], Rule[BaseStyle, \
-List[Rule[ShowStringCharacters, False], Rule[NumberMarks, False], \
-Rule[PrintPrecision, 3], Rule[ShowSyntaxStyles, False]]]]]], \
-Rule[GridBoxAlignment, List[Rule[\\\"Rows\\\", List[List[Top]]]]], \
-Rule[AutoDelete, False], Rule[GridBoxItemSize, List[Rule[\\\"Columns\\\", \
-List[List[Automatic]]], Rule[\\\"Rows\\\", List[List[Automatic]]]]], \
-Rule[BaselinePosition, List[1, 1]]]]], Dynamic[Typeset`open$$], \
-Rule[ImageSize, Automatic]]], \\\"SummaryPanel\\\"], \
-RuleDelayed[DynamicModuleValues, List[]]], \\\"]\\\"}], \
-DiaryDistance[List[Missing[], Missing[]]], Rule[Selectable, False], \
-Rule[Editable, False], Rule[SelectWithContents, True]], \\\",\\\", RowBox[{\\\
-\"Missing\\\", \\\"[\\\", \\\"]\\\"}]}], \\\"}\\\"}]}], \\\"}\\\"}], \
-\\\"]\\\"}], \\\"]\\\"}]\\) is not a valid DiaryDisplacement.\"", 2, 26, 11, 
-   18668714734494815129, "Local", 
-   "ComputationalDiaries`DiaryTypes`DiaryDisplacement"},
-  "MessageTemplate2"]], "Message", "MSG",
- CellChangeTimes->{3.797520888440975*^9, 3.797520936665144*^9},
- CellLabel->
-  "During evaluation of \
-In[26]:=",ExpressionUUID->"5be29a16-8747-419e-a348-437320c16d43"],
-
-Cell[BoxData[
- TemplateBox[{
-  "General", "stop", 
-   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"DiaryDisplacement\\\", \
-\\\"::\\\", \\\"invalid\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
-during this calculation.\"", 2, 26, 12, 18668714734494815129, "Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.797520888440975*^9, 3.7975209367023363`*^9},
- CellLabel->
-  "During evaluation of \
-In[26]:=",ExpressionUUID->"2a75c5b3-1ec7-453e-98bd-f73496733670"]
-}, Open  ]],
+ RowBox[{
+  RowBox[{"grasshoffObservations", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{"FileNameJoin", "[", 
+     RowBox[{"{", 
+      RowBox[{
+      "dataDirectory", ",", "\"\<MX\>\"", ",", 
+       "\"\<grasshoffObservations.mx\>\""}], "}"}], "]"}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.797553131223461*^9, 3.7975531531996098`*^9}},
+ CellLabel->"In[19]:=",ExpressionUUID->"d6d74f31-acbf-4984-aa69-d46bcdeba8df"],
 
 Cell[CellGroupData[{
 
@@ -2216,331 +1940,11 @@ Cell[BoxData[
  CellLabel->"Out[18]=",ExpressionUUID->"f263a839-a4bb-4024-a46b-1c6501a4990b"]
 }, Open  ]],
 
-Cell[CellGroupData[{
-
 Cell[BoxData[
  RowBox[{"rawJSON", "[", 
   RowBox[{"[", "10", "]"}], "]"}]], "Input",
  CellChangeTimes->{{3.7971141001530333`*^9, 3.79711410558806*^9}},
  CellLabel->"In[19]:=",ExpressionUUID->"f9aa12e0-66cc-42bf-83d9-eb5c7714a500"],
-
-Cell[BoxData[
- RowBox[{"\[LeftAssociation]", 
-  RowBox[{
-   RowBox[{"\<\"events\"\>", "\[Rule]", 
-    RowBox[{"{", 
-     RowBox[{"5212", ",", "5213", ",", "5214", ",", "5215", ",", "5216"}], 
-     "}"}]}], ",", 
-   RowBox[{"\<\"id\"\>", "\[Rule]", "\<\"pl107B\"\>"}], ",", 
-   RowBox[{"\<\"year_filter_key\"\>", "\[Rule]", "\<\"100BC\"\>"}], ",", 
-   RowBox[{"\<\"scis\"\>", "\[Rule]", 
-    RowBox[{"\[LeftAssociation]", 
-     RowBox[{
-      RowBox[{"\<\"text\"\>", "\[Rule]", 
-       RowBox[{"\[LeftAssociation]", 
-        RowBox[{
-         RowBox[{"\<\"title\"\>", "\[Rule]", "\<\"table\"\>"}], ",", 
-         RowBox[{"\<\"url\"\>", 
-          "\[Rule]", \
-"\<\"http://repository.edition-topoi.org/BDIA/ReposBDIA/BDIA3047/BDIA3047.sCi\
-\"\>"}], ",", 
-         RowBox[{"\<\"file\"\>", "\[Rule]", "\<\"3047\"\>"}]}], 
-        "\[RightAssociation]"}]}], ",", 
-      RowBox[{"\<\"analysis\"\>", "\[Rule]", 
-       RowBox[{"\[LeftAssociation]", 
-        RowBox[{
-         RowBox[{"\<\"title\"\>", "\[Rule]", "\<\"table\"\>"}], ",", 
-         RowBox[{"\<\"url\"\>", 
-          "\[Rule]", \
-"\<\"http://repository.edition-topoi.org/BDIA/ReposBDIA/BDIA4047/BDIA4047.sCi\
-\"\>"}], ",", 
-         RowBox[{"\<\"file\"\>", "\[Rule]", "\<\"4047\"\>"}]}], 
-        "\[RightAssociation]"}]}], ",", 
-      RowBox[{"\<\"data\"\>", "\[Rule]", 
-       RowBox[{"\[LeftAssociation]", 
-        RowBox[{
-         RowBox[{"\<\"title\"\>", "\[Rule]", "\<\"table\"\>"}], ",", 
-         RowBox[{"\<\"url\"\>", 
-          "\[Rule]", \
-"\<\"http://repository.edition-topoi.org/BDIA/ReposBDIA/BDIA6047/BDIA6047.sCi\
-\"\>"}], ",", 
-         RowBox[{"\<\"file\"\>", "\[Rule]", "\<\"6047\"\>"}]}], 
-        "\[RightAssociation]"}]}], ",", 
-      RowBox[{"\<\"notebooks\"\>", "\[Rule]", 
-       RowBox[{"\[LeftAssociation]", 
-        RowBox[{
-         RowBox[{"\<\"title\"\>", "\[Rule]", "\<\"table\"\>"}], ",", 
-         RowBox[{"\<\"url\"\>", 
-          "\[Rule]", \
-"\<\"http://repository.edition-topoi.org/BDIA/ReposBDIA/BDIA5000/BDIA5000.sCi\
-\"\>"}], ",", 
-         RowBox[{"\<\"file\"\>", "\[Rule]", "\<\"5000\"\>"}]}], 
-        "\[RightAssociation]"}]}], ",", 
-      RowBox[{"\<\"articles\"\>", "\[Rule]", 
-       RowBox[{"\[LeftAssociation]", 
-        RowBox[{
-         RowBox[{"\<\"title\"\>", "\[Rule]", "\<\"table\"\>"}], ",", 
-         RowBox[{"\<\"url\"\>", 
-          "\[Rule]", \
-"\<\"http://repository.edition-topoi.org/BDIA/ReposBDIA/BDIA5001/BDIA5001.sCi\
-\"\>"}], ",", 
-         RowBox[{"\<\"file\"\>", "\[Rule]", "\<\"5001\"\>"}]}], 
-        "\[RightAssociation]"}]}]}], "\[RightAssociation]"}]}], ",", 
-   RowBox[{"\<\"type\"\>", "\[Rule]", "\<\"table\"\>"}], ",", 
-   RowBox[{"\<\"metadata\"\>", "\[Rule]", 
-    RowBox[{"\[LeftAssociation]", 
-     RowBox[{
-      RowBox[{"\<\"General Information\"\>", "\[Rule]", 
-       RowBox[{"\[LeftAssociation]", 
-        RowBox[{
-         RowBox[{"\<\"Creator\"\>", 
-          "\[Rule]", "\<\"Exzellenzcluster 264 \[Dash] Topoi\"\>"}], ",", 
-         RowBox[{"\<\"Title\"\>", "\[Rule]", "\<\"Tablet 107B\"\>"}], ",", 
-         RowBox[{"\<\"Subtitle\"\>", 
-          "\[Rule]", "\<\"transliteration and English translation by Hermann \
-Hunger und Abrahm J. Sachs\"\>"}], ",", 
-         RowBox[{"\<\"DOI\"\>", "\[Rule]", "\<\"10.171/1-3-47\"\>"}], ",", 
-         RowBox[{"\<\"Publisher\"\>", "\[Rule]", "\<\"Edition Topoi\"\>"}], 
-         ",", 
-         RowBox[{"\<\"Publication Year\"\>", "\[Rule]", "\<\"2015\"\>"}], ",", 
-         RowBox[{"\<\"Description\"\>", "\[Rule]", "\<\"\"\>"}], ",", 
-         RowBox[{"\<\"Source\"\>", 
-          "\[Rule]", "\<\"Astronomical Diaries and Related Texts from \
-Babylonia, Edited by Hermann Hunger, Wien, 2006,  <a \
-href='http://verlag.oeaw.ac.at/' ' target='_blank'>Verlag der \
-\[CapitalODoubleDot]sterreichischen Akademie der Wissenschaften</a>\"\>"}]}], 
-        "\[RightAssociation]"}]}], ",", 
-      RowBox[{"\<\"Technical characteristics\"\>", "\[Rule]", 
-       RowBox[{"\[LeftAssociation]", 
-        RowBox[{
-         RowBox[{"\<\"Collection\"\>", 
-          "\[Rule]", "\<\"Astronomical Diaries\"\>"}], ",", 
-         RowBox[{"\<\"Contributor Type\"\>", "\[Rule]", "\<\"Editor\"\>"}], 
-         ",", 
-         RowBox[{"\<\"Format\"\>", "\[Rule]", "\<\"\"\>"}], ",", 
-         RowBox[{"\<\"Contributor Name\"\>", 
-          "\[Rule]", "\<\"Gerd Gra\[SZ]hoff\"\>"}], ",", 
-         RowBox[{"\<\"Resource Type\"\>", "\[Rule]", "\<\"Dataset\"\>"}], ",", 
-         RowBox[{"\<\"Tools\"\>", "\[Rule]", "\<\"\"\>"}], ",", 
-         RowBox[{"\<\"Size\"\>", "\[Rule]", "\<\"\"\>"}], ",", 
-         RowBox[{"\<\"Date (Update)\"\>", "\[Rule]", "\<\"2015\"\>"}]}], 
-        "\[RightAssociation]"}]}], ",", 
-      RowBox[{"\<\"Specific Attributes\"\>", "\[Rule]", 
-       RowBox[{"\[LeftAssociation]", 
-        RowBox[{
-         RowBox[{"\<\"Origin / Holder object\"\>", "\[Rule]", "\<\"\"\>"}], 
-         ",", 
-         RowBox[{"\<\"Holder digital source\"\>", 
-          "\[Rule]", "\<\"Exzellenzcluster 264 \[Dash] Topoi\"\>"}], ",", 
-         RowBox[{"\<\"Inventory Number\"\>", "\[Rule]", "\<\"\"\>"}], ",", 
-         RowBox[{"\<\"Language source/object\"\>", 
-          "\[Rule]", "\<\"akkadian\"\>"}], ",", 
-         RowBox[{"\<\"Related Identifier\"\>", "\[Rule]", "\<\"\"\>"}], ",", 
-         RowBox[{"\<\"Alternate Identifier\"\>", "\[Rule]", "\<\"\"\>"}], ",", 
-         RowBox[{"\<\"Geolocation/region\"\>", 
-          "\[Rule]", "\<\"Babylonia\"\>"}]}], "\[RightAssociation]"}]}], ",", 
-      
-      RowBox[{"\<\"Conditions for use\"\>", "\[Rule]", 
-       RowBox[{"\[LeftAssociation]", 
-        RowBox[{
-         RowBox[{"\<\"Rights: Creative Commons\"\>", 
-          "\[Rule]", "\<\"CC-BY 4.0\"\>"}], ",", 
-         RowBox[{"\<\"Further legal restrictions or comments\"\>", 
-          "\[Rule]", "\<\"\"\>"}]}], "\[RightAssociation]"}]}], ",", 
-      RowBox[{"\<\"Annotations\"\>", "\[Rule]", 
-       RowBox[{"\[LeftAssociation]", 
-        RowBox[{
-         RowBox[{"\<\"Subjects\"\>", "\[Rule]", "\<\"\"\>"}], ",", 
-         RowBox[{"\<\"Version\"\>", "\[Rule]", "\<\"1.0\"\>"}], ",", 
-         RowBox[{"\<\"Further information\"\>", "\[Rule]", "\<\"\"\>"}]}], 
-        "\[RightAssociation]"}]}]}], "\[RightAssociation]"}]}], ",", 
-   RowBox[{"\<\"event-5213\"\>", "\[Rule]", 
-    RowBox[{"\[LeftAssociation]", 
-     RowBox[{
-      RowBox[{"\<\"j\"\>", "\[Rule]", 
-       RowBox[{"-", "107"}]}], ",", 
-      RowBox[{"\<\"m\"\>", "\[Rule]", "9"}], ",", 
-      RowBox[{"\<\"rel2\"\>", "\[Rule]", "\<\"passed_to_the_east\"\>"}], ",", 
-      
-      RowBox[{"\<\"kusd20\"\>", "\[Rule]", "1.`"}], ",", 
-      RowBox[{"\<\"balanced\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"kus\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"obj2\"\>", "\[Rule]", "\<\"g_geminorum\"\>"}], ",", 
-      RowBox[{"\<\"kus2d24\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"id\"\>", "\[Rule]", "5213"}], ",", 
-      RowBox[{"\<\"kusp2\"\>", "\[Rule]", "\<\"a_little\"\>"}], ",", 
-      RowBox[{"\<\"day\"\>", "\[Rule]", "20"}], ",", 
-      RowBox[{"\<\"number\"\>", "\[Rule]", "5213"}], ",", 
-      RowBox[{"\<\"kus2\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"shift\"\>", "\[Rule]", "\<\"shift\"\>"}], ",", 
-      RowBox[{"\<\"event-type\"\>", "\[Rule]", "\<\"configuration\"\>"}], ",", 
-      RowBox[{"\<\"king\"\>", "\[Rule]", "\<\"seleucid_era\"\>"}], ",", 
-      RowBox[{"\<\"obj1\"\>", "\[Rule]", "\<\"moon\"\>"}], ",", 
-      RowBox[{"\<\"mjd\"\>", "\[Rule]", 
-       RowBox[{"-", "717762"}]}], ",", 
-      RowBox[{"\<\"kusfrac2\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"kusfrac\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"kus2d20\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"kusd24\"\>", "\[Rule]", "0.833333`"}], ",", 
-      RowBox[{"\<\"time\"\>", "\[Rule]", "\<\"last_part_of_night\"\>"}], ",", 
-      
-      RowBox[{"\<\"kusp\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"type_filter_key\"\>", "\[Rule]", "\<\"configuration\"\>"}],
-       ",", 
-      RowBox[{"\<\"si2\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"lfdnr\"\>", "\[Rule]", "2"}], ",", 
-      RowBox[{"\<\"torel\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"month\"\>", "\[Rule]", "6"}], ",", 
-      RowBox[{"\<\"rel\"\>", "\[Rule]", "\<\"above\"\>"}], ",", 
-      RowBox[{"\<\"year_filter_key\"\>", "\[Rule]", "204"}], ",", 
-      RowBox[{"\<\"table\"\>", "\[Rule]", "\<\"pl107B\"\>"}], ",", 
-      RowBox[{"\<\"si\"\>", "\[Rule]", "20"}], ",", 
-      RowBox[{"\<\"sip\"\>", "\[Rule]", "\<\"si\"\>"}], ",", 
-      RowBox[{"\<\"sip2\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"t\"\>", "\[Rule]", "20"}], ",", 
-      RowBox[{"\<\"type\"\>", "\[Rule]", "\<\"event\"\>"}], ",", 
-      RowBox[{"\<\"year\"\>", "\[Rule]", "204"}]}], "\[RightAssociation]"}]}],
-    ",", 
-   RowBox[{"\<\"event-5214\"\>", "\[Rule]", 
-    RowBox[{"\[LeftAssociation]", 
-     RowBox[{
-      RowBox[{"\<\"j\"\>", "\[Rule]", 
-       RowBox[{"-", "107"}]}], ",", 
-      RowBox[{"\<\"m\"\>", "\[Rule]", "9"}], ",", 
-      RowBox[{"\<\"rel2\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"kusd20\"\>", "\[Rule]", "2.`"}], ",", 
-      RowBox[{"\<\"balanced\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"kus\"\>", "\[Rule]", "2"}], ",", 
-      RowBox[{"\<\"obj2\"\>", "\[Rule]", "\<\"d_cancri\"\>"}], ",", 
-      RowBox[{"\<\"kus2d24\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"id\"\>", "\[Rule]", "5214"}], ",", 
-      RowBox[{"\<\"kusp2\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"day\"\>", "\[Rule]", "22"}], ",", 
-      RowBox[{"\<\"number\"\>", "\[Rule]", "5214"}], ",", 
-      RowBox[{"\<\"kus2\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"shift\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"event-type\"\>", "\[Rule]", "\<\"configuration\"\>"}], ",", 
-      RowBox[{"\<\"king\"\>", "\[Rule]", "\<\"seleucid_era\"\>"}], ",", 
-      RowBox[{"\<\"obj1\"\>", "\[Rule]", "\<\"moon\"\>"}], ",", 
-      RowBox[{"\<\"mjd\"\>", "\[Rule]", 
-       RowBox[{"-", "717760"}]}], ",", 
-      RowBox[{"\<\"kusfrac2\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"kusfrac\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"kus2d20\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"kusd24\"\>", "\[Rule]", "2.`"}], ",", 
-      RowBox[{"\<\"time\"\>", "\[Rule]", "\<\"last_part_of_night\"\>"}], ",", 
-      
-      RowBox[{"\<\"kusp\"\>", "\[Rule]", "\<\"kus\"\>"}], ",", 
-      RowBox[{"\<\"type_filter_key\"\>", "\[Rule]", "\<\"configuration\"\>"}],
-       ",", 
-      RowBox[{"\<\"si2\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"lfdnr\"\>", "\[Rule]", "3"}], ",", 
-      RowBox[{"\<\"torel\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"month\"\>", "\[Rule]", "6"}], ",", 
-      RowBox[{"\<\"rel\"\>", "\[Rule]", "\<\"below\"\>"}], ",", 
-      RowBox[{"\<\"year_filter_key\"\>", "\[Rule]", "204"}], ",", 
-      RowBox[{"\<\"table\"\>", "\[Rule]", "\<\"pl107B\"\>"}], ",", 
-      RowBox[{"\<\"si\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"sip\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"sip2\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"t\"\>", "\[Rule]", "22"}], ",", 
-      RowBox[{"\<\"type\"\>", "\[Rule]", "\<\"event\"\>"}], ",", 
-      RowBox[{"\<\"year\"\>", "\[Rule]", "204"}]}], "\[RightAssociation]"}]}],
-    ",", 
-   RowBox[{"\<\"event-5215\"\>", "\[Rule]", 
-    RowBox[{"\[LeftAssociation]", 
-     RowBox[{
-      RowBox[{"\<\"j\"\>", "\[Rule]", 
-       RowBox[{"-", "107"}]}], ",", 
-      RowBox[{"\<\"m\"\>", "\[Rule]", "9"}], ",", 
-      RowBox[{"\<\"rel2\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"kusd20\"\>", "\[Rule]", "1.`"}], ",", 
-      RowBox[{"\<\"balanced\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"kus\"\>", "\[Rule]", "1"}], ",", 
-      RowBox[{"\<\"obj2\"\>", "\[Rule]", "\<\"th_leonis\"\>"}], ",", 
-      RowBox[{"\<\"kus2d24\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"id\"\>", "\[Rule]", "5215"}], ",", 
-      RowBox[{"\<\"kusp2\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"day\"\>", "\[Rule]", "25"}], ",", 
-      RowBox[{"\<\"number\"\>", "\[Rule]", "5215"}], ",", 
-      RowBox[{"\<\"kus2\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"shift\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"event-type\"\>", "\[Rule]", "\<\"configuration\"\>"}], ",", 
-      RowBox[{"\<\"king\"\>", "\[Rule]", "\<\"seleucid_era\"\>"}], ",", 
-      RowBox[{"\<\"obj1\"\>", "\[Rule]", "\<\"moon\"\>"}], ",", 
-      RowBox[{"\<\"mjd\"\>", "\[Rule]", 
-       RowBox[{"-", "717757"}]}], ",", 
-      RowBox[{"\<\"kusfrac2\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"kusfrac\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"kus2d20\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"kusd24\"\>", "\[Rule]", "1.`"}], ",", 
-      RowBox[{"\<\"time\"\>", "\[Rule]", "\<\"last_part_of_night\"\>"}], ",", 
-      
-      RowBox[{"\<\"kusp\"\>", "\[Rule]", "\<\"kus\"\>"}], ",", 
-      RowBox[{"\<\"type_filter_key\"\>", "\[Rule]", "\<\"configuration\"\>"}],
-       ",", 
-      RowBox[{"\<\"si2\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"lfdnr\"\>", "\[Rule]", "4"}], ",", 
-      RowBox[{"\<\"torel\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"month\"\>", "\[Rule]", "6"}], ",", 
-      RowBox[{"\<\"rel\"\>", "\[Rule]", "\<\"behind\"\>"}], ",", 
-      RowBox[{"\<\"year_filter_key\"\>", "\[Rule]", "204"}], ",", 
-      RowBox[{"\<\"table\"\>", "\[Rule]", "\<\"pl107B\"\>"}], ",", 
-      RowBox[{"\<\"si\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"sip\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"sip2\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"t\"\>", "\[Rule]", "25"}], ",", 
-      RowBox[{"\<\"type\"\>", "\[Rule]", "\<\"event\"\>"}], ",", 
-      RowBox[{"\<\"year\"\>", "\[Rule]", "204"}]}], "\[RightAssociation]"}]}],
-    ",", 
-   RowBox[{"\<\"event-5216\"\>", "\[Rule]", 
-    RowBox[{"\[LeftAssociation]", 
-     RowBox[{
-      RowBox[{"\<\"j\"\>", "\[Rule]", 
-       RowBox[{"-", "107"}]}], ",", 
-      RowBox[{"\<\"m\"\>", "\[Rule]", "9"}], ",", 
-      RowBox[{"\<\"rel2\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"kusd20\"\>", "\[Rule]", "2.`"}], ",", 
-      RowBox[{"\<\"balanced\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"kus\"\>", "\[Rule]", "2"}], ",", 
-      RowBox[{"\<\"obj2\"\>", "\[Rule]", "\<\"a_scorpii\"\>"}], ",", 
-      RowBox[{"\<\"kus2d24\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"id\"\>", "\[Rule]", "5216"}], ",", 
-      RowBox[{"\<\"kusp2\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"day\"\>", "\[Rule]", "29"}], ",", 
-      RowBox[{"\<\"number\"\>", "\[Rule]", "5216"}], ",", 
-      RowBox[{"\<\"kus2\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"shift\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"event-type\"\>", "\[Rule]", "\<\"configuration\"\>"}], ",", 
-      RowBox[{"\<\"king\"\>", "\[Rule]", "\<\"seleucid_era\"\>"}], ",", 
-      RowBox[{"\<\"obj1\"\>", "\[Rule]", "\<\"venus\"\>"}], ",", 
-      RowBox[{"\<\"mjd\"\>", "\[Rule]", 
-       RowBox[{"-", "717753"}]}], ",", 
-      RowBox[{"\<\"kusfrac2\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"kusfrac\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"kus2d20\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"kusd24\"\>", "\[Rule]", "2.`"}], ",", 
-      RowBox[{"\<\"time\"\>", "\[Rule]", "\<\"first_part_of_night\"\>"}], ",", 
-      RowBox[{"\<\"kusp\"\>", "\[Rule]", "\<\"kus\"\>"}], ",", 
-      RowBox[{"\<\"type_filter_key\"\>", "\[Rule]", "\<\"configuration\"\>"}],
-       ",", 
-      RowBox[{"\<\"si2\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"lfdnr\"\>", "\[Rule]", "5"}], ",", 
-      RowBox[{"\<\"torel\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"month\"\>", "\[Rule]", "6"}], ",", 
-      RowBox[{"\<\"rel\"\>", "\[Rule]", "\<\"above\"\>"}], ",", 
-      RowBox[{"\<\"year_filter_key\"\>", "\[Rule]", "204"}], ",", 
-      RowBox[{"\<\"table\"\>", "\[Rule]", "\<\"pl107B\"\>"}], ",", 
-      RowBox[{"\<\"si\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"sip\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"sip2\"\>", "\[Rule]", "Null"}], ",", 
-      RowBox[{"\<\"t\"\>", "\[Rule]", "29"}], ",", 
-      RowBox[{"\<\"type\"\>", "\[Rule]", "\<\"event\"\>"}], ",", 
-      RowBox[{"\<\"year\"\>", "\[Rule]", "204"}]}], 
-     "\[RightAssociation]"}]}]}], "\[RightAssociation]"}]], "Output",
- CellChangeTimes->{3.79712642426026*^9},
- CellLabel->"Out[19]=",ExpressionUUID->"72345004-e241-4414-884d-ca5bc041d0d5"]
-}, Open  ]],
 
 Cell[BoxData[
  RowBox[{"tabletEvents", "[", 
@@ -3451,7 +2855,7 @@ Cell[BoxData[
 }, Open  ]]
 },
 WindowSize->{935, 913},
-WindowMargins->{{76, Automatic}, {28, Automatic}},
+WindowMargins->{{326, Automatic}, {Automatic, 20}},
 FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (March 18, 2020)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"d6405c13-bc1e-4c27-a833-71d511383a62"
@@ -3470,115 +2874,108 @@ Notebook[{
 Cell[558, 20, 174, 2, 30, "Input",ExpressionUUID->"fb9ca211-a049-4043-aced-2daa5e233548"],
 Cell[CellGroupData[{
 Cell[757, 26, 411, 9, 30, "Input",ExpressionUUID->"1a0363b9-6e9e-4b1c-a35a-cf5f37a13331"],
-Cell[1171, 37, 447, 7, 34, "Output",ExpressionUUID->"c5c36a71-5ab9-4636-8894-7c7562d2ebc5"]
+Cell[1171, 37, 498, 8, 34, "Output",ExpressionUUID->"76722355-59f0-4ad3-87eb-c878fa55f105"]
 }, Open  ]],
-Cell[1633, 47, 279, 4, 30, "Input",ExpressionUUID->"1c2979cb-bc2c-4ee3-a9e8-0078c8a27c51"],
+Cell[1684, 48, 279, 4, 30, "Input",ExpressionUUID->"1c2979cb-bc2c-4ee3-a9e8-0078c8a27c51"],
 Cell[CellGroupData[{
-Cell[1937, 55, 397, 9, 30, "Input",ExpressionUUID->"0a503957-3285-424b-a6dd-845d36eec216"],
-Cell[2337, 66, 622, 9, 34, "Output",ExpressionUUID->"65c36863-d17b-46c3-a82c-8ecb1352940e"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[2996, 80, 217, 4, 67, "Section",ExpressionUUID->"fe8e34f7-12df-425c-ba23-fcc86c401c7f"],
-Cell[3216, 86, 250, 6, 35, "Text",ExpressionUUID->"90c3ec4f-9430-4ff2-9c14-ab8e9783c6fa"],
-Cell[3469, 94, 504, 12, 30, "Input",ExpressionUUID->"210b63ea-4116-4c76-8b02-9c66a799ddce"],
-Cell[3976, 108, 1394, 34, 115, "Input",ExpressionUUID->"ac6e2124-22e5-47df-841c-acda56a86c0f"],
-Cell[5373, 144, 298, 6, 30, "Input",ExpressionUUID->"c0862039-b95c-4c3d-9bc5-62e4186ed44e"]
+Cell[1988, 56, 397, 9, 30, "Input",ExpressionUUID->"0a503957-3285-424b-a6dd-845d36eec216"],
+Cell[2388, 67, 669, 10, 34, "Output",ExpressionUUID->"7489750b-e408-4e02-95c8-0f16a706dfb8"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5708, 155, 162, 3, 67, "Section",ExpressionUUID->"4c44021b-245b-48bd-8d12-23b56c3e523b"],
-Cell[CellGroupData[{
-Cell[5895, 162, 161, 3, 54, "Subsection",ExpressionUUID->"ca694232-c1f5-480b-85e2-a7b04053dce8"],
-Cell[6059, 167, 3973, 89, 421, "Code",ExpressionUUID->"072e9d2f-4539-4fd4-908a-9ebb3306f26f"],
-Cell[10035, 258, 7149, 151, 874, "Code",ExpressionUUID->"a9ec18df-f115-4b50-8c88-7f37811a4028"],
-Cell[17187, 411, 751, 16, 148, "Code",ExpressionUUID->"daf05c61-0b28-4f09-9c5a-dfd2a10a4a66"],
-Cell[17941, 429, 741, 18, 148, "Code",ExpressionUUID->"7f294beb-ee61-4089-938c-944b9a265eab"],
-Cell[18685, 449, 603, 11, 148, "Code",ExpressionUUID->"82fda1da-ea35-41b1-8427-3833f797c28b"]
+Cell[3094, 82, 217, 4, 67, "Section",ExpressionUUID->"fe8e34f7-12df-425c-ba23-fcc86c401c7f"],
+Cell[3314, 88, 250, 6, 35, "Text",ExpressionUUID->"90c3ec4f-9430-4ff2-9c14-ab8e9783c6fa"],
+Cell[3567, 96, 504, 12, 30, "Input",ExpressionUUID->"210b63ea-4116-4c76-8b02-9c66a799ddce"],
+Cell[4074, 110, 1394, 34, 115, "Input",ExpressionUUID->"ac6e2124-22e5-47df-841c-acda56a86c0f"],
+Cell[5471, 146, 298, 6, 30, "Input",ExpressionUUID->"c0862039-b95c-4c3d-9bc5-62e4186ed44e"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[19325, 465, 155, 3, 54, "Subsection",ExpressionUUID->"8c921b93-9c88-4b92-b79b-f5a37a95b05c"],
+Cell[5806, 157, 162, 3, 67, "Section",ExpressionUUID->"4c44021b-245b-48bd-8d12-23b56c3e523b"],
 Cell[CellGroupData[{
-Cell[19505, 472, 10173, 189, 946, "Code",ExpressionUUID->"d977d37a-9b79-4752-9988-15864392bf38"],
-Cell[29681, 663, 7339, 110, 143, "Message",ExpressionUUID->"e304036d-d292-44fc-8a8b-d66d601c1b06"],
-Cell[37023, 775, 7206, 105, 116, "Message",ExpressionUUID->"35a0630e-fbc5-49ea-bff5-1711d3ae0112"],
-Cell[44232, 882, 7325, 108, 116, "Message",ExpressionUUID->"5be29a16-8747-419e-a348-437320c16d43"],
-Cell[51560, 992, 489, 10, 24, "Message",ExpressionUUID->"2a75c5b3-1ec7-453e-98bd-f73496733670"]
+Cell[5993, 164, 161, 3, 54, "Subsection",ExpressionUUID->"ca694232-c1f5-480b-85e2-a7b04053dce8"],
+Cell[6157, 169, 3973, 89, 421, "Code",ExpressionUUID->"072e9d2f-4539-4fd4-908a-9ebb3306f26f"],
+Cell[10133, 260, 7149, 151, 874, "Code",ExpressionUUID->"a9ec18df-f115-4b50-8c88-7f37811a4028"],
+Cell[17285, 413, 751, 16, 148, "Code",ExpressionUUID->"daf05c61-0b28-4f09-9c5a-dfd2a10a4a66"],
+Cell[18039, 431, 741, 18, 148, "Code",ExpressionUUID->"7f294beb-ee61-4089-938c-944b9a265eab"],
+Cell[18783, 451, 603, 11, 148, "Code",ExpressionUUID->"82fda1da-ea35-41b1-8427-3833f797c28b"],
+Cell[19389, 464, 523, 12, 53, "Input",ExpressionUUID->"c7937336-cf34-4cda-af0a-3c3d3fc051cd"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[52086, 1007, 406, 8, 39, "Input",ExpressionUUID->"2660506b-f31d-4cf6-9dea-4af17c532efc"],
-Cell[52495, 1017, 1308, 22, 119, "Output",ExpressionUUID->"ed6f17ad-739e-4ba7-8bcb-d1d4a4fcbb7f"]
+Cell[19949, 481, 155, 3, 54, "Subsection",ExpressionUUID->"8c921b93-9c88-4b92-b79b-f5a37a95b05c"],
+Cell[20107, 486, 12292, 228, 1041, "Code",ExpressionUUID->"d977d37a-9b79-4752-9988-15864392bf38"],
+Cell[32402, 716, 442, 11, 30, "Input",ExpressionUUID->"d6d74f31-acbf-4984-aa69-d46bcdeba8df"],
+Cell[CellGroupData[{
+Cell[32869, 731, 406, 8, 39, "Input",ExpressionUUID->"2660506b-f31d-4cf6-9dea-4af17c532efc"],
+Cell[33278, 741, 1308, 22, 119, "Output",ExpressionUUID->"ed6f17ad-739e-4ba7-8bcb-d1d4a4fcbb7f"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[53840, 1044, 466, 11, 30, "Input",ExpressionUUID->"4361f986-6b2c-4b1a-9b3f-ba292b19f7f3"],
-Cell[54309, 1057, 39304, 779, 1185, "Output",ExpressionUUID->"eeea3936-cc05-4503-bf5f-281936a8e078"]
+Cell[34623, 768, 466, 11, 30, "Input",ExpressionUUID->"4361f986-6b2c-4b1a-9b3f-ba292b19f7f3"],
+Cell[35092, 781, 39304, 779, 1185, "Output",ExpressionUUID->"eeea3936-cc05-4503-bf5f-281936a8e078"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[93650, 1841, 388, 6, 30, "Input",ExpressionUUID->"250c9252-87f3-4c3a-8fa4-0796a632957a"],
-Cell[94041, 1849, 12269, 244, 271, "Output",ExpressionUUID->"7f0d84a2-6260-4a67-8371-6be83a51b202"]
+Cell[74433, 1565, 388, 6, 30, "Input",ExpressionUUID->"250c9252-87f3-4c3a-8fa4-0796a632957a"],
+Cell[74824, 1573, 12269, 244, 271, "Output",ExpressionUUID->"7f0d84a2-6260-4a67-8371-6be83a51b202"]
 }, Open  ]],
-Cell[106325, 2096, 217, 3, 30, "Input",ExpressionUUID->"3be738e2-c53b-4d20-a741-a644475d3177"],
+Cell[87108, 1820, 217, 3, 30, "Input",ExpressionUUID->"3be738e2-c53b-4d20-a741-a644475d3177"],
 Cell[CellGroupData[{
-Cell[106567, 2103, 444, 10, 30, "Input",ExpressionUUID->"c5227be7-3861-4dfa-b02b-489c4cd11bfb"],
-Cell[107014, 2115, 3233, 61, 186, "Output",ExpressionUUID->"c7d5ddff-6464-4458-94da-1c4bab83c96e"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[110284, 2181, 645, 16, 52, "Input",ExpressionUUID->"e112f018-17b9-4640-8032-55496ec641bf"],
-Cell[110932, 2199, 851, 16, 60, "Output",ExpressionUUID->"f263a839-a4bb-4024-a46b-1c6501a4990b"]
+Cell[87350, 1827, 444, 10, 30, "Input",ExpressionUUID->"c5227be7-3861-4dfa-b02b-489c4cd11bfb"],
+Cell[87797, 1839, 3233, 61, 186, "Output",ExpressionUUID->"c7d5ddff-6464-4458-94da-1c4bab83c96e"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[111820, 2220, 230, 4, 30, "Input",ExpressionUUID->"f9aa12e0-66cc-42bf-83d9-eb5c7714a500"],
-Cell[112053, 2226, 16423, 315, 1212, "Output",ExpressionUUID->"72345004-e241-4414-884d-ca5bc041d0d5"]
+Cell[91067, 1905, 645, 16, 52, "Input",ExpressionUUID->"e112f018-17b9-4640-8032-55496ec641bf"],
+Cell[91715, 1923, 851, 16, 60, "Output",ExpressionUUID->"f263a839-a4bb-4024-a46b-1c6501a4990b"]
 }, Open  ]],
-Cell[128491, 2544, 168, 3, 30, "Input",ExpressionUUID->"4b036205-6efe-46ce-bb06-5c9a4fff6828"],
+Cell[92581, 1942, 230, 4, 30, "Input",ExpressionUUID->"f9aa12e0-66cc-42bf-83d9-eb5c7714a500"],
+Cell[92814, 1948, 168, 3, 30, "Input",ExpressionUUID->"4b036205-6efe-46ce-bb06-5c9a4fff6828"],
 Cell[CellGroupData[{
-Cell[128684, 2551, 721, 19, 52, "Input",ExpressionUUID->"8a96411d-2aa9-4975-8478-2878bb373dd5"],
-Cell[129408, 2572, 3671, 80, 141, "Output",ExpressionUUID->"be63fb8b-4f84-46b5-a845-d8629c89d6c4"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[133116, 2657, 261, 5, 30, "Input",ExpressionUUID->"8e65fcba-4181-4d5f-b76f-a71cf576f0e7"],
-Cell[133380, 2664, 461, 10, 24, "Message",ExpressionUUID->"288c172e-fbae-47d7-b04f-9e0b5ab875b8"],
-Cell[133844, 2676, 284, 5, 34, "Output",ExpressionUUID->"4923064e-f045-4cef-8d94-e71fe7ba9fcd"]
+Cell[93007, 1955, 721, 19, 52, "Input",ExpressionUUID->"8a96411d-2aa9-4975-8478-2878bb373dd5"],
+Cell[93731, 1976, 3671, 80, 141, "Output",ExpressionUUID->"be63fb8b-4f84-46b5-a845-d8629c89d6c4"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[134165, 2686, 237, 4, 30, "Input",ExpressionUUID->"1d677356-3d61-45ed-9b23-f881735a2145"],
-Cell[134405, 2692, 462, 10, 24, "Message",ExpressionUUID->"30c89e16-c5df-4ca6-81dd-eee00ad130d0"],
-Cell[134870, 2704, 302, 5, 34, "Output",ExpressionUUID->"20ec418b-b63e-497c-b254-65d162addda4"]
+Cell[97439, 2061, 261, 5, 30, "Input",ExpressionUUID->"8e65fcba-4181-4d5f-b76f-a71cf576f0e7"],
+Cell[97703, 2068, 461, 10, 24, "Message",ExpressionUUID->"288c172e-fbae-47d7-b04f-9e0b5ab875b8"],
+Cell[98167, 2080, 284, 5, 34, "Output",ExpressionUUID->"4923064e-f045-4cef-8d94-e71fe7ba9fcd"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[135209, 2714, 492, 10, 30, "Input",ExpressionUUID->"7504fc6e-ea8a-4bb2-8dba-c54b96acb599"],
-Cell[135704, 2726, 504, 9, 34, "Output",ExpressionUUID->"6805e3dd-699c-4e09-8782-0ddf49fff6c4"]
+Cell[98488, 2090, 237, 4, 30, "Input",ExpressionUUID->"1d677356-3d61-45ed-9b23-f881735a2145"],
+Cell[98728, 2096, 462, 10, 24, "Message",ExpressionUUID->"30c89e16-c5df-4ca6-81dd-eee00ad130d0"],
+Cell[99193, 2108, 302, 5, 34, "Output",ExpressionUUID->"20ec418b-b63e-497c-b254-65d162addda4"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[136245, 2740, 278, 7, 30, "Input",ExpressionUUID->"5ce8b5d3-dc66-4b5d-b835-4d16733b32fa"],
-Cell[136526, 2749, 398, 6, 34, "Output",ExpressionUUID->"1a7cfa97-b1cc-4c1b-9c64-4e09f712ab5f"]
+Cell[99532, 2118, 492, 10, 30, "Input",ExpressionUUID->"7504fc6e-ea8a-4bb2-8dba-c54b96acb599"],
+Cell[100027, 2130, 504, 9, 34, "Output",ExpressionUUID->"6805e3dd-699c-4e09-8782-0ddf49fff6c4"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[136961, 2760, 400, 9, 30, "Input",ExpressionUUID->"a3c101fa-f665-43c5-929d-12ad3d73187a"],
-Cell[137364, 2771, 464, 8, 56, "Output",ExpressionUUID->"b0a089d2-0c2f-4acf-9efd-09a8f12ceabc"]
+Cell[100568, 2144, 278, 7, 30, "Input",ExpressionUUID->"5ce8b5d3-dc66-4b5d-b835-4d16733b32fa"],
+Cell[100849, 2153, 398, 6, 34, "Output",ExpressionUUID->"1a7cfa97-b1cc-4c1b-9c64-4e09f712ab5f"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[137865, 2784, 883, 21, 73, "Input",ExpressionUUID->"a0003644-12a4-48b2-baaa-fdf2e8a46b23"],
-Cell[138751, 2807, 288, 4, 34, "Output",ExpressionUUID->"71d5da45-322a-407d-a6a8-049d7843c79c"]
+Cell[101284, 2164, 400, 9, 30, "Input",ExpressionUUID->"a3c101fa-f665-43c5-929d-12ad3d73187a"],
+Cell[101687, 2175, 464, 8, 56, "Output",ExpressionUUID->"b0a089d2-0c2f-4acf-9efd-09a8f12ceabc"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[139076, 2816, 334, 7, 30, "Input",ExpressionUUID->"69c22aeb-5fbf-47ca-bfa5-f7713749eb6b"],
-Cell[139413, 2825, 1274, 21, 119, "Output",ExpressionUUID->"6e409631-debf-40a7-b214-12c34f5ec220"]
+Cell[102188, 2188, 883, 21, 73, "Input",ExpressionUUID->"a0003644-12a4-48b2-baaa-fdf2e8a46b23"],
+Cell[103074, 2211, 288, 4, 34, "Output",ExpressionUUID->"71d5da45-322a-407d-a6a8-049d7843c79c"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[140724, 2851, 3253, 67, 220, "Input",ExpressionUUID->"2ffb713c-34d6-46ee-b7a4-fac08932be4f"],
-Cell[143980, 2920, 346, 8, 34, "Output",ExpressionUUID->"b88c31a1-66c9-4ce8-9257-9d5e01ec98ca"]
-}, Open  ]],
-Cell[144341, 2931, 233, 4, 30, "Input",ExpressionUUID->"07d92dea-b7f1-431b-b8de-23e05eeff98e"],
-Cell[CellGroupData[{
-Cell[144599, 2939, 300, 6, 30, "Input",ExpressionUUID->"7b0078e5-ea3f-410e-90e1-aa2a04784646"],
-Cell[144902, 2947, 19428, 362, 1167, "Output",ExpressionUUID->"5c295bf3-8e1a-4e53-8377-0125f3d47891"]
+Cell[103399, 2220, 334, 7, 30, "Input",ExpressionUUID->"69c22aeb-5fbf-47ca-bfa5-f7713749eb6b"],
+Cell[103736, 2229, 1274, 21, 119, "Output",ExpressionUUID->"6e409631-debf-40a7-b214-12c34f5ec220"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[164367, 3314, 448, 9, 30, "Input",ExpressionUUID->"763ff8e3-3bea-48ac-83bb-982696a45ba2"],
-Cell[164818, 3325, 1661, 26, 140, "Output",ExpressionUUID->"760e2fce-d56f-4990-8481-730bda6a58d9"]
+Cell[105047, 2255, 3253, 67, 220, "Input",ExpressionUUID->"2ffb713c-34d6-46ee-b7a4-fac08932be4f"],
+Cell[108303, 2324, 346, 8, 34, "Output",ExpressionUUID->"b88c31a1-66c9-4ce8-9257-9d5e01ec98ca"]
+}, Open  ]],
+Cell[108664, 2335, 233, 4, 30, "Input",ExpressionUUID->"07d92dea-b7f1-431b-b8de-23e05eeff98e"],
+Cell[CellGroupData[{
+Cell[108922, 2343, 300, 6, 30, "Input",ExpressionUUID->"7b0078e5-ea3f-410e-90e1-aa2a04784646"],
+Cell[109225, 2351, 19428, 362, 1167, "Output",ExpressionUUID->"5c295bf3-8e1a-4e53-8377-0125f3d47891"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[166516, 3356, 444, 11, 30, "Input",ExpressionUUID->"3916b556-2686-408f-bb3f-fc2bcd433cc3"],
-Cell[166963, 3369, 2722, 78, 164, "Output",ExpressionUUID->"be1bc42a-131a-4ef7-a4e3-04f7c81c2c86"]
+Cell[128690, 2718, 448, 9, 30, "Input",ExpressionUUID->"763ff8e3-3bea-48ac-83bb-982696a45ba2"],
+Cell[129141, 2729, 1661, 26, 140, "Output",ExpressionUUID->"760e2fce-d56f-4990-8481-730bda6a58d9"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[130839, 2760, 444, 11, 30, "Input",ExpressionUUID->"3916b556-2686-408f-bb3f-fc2bcd433cc3"],
+Cell[131286, 2773, 2722, 78, 164, "Output",ExpressionUUID->"be1bc42a-131a-4ef7-a4e3-04f7c81c2c86"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]

@@ -85,12 +85,12 @@ AstronomicalPosition[obj_, jd_?NumberQ] :=
 	Which[
 		KeyExistsQ[synodicObjectNames, obj],synodicPosition[synodicObjectNames[obj],jd],
 		KeyExistsQ[normalStarHIPNumbers, obj],normalStarPosition[normalStarHIPNumbers[obj],jd],
+		MissingQ[obj], obj,
 		True,Message[AstronomicalPosition::invalidObject, obj];$Failed
 	]
 AstronomicalPosition[obj_, date_?DateObjectQ] := AstronomicalPosition[obj,JulianDate[date]]
 AstronomicalPosition[obj_, date_DiaryDate] := AstronomicalPosition[obj,date["JulianDate"]]
 AstronomicalPosition[obj_, date_?MissingQ] := date
-AstronomicalPosition[obj_?MissingQ, date_] := obj
 
 
 (* ::Subsection:: *)

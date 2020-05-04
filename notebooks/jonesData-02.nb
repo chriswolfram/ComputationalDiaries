@@ -10,17 +10,17 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     37464,        813]
-NotebookOptionsPosition[     34724,        762]
-NotebookOutlinePosition[     35119,        778]
-CellTagsIndexPosition[     35076,        775]
+NotebookDataLength[     50238,       1083]
+NotebookOptionsPosition[     47176,       1027]
+NotebookOutlinePosition[     47570,       1043]
+CellTagsIndexPosition[     47527,       1040]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 Cell[BoxData["Quit"], "Input",
  CellChangeTimes->{{3.797281807838131*^9, 3.79728180815731*^9}},
- CellLabel->"In[79]:=",ExpressionUUID->"7a7565a0-4da5-4b1e-bed1-c61bebff5e8e"],
+ CellLabel->"In[11]:=",ExpressionUUID->"7a7565a0-4da5-4b1e-bed1-c61bebff5e8e"],
 
 Cell[CellGroupData[{
 
@@ -41,8 +41,9 @@ Cell[BoxData[
  CellChangeTimes->{3.7972812785225277`*^9, 3.797281813076733*^9, 
   3.797302039372039*^9, 3.7973022140435553`*^9, 3.797302472560651*^9, 
   3.797309354656045*^9, 3.7973901775157623`*^9, 3.797518977878366*^9, 
-  3.797519802896625*^9, 3.7975200663909273`*^9},
- CellLabel->"Out[1]=",ExpressionUUID->"e26f0b4a-13ee-41fa-95d2-8a08fadbbd08"]
+  3.797519802896625*^9, 3.7975200663909273`*^9, 3.7975529033745127`*^9, 
+  3.797552947169334*^9},
+ CellLabel->"Out[1]=",ExpressionUUID->"8da85359-ee59-451e-996f-b64c7fd8940b"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -62,7 +63,7 @@ Cell[BoxData[
       RowBox[{"NotebookDirectory", "[", "]"}], "]"}], ",", "\"\<data\>\""}], 
     "}"}], "]"}]}]], "Input",
  CellChangeTimes->{{3.797035594539628*^9, 3.797035615828557*^9}},
- CellLabel->"In[4]:=",ExpressionUUID->"bb847c38-4af8-4a45-85b9-aa313eeecde0"],
+ CellLabel->"In[3]:=",ExpressionUUID->"bb847c38-4af8-4a45-85b9-aa313eeecde0"],
 
 Cell[BoxData["\<\"/Users/christopher/git/ComputationalDiaries/data\"\>"], \
 "Output",
@@ -72,8 +73,9 @@ Cell[BoxData["\<\"/Users/christopher/git/ComputationalDiaries/data\"\>"], \
   3.797130136609578*^9, 3.797246630496121*^9, 3.797250915435669*^9, 
   3.797302045661829*^9, 3.797302219505471*^9, 3.7973024774892797`*^9, 
   3.797309360340575*^9, 3.7973901843240013`*^9, 3.797518986309229*^9, 
-  3.7975198073152533`*^9, 3.797520070973871*^9, 3.797520711072761*^9},
- CellLabel->"Out[4]=",ExpressionUUID->"059eada0-37b5-41c3-8771-e6776de938b6"]
+  3.7975198073152533`*^9, 3.797520070973871*^9, 3.797520711072761*^9, 
+  3.797552907963146*^9, 3.7975529517722387`*^9},
+ CellLabel->"Out[3]=",ExpressionUUID->"6c2626bc-bae6-4af2-8bb7-41f1c017fb71"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -124,7 +126,7 @@ Cell[BoxData[
       "dataDirectory", ",", "\"\<jones\>\"", ",", 
        "\"\<Collection_A.txt\>\""}], "}"}], "]"}], "]"}]}], ";"}]], "Input",
  CellChangeTimes->{{3.7972487533122168`*^9, 3.797248755255842*^9}},
- CellLabel->"In[5]:=",ExpressionUUID->"a84ccdee-55ea-4491-a9f2-4dbd842f7a72"],
+ CellLabel->"In[25]:=",ExpressionUUID->"a84ccdee-55ea-4491-a9f2-4dbd842f7a72"],
 
 Cell[BoxData[
  RowBox[{
@@ -164,7 +166,7 @@ Cell[BoxData[
   3.797248758706181*^9}, {3.797249649588764*^9, 3.797249655963732*^9}, {
   3.797391341549446*^9, 3.7973913493198566`*^9}, {3.797518991829674*^9, 
   3.7975190001517677`*^9}},
- CellLabel->"In[6]:=",ExpressionUUID->"19927097-7dbc-4343-8b07-abb646b4657f"]
+ CellLabel->"In[26]:=",ExpressionUUID->"19927097-7dbc-4343-8b07-abb646b4657f"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -247,7 +249,7 @@ Cell[BoxData[
  CellChangeTimes->{{3.79725106337096*^9, 3.7972510715422173`*^9}, {
   3.797251102377006*^9, 3.797251110129448*^9}, {3.797309283390318*^9, 
   3.797309284569221*^9}},
- CellLabel->"In[7]:=",ExpressionUUID->"b0bd10bf-e69c-44f4-baa4-1c66dc9aafd8"],
+ CellLabel->"In[27]:=",ExpressionUUID->"b0bd10bf-e69c-44f4-baa4-1c66dc9aafd8"],
 
 Cell[BoxData[
  RowBox[{
@@ -285,7 +287,7 @@ Cell[BoxData[
         "\"Entity[\\\"Planet\\\", \\\"Saturn\\\"]\"", "\"planet\""},
        "Entity"]}]}], "|>"}]}], ";"}]], "Input",
  CellChangeTimes->{{3.7972510967936687`*^9, 3.797251162064246*^9}},
- CellLabel->"In[8]:=",ExpressionUUID->"b006db81-53d3-4dd5-a44e-439d1133df2d"],
+ CellLabel->"In[28]:=",ExpressionUUID->"b006db81-53d3-4dd5-a44e-439d1133df2d"],
 
 Cell[BoxData[
  RowBox[{
@@ -307,7 +309,7 @@ Cell[BoxData[
      RowBox[{"12.2", "\[Rule]", "\"\<XII2\>\""}], ",", 
      RowBox[{"6.2", "\[Rule]", "\"\<VI2\>\""}]}], "}"}]}], ";"}]], "Input",
  CellChangeTimes->{{3.7975190948379183`*^9, 3.79751914954305*^9}},
- CellLabel->"In[9]:=",ExpressionUUID->"cc7dea7a-aaec-4aab-9e47-055dcb8418dc"],
+ CellLabel->"In[29]:=",ExpressionUUID->"cc7dea7a-aaec-4aab-9e47-055dcb8418dc"],
 
 Cell[BoxData[{
  RowBox[{
@@ -333,7 +335,7 @@ Cell[BoxData[{
   RowBox[{"Missing", "[", "]"}]}]}], "Input",
  CellChangeTimes->{{3.797301028515688*^9, 3.797301097287022*^9}, {
   3.797301277983519*^9, 3.797301282616858*^9}},
- CellLabel->"In[10]:=",ExpressionUUID->"195a73e5-ef8f-430e-abe9-f8a01d9c561a"],
+ CellLabel->"In[30]:=",ExpressionUUID->"195a73e5-ef8f-430e-abe9-f8a01d9c561a"],
 
 Cell[BoxData[
  RowBox[{
@@ -346,6 +348,37 @@ Cell[BoxData[
         RowBox[{
          RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<RelativePosition\>\""}], ",",
           "\n", "\t\t", 
+         RowBox[{"\"\<Date\>\"", "\[Rule]", 
+          RowBox[{"DiaryDate", "[", 
+           RowBox[{"<|", "\n", "\t\t\t", 
+            RowBox[{
+             RowBox[{"\"\<JulianYear\>\"", "\[Rule]", 
+              RowBox[{"e", "[", "\"\<J_Y\>\"", "]"}]}], ",", "\n", "\t\t\t", 
+             RowBox[{"\"\<JulianMonth\>\"", "\[Rule]", 
+              RowBox[{"e", "[", "\"\<J_M\>\"", "]"}]}], ",", "\n", "\t\t\t", 
+             RowBox[{"\"\<JulianDay\>\"", "\[Rule]", 
+              RowBox[{"e", "[", "\"\<J_D\>\"", "]"}]}], ",", "\n", "\t\t\t", 
+             RowBox[{"\"\<BabylonianYear\>\"", "\[Rule]", 
+              RowBox[{"Missing", "[", "]"}]}], 
+             RowBox[{"(*", 
+              RowBox[{
+              "should", " ", "compute", " ", "the", " ", "SE", " ", "year"}], 
+              "*)"}], ",", "\n", "\t\t\t", 
+             RowBox[{"\"\<BabylonianMonth\>\"", "\[Rule]", 
+              RowBox[{"Replace", "[", 
+               RowBox[{
+                RowBox[{"e", "[", "\"\<T_M\>\"", "]"}], ",", "monthMap"}], 
+               "]"}]}], ",", "\n", "\t\t\t", 
+             RowBox[{"\"\<BabylonianDay\>\"", "\[Rule]", 
+              RowBox[{"e", "[", "\"\<T_D\>\"", "]"}]}], ",", "\n", "\t\t\t", 
+             RowBox[{"\"\<Time\>\"", "\[Rule]", 
+              RowBox[{"Switch", "[", 
+               RowBox[{
+                RowBox[{"e", "[", "\"\<T_T\>\"", "]"}], ",", "\"\<f\>\"", 
+                ",", "\"\<FirstPartOfTheNight\>\"", ",", "\"\<l\>\"", ",", 
+                "\"\<LastPartOfTheNight\>\"", ",", "_", ",", 
+                RowBox[{"Missing", "[", "]"}]}], "]"}]}]}], "\n", "\t\t", 
+            "|>"}], "]"}]}], ",", "\n", "\t\t", 
          RowBox[{"\"\<Provenance\>\"", "\[Rule]", 
           RowBox[{"<|", "\n", "\t\t\t", 
            RowBox[{
@@ -365,53 +398,18 @@ data\>\""}]}], "\n", "\t\t", "|>"}]}], ",", "\n", "\t\t",
          RowBox[{"\"\<Content\>\"", "\[Rule]", 
           RowBox[{"<|", "\n", "\t\t\t", 
            RowBox[{
-            RowBox[{"\"\<Source\>\"", "\[Rule]", 
+            RowBox[{"\"\<ObjectA\>\"", "\[Rule]", 
              RowBox[{"Lookup", "[", 
               RowBox[{"planetNames", ",", 
                RowBox[{"e", "[", "\"\<Obj\>\"", "]"}], ",", 
                RowBox[{"Missing", "[", "]"}]}], "]"}]}], ",", "\n", "\t\t\t", 
             
-            RowBox[{"\"\<Target\>\"", "\[Rule]", 
+            RowBox[{"\"\<ObjectB\>\"", "\[Rule]", 
              RowBox[{"Lookup", "[", 
               RowBox[{"normalStarNames", ",", 
                RowBox[{"e", "[", "\"\<NS_Id\>\"", "]"}], ",", 
                RowBox[{"Missing", "[", "]"}]}], "]"}]}], ",", "\n", "\t\t\t", 
             
-            RowBox[{"\"\<Date\>\"", "\[Rule]", 
-             RowBox[{"DiaryDate", "[", 
-              RowBox[{"<|", "\n", "\t\t\t\t", 
-               RowBox[{
-                RowBox[{"\"\<JulianYear\>\"", "\[Rule]", 
-                 RowBox[{"e", "[", "\"\<J_Y\>\"", "]"}]}], ",", "\n", 
-                "\t\t\t\t", 
-                RowBox[{"\"\<JulianMonth\>\"", "\[Rule]", 
-                 RowBox[{"e", "[", "\"\<J_M\>\"", "]"}]}], ",", "\n", 
-                "\t\t\t\t", 
-                RowBox[{"\"\<JulianDay\>\"", "\[Rule]", 
-                 RowBox[{"e", "[", "\"\<J_D\>\"", "]"}]}], ",", "\n", 
-                "\t\t\t\t", 
-                RowBox[{"\"\<BabylonianYear\>\"", "\[Rule]", 
-                 RowBox[{"Missing", "[", "]"}]}], 
-                RowBox[{"(*", 
-                 RowBox[{
-                 "should", " ", "compute", " ", "the", " ", "SE", " ", 
-                  "year"}], "*)"}], ",", "\n", "\t\t\t\t", 
-                RowBox[{"\"\<BabylonianMonth\>\"", "\[Rule]", 
-                 RowBox[{"Replace", "[", 
-                  RowBox[{
-                   RowBox[{"e", "[", "\"\<T_M\>\"", "]"}], ",", "monthMap"}], 
-                  "]"}]}], ",", "\n", "\t\t\t\t", 
-                RowBox[{"\"\<BabylonianDay\>\"", "\[Rule]", 
-                 RowBox[{"e", "[", "\"\<T_D\>\"", "]"}]}], ",", "\n", 
-                "\t\t\t\t", 
-                RowBox[{"\"\<Time\>\"", "\[Rule]", 
-                 RowBox[{"Switch", "[", 
-                  RowBox[{
-                   RowBox[{"e", "[", "\"\<T_T\>\"", "]"}], ",", "\"\<f\>\"", 
-                   ",", "\"\<FirstPartOfTheNight\>\"", ",", "\"\<l\>\"", ",", 
-                   "\"\<LastPartOfTheNight\>\"", ",", "_", ",", 
-                   RowBox[{"Missing", "[", "]"}]}], "]"}]}]}], "\n", "\t\t\t",
-                "|>"}], "]"}]}], ",", "\n", "\t\t\t", 
             RowBox[{"\"\<Displacement\>\"", "\[Rule]", 
              RowBox[{"DiaryDisplacement", "[", "\n", "\t\t\t\t", 
               RowBox[{
@@ -488,16 +486,31 @@ data\>\""}]}], "\n", "\t\t", "|>"}]}], ",", "\n", "\t\t",
               "\n", "\t\t\t", "]"}]}]}], "\n", "\t\t", "|>"}]}]}], "\n", "\t",
          "|>"}], "]"}]}], "\n", "]"}], "/@", "rawCSV"}]}], ";"}]], "Code",
  CellChangeTimes->CompressedData["
-1:eJwdx08oQwEAx/HXVlvaWpTWDGVq0rzCuHhMm8vMptYOttb+sPlzsCUSRqH8
-WUlZkstsSvnXGHbaamm9lb8hFxdLzcEoGZO793uHb5++MteIaYBDEEQ5E6z2
-B2suuj411rFcB1yuLemEi0GtHkY/FEZIOp/MkBcw22BBIuuHxdHAN3xOTf7B
-I32WuGQ08Pck0FG5VQfzunoSrq2WtsCTZqsKJmm7AWpDMSNc37UGC4z0WVMY
-JnXuQ5jZz0Wg5nXwFIq9wzFIPv7EoUUopuEGZSn6Zey9VYkg3ZeQwu6Fhwq4
-3WqXw4Osj4TKeLKnUc98nmOGYvWKDYadUgecp+ghKHG9sCpHQx74Pi7wQlNa
-OAXbUhM+6BRwQ3A2QrG6v6rSMHNzzKre9F9DYeL+Du7E8m/wSsTNwfYGKU/J
-uCQv48Npz4wCUudzrP8cP9HO
+1:eJwdxztIQgEARuFbghWKFISYFGRgRAmVuWQZ6mKmhjmoiGZp5VASRfSECnoI
+ESQhLaZB0AvLyklBQq7Qk4oWlySwIQsiy2jv/nc4fByBY9QwWEgQRBUVrPH4
+ay+7PhWW8awSrtaVdcJlv0oDwx/1eiiyp0yQ6TVZYZ4nGIClYe83fE5M/cFj
+TYa4otQW7fNgb9V2A8ypG0VwY728FZ5KLDIYJ21aqApE9HBzz+LPU5LnLUEY
+VzuPYPogG4KK16EzyHUPR6Do6ScKzWwuCX1Sc8kvZd+djAPJ/hgf6pYeK+FO
+m00IDzMzIiiOxo3NGupzhSbIla9ZYdDO74WLUtIFeY4XWvFYYAS+T7Dc0JBk
+T8P2xOQMtLMYATgfktI6v6qTMH17Qivf8txAduzhHu5Gcm/wmsPIwo4mPlNM
+uSKsKIKzI3P1UHqxQOtLF0uUlJwCF63xqFgHiZ5UN/wHHQrd1w==
   "],
- CellLabel->"In[13]:=",ExpressionUUID->"b7ebfe57-ba6f-4e57-a3a9-29046f7f2515"]
+ CellLabel->"In[32]:=",ExpressionUUID->"b7ebfe57-ba6f-4e57-a3a9-29046f7f2515"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"jonesObservations", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{"FileNameJoin", "[", 
+     RowBox[{"{", 
+      RowBox[{
+      "dataDirectory", ",", "\"\<MX\>\"", ",", 
+       "\"\<jonesObservations.mx\>\""}], "}"}], "]"}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.797553018219578*^9, 3.7975530342904673`*^9}, {
+  3.797553072314538*^9, 
+  3.797553073277869*^9}},ExpressionUUID->"113bab6e-79cf-495b-80e4-\
+fa0f1ea161ca"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -513,7 +526,7 @@ Cell[BoxData[
  RowBox[{"jonesObservations", "[", 
   RowBox[{"[", "10", "]"}], "]"}]], "Input",
  CellChangeTimes->{{3.7975207346091347`*^9, 3.797520738655266*^9}},
- CellLabel->"In[15]:=",ExpressionUUID->"0851865c-2e1d-4211-92fb-84e5998d70f7"],
+ CellLabel->"In[40]:=",ExpressionUUID->"0851865c-2e1d-4211-92fb-84e5998d70f7"],
 
 Cell[BoxData[
  RowBox[{"DiaryObservation", "[", 
@@ -755,13 +768,265 @@ Cell[BoxData[
          SelectWithContents->True,
          Selectable->False]}]}], "\[RightAssociation]"}]}]}], 
    "\[RightAssociation]"}], "]"}]], "Output",
- CellChangeTimes->{{3.7975207372174597`*^9, 3.797520738855588*^9}},
- CellLabel->"Out[15]=",ExpressionUUID->"b54dfaa8-a8db-4971-81bb-4c2b3e618f3d"]
+ CellChangeTimes->{{3.7975207372174597`*^9, 3.797520738855588*^9}, 
+   3.797524717719221*^9},
+ CellLabel->"Out[40]=",ExpressionUUID->"999d4ac5-902d-4c1e-9f08-8e7a76ba86af"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"jonesObservations", "[", 
+  RowBox[{"[", "10", "]"}], "]"}]], "Input",
+ CellLabel->"In[41]:=",ExpressionUUID->"feda55f5-4f60-4c30-be17-8eb3f2764db5"],
+
+Cell[BoxData[
+ RowBox[{"DiaryObservation", "[", 
+  RowBox[{"\[LeftAssociation]", 
+   RowBox[{
+    RowBox[{"\<\"Type\"\>", "\[Rule]", "\<\"RelativePosition\"\>"}], ",", 
+    RowBox[{"\<\"Provenance\"\>", "\[Rule]", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\<\"Tablet\"\>", "\[Rule]", 
+        RowBox[{"-", "321"}]}], ",", 
+       RowBox[{"\<\"Line\"\>", "\[Rule]", 
+        RowBox[{"Missing", "[", "]"}]}], ",", 
+       RowBox[{"\<\"Creator\"\>", 
+        "\[Rule]", "\<\"Alexander Jones Processor\"\>"}], ",", 
+       RowBox[{"\<\"Reviewed\"\>", "\[Rule]", "False"}], ",", 
+       RowBox[{"\<\"Notes\"\>", 
+        "\[Rule]", "\<\"Automatically generated from Alexander Jones's data\"\
+\>"}]}], "\[RightAssociation]"}]}], ",", 
+    RowBox[{"\<\"Content\"\>", "\[Rule]", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\<\"Source\"\>", "\[Rule]", 
+        TemplateBox[{"\"Jupiter\"", 
+          RowBox[{"Entity", "[", 
+            RowBox[{"\"Planet\"", ",", "\"Jupiter\""}], "]"}], 
+          "\"Entity[\\\"Planet\\\", \\\"Jupiter\\\"]\"", "\"planet\""},
+         "Entity"]}], ",", 
+       RowBox[{"\<\"Target\"\>", "\[Rule]", 
+        TemplateBox[{"\"\[Rho] Leonis\"", 
+          RowBox[{"Entity", "[", 
+            RowBox[{"\"Star\"", ",", "\"RhoLeonis\""}], "]"}], 
+          "\"Entity[\\\"Star\\\", \\\"RhoLeonis\\\"]\"", "\"star\""},
+         "Entity"]}], ",", 
+       RowBox[{"\<\"Date\"\>", "\[Rule]", 
+        InterpretationBox[
+         RowBox[{
+          TagBox["DiaryDate",
+           "SummaryHead"], "[", 
+          
+          DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = 
+           "Ready"}, 
+           TemplateBox[{
+             PaneSelectorBox[{False -> GridBox[{{
+                   StyleBox["\"\|012000\"", 24, StripOnInput -> False], 
+                   GridBox[{{
+                    TagBox["\"Julian date: \"", "SummaryItem"], 
+                    TagBox[
+                    TemplateBox[{
+                    RowBox[{"\"Fri 19 Apr -322 12:00:01\"", 
+                    StyleBox[
+                    RowBox[{"\"GMT+\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    "3.`", NumberMarks -> False, StripOnInput -> False]}], 
+                    FontColor -> GrayLevel[0.5]], 
+                    StyleBox[
+                    
+                    RowBox[{"\[ThinSpace]", "(", "\[InvisibleSpace]", 
+                    "\"Julian\"", "\"calendar\"", "\[InvisibleSpace]", ")"}], 
+                    FontColor -> GrayLevel[0.5]]}], 
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "322"}], ",", "4", ",", "19", ",", "12", ",",
+                     "0", ",", "1"}], "}"}], ",", "\"Instant\"", ",", 
+                    "\"Julian\"", ",", "3.`"}], "]"}]}, "DateObject", 
+                    Editable -> False], "SummaryItem"]}, {
+                    TagBox["\"Babylonian month: \"", "SummaryItem"], 
+                    TagBox["\"I\"", "SummaryItem"]}, {
+                    TagBox["\"Babylonian day: \"", "SummaryItem"], 
+                    TagBox["17", "SummaryItem"]}, {
+                    TagBox["\"Time: \"", "SummaryItem"], 
+                    TagBox[
+                    RowBox[{"Missing", "[", "]"}], "SummaryItem"]}}, 
+                    GridBoxAlignment -> {
+                    "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
+                    AutoDelete -> False, 
+                    GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    GridBoxSpacings -> {
+                    "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                    BaseStyle -> {
+                    ShowStringCharacters -> False, NumberMarks -> False, 
+                    PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+                 GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False,
+                  GridBoxItemSize -> {
+                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                 BaselinePosition -> {1, 1}], True -> GridBox[{{
+                   StyleBox["\"\|012000\"", 24, StripOnInput -> False], 
+                   GridBox[{{
+                    TagBox["\"Julian date: \"", "SummaryItem"], 
+                    TagBox[
+                    TemplateBox[{
+                    RowBox[{"\"Fri 19 Apr -322 12:00:01\"", 
+                    StyleBox[
+                    RowBox[{"\"GMT+\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    "3.`", NumberMarks -> False, StripOnInput -> False]}], 
+                    FontColor -> GrayLevel[0.5]], 
+                    StyleBox[
+                    
+                    RowBox[{"\[ThinSpace]", "(", "\[InvisibleSpace]", 
+                    "\"Julian\"", "\"calendar\"", "\[InvisibleSpace]", ")"}], 
+                    FontColor -> GrayLevel[0.5]]}], 
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "322"}], ",", "4", ",", "19", ",", "12", ",",
+                     "0", ",", "1"}], "}"}], ",", "\"Instant\"", ",", 
+                    "\"Julian\"", ",", "3.`"}], "]"}]}, "DateObject", 
+                    Editable -> False], "SummaryItem"]}, {
+                    TagBox["\"Babylonian month: \"", "SummaryItem"], 
+                    TagBox["\"I\"", "SummaryItem"]}, {
+                    TagBox["\"Babylonian day: \"", "SummaryItem"], 
+                    TagBox["17", "SummaryItem"]}, {
+                    TagBox["\"Time: \"", "SummaryItem"], 
+                    TagBox[
+                    RowBox[{"Missing", "[", "]"}], "SummaryItem"]}}, 
+                    GridBoxAlignment -> {
+                    "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
+                    AutoDelete -> False, 
+                    GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    GridBoxSpacings -> {
+                    "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                    BaseStyle -> {
+                    ShowStringCharacters -> False, NumberMarks -> False, 
+                    PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+                 GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False,
+                  GridBoxItemSize -> {
+                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                 BaselinePosition -> {1, 1}]}, 
+              Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+            "SummaryPanel"],
+           DynamicModuleValues:>{}], "]"}],
+         ComputationalDiaries`DiaryTypes`DiaryDate[
+          Association[
+          "JulianYear" -> -321, "JulianMonth" -> 4, "JulianDay" -> 19, 
+           "BabylonianYear" -> Missing[], "BabylonianMonth" -> "I", 
+           "BabylonianDay" -> 17, "Time" -> Missing[]]],
+         Editable->False,
+         SelectWithContents->True,
+         Selectable->False]}], ",", 
+       RowBox[{"\<\"Displacement\"\>", "\[Rule]", 
+        InterpretationBox[
+         RowBox[{
+          TagBox["DiaryDisplacement",
+           "SummaryHead"], "[", 
+          
+          DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = 
+           "Ready"}, 
+           TemplateBox[{
+             PaneSelectorBox[{False -> GridBox[{{
+                   GraphicsBox[{{
+                    RGBColor[1, 0.5, 0], 
+                    Dashing[0.1], 
+                    LineBox[{{-0.5, -0.5}, {0.5, 0.5}}]}, 
+                    CircleBox[{0, 0}], 
+                    RGBColor[1, 0, 0], 
+                    PointBox[{-0.5, -0.5}], 
+                    RGBColor[0, 0, 1], 
+                    PointBox[{0.5, 0.5}]}, ImageSize -> 30, Background -> 
+                    GrayLevel[0, 0]], 
+                   GridBox[{{
+                    TagBox["\"distances: \"", "SummaryItem"], 
+                    TagBox[
+                    TemplateBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Missing", "[", "]"}], ",", 
+                    FractionBox["5", "12"]}], "}"}], "\" cubits\""}, 
+                    "RowDefault"], "SummaryItem"]}, {
+                    TagBox["\"relations: \"", "SummaryItem"], 
+                    TagBox[
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Missing", "[", "]"}], ",", "\"Above\""}], "}"}], 
+                    "SummaryItem"]}}, 
+                    GridBoxAlignment -> {
+                    "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
+                    AutoDelete -> False, 
+                    GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    GridBoxSpacings -> {
+                    "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                    BaseStyle -> {
+                    ShowStringCharacters -> False, NumberMarks -> False, 
+                    PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+                 GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False,
+                  GridBoxItemSize -> {
+                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                 BaselinePosition -> {1, 1}], True -> GridBox[{{
+                   GraphicsBox[{{
+                    RGBColor[1, 0.5, 0], 
+                    Dashing[0.1], 
+                    LineBox[{{-0.5, -0.5}, {0.5, 0.5}}]}, 
+                    CircleBox[{0, 0}], 
+                    RGBColor[1, 0, 0], 
+                    PointBox[{-0.5, -0.5}], 
+                    RGBColor[0, 0, 1], 
+                    PointBox[{0.5, 0.5}]}, ImageSize -> 30, Background -> 
+                    GrayLevel[0, 0]], 
+                   GridBox[{{
+                    TagBox["\"distances: \"", "SummaryItem"], 
+                    TagBox[
+                    TemplateBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Missing", "[", "]"}], ",", 
+                    FractionBox["5", "12"]}], "}"}], "\" cubits\""}, 
+                    "RowDefault"], "SummaryItem"]}, {
+                    TagBox["\"relations: \"", "SummaryItem"], 
+                    TagBox[
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Missing", "[", "]"}], ",", "\"Above\""}], "}"}], 
+                    "SummaryItem"]}}, 
+                    GridBoxAlignment -> {
+                    "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
+                    AutoDelete -> False, 
+                    GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    GridBoxSpacings -> {
+                    "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                    BaseStyle -> {
+                    ShowStringCharacters -> False, NumberMarks -> False, 
+                    PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+                 GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False,
+                  GridBoxItemSize -> {
+                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                 BaselinePosition -> {1, 1}]}, 
+              Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+            "SummaryPanel"],
+           DynamicModuleValues:>{}], "]"}],
+         ComputationalDiaries`DiaryTypes`Private`dist,
+         Editable->False,
+         SelectWithContents->True,
+         Selectable->False]}]}], "\[RightAssociation]"}]}]}], 
+   "\[RightAssociation]"}], "]"}]], "Output",
+ CellChangeTimes->{3.7975247343629723`*^9},
+ CellLabel->"Out[41]=",ExpressionUUID->"8d4ebd74-f0c6-4413-9bba-5ecbaefba54f"]
 }, Open  ]]
 }, Open  ]]
 },
 WindowSize->{808, 905},
-WindowMargins->{{430, Automatic}, {43, Automatic}},
+WindowMargins->{{392, Automatic}, {Automatic, 0}},
 FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (March 18, 2020)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"e67573f9-8c27-4116-b7bf-52d21a3ec636"
@@ -780,39 +1045,44 @@ Notebook[{
 Cell[558, 20, 174, 2, 30, "Input",ExpressionUUID->"7a7565a0-4da5-4b1e-bed1-c61bebff5e8e"],
 Cell[CellGroupData[{
 Cell[757, 26, 411, 9, 30, "Input",ExpressionUUID->"1c003d22-f7c9-493d-b474-303492115c7f"],
-Cell[1171, 37, 447, 7, 34, "Output",ExpressionUUID->"e26f0b4a-13ee-41fa-95d2-8a08fadbbd08"]
+Cell[1171, 37, 496, 8, 34, "Output",ExpressionUUID->"8da85359-ee59-451e-996f-b64c7fd8940b"]
 }, Open  ]],
-Cell[1633, 47, 279, 4, 30, "Input",ExpressionUUID->"b1baedd5-d547-4fc3-bc38-f63c101bcb4c"],
+Cell[1682, 48, 279, 4, 30, "Input",ExpressionUUID->"b1baedd5-d547-4fc3-bc38-f63c101bcb4c"],
 Cell[CellGroupData[{
-Cell[1937, 55, 397, 9, 30, "Input",ExpressionUUID->"bb847c38-4af8-4a45-85b9-aa313eeecde0"],
-Cell[2337, 66, 649, 9, 34, "Output",ExpressionUUID->"059eada0-37b5-41c3-8771-e6776de938b6"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[3023, 80, 167, 3, 67, "Section",ExpressionUUID->"766d02f3-5317-4b57-98e1-e2acb842cbed"],
-Cell[3193, 85, 221, 6, 35, "Text",ExpressionUUID->"ffbd55c9-36f5-4660-8816-2382c65ce6b8"],
-Cell[3417, 93, 262, 6, 58, "Text",ExpressionUUID->"c4f75599-0cd5-4e37-b98f-f4faf40aebde"],
-Cell[3682, 101, 234, 5, 58, "Text",ExpressionUUID->"2670ac50-007a-4ce4-9879-0a0466bbfa30"],
-Cell[3919, 108, 241, 6, 58, "Text",ExpressionUUID->"bf961efe-152a-47ae-9fdf-43fe288e0a09"],
-Cell[4163, 116, 418, 10, 30, "Input",ExpressionUUID->"a84ccdee-55ea-4491-a9f2-4dbd842f7a72"],
-Cell[4584, 128, 1499, 38, 94, "Input",ExpressionUUID->"19927097-7dbc-4343-8b07-abb646b4657f"]
+Cell[1986, 56, 397, 9, 30, "Input",ExpressionUUID->"bb847c38-4af8-4a45-85b9-aa313eeecde0"],
+Cell[2386, 67, 698, 10, 34, "Output",ExpressionUUID->"6c2626bc-bae6-4af2-8bb7-41f1c017fb71"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[6120, 171, 164, 3, 67, "Section",ExpressionUUID->"e21ed9ea-aa33-4982-8da7-9623f23a67c0"],
-Cell[CellGroupData[{
-Cell[6309, 178, 241, 4, 30, "Input",ExpressionUUID->"159a8f24-c2dd-43d4-922b-92b4439b72f5"],
-Cell[6553, 184, 1476, 20, 539, "Output",ExpressionUUID->"4dba243e-dcb0-4bb7-bf5c-cb0343379b11"]
-}, Open  ]],
-Cell[8044, 207, 2759, 42, 262, "Input",ExpressionUUID->"b0bd10bf-e69c-44f4-baa4-1c66dc9aafd8"],
-Cell[10806, 251, 1575, 36, 69, "Input",ExpressionUUID->"b006db81-53d3-4dd5-a44e-439d1133df2d"],
-Cell[12384, 289, 975, 20, 52, "Input",ExpressionUUID->"cc7dea7a-aaec-4aab-9e47-055dcb8418dc"],
-Cell[13362, 311, 946, 24, 94, "Input",ExpressionUUID->"195a73e5-ef8f-430e-abe9-f8a01d9c561a"],
-Cell[14311, 337, 8077, 162, 813, "Code",ExpressionUUID->"b7ebfe57-ba6f-4e57-a3a9-29046f7f2515"]
+Cell[3121, 82, 167, 3, 67, "Section",ExpressionUUID->"766d02f3-5317-4b57-98e1-e2acb842cbed"],
+Cell[3291, 87, 221, 6, 35, "Text",ExpressionUUID->"ffbd55c9-36f5-4660-8816-2382c65ce6b8"],
+Cell[3515, 95, 262, 6, 58, "Text",ExpressionUUID->"c4f75599-0cd5-4e37-b98f-f4faf40aebde"],
+Cell[3780, 103, 234, 5, 58, "Text",ExpressionUUID->"2670ac50-007a-4ce4-9879-0a0466bbfa30"],
+Cell[4017, 110, 241, 6, 58, "Text",ExpressionUUID->"bf961efe-152a-47ae-9fdf-43fe288e0a09"],
+Cell[4261, 118, 419, 10, 30, "Input",ExpressionUUID->"a84ccdee-55ea-4491-a9f2-4dbd842f7a72"],
+Cell[4683, 130, 1500, 38, 94, "Input",ExpressionUUID->"19927097-7dbc-4343-8b07-abb646b4657f"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[22425, 504, 185, 3, 67, "Section",ExpressionUUID->"d1651ad9-c7dd-47ff-8025-a364f6039020"],
+Cell[6220, 173, 164, 3, 67, "Section",ExpressionUUID->"e21ed9ea-aa33-4982-8da7-9623f23a67c0"],
 Cell[CellGroupData[{
-Cell[22635, 511, 241, 4, 30, "Input",ExpressionUUID->"0851865c-2e1d-4211-92fb-84e5998d70f7"],
-Cell[22879, 517, 11817, 241, 294, "Output",ExpressionUUID->"b54dfaa8-a8db-4971-81bb-4c2b3e618f3d"]
+Cell[6409, 180, 241, 4, 30, "Input",ExpressionUUID->"159a8f24-c2dd-43d4-922b-92b4439b72f5"],
+Cell[6653, 186, 1476, 20, 539, "Output",ExpressionUUID->"4dba243e-dcb0-4bb7-bf5c-cb0343379b11"]
+}, Open  ]],
+Cell[8144, 209, 2760, 42, 262, "Input",ExpressionUUID->"b0bd10bf-e69c-44f4-baa4-1c66dc9aafd8"],
+Cell[10907, 253, 1576, 36, 69, "Input",ExpressionUUID->"b006db81-53d3-4dd5-a44e-439d1133df2d"],
+Cell[12486, 291, 976, 20, 52, "Input",ExpressionUUID->"cc7dea7a-aaec-4aab-9e47-055dcb8418dc"],
+Cell[13465, 313, 946, 24, 94, "Input",ExpressionUUID->"195a73e5-ef8f-430e-abe9-f8a01d9c561a"],
+Cell[14414, 339, 7927, 158, 813, "Code",ExpressionUUID->"b7ebfe57-ba6f-4e57-a3a9-29046f7f2515"],
+Cell[22344, 499, 464, 13, 30, "Input",ExpressionUUID->"113bab6e-79cf-495b-80e4-fa0f1ea161ca"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22845, 517, 185, 3, 67, "Section",ExpressionUUID->"d1651ad9-c7dd-47ff-8025-a364f6039020"],
+Cell[CellGroupData[{
+Cell[23055, 524, 241, 4, 30, "Input",ExpressionUUID->"0851865c-2e1d-4211-92fb-84e5998d70f7"],
+Cell[23299, 530, 11843, 242, 294, "Output",ExpressionUUID->"999d4ac5-902d-4c1e-9f08-8e7a76ba86af"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[35179, 777, 173, 3, 30, "Input",ExpressionUUID->"feda55f5-4f60-4c30-be17-8eb3f2764db5"],
+Cell[35355, 782, 11793, 241, 294, "Output",ExpressionUUID->"8d4ebd74-f0c6-4413-9bba-5ecbaefba54f"]
 }, Open  ]]
 }, Open  ]]
 }
