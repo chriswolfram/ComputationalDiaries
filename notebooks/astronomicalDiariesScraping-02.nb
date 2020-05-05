@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     49545,       1241]
-NotebookOptionsPosition[     46901,       1188]
-NotebookOutlinePosition[     47295,       1204]
-CellTagsIndexPosition[     47252,       1201]
+NotebookDataLength[     56149,       1415]
+NotebookOptionsPosition[     53502,       1362]
+NotebookOutlinePosition[     53896,       1378]
+CellTagsIndexPosition[     53853,       1375]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -411,8 +411,9 @@ Cell[BoxData[
            RowBox[{"Module", "[", 
             RowBox[{
              RowBox[{"{", 
-              RowBox[{"lineDesignation", ",", "lineNumber"}], "}"}], ",", 
-             "\n", "\t\t\t", 
+              RowBox[{
+              "lineDesignation", ",", "lineNumber", ",", "lineFragments"}], 
+              "}"}], ",", "\n", "\t\t\t", 
              RowBox[{
               RowBox[{"If", "[", 
                RowBox[{
@@ -449,10 +450,10 @@ Cell[BoxData[
                     "3", ",", "1", ",", "3", ",", "1", ",", "3", ",", "1", 
                     ",", "3", ",", "1"}], "]"}], "]"}]}], ";", "\n", 
                  "\t\t\t\t", 
-                 RowBox[{"Throw", "[", 
+                 RowBox[{"lineFragments", " ", "=", " ", 
                   RowBox[{"StringReplace", "[", 
                    RowBox[{
-                    RowBox[{"processParagraph", "@", "\n", "\t\t\t\t\t\t", 
+                    RowBox[{"processParagraph", "@", "\n", "\t\t\t\t\t\t\t", 
                     RowBox[{"Riffle", "[", 
                     RowBox[{
                     RowBox[{"DeleteCases", "[", 
@@ -467,209 +468,382 @@ Cell[BoxData[
                     "\"\< \>\""}], "]"}]}], ",", "\n", "\t\t\t\t\t\t", 
                     RowBox[{
                     RowBox[{"\"\< \>\"", ".."}], "\[Rule]", "\"\< \>\""}]}], 
-                   "]"}], "\n", "\t\t\t\t", "]"}], ";"}]}], "\n", "\t\t\t", 
+                   "]"}]}], ";", "\n", "\t\t\t\t", 
+                 RowBox[{"Throw", "[", 
+                  RowBox[{"{", 
+                   RowBox[{
+                   "lineNumber", ",", "lineDesignation", ",", 
+                    "lineFragments"}], "}"}], "]"}], ";"}]}], "\n", "\t\t\t", 
                "]"}], ";", "\n", "\t\t\t", "Nothing"}]}], "\n", "\t\t", 
             "]"}]}]}], "]"}], "/@", "rawLines"}]}]}], "\n", "\t", "]"}]}], 
    "\n", "]"}], "@", 
   RowBox[{"allHTML", "[", 
    RowBox[{"[", "100", "]"}], "]"}]}]], "Code",
  CellChangeTimes->CompressedData["
-1:eJxTTMoPSmViYGAQBWIQvYtho6m79xvHx11xFiD63r4EGxDNOHWlA4jeUMrt
+1:eJxTTMoPSmViYGAQA2IQvYtho6m79xvHx11xFiD63r4EGxDNOHWlA4jeUMrt
 AaIzsiSCQXStSEY0iNbLM8oF0WlrAopB9LoHIZUgumWd6yQQrcVgPRlEV8Vv
 mQ2iVffvANP2DZILwHzF7+tBdE6+8jUQnd/0/TqI1lSKvAOiO7zZ34Do21Ol
 PoLooncWYLrsvcYvEP1r1RMwvVNaxcUDSGt8WuoBopM2GAaCaIZ1l0NA9L5y
 uWgQfWWOayKIPn+mKxVEK8y4DKZfyL3NBNORV+tB9J1LZ5tB9NfrX1vA5vS9
-7wDRKzQtekD0NFXFxSD6p03vWhD9h9dwJ4i+EL57F4gGABJqn9g=
+7wDRKzQtekD0NFXFxSD6p03vWhD9h9dwJ4i+EL57F4gW2DP/Dtg+Y9/7IBoA
+Viyn0w==
   "],
  CellLabel->
-  "In[384]:=",ExpressionUUID->"abca5d64-afbd-41ce-902d-3a977349d555"],
+  "In[385]:=",ExpressionUUID->"abca5d64-afbd-41ce-902d-3a977349d555"],
 
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{
-   RowBox[{"{", "\<\"sacrifices\"\>", "}"}], ",", "\<\"Delimiter\"\>", ",", 
    RowBox[{"{", 
-    RowBox[{"\<\"Month II\"\>", 
-     ",", "\<\"the moon being 5 cubits high to the north\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"\<\"of the night the moon was\"\>", 
-     ",", "\<\"above \[Delta] Cancri\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"\<\"Night of the 6th beginning of the night the moon was 1 cubit\
-\"\>", ",", "\<\"\[Alpha] Leonis Night of the 7th beginning of the night the \
-moon was 3 cubits below \[CurlyTheta] Leonis\"\>"}], "}"}], ",", 
-   RowBox[{
-   "{", "\<\"Night of the 9th of the night the moon was 2 cubits below \
-\[Gamma] Virginis\"\>", "}"}], ",", 
-   RowBox[{
-   "{", "\<\"first part of the night Mars was 4 cubits below \[CurlyEpsilon] \
-Leonis Night of the 13th beginning of the night the\"\>", "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"\<\"Night of the 15th the moon was 2 1/2 cubits\"\>", 
-     ",", "\<\"\[CurlyTheta] The 15th moonset to sunrise 6\[Degree] 50 \
-measured Night of the 16th sunset to moonrise 4\[Degree]\"\>"}], "}"}], ",", 
-   RowBox[{
-   "{", "\<\"low to the south The 20th Jupiter\[CloseCurlyQuote]s first \
-appearance in Taurus it was bright and high rising of Jupiter to sunrise 12\
-\[Degree] 30 ideal first appearance on the 18th\"\>", "}"}], ",", 
-   RowBox[{
-   "{", "\<\"last part of the night Venus was 3 cubits below \[Eta] Tauri \
-Night of the 26th last part of the night the moon was mm behind \[Eta] \
-Tauri\"\>", "}"}], ",", 
-   RowBox[{
-   "{", "\<\"Night of the 28th last part of the night the moon was 3 cubits \
-behind \[Beta] Tauri 3 1/2 cubits behind Jupiter the moon being 4 cubits high \
-to the north\"\>", "}"}], ",", 
-   RowBox[{
-   "{", "\<\"3 sesame 4 wool 4 1/2 minas At that time around the 18th Jupiter\
-\[CloseCurlyQuote]s first appearance in\"\>", "}"}], ",", 
-   RowBox[{
-   "{", "\<\"the river level receded 4 fingers total 17 was the na-gauge That \
-month the 25th the temple E-nam-dumu\"\>", "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"\<\"a man who\"\>", ",", "\<\"the ak\:012btu temple\"\>"}], 
-    "}"}], ",", 
-   RowBox[{"{", "\<\"merry-making was set up in the land\"\>", "}"}], 
+    RowBox[{"\<\"o\[NonBreakingSpace]1'\"\>", ",", "\<\"a.X201701.2\"\>", ",", 
+     RowBox[{"{", "\<\"sacrifices\"\>", "}"}]}], "}"}], 
    ",", "\<\"Delimiter\"\>", ",", 
    RowBox[{"{", 
-    RowBox[{"\<\"Month III the 1st of which followed the 30th of the \
+    RowBox[{"\<\"o\[NonBreakingSpace]2'\"\>", ",", "\<\"a.X201701.4\"\>", ",", 
+     RowBox[{"{", 
+      RowBox[{"\<\"Month II\"\>", 
+       ",", "\<\"the moon being 5 cubits high to the north\"\>"}], "}"}]}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"o\[NonBreakingSpace]3'\"\>", ",", "\<\"a.X201701.5\"\>", ",", 
+     RowBox[{"{", 
+      RowBox[{"\<\"of the night the moon was\"\>", 
+       ",", "\<\"above \[Delta] Cancri\"\>"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"o\[NonBreakingSpace]4'\"\>", ",", "\<\"a.X201701.6\"\>", ",", 
+     RowBox[{"{", 
+      RowBox[{"\<\"Night of the 6th beginning of the night the moon was 1 \
+cubit\"\>", 
+       ",", "\<\"\[Alpha] Leonis Night of the 7th beginning of the night the \
+moon was 3 cubits below \[CurlyTheta] Leonis\"\>"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"o\[NonBreakingSpace]5'\"\>", ",", "\<\"a.X201701.7\"\>", ",", 
+     RowBox[{
+     "{", "\<\"Night of the 9th of the night the moon was 2 cubits below \
+\[Gamma] Virginis\"\>", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"o\[NonBreakingSpace]6'\"\>", ",", "\<\"a.X201701.8\"\>", ",", 
+     RowBox[{
+     "{", "\<\"first part of the night Mars was 4 cubits below \
+\[CurlyEpsilon] Leonis Night of the 13th beginning of the night the\"\>", 
+      "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"o\[NonBreakingSpace]7'\"\>", ",", "\<\"a.X201701.9\"\>", ",", 
+     RowBox[{"{", 
+      RowBox[{"\<\"Night of the 15th the moon was 2 1/2 cubits\"\>", 
+       ",", "\<\"\[CurlyTheta] The 15th moonset to sunrise 6\[Degree] 50 \
+measured Night of the 16th sunset to moonrise 4\[Degree]\"\>"}], "}"}]}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"o\[NonBreakingSpace]8'\"\>", ",", "\<\"a.X201701.10\"\>", 
+     ",", 
+     RowBox[{
+     "{", "\<\"low to the south The 20th Jupiter\[CloseCurlyQuote]s first \
+appearance in Taurus it was bright and high rising of Jupiter to sunrise 12\
+\[Degree] 30 ideal first appearance on the 18th\"\>", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"o\[NonBreakingSpace]9'\"\>", ",", "\<\"a.X201701.11\"\>", 
+     ",", 
+     RowBox[{
+     "{", "\<\"last part of the night Venus was 3 cubits below \[Eta] Tauri \
+Night of the 26th last part of the night the moon was mm behind \[Eta] \
+Tauri\"\>", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"o\[NonBreakingSpace]10'\"\>", ",", "\<\"a.X201701.12\"\>", 
+     ",", 
+     RowBox[{
+     "{", "\<\"Night of the 28th last part of the night the moon was 3 cubits \
+behind \[Beta] Tauri 3 1/2 cubits behind Jupiter the moon being 4 cubits high \
+to the north\"\>", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"o\[NonBreakingSpace]11'\"\>", ",", "\<\"a.X201701.13\"\>", 
+     ",", 
+     RowBox[{
+     "{", "\<\"3 sesame 4 wool 4 1/2 minas At that time around the 18th \
+Jupiter\[CloseCurlyQuote]s first appearance in\"\>", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"o\[NonBreakingSpace]12'\"\>", ",", "\<\"a.X201701.14\"\>", 
+     ",", 
+     RowBox[{
+     "{", "\<\"the river level receded 4 fingers total 17 was the na-gauge \
+That month the 25th the temple E-nam-dumu\"\>", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"o\[NonBreakingSpace]13'\"\>", ",", "\<\"a.X201701.15\"\>", 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"\<\"a man who\"\>", ",", "\<\"the ak\:012btu temple\"\>"}], 
+      "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"o\[NonBreakingSpace]14'\"\>", ",", "\<\"a.X201701.16\"\>", 
+     ",", 
+     RowBox[{"{", "\<\"merry-making was set up in the land\"\>", "}"}]}], 
+    "}"}], ",", "\<\"Delimiter\"\>", ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"o\[NonBreakingSpace]15'\"\>", ",", "\<\"a.X201701.18\"\>", 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"\<\"Month III the 1st of which followed the 30th of the \
 preceding month cubits the moon being 4 cubits low to the south first part of \
 the night Saturn was 1/2 cubit above \[Beta] Virginis Night of the 3rd the \
-moon was\"\>", ",", "\<\"\[Alpha] Leonis\"\>"}], "}"}], ",", 
-   RowBox[{
-   "{", "\<\"low to the south Night of the 5th beginning of the night the \
+moon was\"\>", ",", "\<\"\[Alpha] Leonis\"\>"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"o\[NonBreakingSpace]16'\"\>", ",", "\<\"a.X201701.19\"\>", 
+     ",", 
+     RowBox[{
+     "{", "\<\"low to the south Night of the 5th beginning of the night the \
 moon was 1/2 cubit below \[Beta] Virginis the moon having passed 1/2 cubit to \
-the west\"\>", "}"}], ",", 
-   RowBox[{
-   "{", "\<\"2 1/2 cubits Night of the 9th beginning of the night the moon \
+the west\"\>", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"o\[NonBreakingSpace]17'\"\>", ",", "\<\"a.X201701.20\"\>", 
+     ",", 
+     RowBox[{
+     "{", "\<\"2 1/2 cubits Night of the 9th beginning of the night the moon \
 was 1 cubit in front of \[Alpha] Librae Night of the 10th beginning of the \
-night the moon was in\"\>", "}"}], ",", 
-   RowBox[{
-   "{", "\<\"the moon was 2 cubits in front of \[Alpha] Scorpii Night of the \
-12th beginning of the the moon was 2 cubits in front of \[CurlyTheta] \
-Ophiuchi The 14th moonset to sunrise 11\[Degree]\"\>", "}"}], ",", 
-   RowBox[{
-   "{", "\<\"Night of the 16th sunset to moonrise 15\[Degree] last part of \
+night the moon was in\"\>", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"o\[NonBreakingSpace]18'\"\>", ",", "\<\"a.X201701.21\"\>", 
+     ",", 
+     RowBox[{
+     "{", "\<\"the moon was 2 cubits in front of \[Alpha] Scorpii Night of \
+the 12th beginning of the the moon was 2 cubits in front of \[CurlyTheta] \
+Ophiuchi The 14th moonset to sunrise 11\[Degree]\"\>", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"o\[NonBreakingSpace]19'\"\>", ",", "\<\"a.X201701.22\"\>", 
+     ",", 
+     RowBox[{
+     "{", "\<\"Night of the 16th sunset to moonrise 15\[Degree] last part of \
 the night the moon was 3 cubits in front of \[Gamma] Capricorni the moon \
-being 1 1/2 cubits low to the south The 16th\"\>", "}"}], ",", 
+being 1 1/2 cubits low to the south The 16th\"\>", "}"}]}], "}"}], ",", 
    RowBox[{"{", 
-    RowBox[{"\<\"back to the west last part of the night Venus was 2/3 cubit \
-below Jupiter Night of the 22nd last part of the night the was\"\>", 
-     ",", "\<\"\[Alpha]\"\>"}], "}"}], ",", 
-   RowBox[{
-   "{", "\<\"of the 24th last part of the night the moon was 5 cubits above \
-\[Alpha] Tauri the moon having passed a little to the east\"\>", "}"}], ",", 
-   RowBox[{
-   "{", "\<\"Night of the 25th last part of the night the moon was 1 1/2 \
+    RowBox[{"\<\"o\[NonBreakingSpace]20'\"\>", ",", "\<\"a.X201701.23\"\>", 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"\<\"back to the west last part of the night Venus was 2/3 \
+cubit below Jupiter Night of the 22nd last part of the night the was\"\>", 
+       ",", "\<\"\[Alpha]\"\>"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"o\[NonBreakingSpace]21'\"\>", ",", "\<\"a.X201701.24\"\>", 
+     ",", 
+     RowBox[{
+     "{", "\<\"of the 24th last part of the night the moon was 5 cubits above \
+\[Alpha] Tauri the moon having passed a little to the east\"\>", "}"}]}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"o\[NonBreakingSpace]22'\"\>", ",", "\<\"a.X201701.25\"\>", 
+     ",", 
+     RowBox[{
+     "{", "\<\"Night of the 25th last part of the night the moon was 1 1/2 \
 cubits in front of Venus the moon being 3 cubits high to the north Night of \
-the 26th\"\>", "}"}], ",", 
-   RowBox[{
-   "{", "\<\"low it stood 2 cubits in front of Mercury to the west The 27th\"\
-\>", "}"}], ",", 
-   RowBox[{"{", "\<\"1 2 sesame 3 3\"\>", "}"}], ",", 
+the 26th\"\>", "}"}]}], "}"}], ",", 
    RowBox[{"{", 
-    RowBox[{"\<\"That the river level\"\>", ",", "\<\"1\"\>"}], "}"}], ",", 
-   RowBox[{"{", "}"}], ",", 
-   RowBox[{"{", "\<\"Night of the 19th last part of the night the\"\>", "}"}],
-    ",", 
-   RowBox[{
-   "{", "\<\"Night of the 21st last part of the night the moon was 3 cubits \
-in front of \[Alpha] Tauri the moon being\"\>", "}"}], ",", 
-   RowBox[{
-   "{", "\<\"having passed to the east Night of the 25th last part of the \
-night the moon was in front of\"\>", "}"}], ",", 
+    RowBox[{"\<\"o\[NonBreakingSpace]23'\"\>", ",", "\<\"a.X201701.26\"\>", 
+     ",", 
+     RowBox[{
+     "{", "\<\"low it stood 2 cubits in front of Mercury to the west The 27th\
+\"\>", "}"}]}], "}"}], ",", 
    RowBox[{"{", 
-    RowBox[{"\<\"Night of the 29th last part of the night Venus was\"\>", 
-     ",", "\<\"above \[Delta]\"\>"}], "}"}], ",", 
-   RowBox[{"{", "\<\"5 wool 4 minas At that time Jupiter was in\"\>", "}"}], 
-   ",", 
-   RowBox[{
-   "{", "\<\"That month the river level receded 8 fingers total 31 was the \
-na-gauge\"\>", "}"}], ",", "\<\"Delimiter\"\>", ",", 
-   RowBox[{
-   "{", "\<\"Month V the 1st of which was identical with the 30th of the \
+    RowBox[{"\<\"o\[NonBreakingSpace]24'\"\>", ",", "\<\"a.X201701.27\"\>", 
+     ",", 
+     RowBox[{"{", "\<\"1 2 sesame 3 3\"\>", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"o\[NonBreakingSpace]25'\"\>", ",", "\<\"a.X201701.28\"\>", 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"\<\"That the river level\"\>", ",", "\<\"1\"\>"}], "}"}]}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"r\[NonBreakingSpace]1'\"\>", ",", "\<\"a.X201701.30\"\>", 
+     ",", 
+     RowBox[{"{", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"r\[NonBreakingSpace]2'\"\>", ",", "\<\"a.X201701.31\"\>", 
+     ",", 
+     RowBox[{
+     "{", "\<\"Night of the 19th last part of the night the\"\>", "}"}]}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"r\[NonBreakingSpace]3'\"\>", ",", "\<\"a.X201701.32\"\>", 
+     ",", 
+     RowBox[{
+     "{", "\<\"Night of the 21st last part of the night the moon was 3 cubits \
+in front of \[Alpha] Tauri the moon being\"\>", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"r\[NonBreakingSpace]4'\"\>", ",", "\<\"a.X201701.33\"\>", 
+     ",", 
+     RowBox[{
+     "{", "\<\"having passed to the east Night of the 25th last part of the \
+night the moon was in front of\"\>", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"r\[NonBreakingSpace]5'\"\>", ",", "\<\"a.X201701.34\"\>", 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"\<\"Night of the 29th last part of the night Venus was\"\>", 
+       ",", "\<\"above \[Delta]\"\>"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"r\[NonBreakingSpace]6'\"\>", ",", "\<\"a.X201701.35\"\>", 
+     ",", 
+     RowBox[{
+     "{", "\<\"5 wool 4 minas At that time Jupiter was in\"\>", "}"}]}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"r\[NonBreakingSpace]7'\"\>", ",", "\<\"a.X201701.36\"\>", 
+     ",", 
+     RowBox[{
+     "{", "\<\"That month the river level receded 8 fingers total 31 was the \
+na-gauge\"\>", "}"}]}], "}"}], ",", "\<\"Delimiter\"\>", ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"r\[NonBreakingSpace]8'\"\>", ",", "\<\"a.X201701.38\"\>", 
+     ",", 
+     RowBox[{
+     "{", "\<\"Month V the 1st of which was identical with the 30th of the \
 preceding month sunset to moonset nn\[Degree] it was faint it was low to the \
 sun the moon stood 3 cubits in front of Mars 5 cubits in front of to the west\
-\"\>", "}"}], ",", 
+\"\>", "}"}]}], "}"}], ",", 
    RowBox[{"{", 
-    RowBox[{"\<\"Night of the 4th the moon was 4 1/2 cubits in front of \
+    RowBox[{"\<\"r\[NonBreakingSpace]9'\"\>", ",", "\<\"a.X201701.39\"\>", 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"\<\"Night of the 4th the moon was 4 1/2 cubits in front of \
 \[Alpha] Librae Night of the 5th beginning of the night the moon was\"\>", 
-     ",", "\<\"behind \[Beta]\"\>"}], "}"}], ",", 
-   RowBox[{
-   "{", "\<\"Night of the 7th beginning of the night the moon was 1/2 cubit \
+       ",", "\<\"behind \[Beta]\"\>"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"r\[NonBreakingSpace]10'\"\>", ",", "\<\"a.X201701.40\"\>", 
+     ",", 
+     RowBox[{
+     "{", "\<\"Night of the 7th beginning of the night the moon was 1/2 cubit \
 below \[Alpha] Scorpii the moon having passed 1/2 cubit to the east Night of \
-the 7th beginning of the\"\>", "}"}], ",", 
+the 7th beginning of the\"\>", "}"}]}], "}"}], ",", 
    RowBox[{"{", 
-    RowBox[{"\<\"4 fingers\"\>", 
-     ",", "\<\"Geminorum Night of the 11th beginning of the night the moon \
-was\"\>"}], "}"}], ",", 
-   RowBox[{
-   "{", "\<\"when the moon came out it was completely covered when it began \
-to clear\"\>", "}"}], ",", 
-   RowBox[{
-   "{", "\<\"the remainder of the did not stand there it was eclipsed in the \
-end of Aquarius at 42\[Degree] before sunset The 15th\"\>", "}"}], ",", 
+    RowBox[{"\<\"r\[NonBreakingSpace]11'\"\>", ",", "\<\"a.X201701.41\"\>", 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"\<\"4 fingers\"\>", 
+       ",", "\<\"Geminorum Night of the 11th beginning of the night the moon \
+was\"\>"}], "}"}]}], "}"}], ",", 
    RowBox[{"{", 
-    RowBox[{"\<\"3 1/2 cubits\"\>", 
-     ",", "\<\"\[Alpha] Arietis Night of the 19th last part of the night the \
-moon was 1 1/2 cubits behind \[Eta] Tauri Night of the 20th\"\>", 
-     ",", "\<\"Night of the 21st last part of the night the moon\"\>"}], 
+    RowBox[{"\<\"r\[NonBreakingSpace]12'\"\>", ",", "\<\"a.X201701.42\"\>", 
+     ",", 
+     RowBox[{
+     "{", "\<\"when the moon came out it was completely covered when it began \
+to clear\"\>", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"r\[NonBreakingSpace]13'\"\>", ",", "\<\"a.X201701.43\"\>", 
+     ",", 
+     RowBox[{
+     "{", "\<\"the remainder of the did not stand there it was eclipsed in \
+the end of Aquarius at 42\[Degree] before sunset The 15th\"\>", "}"}]}], 
     "}"}], ",", 
    RowBox[{"{", 
-    RowBox[{"\<\"stood\"\>", 
-     ",", "\<\"in front of Jupiter to the west the moon being 2 1/2 cubits \
+    RowBox[{"\<\"r\[NonBreakingSpace]14'\"\>", ",", "\<\"a.X201701.44\"\>", 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"\<\"3 1/2 cubits\"\>", 
+       ",", "\<\"\[Alpha] Arietis Night of the 19th last part of the night \
+the moon was 1 1/2 cubits behind \[Eta] Tauri Night of the 20th\"\>", 
+       ",", "\<\"Night of the 21st last part of the night the moon\"\>"}], 
+      "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"r\[NonBreakingSpace]15'\"\>", ",", "\<\"a.X201701.45\"\>", 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"\<\"stood\"\>", 
+       ",", "\<\"in front of Jupiter to the west the moon being 2 1/2 cubits \
 high to the north Night of the 22nd last part of the night the moon was\"\>", 
-     ",", "\<\"in front of \[Alpha] Geminorum\"\>", 
-     ",", "\<\"Night of the 26th last part of the night the moon\"\>"}], 
-    "}"}], ",", 
-   RowBox[{
-   "{", "\<\"it stood 2 cubits in front of to the west Night of the 27th last \
-part of the night Jupiter was 4 fingers above \[Mu] Geminorum The 27th \
-moonrise to sunrise\"\>", "}"}], ",", 
-   RowBox[{"{", "\<\"sesame 4 wool 5 minas At that time\"\>", "}"}], ",", 
+       ",", "\<\"in front of \[Alpha] Geminorum\"\>", 
+       ",", "\<\"Night of the 26th last part of the night the moon\"\>"}], 
+      "}"}]}], "}"}], ",", 
    RowBox[{"{", 
-    RowBox[{"\<\"around the 7th Saturn\[CloseCurlyQuote]s last appearance in \
-Virgo That month the river level\"\>", ",", "\<\"8\"\>"}], "}"}], ",", 
-   RowBox[{"{", "\<\"of Babylon carried\"\>", "}"}], ",", "\<\"Delimiter\"\>",
-    ",", 
-   RowBox[{
-   "{", "\<\"Month VI the 1st of which followed the 30th of the preceding \
+    RowBox[{"\<\"r\[NonBreakingSpace]16'\"\>", ",", "\<\"a.X201701.46\"\>", 
+     ",", 
+     RowBox[{
+     "{", "\<\"it stood 2 cubits in front of to the west Night of the 27th \
+last part of the night Jupiter was 4 fingers above \[Mu] Geminorum The 27th \
+moonrise to sunrise\"\>", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"r\[NonBreakingSpace]17'\"\>", ",", "\<\"a.X201701.47\"\>", 
+     ",", 
+     RowBox[{"{", "\<\"sesame 4 wool 5 minas At that time\"\>", "}"}]}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"r\[NonBreakingSpace]18'\"\>", ",", "\<\"a.X201701.48\"\>", 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"\<\"around the 7th Saturn\[CloseCurlyQuote]s last appearance \
+in Virgo That month the river level\"\>", ",", "\<\"8\"\>"}], "}"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"r\[NonBreakingSpace]19'\"\>", ",", "\<\"a.X201701.49\"\>", 
+     ",", 
+     RowBox[{"{", "\<\"of Babylon carried\"\>", "}"}]}], "}"}], 
+   ",", "\<\"Delimiter\"\>", ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"r\[NonBreakingSpace]20'\"\>", ",", "\<\"a.X201701.51\"\>", 
+     ",", 
+     RowBox[{
+     "{", "\<\"Month VI the 1st of which followed the 30th of the preceding \
 month Night of the 2nd last part of the night Venus was 5 cubits below \
-\[CurlyTheta] Leonis Night of the 3rd the moon was\"\>", "}"}], ",", 
+\[CurlyTheta] Leonis Night of the 3rd the moon was\"\>", "}"}]}], "}"}], ",", 
+   
    RowBox[{"{", 
-    RowBox[{"\<\"Night of the 4th the moon was\"\>", 
-     ",", "\<\"\[Alpha] Scorpii the moon being 1/2 cubit low to the south \
-Night of the 5th beginning of the night the moon was\"\>"}], "}"}], ",", 
+    RowBox[{"\<\"r\[NonBreakingSpace]21'\"\>", ",", "\<\"a.X201701.52\"\>", 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"\<\"Night of the 4th the moon was\"\>", 
+       ",", "\<\"\[Alpha] Scorpii the moon being 1/2 cubit low to the south \
+Night of the 5th beginning of the night the moon was\"\>"}], "}"}]}], "}"}], 
+   ",", 
    RowBox[{"{", 
-    RowBox[{"\<\"1/2 cubit\"\>", 
-     ",", "\<\"\[Delta] the moon being 1/2 cubit back to the west Around \
-the\"\>"}], "}"}], ",", 
-   RowBox[{
-   "{", "\<\"Saturn\[CloseCurlyQuote]s first appearance in Virgo it was and \
+    RowBox[{"\<\"r\[NonBreakingSpace]22'\"\>", ",", "\<\"a.X201701.53\"\>", 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"\<\"1/2 cubit\"\>", 
+       ",", "\<\"\[Delta] the moon being 1/2 cubit back to the west Around \
+the\"\>"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"r\[NonBreakingSpace]23'\"\>", ",", "\<\"a.X201701.54\"\>", 
+     ",", 
+     RowBox[{
+     "{", "\<\"Saturn\[CloseCurlyQuote]s first appearance in Virgo it was and \
 high rising of Saturn to sunrise 17\[Degree] ideal first appearance on the \
-12th\"\>", "}"}], ",", 
-   RowBox[{
-   "{", "\<\"2 1/2 cubits the moon having passed a little to the east\"\>", 
-    "}"}], ",", 
+12th\"\>", "}"}]}], "}"}], ",", 
    RowBox[{"{", 
-    RowBox[{"\<\"when Jupiter became stationary to the east it became \
+    RowBox[{"\<\"r\[NonBreakingSpace]24'\"\>", ",", "\<\"a.X201701.55\"\>", 
+     ",", 
+     RowBox[{
+     "{", "\<\"2 1/2 cubits the moon having passed a little to the east\"\>", 
+      "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"r\[NonBreakingSpace]25'\"\>", ",", "\<\"a.X201701.56\"\>", 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"\<\"when Jupiter became stationary to the east it became \
 stationary\"\>", 
-     ",", "\<\"behind \[Mu] Geminorum the moon being 4 fingers high to the \
-north\"\>"}], "}"}], ",", 
-   RowBox[{
-   "{", "\<\"of the 21st last part of the night the monn was above\"\>", 
-    "}"}], ",", 
-   RowBox[{
-   "{", "\<\"Night of the 23rd last part of the the moon was mm behind \
-\[Alpha] Leonis\"\>", "}"}], ",", 
-   RowBox[{"{", "\<\"2 mm below Saturn\"\>", "}"}]}], "}"}]], "Output",
+       ",", "\<\"behind \[Mu] Geminorum the moon being 4 fingers high to the \
+north\"\>"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"r\[NonBreakingSpace]26'\"\>", ",", "\<\"a.X201701.57\"\>", 
+     ",", 
+     RowBox[{
+     "{", "\<\"of the 21st last part of the night the monn was above\"\>", 
+      "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"r\[NonBreakingSpace]27'\"\>", ",", "\<\"a.X201701.58\"\>", 
+     ",", 
+     RowBox[{
+     "{", "\<\"Night of the 23rd last part of the the moon was mm behind \
+\[Alpha] Leonis\"\>", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"r\[NonBreakingSpace]28'\"\>", ",", "\<\"a.X201701.59\"\>", 
+     ",", 
+     RowBox[{"{", "\<\"2 mm below Saturn\"\>", "}"}]}], "}"}]}], 
+  "}"}]], "Output",
  CellChangeTimes->{{3.797566360969996*^9, 3.79756642231993*^9}, {
    3.797566453689533*^9, 3.7975664629490013`*^9}, 3.797566504896541*^9, {
    3.797566538914572*^9, 3.797566562055606*^9}, {3.7975667602249928`*^9, 
    3.797566767907753*^9}, 3.7975667979689407`*^9, 3.7975668298048897`*^9, 
-   3.797566934346592*^9},
+   3.797566934346592*^9, 3.79756722674074*^9},
  CellLabel->
-  "Out[384]=",ExpressionUUID->"76b0a2f3-f713-4047-84cc-e9d401b8a61a"]
+  "Out[385]=",ExpressionUUID->"4e466b24-7988-4ea8-97d7-cc4d9e0b9fbc"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1231,16 +1405,16 @@ Cell[9297, 265, 1996, 49, 98, "Output",ExpressionUUID->"39b5de77-0883-4c07-8c57-
 Cell[11308, 317, 190, 4, 30, "Input",ExpressionUUID->"a4143005-70c5-4ea2-a64a-fcdde6132c9f"],
 Cell[11501, 323, 2337, 65, 205, "Code",ExpressionUUID->"0e7b573c-d250-4080-b8c4-77d7b427f8b3"],
 Cell[CellGroupData[{
-Cell[13863, 392, 4027, 92, 338, "Code",ExpressionUUID->"abca5d64-afbd-41ce-902d-3a977349d555"],
-Cell[17893, 486, 9148, 185, 1883, "Output",ExpressionUUID->"76b0a2f3-f713-4047-84cc-e9d401b8a61a"]
+Cell[13863, 392, 4319, 99, 338, "Code",ExpressionUUID->"abca5d64-afbd-41ce-902d-3a977349d555"],
+Cell[18185, 493, 15457, 352, 2324, "Output",ExpressionUUID->"4e466b24-7988-4ea8-97d7-cc4d9e0b9fbc"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[27078, 676, 444, 12, 30, "Input",ExpressionUUID->"96d29a14-6d84-43db-8077-95e070a7a4d9"],
-Cell[27525, 690, 10183, 250, 142, "Output",ExpressionUUID->"311a0d4d-d182-4958-acd3-f94a56f50d47"]
+Cell[33679, 850, 444, 12, 30, "Input",ExpressionUUID->"96d29a14-6d84-43db-8077-95e070a7a4d9"],
+Cell[34126, 864, 10183, 250, 142, "Output",ExpressionUUID->"311a0d4d-d182-4958-acd3-f94a56f50d47"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[37745, 945, 408, 10, 26, "Input",ExpressionUUID->"55523418-f079-4f57-b45e-86c2f9b4d4a9"],
-Cell[38156, 957, 8717, 227, 93, "Output",ExpressionUUID->"cae4ef7f-5420-425b-895c-1a2274770780"]
+Cell[44346, 1119, 408, 10, 26, "Input",ExpressionUUID->"55523418-f079-4f57-b45e-86c2f9b4d4a9"],
+Cell[44757, 1131, 8717, 227, 93, "Output",ExpressionUUID->"cae4ef7f-5420-425b-895c-1a2274770780"]
 }, Open  ]]
 }, Open  ]]
 }

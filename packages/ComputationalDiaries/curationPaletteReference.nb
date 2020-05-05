@@ -1,0 +1,1874 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     68504,       1866]
+NotebookOptionsPosition[     60088,       1709]
+NotebookOutlinePosition[     60481,       1725]
+CellTagsIndexPosition[     60438,       1722]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Structure", "Subsection",
+ CellChangeTimes->{{3.797628330873962*^9, 
+  3.797628332593787*^9}},ExpressionUUID->"b8b89563-8420-400b-866c-\
+c027c93a6b4a"],
+
+Cell[CellGroupData[{
+
+Cell["Tablet", "Subsubsection",
+ CellChangeTimes->{{3.797626812541707*^9, 3.7976268129996967`*^9}, {
+  3.797628263711183*^9, 
+  3.797628264339122*^9}},ExpressionUUID->"00485494-f8ad-4574-86ba-\
+8b3f94668370"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"<|", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\"\<TabletID\>\"", "\[Rule]", 
+     TagBox[
+      FrameBox["String"],
+      "Placeholder"]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"\"\<Creator\>\"", "\[Rule]", 
+     TagBox[
+      FrameBox["String"],
+      "Placeholder"]}]}], "\[IndentingNewLine]", "|>"}], "\[Rule]", 
+  RowBox[{"{", "\[IndentingNewLine]", 
+   TagBox[
+    FrameBox["\<\"months\"\>"],
+    "Placeholder"], "\[IndentingNewLine]", "}"}]}]], "Input",ExpressionUUID->\
+"dbd2fba2-c2de-4879-8c09-da2e11b5f6bf"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Month", "Subsubsection",
+ CellChangeTimes->{{3.79762831566782*^9, 
+  3.7976283160941153`*^9}},ExpressionUUID->"4c764ded-a9dc-4ac2-ad72-\
+67e2a1873ca7"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DiaryDate", "[", 
+   RowBox[{"<|", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"\"\<BabylonianYear\>\"", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        TagBox[
+         FrameBox["\<\"king\"\>"],
+         "Placeholder"], ",", 
+        TagBox[
+         FrameBox["\<\"year\"\>"],
+         "Placeholder"]}], "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"\"\<BabylonianMonth\>\"", "\[Rule]", 
+      TagBox[
+       FrameBox["\<\"month (roman numeral)\"\>"],
+       "Placeholder"]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"\"\<BabylonianDay\>\"", "\[Rule]", 
+      TagBox[
+       FrameBox["\<\"day\"\>"],
+       "Placeholder"]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"\"\<JulianYear\>\"", "\[Rule]", 
+      TagBox[
+       FrameBox["\<\"year AD\"\>"],
+       "Placeholder"]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"\"\<JulianMonth\>\"", "\[Rule]", 
+      TagBox[
+       FrameBox["\<\"month\"\>"],
+       "Placeholder"]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"\"\<JulianDay\>\"", "\[Rule]", 
+      TagBox[
+       FrameBox["\<\"day\"\>"],
+       "Placeholder"]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"\"\<Time\>\"", "\[Rule]", 
+      RowBox[{
+      "\"\<BeginningOfTheNight\>\"", "|", "\"\<FirstPartOfTheNight\>\"", "|", 
+       "\"\<MiddlePartOfTheNight\>\"", "|", "\"\<LastPartOfTheNight\>\"", 
+       "|", "\"\<Morning\>\"", "|", "\"\<Noon\>\"", "|", "\"\<Afternoon\>\"", 
+       "|", "\"\<Sunset\>\""}]}]}], "\[IndentingNewLine]", "|>"}], "]"}], 
+  "\[Rule]", 
+  RowBox[{"{", "\[IndentingNewLine]", 
+   TagBox[
+    FrameBox["\<\"observations\"\>"],
+    "Placeholder"], "\[IndentingNewLine]", "}"}]}]], "Input",
+ CellChangeTimes->{{3.797629041724348*^9, 
+  3.797629050004558*^9}},ExpressionUUID->"d2073d21-2e65-4013-81d3-\
+2cf787b1fefa"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Common objects", "Subsection",
+ CellChangeTimes->{{3.797628324396891*^9, 
+  3.7976283397528143`*^9}},ExpressionUUID->"0d4190cb-69b5-4def-8424-\
+5669011e4a04"],
+
+Cell[CellGroupData[{
+
+Cell["DiaryDate", "Subsubsection",
+ CellChangeTimes->{{3.797628440374751*^9, 
+  3.79762844443155*^9}},ExpressionUUID->"55b4c259-bb43-48a5-ac69-\
+d70903e57140"],
+
+Cell[BoxData[
+ RowBox[{"DiaryDate", "[", 
+  RowBox[{"<|", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\"\<BabylonianYear\>\"", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+       TagBox[
+        FrameBox["\<\"king\"\>"],
+        "Placeholder"], ",", 
+       TagBox[
+        FrameBox["\<\"year\"\>"],
+        "Placeholder"]}], "}"}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"\"\<BabylonianMonth\>\"", "\[Rule]", 
+     TagBox[
+      FrameBox["\<\"month (roman numeral)\"\>"],
+      "Placeholder"]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"\"\<BabylonianDay\>\"", "\[Rule]", 
+     TagBox[
+      FrameBox["\<\"day\"\>"],
+      "Placeholder"]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"\"\<JulianYear\>\"", "\[Rule]", 
+     TagBox[
+      FrameBox["\<\"year AD\"\>"],
+      "Placeholder"]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"\"\<JulianMonth\>\"", "\[Rule]", 
+     TagBox[
+      FrameBox["\<\"month\"\>"],
+      "Placeholder"]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"\"\<JulianDay\>\"", "\[Rule]", 
+     TagBox[
+      FrameBox["\<\"day\"\>"],
+      "Placeholder"]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"\"\<Time\>\"", "\[Rule]", 
+     RowBox[{
+     "\"\<BeginningOfTheNight\>\"", "|", "\"\<FirstPartOfTheNight\>\"", "|", 
+      "\"\<MiddlePartOfTheNight\>\"", "|", "\"\<LastPartOfTheNight\>\"", "|", 
+      "\"\<Morning\>\"", "|", "\"\<Noon\>\"", "|", "\"\<Afternoon\>\"", "|", 
+      "\"\<Sunset\>\""}]}]}], "\[IndentingNewLine]", "|>"}], "]"}]], "Input",
+ CellChangeTimes->{{3.797628499637183*^9, 3.797628632530016*^9}, {
+  3.7976287004876957`*^9, 
+  3.797628700632378*^9}},ExpressionUUID->"9f1b1622-8e4f-4c52-a96e-\
+90a9842705ff"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["DiaryDistance", "Subsubsection",
+ CellChangeTimes->{{3.797628717308303*^9, 
+  3.7976287191403913`*^9}},ExpressionUUID->"b5c49c6b-626f-4ecf-acad-\
+746349eff814"],
+
+Cell[BoxData[
+ RowBox[{"DiaryDistance", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    TagBox[
+     FrameBox["\<\"cubits\"\>"],
+     "Placeholder"], ",", 
+    TagBox[
+     FrameBox["\<\"fingers\"\>"],
+     "Placeholder"]}], "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.797628720592025*^9, 
+  3.7976287372191267`*^9}},ExpressionUUID->"fdb6508c-4b72-4d76-b8e4-\
+4d197322836f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["DiaryDisplacement", "Subsubsection",
+ CellChangeTimes->{{3.797628789872802*^9, 
+  3.7976287944466352`*^9}},ExpressionUUID->"6b0bfccc-fbff-4d5b-926a-\
+1976875292de"],
+
+Cell[BoxData[
+ RowBox[{"DiaryDisplacement", "[", 
+  RowBox[{"<|", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\"\<Distances\>\"", "\[Rule]", 
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"DiaryDistance", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          TagBox[
+           FrameBox["\<\"cubits\"\>"],
+           "Placeholder"], ",", 
+          TagBox[
+           FrameBox["\<\"fingers\"\>"],
+           "Placeholder"]}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"DiaryDistance", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          TagBox[
+           FrameBox["\<\"cubits\"\>"],
+           "Placeholder"], ",", 
+          TagBox[
+           FrameBox["\<\"fingers\"\>"],
+           "Placeholder"]}], "}"}], "]"}]}], "}"}]}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"\"\<Relations\>\"", "\[Rule]", 
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{
+       "\"\<InFrontOf\>\"", "|", "\"\<Behind\>\"", "|", "\"\<East\>\"", "|", 
+        "\"\<West\>\""}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+       "\"\<Above\>\"", "|", "\"\<Below\>\"", "|", "\"\<North\>\"", "|", 
+        "\"\<South\>\""}]}], "}"}]}]}], "\[IndentingNewLine]", "|>"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.797628814449252*^9, 
+  3.7976288427565517`*^9}},ExpressionUUID->"bf31e6f3-7202-4140-a355-\
+085282f5b060"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["DiaryDuration", "Subsubsection",
+ CellChangeTimes->{{3.797628849181427*^9, 
+  3.797628851396104*^9}},ExpressionUUID->"c4b49f59-86b7-4af3-849e-\
+e9ade50f788c"],
+
+Cell[BoxData[
+ RowBox[{"DiaryDuration", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    TagBox[
+     FrameBox["\<\"degrees\"\>"],
+     "Placeholder"], ",", 
+    TagBox[
+     FrameBox["\<\"NINDA\"\>"],
+     "Placeholder"]}], "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.797628853865858*^9, 
+  3.7976288757842073`*^9}},ExpressionUUID->"12174a6a-a7a8-4f74-9e69-\
+b529f5cb2df5"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["DiaryCapacity", "Subsubsection",
+ CellChangeTimes->{{3.7976288872416153`*^9, 
+  3.797628889587859*^9}},ExpressionUUID->"8973a062-337d-442f-add0-\
+5f4e76695a42"],
+
+Cell[BoxData[
+ RowBox[{"DiaryCapacity", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    TagBox[
+     FrameBox["\<\"kur\"\>"],
+     "Placeholder"], ",", 
+    TagBox[
+     FrameBox["\<\"p\[ABar]n\"\>"],
+     "Placeholder"], ",", 
+    TagBox[
+     FrameBox["\<\"s\:016bt\"\>"],
+     "Placeholder"], ",", 
+    TagBox[
+     FrameBox["\<\"qa\"\>"],
+     "Placeholder"]}], "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7976288901133757`*^9, 
+  3.7976289246699123`*^9}},ExpressionUUID->"de03670d-ec45-4e65-ba55-\
+05875217bddd"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Missing", "Subsection",
+ CellChangeTimes->{{3.797628710970417*^9, 
+  3.7976287117025747`*^9}},ExpressionUUID->"262b5d47-bfdc-4f9d-a673-\
+8173204b8a41"],
+
+Cell[CellGroupData[{
+
+Cell["Missing[]", "Subsubsection",
+ CellChangeTimes->{{3.797628934553999*^9, 
+  3.797628935409823*^9}},ExpressionUUID->"613df0ac-ee02-4eb0-918e-\
+9689a3c80bac"],
+
+Cell[BoxData[
+ RowBox[{"Missing", "[", "]"}]], "Input",
+ CellChangeTimes->{{3.797628930266481*^9, 
+  3.797628931265707*^9}},ExpressionUUID->"1f046a0a-a3c8-46a3-a94d-\
+8d455cb3b2cb"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Missing[\[OpenCurlyDoubleQuote]Destroyed\[CloseCurlyDoubleQuote]]", \
+"Subsubsection",
+ CellChangeTimes->{{3.7976289411282682`*^9, 
+  3.797628945199242*^9}},ExpressionUUID->"2b4f9841-ef35-4de9-a0a7-\
+823eb882a877"],
+
+Cell[BoxData[
+ RowBox[{"Missing", "[", "\"\<Destroyed\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.797628945952016*^9, 
+  3.7976289489584627`*^9}},ExpressionUUID->"cea7d7e3-9ac9-4bc1-a052-\
+1163a7bd9ace"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Missing[\[OpenCurlyDoubleQuote]Unmentioned\[CloseCurlyDoubleQuote]]", \
+"Subsubsection",
+ CellChangeTimes->{{3.797628950532898*^9, 
+  3.797628954661954*^9}},ExpressionUUID->"399da85d-e6e3-430b-a193-\
+3fd9d9d5e1ed"],
+
+Cell[BoxData[
+ RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.797628971168285*^9, 
+  3.797628977293681*^9}},ExpressionUUID->"1c1d6a32-c2a6-4fbc-b204-\
+de34387f7e30"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Observations", "Subsection",
+ CellChangeTimes->{{3.797629058430977*^9, 
+  3.797629061299774*^9}},ExpressionUUID->"da2ec88f-d261-4340-bf72-\
+af86ddb889fd"],
+
+Cell[CellGroupData[{
+
+Cell["DiaryObservation", "Subsubsection",
+ CellChangeTimes->{{3.797629063877516*^9, 3.797629067764888*^9}, {
+  3.7976293513580637`*^9, 
+  3.7976293570490303`*^9}},ExpressionUUID->"e5c31154-373e-4b10-b036-\
+a2cbc878205e"],
+
+Cell[BoxData[
+ RowBox[{"DiaryObservation", "[", 
+  RowBox[{"<|", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\"\<Type\>\"", "\[Rule]", 
+     TagBox[
+      FrameBox["\<\"type\"\>"],
+      "Placeholder"]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"\"\<Content\>\"", "\[Rule]", 
+     RowBox[{"<|", 
+      TagBox[
+       FrameBox["\<\"content\"\>"],
+       "Placeholder"], "|>"}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"\"\<Date\>\"", "\[Rule]", 
+     RowBox[{"DiaryDate", "[", 
+      RowBox[{"<|", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"\"\<BabylonianYear\>\"", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           TagBox[
+            FrameBox["\<\"king\"\>"],
+            "Placeholder"], ",", 
+           TagBox[
+            FrameBox["\<\"year\"\>"],
+            "Placeholder"]}], "}"}]}], ",", "\[IndentingNewLine]", 
+        RowBox[{"\"\<BabylonianMonth\>\"", "\[Rule]", 
+         TagBox[
+          FrameBox["\<\"month (roman numeral)\"\>"],
+          "Placeholder"]}], ",", "\[IndentingNewLine]", 
+        RowBox[{"\"\<BabylonianDay\>\"", "\[Rule]", 
+         TagBox[
+          FrameBox["\<\"day\"\>"],
+          "Placeholder"]}], ",", "\[IndentingNewLine]", 
+        RowBox[{"\"\<JulianYear\>\"", "\[Rule]", 
+         TagBox[
+          FrameBox["\<\"year AD\"\>"],
+          "Placeholder"]}], ",", "\[IndentingNewLine]", 
+        RowBox[{"\"\<JulianMonth\>\"", "\[Rule]", 
+         TagBox[
+          FrameBox["\<\"month\"\>"],
+          "Placeholder"]}], ",", "\[IndentingNewLine]", 
+        RowBox[{"\"\<JulianDay\>\"", "\[Rule]", 
+         TagBox[
+          FrameBox["\<\"day\"\>"],
+          "Placeholder"]}], ",", "\[IndentingNewLine]", 
+        RowBox[{"\"\<Time\>\"", "\[Rule]", 
+         RowBox[{
+         "\"\<BeginningOfTheNight\>\"", "|", "\"\<FirstPartOfTheNight\>\"", 
+          "|", "\"\<MiddlePartOfTheNight\>\"", "|", 
+          "\"\<LastPartOfTheNight\>\"", "|", "\"\<Morning\>\"", "|", 
+          "\"\<Noon\>\"", "|", "\"\<Afternoon\>\"", "|", 
+          "\"\<Sunset\>\""}]}]}], "\[IndentingNewLine]", "|>"}], "]"}]}], ",",
+     "\[IndentingNewLine]", 
+    RowBox[{"\"\<Provenance\>\"", "\[Rule]", 
+     RowBox[{"<|", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"\"\<Creator\>\"", "\[Rule]", 
+        TagBox[
+         FrameBox["\<\"creator\"\>"],
+         "Placeholder"]}], ",", "\[IndentingNewLine]", 
+       RowBox[{"\"\<TabletID\>\"", "\[Rule]", 
+        TagBox[
+         FrameBox["\<\"Oracc ID\"\>"],
+         "Placeholder"]}], ",", "\[IndentingNewLine]", 
+       RowBox[{"\"\<LineNumber\>\"", "\[Rule]", 
+        TagBox[
+         FrameBox["\<\"line\"\>"],
+         "Placeholder"]}], ",", "\[IndentingNewLine]", 
+       RowBox[{"\"\<Reviewed\>\"", "\[Rule]", "False"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"\"\<Notes\>\"", "\[Rule]", 
+        RowBox[{"Missing", "[", "]"}]}]}], "\[IndentingNewLine]", "|>"}]}]}], 
+   "\[IndentingNewLine]", "|>"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7976290793864927`*^9, 
+  3.797629190293107*^9}},ExpressionUUID->"bebe4476-edd7-4f53-9018-\
+1971b733faa3"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["General template", "Subsubsection",
+ CellChangeTimes->{{3.797629336616393*^9, 
+  3.797629360363035*^9}},ExpressionUUID->"d6727262-29ec-43c4-b43d-\
+66262607be86"],
+
+Cell[BoxData[
+ RowBox[{"<|", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"\"\<LineNumber\>\"", "\[Rule]", 
+    TagBox[
+     FrameBox["\<\"line\"\>"],
+     "Placeholder"]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Date\>\"", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"(", 
+       TagBox[
+        FrameBox["\<\"day of month\"\>"],
+        "Placeholder"], ")"}], ",", 
+      RowBox[{
+      "\"\<BeginningOfTheNight\>\"", "|", "\"\<FirstPartOfTheNight\>\"", "|", 
+       "\"\<MiddlePartOfTheNight\>\"", "|", "\"\<LastPartOfTheNight\>\"", 
+       "|", "\"\<Morning\>\"", "|", "\"\<Noon\>\"", "|", "\"\<Afternoon\>\"", 
+       "|", "\"\<Sunset\>\""}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Type\>\"", "\[Rule]", 
+    TagBox[
+     FrameBox["\<\"type\"\>"],
+     "Placeholder"]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Content\>\"", "\[Rule]", 
+    RowBox[{"<|", 
+     TagBox[
+      FrameBox["\<\"content\"\>"],
+      "Placeholder"], "|>"}]}]}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{",", 
+    RowBox[{"Optional", "[", 
+     RowBox[{"\"\<Notes\>\"", "\[Rule]", "String"}], "]"}]}], "*)"}], 
+  "\[IndentingNewLine]", "|>"}]], "Input",
+ CellChangeTimes->{{3.7976293759832687`*^9, 
+  3.7976294385303583`*^9}},ExpressionUUID->"e60bf099-0556-475d-90ed-\
+5d3663952bc6"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["RelativePosition", "Subsubsection",
+ CellChangeTimes->{{3.797629336616393*^9, 3.797629360363035*^9}, {
+  3.797629579297798*^9, 
+  3.797629581534202*^9}},ExpressionUUID->"b7e60d32-e080-4fdc-be61-\
+fd9c1afd9fbd"],
+
+Cell[BoxData[
+ RowBox[{"<|", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"\"\<LineNumber\>\"", "\[Rule]", 
+    TagBox[
+     FrameBox["\<\"line\"\>"],
+     "Placeholder"]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Date\>\"", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"(", 
+       TagBox[
+        FrameBox["\<\"day of month\"\>"],
+        "Placeholder"], ")"}], ",", 
+      RowBox[{
+      "\"\<BeginningOfTheNight\>\"", "|", "\"\<FirstPartOfTheNight\>\"", "|", 
+       "\"\<MiddlePartOfTheNight\>\"", "|", "\"\<LastPartOfTheNight\>\"", 
+       "|", "\"\<Morning\>\"", "|", "\"\<Noon\>\"", "|", "\"\<Afternoon\>\"", 
+       "|", "\"\<Sunset\>\""}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<RelativePosition\>\""}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"\"\<Content\>\"", "\[Rule]", 
+    RowBox[{"<|", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"\"\<ObjectA\>\"", "\[Rule]", 
+       TagBox[
+        FrameBox["\<\"primary object\"\>"],
+        "Placeholder"]}], ",", "\[IndentingNewLine]", 
+      RowBox[{"\"\<ObjectB\>\"", "\[Rule]", 
+       TagBox[
+        FrameBox["\<\"secondary object\"\>"],
+        "Placeholder"]}], ",", "\[IndentingNewLine]", 
+      RowBox[{"\"\<Displacement\>\"", "\[Rule]", 
+       RowBox[{"DiaryDisplacement", "[", 
+        RowBox[{"<|", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"\"\<Distances\>\"", "\[Rule]", 
+           RowBox[{"{", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"DiaryDistance", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                TagBox[
+                 FrameBox["\<\"cubits\"\>"],
+                 "Placeholder"], ",", 
+                TagBox[
+                 FrameBox["\<\"fingers\"\>"],
+                 "Placeholder"]}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"DiaryDistance", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                TagBox[
+                 FrameBox["\<\"cubits\"\>"],
+                 "Placeholder"], ",", 
+                TagBox[
+                 FrameBox["\<\"fingers\"\>"],
+                 "Placeholder"]}], "}"}], "]"}]}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<Relations\>\"", "\[Rule]", 
+           RowBox[{"{", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{
+             "\"\<InFrontOf\>\"", "|", "\"\<Behind\>\"", "|", "\"\<East\>\"", 
+              "|", "\"\<West\>\""}], ",", "\[IndentingNewLine]", 
+             RowBox[{
+             "\"\<Above\>\"", "|", "\"\<Below\>\"", "|", "\"\<North\>\"", 
+              "|", "\"\<South\>\""}]}], "}"}]}]}], "\[IndentingNewLine]", 
+         "|>"}], "]"}]}]}], "\[IndentingNewLine]", "|>"}]}]}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{",", 
+    RowBox[{"Optional", "[", 
+     RowBox[{"\"\<Notes\>\"", "\[Rule]", "String"}], "]"}]}], "*)"}], 
+  "\[IndentingNewLine]", "|>"}]], "Input",
+ CellChangeTimes->{{3.7976293759832687`*^9, 3.7976294385303583`*^9}, {
+  3.797629586076181*^9, 
+  3.7976296217777567`*^9}},ExpressionUUID->"ec7d6f6f-0065-4649-846d-\
+49049b843562"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["ZodiacalPosition", "Subsubsection",
+ CellChangeTimes->{{3.797629336616393*^9, 3.797629360363035*^9}, 
+   3.797629678979354*^9},ExpressionUUID->"d1293c60-764b-4131-b9bd-\
+712cb66934bb"],
+
+Cell[BoxData[
+ RowBox[{"<|", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"\"\<LineNumber\>\"", "\[Rule]", 
+    TagBox[
+     FrameBox["\<\"line\"\>"],
+     "Placeholder"]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Date\>\"", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"(", 
+       TagBox[
+        FrameBox["\<\"day of month\"\>"],
+        "Placeholder"], ")"}], ",", 
+      RowBox[{
+      "\"\<BeginningOfTheNight\>\"", "|", "\"\<FirstPartOfTheNight\>\"", "|", 
+       "\"\<MiddlePartOfTheNight\>\"", "|", "\"\<LastPartOfTheNight\>\"", 
+       "|", "\"\<Morning\>\"", "|", "\"\<Noon\>\"", "|", "\"\<Afternoon\>\"", 
+       "|", "\"\<Sunset\>\""}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<ZodiacalPosition\>\""}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"\"\<Content\>\"", "\[Rule]", 
+    RowBox[{"<|", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"\"\<Object\>\"", "\[Rule]", 
+       TagBox[
+        FrameBox["\<\"object\"\>"],
+        "Placeholder"]}], ",", "\[IndentingNewLine]", 
+      RowBox[{"\"\<Sign\>\"", "\[Rule]", 
+       TagBox[
+        FrameBox["\<\"sign\"\>"],
+        "Placeholder"]}], ",", "\[IndentingNewLine]", 
+      RowBox[{"\"\<Entering\>\"", "\[Rule]", 
+       RowBox[{"True", "|", "False"}]}]}], "\[IndentingNewLine]", "|>"}]}]}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{",", 
+    RowBox[{"Optional", "[", 
+     RowBox[{"\"\<Notes\>\"", "\[Rule]", "String"}], "]"}]}], "*)"}], 
+  "\[IndentingNewLine]", "|>"}]], "Input",
+ CellChangeTimes->{{3.7976293759832687`*^9, 3.7976294385303583`*^9}, {
+  3.797629686073471*^9, 
+  3.797629738109642*^9}},ExpressionUUID->"bf200f88-4d32-4f00-95c2-\
+9249d8be39b6"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["NotVisible", "Subsubsection",
+ CellChangeTimes->{{3.7976297578711987`*^9, 
+  3.797629759827265*^9}},ExpressionUUID->"564714e5-5384-4d3e-b630-\
+ca8683eb5ccc"],
+
+Cell[BoxData[
+ RowBox[{"<|", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"\"\<LineNumber\>\"", "\[Rule]", 
+    TagBox[
+     FrameBox["\<\"line\"\>"],
+     "Placeholder"]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Date\>\"", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"(", 
+       TagBox[
+        FrameBox["\<\"day of month\"\>"],
+        "Placeholder"], ")"}], ",", 
+      RowBox[{
+      "\"\<BeginningOfTheNight\>\"", "|", "\"\<FirstPartOfTheNight\>\"", "|", 
+       "\"\<MiddlePartOfTheNight\>\"", "|", "\"\<LastPartOfTheNight\>\"", 
+       "|", "\"\<Morning\>\"", "|", "\"\<Noon\>\"", "|", "\"\<Afternoon\>\"", 
+       "|", "\"\<Sunset\>\""}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<NotVisible\>\""}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"\"\<Content\>\"", "\[Rule]", 
+    RowBox[{"<|", "\[IndentingNewLine]", 
+     RowBox[{"\"\<Object\>\"", "\[Rule]", 
+      TagBox[
+       FrameBox["\<\"object\"\>"],
+       "Placeholder"]}], "\[IndentingNewLine]", "|>"}]}]}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{",", 
+    RowBox[{"Optional", "[", 
+     RowBox[{"\"\<Notes\>\"", "\[Rule]", "String"}], "]"}]}], "*)"}], 
+  "\[IndentingNewLine]", "|>"}]], "Input",
+ CellChangeTimes->{{3.7976297634678583`*^9, 
+  3.797629781006858*^9}},ExpressionUUID->"03bad260-1846-44f2-9cfd-\
+b08cf7bd6837"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["FirstAppearenceEast (\[CapitalGamma])", "Subsubsection",
+ CellChangeTimes->{
+  3.797629816209622*^9},ExpressionUUID->"9ae7221d-c47d-4d56-9f56-\
+be005e6ff62c"],
+
+Cell[BoxData[
+ RowBox[{"<|", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"\"\<LineNumber\>\"", "\[Rule]", 
+    TagBox[
+     FrameBox["\<\"line\"\>"],
+     "Placeholder"]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Date\>\"", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"(", 
+       TagBox[
+        FrameBox["\<\"day of month\"\>"],
+        "Placeholder"], ")"}], ",", 
+      RowBox[{
+      "\"\<BeginningOfTheNight\>\"", "|", "\"\<FirstPartOfTheNight\>\"", "|", 
+       "\"\<MiddlePartOfTheNight\>\"", "|", "\"\<LastPartOfTheNight\>\"", 
+       "|", "\"\<Morning\>\"", "|", "\"\<Noon\>\"", "|", "\"\<Afternoon\>\"", 
+       "|", "\"\<Sunset\>\""}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<FirstAppearenceEast\>\""}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"\"\<Content\>\"", "\[Rule]", 
+    RowBox[{"<|", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"\"\<Object\>\"", "\[Rule]", 
+       TagBox[
+        FrameBox["\<\"object\"\>"],
+        "Placeholder"]}], ",", "\[IndentingNewLine]", 
+      RowBox[{"\"\<VisibilityDuration\>\"", "\[Rule]", 
+       RowBox[{"DiaryDuration", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          TagBox[
+           FrameBox["\<\"degrees\"\>"],
+           "Placeholder"], ",", 
+          TagBox[
+           FrameBox["\<\"NINDA\"\>"],
+           "Placeholder"]}], "}"}], "]"}]}], ",", "\[IndentingNewLine]", 
+      RowBox[{"\"\<DidNotWatch\>\"", "\[Rule]", "False"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"\"\<IdealDate\>\"", "\[Rule]", 
+       RowBox[{"Missing", "[", "]"}]}]}], "\[IndentingNewLine]", "|>"}]}]}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{",", 
+    RowBox[{"Optional", "[", 
+     RowBox[{"\"\<Notes\>\"", "\[Rule]", "String"}], "]"}]}], "*)"}], 
+  "\[IndentingNewLine]", "|>"}]], "Input",
+ CellChangeTimes->{{3.797629822767747*^9, 
+  3.797629857066229*^9}},ExpressionUUID->"4b1737c3-2e84-4ff3-9445-\
+747174a58367"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["FirstAppearenceWest (\[CapitalXi])", "Subsubsection",
+ CellChangeTimes->{{3.797616190981967*^9, 3.797616194825499*^9}, {
+  3.7976172371885433`*^9, 3.797617239983081*^9}, {3.797617477069441*^9, 
+  3.797617478215665*^9}, {3.797618552604311*^9, 
+  3.79761856888844*^9}},ExpressionUUID->"0094f795-abf1-482c-a820-\
+542f3d21b347"],
+
+Cell[BoxData[
+ RowBox[{"<|", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"\"\<LineNumber\>\"", "\[Rule]", 
+    TagBox[
+     FrameBox["\<\"line\"\>"],
+     "Placeholder"]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Date\>\"", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"(", 
+       TagBox[
+        FrameBox["\<\"day of month\"\>"],
+        "Placeholder"], ")"}], ",", 
+      RowBox[{
+      "\"\<BeginningOfTheNight\>\"", "|", "\"\<FirstPartOfTheNight\>\"", "|", 
+       "\"\<MiddlePartOfTheNight\>\"", "|", "\"\<LastPartOfTheNight\>\"", 
+       "|", "\"\<Morning\>\"", "|", "\"\<Noon\>\"", "|", "\"\<Afternoon\>\"", 
+       "|", "\"\<Sunset\>\""}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<FirstAppearenceWest\>\""}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"\"\<Content\>\"", "\[Rule]", 
+    RowBox[{"<|", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"\"\<Object\>\"", "\[Rule]", 
+       TagBox[
+        FrameBox["\<\"object\"\>"],
+        "Placeholder"]}], ",", "\[IndentingNewLine]", 
+      RowBox[{"\"\<VisibilityDuration\>\"", "\[Rule]", 
+       RowBox[{"DiaryDuration", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          TagBox[
+           FrameBox["\<\"degrees\"\>"],
+           "Placeholder"], ",", 
+          TagBox[
+           FrameBox["\<\"NINDA\"\>"],
+           "Placeholder"]}], "}"}], "]"}]}], ",", "\[IndentingNewLine]", 
+      RowBox[{"\"\<DidNotWatch\>\"", "\[Rule]", "False"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"\"\<IdealDate\>\"", "\[Rule]", 
+       RowBox[{"Missing", "[", "]"}]}]}], "\[IndentingNewLine]", "|>"}]}]}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{",", 
+    RowBox[{"Optional", "[", 
+     RowBox[{"\"\<Notes\>\"", "\[Rule]", "String"}], "]"}]}], "*)"}], 
+  "\[IndentingNewLine]", "|>"}]], "Input",
+ CellChangeTimes->{{3.797629900627935*^9, 
+  3.797629901795877*^9}},ExpressionUUID->"543e10f3-b351-4af2-b88c-\
+47dfd6feef69"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["LastAppearenceEast (\[CapitalSigma])", "Subsubsection",
+ CellChangeTimes->{{3.797616190981967*^9, 3.797616194825499*^9}, {
+  3.797616977094586*^9, 3.797616977560151*^9}, {3.797618522088674*^9, 
+  3.7976185235308657`*^9}, {3.797618573743082*^9, 
+  3.797618576699368*^9}},ExpressionUUID->"2d4814ef-ac26-447a-9306-\
+9ef45d7b50d6"],
+
+Cell[BoxData[
+ RowBox[{"<|", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"\"\<LineNumber\>\"", "\[Rule]", 
+    TagBox[
+     FrameBox["\<\"line\"\>"],
+     "Placeholder"]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Date\>\"", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"(", 
+       TagBox[
+        FrameBox["\<\"day of month\"\>"],
+        "Placeholder"], ")"}], ",", 
+      RowBox[{
+      "\"\<BeginningOfTheNight\>\"", "|", "\"\<FirstPartOfTheNight\>\"", "|", 
+       "\"\<MiddlePartOfTheNight\>\"", "|", "\"\<LastPartOfTheNight\>\"", 
+       "|", "\"\<Morning\>\"", "|", "\"\<Noon\>\"", "|", "\"\<Afternoon\>\"", 
+       "|", "\"\<Sunset\>\""}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<LastAppearenceEast\>\""}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"\"\<Content\>\"", "\[Rule]", 
+    RowBox[{"<|", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"\"\<Object\>\"", "\[Rule]", 
+       TagBox[
+        FrameBox["\<\"object\"\>"],
+        "Placeholder"]}], ",", "\[IndentingNewLine]", 
+      RowBox[{"\"\<VisibilityDuration\>\"", "\[Rule]", 
+       RowBox[{"DiaryDuration", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          TagBox[
+           FrameBox["\<\"degrees\"\>"],
+           "Placeholder"], ",", 
+          TagBox[
+           FrameBox["\<\"NINDA\"\>"],
+           "Placeholder"]}], "}"}], "]"}]}], ",", "\[IndentingNewLine]", 
+      RowBox[{"\"\<DidNotWatch\>\"", "\[Rule]", "False"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"\"\<IdealDate\>\"", "\[Rule]", 
+       RowBox[{"Missing", "[", "]"}]}]}], "\[IndentingNewLine]", "|>"}]}]}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{",", 
+    RowBox[{"Optional", "[", 
+     RowBox[{"\"\<Notes\>\"", "\[Rule]", "String"}], "]"}]}], "*)"}], 
+  "\[IndentingNewLine]", "|>"}]], "Input",
+ CellChangeTimes->{
+  3.797630033006216*^9},ExpressionUUID->"0b4035ea-97f5-4e53-9bc3-\
+87fc0f7f7202"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["LastAppearenceWest (\[CapitalOmega])", "Subsubsection",
+ CellChangeTimes->{{3.797616190981967*^9, 3.797616194825499*^9}, {
+  3.797616977094586*^9, 3.797616977560151*^9}, {3.797618522088674*^9, 
+  3.7976185373516483`*^9}, {3.79761857879736*^9, 
+  3.797618582207581*^9}},ExpressionUUID->"4720f486-637c-4da1-8414-\
+64e5e0b7bb7d"],
+
+Cell[BoxData[
+ RowBox[{"<|", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"\"\<LineNumber\>\"", "\[Rule]", 
+    TagBox[
+     FrameBox["\<\"line\"\>"],
+     "Placeholder"]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Date\>\"", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"(", 
+       TagBox[
+        FrameBox["\<\"day of month\"\>"],
+        "Placeholder"], ")"}], ",", 
+      RowBox[{
+      "\"\<BeginningOfTheNight\>\"", "|", "\"\<FirstPartOfTheNight\>\"", "|", 
+       "\"\<MiddlePartOfTheNight\>\"", "|", "\"\<LastPartOfTheNight\>\"", 
+       "|", "\"\<Morning\>\"", "|", "\"\<Noon\>\"", "|", "\"\<Afternoon\>\"", 
+       "|", "\"\<Sunset\>\""}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<LastAppearenceWest\>\""}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"\"\<Content\>\"", "\[Rule]", 
+    RowBox[{"<|", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"\"\<Object\>\"", "\[Rule]", 
+       TagBox[
+        FrameBox["\<\"object\"\>"],
+        "Placeholder"]}], ",", "\[IndentingNewLine]", 
+      RowBox[{"\"\<VisibilityDuration\>\"", "\[Rule]", 
+       RowBox[{"DiaryDuration", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          TagBox[
+           FrameBox["\<\"degrees\"\>"],
+           "Placeholder"], ",", 
+          TagBox[
+           FrameBox["\<\"NINDA\"\>"],
+           "Placeholder"]}], "}"}], "]"}]}], ",", "\[IndentingNewLine]", 
+      RowBox[{"\"\<DidNotWatch\>\"", "\[Rule]", "False"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"\"\<IdealDate\>\"", "\[Rule]", 
+       RowBox[{"Missing", "[", "]"}]}]}], "\[IndentingNewLine]", "|>"}]}]}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{",", 
+    RowBox[{"Optional", "[", 
+     RowBox[{"\"\<Notes\>\"", "\[Rule]", "String"}], "]"}]}], "*)"}], 
+  "\[IndentingNewLine]", "|>"}]], "Input",
+ CellChangeTimes->{
+  3.797630040504055*^9},ExpressionUUID->"886fb128-a769-492c-989e-\
+882f7cfea171"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["FirstStationaryPoint (\[CapitalPhi])", "Subsubsection",
+ CellChangeTimes->{{3.797616190981967*^9, 3.797616194825499*^9}, {
+  3.7976172371885433`*^9, 3.797617239983081*^9}, {3.797618547978442*^9, 
+  3.797618550997417*^9}, {3.797623402676403*^9, 
+  3.797623411738996*^9}},ExpressionUUID->"c5dd4682-fb17-410f-bafa-\
+0dd79eb950f5"],
+
+Cell[BoxData[
+ RowBox[{"<|", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"\"\<LineNumber\>\"", "\[Rule]", 
+    TagBox[
+     FrameBox["\<\"line\"\>"],
+     "Placeholder"]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Date\>\"", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"(", 
+       TagBox[
+        FrameBox["\<\"day of month\"\>"],
+        "Placeholder"], ")"}], ",", 
+      RowBox[{
+      "\"\<BeginningOfTheNight\>\"", "|", "\"\<FirstPartOfTheNight\>\"", "|", 
+       "\"\<MiddlePartOfTheNight\>\"", "|", "\"\<LastPartOfTheNight\>\"", 
+       "|", "\"\<Morning\>\"", "|", "\"\<Noon\>\"", "|", "\"\<Afternoon\>\"", 
+       "|", "\"\<Sunset\>\""}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<FirstStationaryPoint\>\""}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"\"\<Content\>\"", "\[Rule]", 
+    RowBox[{"<|", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"\"\<Object\>\"", "\[Rule]", 
+       TagBox[
+        FrameBox["\<\"object\"\>"],
+        "Placeholder"]}], ",", "\[IndentingNewLine]", 
+      RowBox[{"\"\<DidNotWatch\>\"", "\[Rule]", "False"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"\"\<IdealDate\>\"", "\[Rule]", 
+       RowBox[{"Missing", "[", "]"}]}]}], "\[IndentingNewLine]", "|>"}]}]}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{",", 
+    RowBox[{"Optional", "[", 
+     RowBox[{"\"\<Notes\>\"", "\[Rule]", "String"}], "]"}]}], "*)"}], 
+  "\[IndentingNewLine]", "|>"}]], "Input",
+ CellChangeTimes->{{3.797630048900037*^9, 
+  3.797630051439486*^9}},ExpressionUUID->"a6f65a79-23a5-4e55-93d7-\
+4e399f35a751"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["SecondStationaryPoint (\[CapitalPsi])", "Subsubsection",
+ CellChangeTimes->{{3.797616190981967*^9, 3.797616194825499*^9}, {
+  3.7976172371885433`*^9, 3.797617239983081*^9}, {3.797618547978442*^9, 
+  3.797618550997417*^9}, {3.797623402676403*^9, 3.797623411738996*^9}, {
+  3.7976234500004*^9, 
+  3.7976234551621037`*^9}},ExpressionUUID->"488d9961-34c3-4e5a-b5a6-\
+a28e845596fc"],
+
+Cell[BoxData[
+ RowBox[{"<|", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"\"\<LineNumber\>\"", "\[Rule]", 
+    TagBox[
+     FrameBox["\<\"line\"\>"],
+     "Placeholder"]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Date\>\"", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"(", 
+       TagBox[
+        FrameBox["\<\"day of month\"\>"],
+        "Placeholder"], ")"}], ",", 
+      RowBox[{
+      "\"\<BeginningOfTheNight\>\"", "|", "\"\<FirstPartOfTheNight\>\"", "|", 
+       "\"\<MiddlePartOfTheNight\>\"", "|", "\"\<LastPartOfTheNight\>\"", 
+       "|", "\"\<Morning\>\"", "|", "\"\<Noon\>\"", "|", "\"\<Afternoon\>\"", 
+       "|", "\"\<Sunset\>\""}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<SecondStationaryPoint\>\""}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"\"\<Content\>\"", "\[Rule]", 
+    RowBox[{"<|", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"\"\<Object\>\"", "\[Rule]", 
+       TagBox[
+        FrameBox["\<\"object\"\>"],
+        "Placeholder"]}], ",", "\[IndentingNewLine]", 
+      RowBox[{"\"\<DidNotWatch\>\"", "\[Rule]", "False"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"\"\<IdealDate\>\"", "\[Rule]", 
+       RowBox[{"Missing", "[", "]"}]}]}], "\[IndentingNewLine]", "|>"}]}]}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{",", 
+    RowBox[{"Optional", "[", 
+     RowBox[{"\"\<Notes\>\"", "\[Rule]", "String"}], "]"}]}], "*)"}], 
+  "\[IndentingNewLine]", "|>"}]], "Input",
+ CellChangeTimes->{
+  3.7976300581369267`*^9},ExpressionUUID->"332e745a-c790-48fd-b8ee-\
+f4ba8457dcc6"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["AcronychalRising (\[CapitalTheta])", "Subsubsection",
+ CellChangeTimes->{{3.797616190981967*^9, 3.797616194825499*^9}, {
+  3.7976172371885433`*^9, 3.797617239983081*^9}, {3.797618547978442*^9, 
+  3.797618550997417*^9}, {3.797623402676403*^9, 3.797623411738996*^9}, {
+  3.7976234500004*^9, 3.7976234551621037`*^9}, {3.797623522799769*^9, 
+  3.7976235559196777`*^9}, {3.797623954039689*^9, 
+  3.797623955542878*^9}},ExpressionUUID->"4c29ec6a-b50d-4507-8d87-\
+88af266d824e"],
+
+Cell[BoxData[
+ RowBox[{"<|", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"\"\<LineNumber\>\"", "\[Rule]", 
+    TagBox[
+     FrameBox["\<\"line\"\>"],
+     "Placeholder"]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Date\>\"", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"(", 
+       TagBox[
+        FrameBox["\<\"day of month\"\>"],
+        "Placeholder"], ")"}], ",", 
+      RowBox[{
+      "\"\<BeginningOfTheNight\>\"", "|", "\"\<FirstPartOfTheNight\>\"", "|", 
+       "\"\<MiddlePartOfTheNight\>\"", "|", "\"\<LastPartOfTheNight\>\"", 
+       "|", "\"\<Morning\>\"", "|", "\"\<Noon\>\"", "|", "\"\<Afternoon\>\"", 
+       "|", "\"\<Sunset\>\""}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<AcronychalRising\>\""}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"\"\<Content\>\"", "\[Rule]", 
+    RowBox[{"<|", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"\"\<Object\>\"", "\[Rule]", 
+       TagBox[
+        FrameBox["\<\"object\"\>"],
+        "Placeholder"]}], ",", "\[IndentingNewLine]", 
+      RowBox[{"\"\<DidNotWatch\>\"", "\[Rule]", "False"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"\"\<IdealDate\>\"", "\[Rule]", 
+       RowBox[{"Missing", "[", "]"}]}]}], "\[IndentingNewLine]", "|>"}]}]}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{",", 
+    RowBox[{"Optional", "[", 
+     RowBox[{"\"\<Notes\>\"", "\[Rule]", "String"}], "]"}]}], "*)"}], 
+  "\[IndentingNewLine]", "|>"}]], "Input",
+ CellChangeTimes->{
+  3.797630063834416*^9},ExpressionUUID->"10b35be5-80a2-440f-b481-\
+7d23722117c1"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["SunsetToMoonset", "Subsubsection",
+ CellChangeTimes->{
+  3.7976300894930763`*^9},ExpressionUUID->"d1a9e563-3a3c-4ebc-915e-\
+48f2b66f3a25"],
+
+Cell[BoxData[
+ RowBox[{"<|", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"\"\<LineNumber\>\"", "\[Rule]", 
+    TagBox[
+     FrameBox["\<\"line\"\>"],
+     "Placeholder"]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Date\>\"", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"(", 
+       TagBox[
+        FrameBox["\<\"day of month\"\>"],
+        "Placeholder"], ")"}], ",", 
+      RowBox[{
+      "\"\<BeginningOfTheNight\>\"", "|", "\"\<FirstPartOfTheNight\>\"", "|", 
+       "\"\<MiddlePartOfTheNight\>\"", "|", "\"\<LastPartOfTheNight\>\"", 
+       "|", "\"\<Morning\>\"", "|", "\"\<Noon\>\"", "|", "\"\<Afternoon\>\"", 
+       "|", "\"\<Sunset\>\""}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<SunsetToMoonset\>\""}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"\"\<Content\>\"", "\[Rule]", 
+    RowBox[{"<|", "\[IndentingNewLine]", 
+     RowBox[{"\"\<Duration\>\"", "\[Rule]", 
+      RowBox[{"DiaryDuration", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         TagBox[
+          FrameBox["\<\"degrees\"\>"],
+          "Placeholder"], ",", 
+         TagBox[
+          FrameBox["\<\"NINDA\"\>"],
+          "Placeholder"]}], "}"}], "]"}]}], "\[IndentingNewLine]", "|>"}]}]}],
+   "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{",", 
+    RowBox[{"Optional", "[", 
+     RowBox[{"\"\<Notes\>\"", "\[Rule]", "String"}], "]"}]}], "*)"}], 
+  "\[IndentingNewLine]", "|>"}]], "Input",
+ CellChangeTimes->{{3.79763009538807*^9, 
+  3.797630113049467*^9}},ExpressionUUID->"484d9897-dd60-438e-931b-\
+3f587a256a21"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["MoonsetToSunrise", "Subsubsection",
+ CellChangeTimes->{{3.7974389212244596`*^9, 
+  3.79743892460367*^9}},ExpressionUUID->"5847682a-b2d0-4772-8ed7-\
+b56c32774824"],
+
+Cell[BoxData[
+ RowBox[{"<|", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"\"\<LineNumber\>\"", "\[Rule]", 
+    TagBox[
+     FrameBox["\<\"line\"\>"],
+     "Placeholder"]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Date\>\"", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"(", 
+       TagBox[
+        FrameBox["\<\"day of month\"\>"],
+        "Placeholder"], ")"}], ",", 
+      RowBox[{
+      "\"\<BeginningOfTheNight\>\"", "|", "\"\<FirstPartOfTheNight\>\"", "|", 
+       "\"\<MiddlePartOfTheNight\>\"", "|", "\"\<LastPartOfTheNight\>\"", 
+       "|", "\"\<Morning\>\"", "|", "\"\<Noon\>\"", "|", "\"\<Afternoon\>\"", 
+       "|", "\"\<Sunset\>\""}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<MoonsetToSunrise\>\""}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"\"\<Content\>\"", "\[Rule]", 
+    RowBox[{"<|", "\[IndentingNewLine]", 
+     RowBox[{"\"\<Duration\>\"", "\[Rule]", 
+      RowBox[{"DiaryDuration", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         TagBox[
+          FrameBox["\<\"degrees\"\>"],
+          "Placeholder"], ",", 
+         TagBox[
+          FrameBox["\<\"NINDA\"\>"],
+          "Placeholder"]}], "}"}], "]"}]}], "\[IndentingNewLine]", "|>"}]}]}],
+   "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{",", 
+    RowBox[{"Optional", "[", 
+     RowBox[{"\"\<Notes\>\"", "\[Rule]", "String"}], "]"}]}], "*)"}], 
+  "\[IndentingNewLine]", "|>"}]], "Input",
+ CellChangeTimes->{
+  3.7976302153442707`*^9},ExpressionUUID->"c4a99df0-193d-4527-89c2-\
+0249594c1e98"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["SunriseToMoonset", "Subsubsection",
+ CellChangeTimes->{{3.7974389212244596`*^9, 3.79743892460367*^9}, {
+  3.797438956262776*^9, 
+  3.79743895842909*^9}},ExpressionUUID->"86950bcc-ffde-4b8a-8e85-\
+69f65474f6d2"],
+
+Cell[BoxData[
+ RowBox[{"<|", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"\"\<LineNumber\>\"", "\[Rule]", 
+    TagBox[
+     FrameBox["\<\"line\"\>"],
+     "Placeholder"]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Date\>\"", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"(", 
+       TagBox[
+        FrameBox["\<\"day of month\"\>"],
+        "Placeholder"], ")"}], ",", 
+      RowBox[{
+      "\"\<BeginningOfTheNight\>\"", "|", "\"\<FirstPartOfTheNight\>\"", "|", 
+       "\"\<MiddlePartOfTheNight\>\"", "|", "\"\<LastPartOfTheNight\>\"", 
+       "|", "\"\<Morning\>\"", "|", "\"\<Noon\>\"", "|", "\"\<Afternoon\>\"", 
+       "|", "\"\<Sunset\>\""}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<SunriseToMoonset\>\""}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"\"\<Content\>\"", "\[Rule]", 
+    RowBox[{"<|", "\[IndentingNewLine]", 
+     RowBox[{"\"\<Duration\>\"", "\[Rule]", 
+      RowBox[{"DiaryDuration", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         TagBox[
+          FrameBox["\<\"degrees\"\>"],
+          "Placeholder"], ",", 
+         TagBox[
+          FrameBox["\<\"NINDA\"\>"],
+          "Placeholder"]}], "}"}], "]"}]}], "\[IndentingNewLine]", "|>"}]}]}],
+   "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{",", 
+    RowBox[{"Optional", "[", 
+     RowBox[{"\"\<Notes\>\"", "\[Rule]", "String"}], "]"}]}], "*)"}], 
+  "\[IndentingNewLine]", "|>"}]], "Input",
+ CellChangeTimes->{
+  3.797630219757676*^9},ExpressionUUID->"1391cf65-a8dd-4b92-85eb-\
+8801f8ddeaaa"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["MoonriseToSunset", "Subsubsection",
+ CellChangeTimes->{{3.7974389212244596`*^9, 3.79743892460367*^9}, {
+  3.797438956262776*^9, 3.79743895842909*^9}, {3.79743901204202*^9, 
+  3.797439015265204*^9}},ExpressionUUID->"658539ca-a88e-438b-a34f-\
+2d73b5ab7ec9"],
+
+Cell[BoxData[
+ RowBox[{"<|", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"\"\<LineNumber\>\"", "\[Rule]", 
+    TagBox[
+     FrameBox["\<\"line\"\>"],
+     "Placeholder"]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Date\>\"", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"(", 
+       TagBox[
+        FrameBox["\<\"day of month\"\>"],
+        "Placeholder"], ")"}], ",", 
+      RowBox[{
+      "\"\<BeginningOfTheNight\>\"", "|", "\"\<FirstPartOfTheNight\>\"", "|", 
+       "\"\<MiddlePartOfTheNight\>\"", "|", "\"\<LastPartOfTheNight\>\"", 
+       "|", "\"\<Morning\>\"", "|", "\"\<Noon\>\"", "|", "\"\<Afternoon\>\"", 
+       "|", "\"\<Sunset\>\""}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<MoonriseToSunset\>\""}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"\"\<Content\>\"", "\[Rule]", 
+    RowBox[{"<|", "\[IndentingNewLine]", 
+     RowBox[{"\"\<Duration\>\"", "\[Rule]", 
+      RowBox[{"DiaryDuration", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         TagBox[
+          FrameBox["\<\"degrees\"\>"],
+          "Placeholder"], ",", 
+         TagBox[
+          FrameBox["\<\"NINDA\"\>"],
+          "Placeholder"]}], "}"}], "]"}]}], "\[IndentingNewLine]", "|>"}]}]}],
+   "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{",", 
+    RowBox[{"Optional", "[", 
+     RowBox[{"\"\<Notes\>\"", "\[Rule]", "String"}], "]"}]}], "*)"}], 
+  "\[IndentingNewLine]", "|>"}]], "Input",
+ CellChangeTimes->{
+  3.797630224419857*^9},ExpressionUUID->"15c7a6dc-baf3-43be-be1f-\
+9262ab731ac2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["SunsetToMoonrise", "Subsubsection",
+ CellChangeTimes->{{3.7974389212244596`*^9, 3.79743892460367*^9}, {
+  3.797438956262776*^9, 3.79743895842909*^9}, {3.79743901204202*^9, 
+  3.7974390326429043`*^9}},ExpressionUUID->"287251dd-0471-4e1b-a12d-\
+6716e91c50a8"],
+
+Cell[BoxData[
+ RowBox[{"<|", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"\"\<LineNumber\>\"", "\[Rule]", 
+    TagBox[
+     FrameBox["\<\"line\"\>"],
+     "Placeholder"]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Date\>\"", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"(", 
+       TagBox[
+        FrameBox["\<\"day of month\"\>"],
+        "Placeholder"], ")"}], ",", 
+      RowBox[{
+      "\"\<BeginningOfTheNight\>\"", "|", "\"\<FirstPartOfTheNight\>\"", "|", 
+       "\"\<MiddlePartOfTheNight\>\"", "|", "\"\<LastPartOfTheNight\>\"", 
+       "|", "\"\<Morning\>\"", "|", "\"\<Noon\>\"", "|", "\"\<Afternoon\>\"", 
+       "|", "\"\<Sunset\>\""}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<SunsetToMoonrise\>\""}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"\"\<Content\>\"", "\[Rule]", 
+    RowBox[{"<|", "\[IndentingNewLine]", 
+     RowBox[{"\"\<Duration\>\"", "\[Rule]", 
+      RowBox[{"DiaryDuration", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         TagBox[
+          FrameBox["\<\"degrees\"\>"],
+          "Placeholder"], ",", 
+         TagBox[
+          FrameBox["\<\"NINDA\"\>"],
+          "Placeholder"]}], "}"}], "]"}]}], "\[IndentingNewLine]", "|>"}]}]}],
+   "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{",", 
+    RowBox[{"Optional", "[", 
+     RowBox[{"\"\<Notes\>\"", "\[Rule]", "String"}], "]"}]}], "*)"}], 
+  "\[IndentingNewLine]", "|>"}]], "Input",
+ CellChangeTimes->{
+  3.797630228849956*^9},ExpressionUUID->"d52ab691-6888-49b7-9077-\
+3b7adc82ed96"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["MoonriseToSunrise", "Subsubsection",
+ CellChangeTimes->{{3.7974389212244596`*^9, 3.79743892460367*^9}, {
+  3.797438956262776*^9, 3.79743895842909*^9}, {3.79743901204202*^9, 
+  3.7974390326429043`*^9}, {3.797439107136971*^9, 
+  3.797439109927928*^9}},ExpressionUUID->"3c4e2764-f185-4f77-8248-\
+e8481f940d1a"],
+
+Cell[BoxData[
+ RowBox[{"<|", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"\"\<LineNumber\>\"", "\[Rule]", 
+    TagBox[
+     FrameBox["\<\"line\"\>"],
+     "Placeholder"]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Date\>\"", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"(", 
+       TagBox[
+        FrameBox["\<\"day of month\"\>"],
+        "Placeholder"], ")"}], ",", 
+      RowBox[{
+      "\"\<BeginningOfTheNight\>\"", "|", "\"\<FirstPartOfTheNight\>\"", "|", 
+       "\"\<MiddlePartOfTheNight\>\"", "|", "\"\<LastPartOfTheNight\>\"", 
+       "|", "\"\<Morning\>\"", "|", "\"\<Noon\>\"", "|", "\"\<Afternoon\>\"", 
+       "|", "\"\<Sunset\>\""}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<MoonriseToSunrise\>\""}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"\"\<Content\>\"", "\[Rule]", 
+    RowBox[{"<|", "\[IndentingNewLine]", 
+     RowBox[{"\"\<Duration\>\"", "\[Rule]", 
+      RowBox[{"DiaryDuration", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         TagBox[
+          FrameBox["\<\"degrees\"\>"],
+          "Placeholder"], ",", 
+         TagBox[
+          FrameBox["\<\"NINDA\"\>"],
+          "Placeholder"]}], "}"}], "]"}]}], "\[IndentingNewLine]", "|>"}]}]}],
+   "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{",", 
+    RowBox[{"Optional", "[", 
+     RowBox[{"\"\<Notes\>\"", "\[Rule]", "String"}], "]"}]}], "*)"}], 
+  "\[IndentingNewLine]", "|>"}]], "Input",
+ CellChangeTimes->{
+  3.7976302329726753`*^9},ExpressionUUID->"58d2e1cc-80a6-4b4f-9a78-\
+9e17150a7c5f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["WindDirection", "Subsubsection",
+ CellChangeTimes->{{3.7976302677224493`*^9, 
+  3.797630293671213*^9}},ExpressionUUID->"b3fbead7-86ed-4520-959e-\
+56b3ae2a7ddc"],
+
+Cell[BoxData[
+ RowBox[{"<|", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"\"\<LineNumber\>\"", "\[Rule]", 
+    TagBox[
+     FrameBox["\<\"line\"\>"],
+     "Placeholder"]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Date\>\"", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"(", 
+       TagBox[
+        FrameBox["\<\"day of month\"\>"],
+        "Placeholder"], ")"}], ",", 
+      RowBox[{
+      "\"\<BeginningOfTheNight\>\"", "|", "\"\<FirstPartOfTheNight\>\"", "|", 
+       "\"\<MiddlePartOfTheNight\>\"", "|", "\"\<LastPartOfTheNight\>\"", 
+       "|", "\"\<Morning\>\"", "|", "\"\<Noon\>\"", "|", "\"\<Afternoon\>\"", 
+       "|", "\"\<Sunset\>\""}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<WindDirection\>\""}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"\"\<Content\>\"", "\[Rule]", 
+    RowBox[{"<|", "\[IndentingNewLine]", 
+     RowBox[{"\"\<Direction\>\"", "\[Rule]", 
+      RowBox[{
+      "\"\<North\>\"", "|", "\"\<South\>\"", "|", "\"\<East\>\"", "|", 
+       "\"\<West\>\""}]}], "\[IndentingNewLine]", "|>"}]}]}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{",", 
+    RowBox[{"Optional", "[", 
+     RowBox[{"\"\<Notes\>\"", "\[Rule]", "String"}], "]"}]}], "*)"}], 
+  "\[IndentingNewLine]", "|>"}]], "Input",
+ CellChangeTimes->{{3.797630285062755*^9, 
+  3.797630303150256*^9}},ExpressionUUID->"a7131761-7893-4e63-af24-\
+6aab2d14b30a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Weather", "Subsubsection",
+ CellChangeTimes->{{3.797630308298627*^9, 
+  3.797630309120798*^9}},ExpressionUUID->"92b3e113-c56e-40e8-b9b1-\
+5301be1d35fd"],
+
+Cell[BoxData[
+ RowBox[{"<|", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"\"\<LineNumber\>\"", "\[Rule]", 
+    TagBox[
+     FrameBox["\<\"line\"\>"],
+     "Placeholder"]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Date\>\"", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"(", 
+       TagBox[
+        FrameBox["\<\"day of month\"\>"],
+        "Placeholder"], ")"}], ",", 
+      RowBox[{
+      "\"\<BeginningOfTheNight\>\"", "|", "\"\<FirstPartOfTheNight\>\"", "|", 
+       "\"\<MiddlePartOfTheNight\>\"", "|", "\"\<LastPartOfTheNight\>\"", 
+       "|", "\"\<Morning\>\"", "|", "\"\<Noon\>\"", "|", "\"\<Afternoon\>\"", 
+       "|", "\"\<Sunset\>\""}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<Weather\>\""}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"\"\<Content\>\"", "\[Rule]", 
+    RowBox[{"<|", "\[IndentingNewLine]", 
+     RowBox[{"\"\<Tag\>\"", "\[Rule]", 
+      RowBox[{
+      "\"\<Mist\>\"", "|", "\"\<Rain\>\"", "|", "\"\<Clouds\>\"", "|", 
+       "\"\<ThinClouds\>\"", "|", "\"\<CrossingClouds\>\"", "|", 
+       "\"\<HeavyClouds\>\"", "|", "\"\<Fog\>\"", "|", "\"\<HeavyFog\>\"", 
+       "|", "\"\<Lightning\>\"", "|", "\"\<Thunder\>\"", "|", "\"\<Haze\>\"", 
+       "|", "\"\<Mud\>\"", "|", "\"\<ThickRain\>\"", "|", "\"\<Hail\>\"", 
+       "|", "\"\<Dew\>\"", "|", "\"\<Cloudburst\>\"", "|", "\"\<Cold\>\"", 
+       "|", "\"\<ColdWind\>\"", "|", "\"\<Overcast\>\"", "|", 
+       "\"\<Locusts\>\"", "|", 
+       RowBox[{"{", 
+        RowBox[{"\"\<Rainbow\>\"", ",", 
+         RowBox[{
+         "\"\<North\>\"", "|", "\"\<South\>\"", "|", "\"\<East\>\"", "|", 
+          "\"\<West\>\"", "|", "_Missing"}]}], "}"}], "|", 
+       RowBox[{"{", 
+        RowBox[{"\"\<Halo\>\"", ",", 
+         RowBox[{
+         "\"\<North\>\"", "|", "\"\<South\>\"", "|", "\"\<East\>\"", "|", 
+          "\"\<West\>\"", "|", "_Missing"}]}], "}"}]}]}], 
+     "\[IndentingNewLine]", "|>"}]}]}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{",", 
+    RowBox[{"Optional", "[", 
+     RowBox[{"\"\<Notes\>\"", "\[Rule]", "String"}], "]"}]}], "*)"}], 
+  "\[IndentingNewLine]", "|>"}]], "Input",
+ CellChangeTimes->{{3.797630313452962*^9, 
+  3.797630325294532*^9}},ExpressionUUID->"5eefbf4b-14c8-4601-83e3-\
+97eba1150287"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["MarketRates", "Subsubsection",
+ CellChangeTimes->{{3.7976303698737993`*^9, 
+  3.797630371231476*^9}},ExpressionUUID->"1d96b4cd-da1c-4c47-8cc4-\
+14e502ee9c8d"],
+
+Cell[BoxData[
+ RowBox[{"<|", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"\"\<LineNumber\>\"", "\[Rule]", 
+    TagBox[
+     FrameBox["\<\"line\"\>"],
+     "Placeholder"]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Date\>\"", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"(", 
+       TagBox[
+        FrameBox["\<\"day of month\"\>"],
+        "Placeholder"], ")"}], ",", 
+      RowBox[{
+      "\"\<BeginningOfTheNight\>\"", "|", "\"\<FirstPartOfTheNight\>\"", "|", 
+       "\"\<MiddlePartOfTheNight\>\"", "|", "\"\<LastPartOfTheNight\>\"", 
+       "|", "\"\<Morning\>\"", "|", "\"\<Noon\>\"", "|", "\"\<Afternoon\>\"", 
+       "|", "\"\<Sunset\>\""}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<MarketRates\>\""}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"\"\<Content\>\"", "\[Rule]", 
+    RowBox[{"<|", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"\"\<Barley\>\"", "\[Rule]", 
+       RowBox[{"DiaryCapacity", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          TagBox[
+           FrameBox["\<\"kur\"\>"],
+           "Placeholder"], ",", 
+          TagBox[
+           FrameBox["\<\"p\[ABar]n\"\>"],
+           "Placeholder"], ",", 
+          TagBox[
+           FrameBox["\<\"s\:016bt\"\>"],
+           "Placeholder"], ",", 
+          TagBox[
+           FrameBox["\<\"qa\"\>"],
+           "Placeholder"]}], "}"}], "]"}]}], ",", "\[IndentingNewLine]", 
+      RowBox[{"\"\<Dates\>\"", "\[Rule]", 
+       RowBox[{"DiaryCapacity", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          TagBox[
+           FrameBox["\<\"kur\"\>"],
+           "Placeholder"], ",", 
+          TagBox[
+           FrameBox["\<\"p\[ABar]n\"\>"],
+           "Placeholder"], ",", 
+          TagBox[
+           FrameBox["\<\"s\:016bt\"\>"],
+           "Placeholder"], ",", 
+          TagBox[
+           FrameBox["\<\"qa\"\>"],
+           "Placeholder"]}], "}"}], "]"}]}], ",", "\[IndentingNewLine]", 
+      RowBox[{"\"\<Mustard\>\"", "\[Rule]", 
+       RowBox[{"DiaryCapacity", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          TagBox[
+           FrameBox["\<\"kur\"\>"],
+           "Placeholder"], ",", 
+          TagBox[
+           FrameBox["\<\"p\[ABar]n\"\>"],
+           "Placeholder"], ",", 
+          TagBox[
+           FrameBox["\<\"s\:016bt\"\>"],
+           "Placeholder"], ",", 
+          TagBox[
+           FrameBox["\<\"qa\"\>"],
+           "Placeholder"]}], "}"}], "]"}]}], ",", "\[IndentingNewLine]", 
+      RowBox[{"\"\<Cress\>\"", "\[Rule]", 
+       RowBox[{"DiaryCapacity", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          TagBox[
+           FrameBox["\<\"kur\"\>"],
+           "Placeholder"], ",", 
+          TagBox[
+           FrameBox["\<\"p\[ABar]n\"\>"],
+           "Placeholder"], ",", 
+          TagBox[
+           FrameBox["\<\"s\:016bt\"\>"],
+           "Placeholder"], ",", 
+          TagBox[
+           FrameBox["\<\"qa\"\>"],
+           "Placeholder"]}], "}"}], "]"}]}], ",", "\[IndentingNewLine]", 
+      RowBox[{"\"\<Sesame\>\"", "\[Rule]", 
+       RowBox[{"DiaryCapacity", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          TagBox[
+           FrameBox["\<\"kur\"\>"],
+           "Placeholder"], ",", 
+          TagBox[
+           FrameBox["\<\"p\[ABar]n\"\>"],
+           "Placeholder"], ",", 
+          TagBox[
+           FrameBox["\<\"s\:016bt\"\>"],
+           "Placeholder"], ",", 
+          TagBox[
+           FrameBox["\<\"qa\"\>"],
+           "Placeholder"]}], "}"}], "]"}]}], ",", "\[IndentingNewLine]", 
+      RowBox[{"\"\<Wool\>\"", "\[Rule]", 
+       TagBox[
+        FrameBox["\<\"minas\"\>"],
+        "Placeholder"]}]}], "\[IndentingNewLine]", "|>"}]}]}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{",", 
+    RowBox[{"Optional", "[", 
+     RowBox[{"\"\<Notes\>\"", "\[Rule]", "String"}], "]"}]}], "*)"}], 
+  "\[IndentingNewLine]", "|>"}]], "Input",
+ CellChangeTimes->{{3.797630378855266*^9, 
+  3.797630420081999*^9}},ExpressionUUID->"36e17357-dd05-4ebf-844b-\
+afdb994af893"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Error", "Subsubsection",
+ CellChangeTimes->{{3.7976304350873833`*^9, 
+  3.7976304356801023`*^9}},ExpressionUUID->"61fbc2f7-730e-43d8-8db9-\
+9ae3567b25a3"],
+
+Cell[BoxData[
+ RowBox[{"<|", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"\"\<LineNumber\>\"", "\[Rule]", 
+    TagBox[
+     FrameBox["\<\"line\"\>"],
+     "Placeholder"]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Date\>\"", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"(", 
+       TagBox[
+        FrameBox["\<\"day of month\"\>"],
+        "Placeholder"], ")"}], ",", 
+      RowBox[{
+      "\"\<BeginningOfTheNight\>\"", "|", "\"\<FirstPartOfTheNight\>\"", "|", 
+       "\"\<MiddlePartOfTheNight\>\"", "|", "\"\<LastPartOfTheNight\>\"", 
+       "|", "\"\<Morning\>\"", "|", "\"\<Noon\>\"", "|", "\"\<Afternoon\>\"", 
+       "|", "\"\<Sunset\>\""}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<Error\>\""}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"\"\<Content\>\"", "\[Rule]", 
+    RowBox[{"<|", "\[IndentingNewLine]", 
+     RowBox[{"\"\<Note\>\"", "\[Rule]", 
+      TagBox[
+       FrameBox["\<\"note\"\>"],
+       "Placeholder"]}], "\[IndentingNewLine]", "|>"}]}]}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{",", 
+    RowBox[{"Optional", "[", 
+     RowBox[{"\"\<Notes\>\"", "\[Rule]", "String"}], "]"}]}], "*)"}], 
+  "\[IndentingNewLine]", "|>"}]], "Input",
+ CellChangeTimes->{{3.797630439173766*^9, 
+  3.797630452383924*^9}},ExpressionUUID->"0ed269bf-3acc-4503-900d-\
+820da8baaca5"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Other", "Subsubsection",
+ CellChangeTimes->{{3.797630455361574*^9, 
+  3.797630455775199*^9}},ExpressionUUID->"b03cfd44-2c27-4fa4-af8e-\
+92547213281f"],
+
+Cell[BoxData[
+ RowBox[{"<|", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"\"\<LineNumber\>\"", "\[Rule]", 
+    TagBox[
+     FrameBox["\<\"line\"\>"],
+     "Placeholder"]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Date\>\"", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"(", 
+       TagBox[
+        FrameBox["\<\"day of month\"\>"],
+        "Placeholder"], ")"}], ",", 
+      RowBox[{
+      "\"\<BeginningOfTheNight\>\"", "|", "\"\<FirstPartOfTheNight\>\"", "|", 
+       "\"\<MiddlePartOfTheNight\>\"", "|", "\"\<LastPartOfTheNight\>\"", 
+       "|", "\"\<Morning\>\"", "|", "\"\<Noon\>\"", "|", "\"\<Afternoon\>\"", 
+       "|", "\"\<Sunset\>\""}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<Other\>\""}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"\"\<Content\>\"", "\[Rule]", 
+    RowBox[{"<|", "\[IndentingNewLine]", 
+     RowBox[{"\"\<Tags\>\"", "\[Rule]", 
+      RowBox[{"{", 
+       TagBox[
+        FrameBox["\<\"tags\"\>"],
+        "Placeholder"], "}"}]}], "\[IndentingNewLine]", "|>"}]}]}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{",", 
+    RowBox[{"Optional", "[", 
+     RowBox[{"\"\<Notes\>\"", "\[Rule]", "String"}], "]"}]}], "*)"}], 
+  "\[IndentingNewLine]", "|>"}]], "Input",
+ CellChangeTimes->{{3.797630459028414*^9, 
+  3.79763049221159*^9}},ExpressionUUID->"0fd17cff-33e5-4683-8459-\
+7ed161208e14"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 905},
+WindowMargins->{{Automatic, 49}, {Automatic, 7}},
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (March 18, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"75474755-8c1b-4fde-bd7c-e58093f8fb45"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 157, 3, 54, "Subsection",ExpressionUUID->"b8b89563-8420-400b-866c-c027c93a6b4a"],
+Cell[CellGroupData[{
+Cell[762, 29, 208, 4, 45, "Subsubsection",ExpressionUUID->"00485494-f8ad-4574-86ba-8b3f94668370"],
+Cell[973, 35, 563, 16, 146, "Input",ExpressionUUID->"dbd2fba2-c2de-4879-8c09-da2e11b5f6bf"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1573, 56, 157, 3, 45, "Subsubsection",ExpressionUUID->"4c764ded-a9dc-4ac2-ad72-67e2a1873ca7"],
+Cell[1733, 61, 1812, 47, 283, "Input",ExpressionUUID->"d2073d21-2e65-4013-81d3-2cf787b1fefa"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3594, 114, 164, 3, 54, "Subsection",ExpressionUUID->"0d4190cb-69b5-4def-8424-5669011e4a04"],
+Cell[CellGroupData[{
+Cell[3783, 121, 159, 3, 45, "Subsubsection",ExpressionUUID->"55b4c259-bb43-48a5-ac69-d70903e57140"],
+Cell[3945, 126, 1660, 42, 237, "Input",ExpressionUUID->"9f1b1622-8e4f-4c52-a96e-90a9842705ff"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5642, 173, 166, 3, 45, "Subsubsection",ExpressionUUID->"b5c49c6b-626f-4ecf-acad-746349eff814"],
+Cell[5811, 178, 366, 12, 34, "Input",ExpressionUUID->"fdb6508c-4b72-4d76-b8e4-4d197322836f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6214, 195, 170, 3, 45, "Subsubsection",ExpressionUUID->"6b0bfccc-fbff-4d5b-926a-1976875292de"],
+Cell[6387, 200, 1375, 38, 190, "Input",ExpressionUUID->"bf31e6f3-7202-4140-a355-085282f5b060"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7799, 243, 164, 3, 45, "Subsubsection",ExpressionUUID->"c4b49f59-86b7-4af3-849e-e9ade50f788c"],
+Cell[7966, 248, 365, 12, 34, "Input",ExpressionUUID->"12174a6a-a7a8-4f74-9e69-b529f5cb2df5"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8368, 265, 166, 3, 45, "Subsubsection",ExpressionUUID->"8973a062-337d-442f-add0-5f4e76695a42"],
+Cell[8537, 270, 509, 18, 34, "Input",ExpressionUUID->"de03670d-ec45-4e65-ba55-05875217bddd"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9095, 294, 157, 3, 54, "Subsection",ExpressionUUID->"262b5d47-bfdc-4f9d-a673-8173204b8a41"],
+Cell[CellGroupData[{
+Cell[9277, 301, 160, 3, 45, "Subsubsection",ExpressionUUID->"613df0ac-ee02-4eb0-918e-9689a3c80bac"],
+Cell[9440, 306, 181, 4, 30, "Input",ExpressionUUID->"1f046a0a-a3c8-46a3-a94d-8d455cb3b2cb"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9658, 315, 220, 4, 45, "Subsubsection",ExpressionUUID->"2b4f9841-ef35-4de9-a0a7-823eb882a877"],
+Cell[9881, 321, 204, 4, 30, "Input",ExpressionUUID->"cea7d7e3-9ac9-4bc1-a052-1163a7bd9ace"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10122, 330, 220, 4, 45, "Subsubsection",ExpressionUUID->"399da85d-e6e3-430b-a193-3fd9d9d5e1ed"],
+Cell[10345, 336, 204, 4, 30, "Input",ExpressionUUID->"1c1d6a32-c2a6-4fbc-b204-de34387f7e30"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10598, 346, 160, 3, 54, "Subsection",ExpressionUUID->"da2ec88f-d261-4340-bf72-af86ddb889fd"],
+Cell[CellGroupData[{
+Cell[10783, 353, 220, 4, 45, "Subsubsection",ExpressionUUID->"e5c31154-373e-4b10-b036-a2cbc878205e"],
+Cell[11006, 359, 3082, 76, 482, "Input",ExpressionUUID->"bebe4476-edd7-4f53-9018-1971b733faa3"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14125, 440, 167, 3, 45, "Subsubsection",ExpressionUUID->"d6727262-29ec-43c4-b43d-66262607be86"],
+Cell[14295, 445, 1317, 35, 210, "Input",ExpressionUUID->"e60bf099-0556-475d-90ed-5d3663952bc6"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15649, 485, 216, 4, 45, "Subsubsection",ExpressionUUID->"b7e60d32-e080-4fdc-be61-fd9c1afd9fbd"],
+Cell[15868, 491, 3137, 77, 453, "Input",ExpressionUUID->"ec7d6f6f-0065-4649-846d-49049b843562"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19042, 573, 190, 3, 45, "Subsubsection",ExpressionUUID->"d1293c60-764b-4131-b9bd-712cb66934bb"],
+Cell[19235, 578, 1711, 43, 294, "Input",ExpressionUUID->"bf200f88-4d32-4f00-95c2-9249d8be39b6"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20983, 626, 163, 3, 45, "Subsubsection",ExpressionUUID->"564714e5-5384-4d3e-b630-ca8683eb5ccc"],
+Cell[21149, 631, 1372, 35, 250, "Input",ExpressionUUID->"03bad260-1846-44f2-9cfd-b08cf7bd6837"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22558, 671, 164, 3, 45, "Subsubsection",ExpressionUUID->"9ae7221d-c47d-4d56-9f56-be005e6ff62c"],
+Cell[22725, 676, 1965, 50, 315, "Input",ExpressionUUID->"4b1737c3-2e84-4ff3-9445-747174a58367"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24727, 731, 330, 5, 45, "Subsubsection",ExpressionUUID->"0094f795-abf1-482c-a820-542f3d21b347"],
+Cell[25060, 738, 1965, 50, 315, "Input",ExpressionUUID->"543e10f3-b351-4af2-b88c-47dfd6feef69"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[27062, 793, 333, 5, 45, "Subsubsection",ExpressionUUID->"2d4814ef-ac26-447a-9306-9ef45d7b50d6"],
+Cell[27398, 800, 1940, 50, 315, "Input",ExpressionUUID->"0b4035ea-97f5-4e53-9bc3-87fc0f7f7202"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[29375, 855, 332, 5, 45, "Subsubsection",ExpressionUUID->"4720f486-637c-4da1-8414-64e5e0b7bb7d"],
+Cell[29710, 862, 1940, 50, 315, "Input",ExpressionUUID->"886fb128-a769-492c-989e-882f7cfea171"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31687, 917, 333, 5, 45, "Subsubsection",ExpressionUUID->"c5dd4682-fb17-410f-bafa-0dd79eb950f5"],
+Cell[32023, 924, 1611, 40, 292, "Input",ExpressionUUID->"a6f65a79-23a5-4e55-93d7-4e399f35a751"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[33671, 969, 383, 6, 45, "Subsubsection",ExpressionUUID->"488d9961-34c3-4e5a-b5a6-a28e845596fc"],
+Cell[34057, 977, 1590, 40, 292, "Input",ExpressionUUID->"332e745a-c790-48fd-b8ee-f4ba8457dcc6"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[35684, 1022, 477, 7, 45, "Subsubsection",ExpressionUUID->"4c29ec6a-b50d-4507-8d87-88af266d824e"],
+Cell[36164, 1031, 1583, 40, 292, "Input",ExpressionUUID->"10b35be5-80a2-440f-b481-7d23722117c1"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[37784, 1076, 144, 3, 45, "Subsubsection",ExpressionUUID->"d1a9e563-3a3c-4ebc-915e-48f2b66f3a25"],
+Cell[37931, 1081, 1563, 41, 250, "Input",ExpressionUUID->"484d9897-dd60-438e-931b-3f587a256a21"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[39531, 1127, 168, 3, 45, "Subsubsection",ExpressionUUID->"5847682a-b2d0-4772-8ed7-b56c32774824"],
+Cell[39702, 1132, 1543, 41, 250, "Input",ExpressionUUID->"c4a99df0-193d-4527-89c2-0249594c1e98"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[41282, 1178, 216, 4, 45, "Subsubsection",ExpressionUUID->"86950bcc-ffde-4b8a-8e85-69f65474f6d2"],
+Cell[41501, 1184, 1541, 41, 250, "Input",ExpressionUUID->"1391cf65-a8dd-4b92-85eb-8801f8ddeaaa"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[43079, 1230, 261, 4, 45, "Subsubsection",ExpressionUUID->"658539ca-a88e-438b-a34f-2d73b5ab7ec9"],
+Cell[43343, 1236, 1541, 41, 250, "Input",ExpressionUUID->"15c7a6dc-baf3-43be-be1f-9262ab731ac2"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[44921, 1282, 263, 4, 45, "Subsubsection",ExpressionUUID->"287251dd-0471-4e1b-a12d-6716e91c50a8"],
+Cell[45187, 1288, 1541, 41, 250, "Input",ExpressionUUID->"d52ab691-6888-49b7-9077-3b7adc82ed96"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[46765, 1334, 313, 5, 45, "Subsubsection",ExpressionUUID->"3c4e2764-f185-4f77-8248-e8481f940d1a"],
+Cell[47081, 1341, 1544, 41, 250, "Input",ExpressionUUID->"58d2e1cc-80a6-4b4f-9a78-9e17150a7c5f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[48662, 1387, 166, 3, 45, "Subsubsection",ExpressionUUID->"b3fbead7-86ed-4520-959e-56b3ae2a7ddc"],
+Cell[48831, 1392, 1416, 35, 248, "Input",ExpressionUUID->"a7131761-7893-4e63-af24-6aab2d14b30a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[50284, 1432, 158, 3, 45, "Subsubsection",ExpressionUUID->"92b3e113-c56e-40e8-b9b1-5301be1d35fd"],
+Cell[50445, 1437, 2272, 51, 332, "Input",ExpressionUUID->"5eefbf4b-14c8-4601-83e3-97eba1150287"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[52754, 1493, 164, 3, 45, "Subsubsection",ExpressionUUID->"1d96b4cd-da1c-4c47-8cc4-14e502ee9c8d"],
+Cell[52921, 1498, 3992, 116, 369, "Input",ExpressionUUID->"36e17357-dd05-4ebf-844b-afdb994af893"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[56950, 1619, 160, 3, 45, "Subsubsection",ExpressionUUID->"61fbc2f7-730e-43d8-8db9-9ae3567b25a3"],
+Cell[57113, 1624, 1361, 35, 250, "Input",ExpressionUUID->"0ed269bf-3acc-4503-900d-820da8baaca5"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[58511, 1664, 156, 3, 45, "Subsubsection",ExpressionUUID->"b03cfd44-2c27-4fa4-af8e-92547213281f"],
+Cell[58670, 1669, 1390, 36, 250, "Input",ExpressionUUID->"0fd17cff-33e5-4683-8459-7ed161208e14"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

@@ -76,7 +76,7 @@ times = {"BeginningOfTheNight","FirstPartOfTheNight","MiddlePartOfTheNight",
 
 
 dd:DiaryDate[Except[KeyValuePattern[{
-		"BabylonianYear"->_Integer|_Missing,
+		"BabylonianYear"->_Integer|{_String,_Integer}|_Missing,
 		"BabylonianMonth"->(Alternatives@@months)|_Missing,
 		"BabylonianDay"->_Integer|_Missing,
 		"JulianYear"->_Integer|_Missing,
