@@ -16,7 +16,7 @@ LaunchCurationPalette::usage = "Opens a palette with useful templates for Diary 
 Begin["`Private`"];
 
 
-diaryDateAdd[date_DiaryDate, days_, time_] :=
+diaryDayAdd[date_DiaryDate, days_Integer, time_] :=
 	Module[{newJulianDate},
 		newJulianDate = date["JulianDate"]+Quantity[days,"Days"];
 		DiaryDate[<|
@@ -31,10 +31,11 @@ diaryDateAdd[date_DiaryDate, days_, time_] :=
 			"Time"->time
 		|>]
 	]
+diaryDayAdd[date_DiaryDate, days_Missing, time_] := days
 
 
 ProcessInputFormat[tablets_] :=
-	Function[tab, Module[{tabletID,creator},
+	Flatten[Function[tab, Module[{tabletID,creator},
 		tabletID = tab[[1,"TabletID"]];
 		creator = tab[[1,"Creator"]];
 		Function[month, Module[{dayZero},
@@ -56,7 +57,7 @@ ProcessInputFormat[tablets_] :=
 				]
 			]/@month[[2]]
 		]]/@tab[[2]]
-	]]/@tablets
+	]]/@tablets,2]
 
 
 makePalette[l_List] := makePalette/@l

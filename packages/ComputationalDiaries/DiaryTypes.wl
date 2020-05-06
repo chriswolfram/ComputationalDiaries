@@ -118,11 +118,18 @@ dd_DiaryDistance["Degrees"] :=
 	With[{totalCubits=dd["TotalCubits"]}, If[MissingQ[totalCubits],Missing[],2*totalCubits]]
 
 
+DiaryDistance["ALittle"]["Cubits"] := Missing[]
+DiaryDistance["ALittle"]["Fingers"] := Missing[]
+DiaryDistance["ALittle"]["TotalCubits"] := Missing[]
+
+
 (* ::Subsubsection:: *)
 (*Verifiers*)
 
 
-dd:DiaryDistance[Except[{_Rational|_Integer|_Missing,_Rational|_Integer|_Missing}]] :=
+dd:DiaryDistance[Except[
+		{_Rational|_Integer|_Missing,_Rational|_Integer|_Missing}|
+		"ALittle"]] :=
 	(Message[DiaryDistance::invalid, Hold[dd]]; Missing["InvalidDiaryDistance"])
 
 
