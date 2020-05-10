@@ -5,7 +5,8 @@ BeginPackage["ComputationalDiaries`",{
 	"ComputationalDiaries`DiaryTypes`",
 	"ComputationalDiaries`DiaryObservation`",
 	"ComputationalDiaries`AstronomicalPosition`",
-	"ComputationalDiaries`InputFormat`"
+	"ComputationalDiaries`InputFormat`",
+	"ComputationalDiaries`ReferenceText`"
 }];
 
 

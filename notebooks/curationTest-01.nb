@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    308332,       5718]
-NotebookOptionsPosition[    306509,       5681]
-NotebookOutlinePosition[    306904,       5697]
-CellTagsIndexPosition[    306861,       5694]
+NotebookDataLength[    316343,       5927]
+NotebookOptionsPosition[    313740,       5877]
+NotebookOutlinePosition[    314135,       5893]
+CellTagsIndexPosition[    314092,       5890]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -5677,10 +5677,206 @@ diaryDayAdd\"\>", "InformationUsageText",
     "ComputationalDiaries`InputFormat`Private`diaryDayAdd"], True]]], "Output",
  CellChangeTimes->{{3.7976450566947117`*^9, 3.797645085556391*^9}},
  CellLabel->"Out[24]=",ExpressionUUID->"ad99b484-09db-4ae5-9c5b-b61d0d81a04a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"#", "[", "\"\<Sign\>\"", "]"}], ",", 
+     RowBox[{"AstronomicalPosition", "[", 
+      RowBox[{
+       RowBox[{"#", "[", "\"\<Object\>\"", "]"}], ",", 
+       RowBox[{"#", "[", "\"\<Date\>\"", "]"}]}], "]"}]}], "}"}], "&"}], "/@", 
+  RowBox[{"Select", "[", 
+   RowBox[{"curatedObservations", ",", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"#", "[", "\"\<Type\>\"", "]"}], "===", 
+      "\"\<ZodiacalPosition\>\""}], "&"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.79768522049469*^9, 3.797685238886669*^9}, {
+  3.7976853598491497`*^9, 3.797685376126368*^9}},
+ CellLabel->"In[80]:=",ExpressionUUID->"700db045-f475-4b90-8a0f-aebeeadb4a7c"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"\"Taurus\"", 
+       RowBox[{"Entity", "[", 
+         RowBox[{"\"Constellation\"", ",", "\"Taurus\""}], "]"}], 
+       "\"Entity[\\\"Constellation\\\", \\\"Taurus\\\"]\"", 
+       "\"constellation\""},
+      "Entity"], ",", 
+     RowBox[{"{", 
+      RowBox[{"48.73457101870248`", ",", 
+       RowBox[{"-", "0.6545831976452795`"}]}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"\"Taurus\"", 
+       RowBox[{"Entity", "[", 
+         RowBox[{"\"Constellation\"", ",", "\"Taurus\""}], "]"}], 
+       "\"Entity[\\\"Constellation\\\", \\\"Taurus\\\"]\"", 
+       "\"constellation\""},
+      "Entity"], ",", 
+     RowBox[{"{", 
+      RowBox[{"48.283551047276`", ",", 
+       RowBox[{"-", "0.6566626645987245`"}]}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"\"Gemini\"", 
+       RowBox[{"Entity", "[", 
+         RowBox[{"\"Constellation\"", ",", "\"Gemini\""}], "]"}], 
+       "\"Entity[\\\"Constellation\\\", \\\"Gemini\\\"]\"", 
+       "\"constellation\""},
+      "Entity"], ",", 
+     RowBox[{"Missing", "[", "\<\"Destroyed\"\>", "]"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"\"Virgo\"", 
+       RowBox[{"Entity", "[", 
+         RowBox[{"\"Constellation\"", ",", "\"Virgo\""}], "]"}], 
+       "\"Entity[\\\"Constellation\\\", \\\"Virgo\\\"]\"", 
+       "\"constellation\""},
+      "Entity"], ",", 
+     RowBox[{"{", 
+      RowBox[{"152.9715193955167`", ",", "2.0137976840319474`"}], "}"}]}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"\"Virgo\"", 
+       RowBox[{"Entity", "[", 
+         RowBox[{"\"Constellation\"", ",", "\"Virgo\""}], "]"}], 
+       "\"Entity[\\\"Constellation\\\", \\\"Virgo\\\"]\"", 
+       "\"constellation\""},
+      "Entity"], ",", 
+     RowBox[{"Missing", "[", "\<\"Destroyed\"\>", "]"}]}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.797685231964581*^9, 3.7976852391830597`*^9}, 
+   3.797685377182753*^9},
+ CellLabel->"Out[80]=",ExpressionUUID->"b25339b9-683b-498e-a5c4-d592c24596dd"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  TemplateBox[{"\"astrological zodiac constellations\"", 
+    RowBox[{"EntityClass", "[", 
+      RowBox[{"\"Constellation\"", ",", "\"AstrologicalZodiac\""}], "]"}], 
+    "\"EntityClass[\\\"Constellation\\\", \\\"AstrologicalZodiac\\\"]\"", 
+    "\"constellations\""},
+   "EntityClass"], "//", "EntityList"}]], "Input",
+ CellChangeTimes->{{3.7976856078626413`*^9, 3.7976856293134108`*^9}},
+ CellLabel->"In[82]:=",ExpressionUUID->"f1951339-95cc-42a8-b655-903b230d05ec"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{"\"Aquarius\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"Constellation\"", ",", "\"Aquarius\""}], "]"}], 
+     "\"Entity[\\\"Constellation\\\", \\\"Aquarius\\\"]\"", 
+     "\"constellation\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Aries\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"Constellation\"", ",", "\"Aries\""}], "]"}], 
+     "\"Entity[\\\"Constellation\\\", \\\"Aries\\\"]\"", "\"constellation\""},
+    
+    "Entity"], ",", 
+   TemplateBox[{"\"Cancer\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"Constellation\"", ",", "\"Cancer\""}], "]"}], 
+     "\"Entity[\\\"Constellation\\\", \\\"Cancer\\\"]\"", "\"constellation\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Capricornus\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"Constellation\"", ",", "\"Capricornus\""}], "]"}], 
+     "\"Entity[\\\"Constellation\\\", \\\"Capricornus\\\"]\"", 
+     "\"constellation\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Gemini\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"Constellation\"", ",", "\"Gemini\""}], "]"}], 
+     "\"Entity[\\\"Constellation\\\", \\\"Gemini\\\"]\"", "\"constellation\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Leo\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"Constellation\"", ",", "\"Leo\""}], "]"}], 
+     "\"Entity[\\\"Constellation\\\", \\\"Leo\\\"]\"", "\"constellation\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Libra\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"Constellation\"", ",", "\"Libra\""}], "]"}], 
+     "\"Entity[\\\"Constellation\\\", \\\"Libra\\\"]\"", "\"constellation\""},
+    
+    "Entity"], ",", 
+   TemplateBox[{"\"Pisces\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"Constellation\"", ",", "\"Pisces\""}], "]"}], 
+     "\"Entity[\\\"Constellation\\\", \\\"Pisces\\\"]\"", "\"constellation\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Sagittarius\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"Constellation\"", ",", "\"Sagittarius\""}], "]"}], 
+     "\"Entity[\\\"Constellation\\\", \\\"Sagittarius\\\"]\"", 
+     "\"constellation\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Scorpius\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"Constellation\"", ",", "\"Scorpius\""}], "]"}], 
+     "\"Entity[\\\"Constellation\\\", \\\"Scorpius\\\"]\"", 
+     "\"constellation\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Taurus\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"Constellation\"", ",", "\"Taurus\""}], "]"}], 
+     "\"Entity[\\\"Constellation\\\", \\\"Taurus\\\"]\"", "\"constellation\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Virgo\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"Constellation\"", ",", "\"Virgo\""}], "]"}], 
+     "\"Entity[\\\"Constellation\\\", \\\"Virgo\\\"]\"", "\"constellation\""},
+    
+    "Entity"]}], "}"}]], "Output",
+ CellChangeTimes->{{3.7976856244848347`*^9, 3.797685629536702*^9}},
+ CellLabel->"Out[82]=",ExpressionUUID->"c0b1f70b-9ef4-47ac-966e-d919954152c8"]
+}, Open  ]],
+
+Cell[BoxData["19.933"], "Input",
+ CellChangeTimes->{{3.797685612012104*^9, 
+  3.7976856120132504`*^9}},ExpressionUUID->"6f33a589-b70e-47a6-8ef6-\
+7e1a84cf200c"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DiaryDuration", "[", 
+   RowBox[{"{", 
+    RowBox[{"14", ",", "30"}], "}"}], "]"}], "[", "\"\<Minutes\>\"", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.7976858229017887`*^9, 3.797685844141543*^9}, {
+  3.797864953546225*^9, 3.797864955466022*^9}},
+ CellLabel->
+  "In[202]:=",ExpressionUUID->"38846817-02d5-4220-874e-21c6ba51bdef"],
+
+Cell[BoxData[
+ TemplateBox[{"58", "\"min\"", "minutes", "\"Minutes\""},
+  "Quantity"]], "Output",
+ CellChangeTimes->{{3.797685838653221*^9, 3.797685844688966*^9}, {
+  3.797864953992675*^9, 3.797864955694614*^9}},
+ CellLabel->
+  "Out[202]=",ExpressionUUID->"03ad8804-3de9-4e3f-8a5a-ec1a883ed30f"]
 }, Open  ]]
 },
 WindowSize->{755, 909},
-WindowMargins->{{Automatic, 295}, {39, Automatic}},
+WindowMargins->{{170, Automatic}, {46, Automatic}},
 FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (March 18, 2020)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"dfe3f90f-5671-48a5-8dc5-aa9f06eab958"
@@ -5719,6 +5915,19 @@ Cell[296263, 5427, 1551, 28, 67, "Output",ExpressionUUID->"3b17eca2-0d63-4d6d-88
 Cell[CellGroupData[{
 Cell[297851, 5460, 244, 4, 30, "Input",ExpressionUUID->"571d9553-8bc6-4bbb-be6e-fe3d417f19f0"],
 Cell[298098, 5466, 8395, 212, 130, "Output",ExpressionUUID->"ad99b484-09db-4ae5-9c5b-b61d0d81a04a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[306530, 5683, 717, 18, 52, "Input",ExpressionUUID->"700db045-f475-4b90-8a0f-aebeeadb4a7c"],
+Cell[307250, 5703, 2107, 57, 106, "Output",ExpressionUUID->"b25339b9-683b-498e-a5c4-d592c24596dd"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[309394, 5765, 492, 9, 39, "Input",ExpressionUUID->"f1951339-95cc-42a8-b655-903b230d05ec"],
+Cell[309889, 5776, 2975, 71, 75, "Output",ExpressionUUID->"c0b1f70b-9ef4-47ac-966e-d919954152c8"]
+}, Open  ]],
+Cell[312879, 5850, 160, 3, 30, "Input",ExpressionUUID->"6f33a589-b70e-47a6-8ef6-7e1a84cf200c"],
+Cell[CellGroupData[{
+Cell[313064, 5857, 362, 9, 30, "Input",ExpressionUUID->"38846817-02d5-4220-874e-21c6ba51bdef"],
+Cell[313429, 5868, 295, 6, 36, "Output",ExpressionUUID->"03ad8804-3de9-4e3f-8a5a-ec1a883ed30f"]
 }, Open  ]]
 }
 ]
