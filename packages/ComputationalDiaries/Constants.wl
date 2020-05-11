@@ -3,15 +3,12 @@
 BeginPackage["ComputationalDiaries`Constants`"];
 
 
-ClearAll["ComputationalDiaries`Constants*"];
-
-
-GetNormalStars::usage = "GetNormalStars[] returns the list of normal stars.
-GetNormalStars[\!\(\*
+getNormalStars::usage = "getNormalStars[] returns the list of normal stars.
+getNormalStars[\!\(\*
 StyleBox[\"name\",\nFontSlant->\"Italic\"]\)] returrns the normal star associated with the name \!\(\*
 StyleBox[\"name\",\nFontSlant->\"Italic\"]\).";
-NormalStarQ::usage = 
-	"NormalStar[\!\(\*
+normalStarQ::usage = 
+	"normalStar[\!\(\*
 StyleBox[\"obj\",\nFontSlant->\"Italic\"]\)] returns True of \!\(\*
 StyleBox[\"obj\",\nFontSlant->\"Italic\"]\) is a normal star and False otherwise.";
 
@@ -60,11 +57,11 @@ normalStarMap = <|
 |>;
 
 
-GetNormalStars[] := Values[normalStarMap]
-GetNormalStars[name_String] := normalStarMap[name]
+getNormalStars[] := Values[normalStarMap]
+getNormalStars[name_String] := normalStarMap[name]
 
 
-NormalStarQ[obj_] := MemberQ[Values[normalStarMap],obj]
+normalStarQ[obj_] := MemberQ[Values[normalStarMap],obj]
 
 
 (* ::Subsection:: *)

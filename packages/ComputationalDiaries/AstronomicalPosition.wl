@@ -6,11 +6,8 @@ BeginPackage["ComputationalDiaries`AstronomicalPosition`",{
 }];
 
 
-ClearAll["ComputationalDiaries`AstronomicalPosition`*"];
-
-
-AstronomicalPosition::usage =
-	"AstronomicalPosition[\!\(\*
+astronomicalPosition::usage =
+	"astronomicalPosition[\!\(\*
 StyleBox[\"obj\",\nFontSlant->\"Italic\"]\),\!\(\*
 StyleBox[\"date\",\nFontSlant->\"Italic\"]\)] computes the ecliptic coordinantes for \!\(\*
 StyleBox[\"obj\",\nFontSlant->\"Italic\"]\) on \!\(\*
@@ -78,19 +75,19 @@ synodicObjectNames = <|
 |>;
 
 
-AstronomicalPosition::invalidObject = "`` is not a valid normal star or synodic object.";
+astronomicalPosition::invalidObject = "`` is not a valid normal star or synodic object.";
 
 
-AstronomicalPosition[obj_, jd_?NumberQ] :=
+astronomicalPosition[obj_, jd_?NumberQ] :=
 	Which[
 		KeyExistsQ[synodicObjectNames, obj],synodicPosition[synodicObjectNames[obj],jd],
 		KeyExistsQ[normalStarHIPNumbers, obj],normalStarPosition[normalStarHIPNumbers[obj],jd],
 		MissingQ[obj], obj,
-		True,Message[AstronomicalPosition::invalidObject, obj];$Failed
+		True,Message[astronomicalPosition::invalidObject, obj];$Failed
 	]
-AstronomicalPosition[obj_, date_?DateObjectQ] := AstronomicalPosition[obj,JulianDate[date]]
-AstronomicalPosition[obj_, date_DiaryDate] := AstronomicalPosition[obj,date["JulianDate"]]
-AstronomicalPosition[obj_, date_?MissingQ] := date
+astronomicalPosition[obj_, date_?DateObjectQ] := astronomicalPosition[obj,JulianDate[date]]
+astronomicalPosition[obj_, date_DiaryDate] := astronomicalPosition[obj,date["JulianDate"]]
+astronomicalPosition[obj_, date_?MissingQ] := date
 
 
 (* ::Subsection:: *)

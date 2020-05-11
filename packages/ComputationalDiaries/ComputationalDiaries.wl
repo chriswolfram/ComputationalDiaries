@@ -10,9 +10,6 @@ BeginPackage["ComputationalDiaries`",{
 }];
 
 
-ClearAll["ComputationalDiaries`*"];
-
-
 Begin["`Private`"];
 
 

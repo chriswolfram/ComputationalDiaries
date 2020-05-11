@@ -6,17 +6,18 @@ BeginPackage["ComputationalDiaries`InputFormat`",{
 }];
 
 
-ClearAll["ComputationalDiaries`InputFormat`*"];
-
-
-ProcessInputFormat::usage = "Canonicalizes the input format.";
-LaunchCurationPalette::usage = "Opens a palette with useful templates for Diary curation.";
+processInputFormat::usage = "Canonicalizes the input format.";
+launchCurationPalette::usage = "Opens a palette with useful templates for Diary curation.";
+inputMonthDay::usage =
+	"inputMonthDay[\!\(\*
+StyleBox[\"day\",\nFontSlant->\"Italic\"]\), \!\(\*
+StyleBox[\"time\",\nFontSlant->\"Italic\"]\)] represents a day and time of the month for the input format.";
 
 
 Begin["`Private`"];
 
 
-diaryDayAdd[date_DiaryDate, days_Integer, time_] :=
+diaryDateAddDay[date_DiaryDate, days_Integer, time_] :=
 	Module[{newJulianDate},
 		newJulianDate = date["JulianDate"]+Quantity[days,"Days"];
 		DiaryDate[<|
@@ -31,32 +32,34 @@ diaryDayAdd[date_DiaryDate, days_Integer, time_] :=
 			"Time"->time
 		|>]
 	]
-diaryDayAdd[date_DiaryDate, days_Missing, time_] := days
+diaryDateAddDay[date_DiaryDate, days_Missing, time_] := days
+diaryDateAddDay[date_Missing, days_, time_] := date
 
 
-ProcessInputFormat[tablets_] :=
+processInputFormat[tablets_] :=
 	Flatten[Function[tab, Module[{tabletID,creator},
-		tabletID = tab[[1,"TabletID"]];
-		creator = tab[[1,"Creator"]];
-		Function[month, Module[{dayZero},
-			dayZero = month[[1]];
+		tabletID = tab["TabletID"];
+		creator = tab["Creator"];
+		Function[month, With[{dayZero = month["DayZero"]},
 			Function[observation,
-				If[MatchQ[observation,_DiaryObservation],
+				Identity//@If[MatchQ[observation,_DiaryObservation],
 					observation,
-					DiaryObservation[<|
+					DiaryObservation[Association[Normal[<|
 						"Type"->observation["Type"],
 						"Content"->observation["Content"],
-						"Date"->diaryDayAdd[dayZero,observation["Date"][[1]],observation["Date"][[2]]],
+						"Date"->observation["Date"],
+						"Inferred"->observation["Inferred"],
+						"UUID"->observation["UUID"],
 						"Provenance"-><|
 							"Creator"->creator,
 							"TabletID"->tabletID,
 							"LineNumber"->observation["LineNumber"],
-							"Notes"->Lookup[observation,"Notes",Missing[]]
+							"Notes"->observation["Notes"]
 						|>
-					|>]
+					|>]/.inputMonthDay[day_,time_]:>diaryDateAddDay[dayZero,day,time]]]
 				]
-			]/@month[[2]]
-		]]/@tab[[2]]
+			]/@month["Observations"]
+		]]/@tab["Months"]
 	]]/@tablets,2]
 
 
@@ -64,7 +67,12 @@ makePalette[l_List] := makePalette/@l
 makePalette[Cell[CellGroupData[{Cell[title_,"Subsection",___],rest___},___]]] :=
 	OpenerView[{title,Column[makePalette/@{rest}]},True]
 makePalette[Cell[CellGroupData[{Cell[title_,"Subsubsection",___],Cell[BoxData[boxes_],___]},___]]] :=
-	PasteButton[title,RawBoxes[boxes]]
+	Button[
+		title,
+		Paste[RawBoxes[boxes]/.
+			RowBox[{"CreateUUID", "[", "]"}]:>StringTemplate["\"``\""][CreateUUID[]]],
+		Appearance->"Palette"
+	]
 
 
 referenceNB = Import[
@@ -72,7 +80,7 @@ referenceNB = Import[
 	"Notebook"];
 
 
-LaunchCurationPalette[] :=
+launchCurationPalette[] :=
 	CreatePalette[makePalette[First[referenceNB]],WindowTitle->"Curation"]
 
 

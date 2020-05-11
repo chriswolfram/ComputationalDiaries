@@ -5,9 +5,6 @@ BeginPackage["ComputationalDiaries`DiaryTypes`",{
 }];
 
 
-ClearAll["ComputationalDiaries`DiaryTypes`*"];
-
-
 DiaryDate::usage = "Represents a date in a combination of the Julian and Babylonian calendars.";
 DiaryDistance::usage = "Represents a distance in the sky in cubits (K\[CapitalUGrave]\[CapitalSHacek]) and fingers (\[CapitalSHacek]I or U).";
 DiaryDisplacement::usage = "Represents the displacement between two objects in the sky.";

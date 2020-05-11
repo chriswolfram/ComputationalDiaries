@@ -5,9 +5,6 @@ BeginPackage["ComputationalDiaries`DiaryObservation`",{
 }];
 
 
-ClearAll["ComputationalDiaries`DiaryObservation`*"];
-
-
 DiaryObservation::usage = "Represents an observation in the Astronomical Diaries.";
 
 
