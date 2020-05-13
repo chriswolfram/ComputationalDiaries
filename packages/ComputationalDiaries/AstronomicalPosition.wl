@@ -61,7 +61,7 @@ def star_position(hip,day):
 "];
 
 
-normalStarHIPNumbers = EntityValue[GetNormalStars[],"HipparcosNumber","EntityAssociation"];
+normalStarHIPNumbers = EntityValue[getNormalStars[],"HipparcosNumber","EntityAssociation"];
 
 
 synodicObjectNames = <|
