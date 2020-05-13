@@ -1,0 +1,289 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     13793,        281]
+NotebookOptionsPosition[     13443,        267]
+NotebookOutlinePosition[     13837,        283]
+CellTagsIndexPosition[     13794,        280]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"inputFormatData", "=", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{"<|", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"\"\<TabletID\>\"", "\[Rule]", "\"\<X201701\>\""}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"\"\<Creator\>\"", "\[Rule]", "\"\<Christopher Wolfram\>\""}], 
+      ",", "\[IndentingNewLine]", 
+      RowBox[{"\"\<Months\>\"", "\[Rule]", 
+       RowBox[{"{", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"<|", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"\"\<DayZero\>\"", "\[Rule]", 
+            RowBox[{"DiaryDate", "[", 
+             RowBox[{"<|", "\[IndentingNewLine]", 
+              RowBox[{
+               RowBox[{"\"\<BabylonianYear\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<SE\>\"", ",", "141"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<BabylonianMonth\>\"", "\[Rule]", "\"\<II\>\""}], 
+               ",", "\[IndentingNewLine]", 
+               RowBox[{"\"\<BabylonianDay\>\"", "\[Rule]", "0"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<JulianYear\>\"", "\[Rule]", 
+                RowBox[{"-", "170"}]}], ",", "\[IndentingNewLine]", 
+               RowBox[{"\"\<JulianMonth\>\"", "\[Rule]", "5"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<JulianDay\>\"", "\[Rule]", "12"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<Time\>\"", "\[Rule]", 
+                RowBox[{"Missing", "[", "]"}]}]}], "\[IndentingNewLine]", 
+              "|>"}], "]"}]}], ",", "\[IndentingNewLine]", 
+           RowBox[{"\"\<Observations\>\"", "\[Rule]", 
+            RowBox[{"{", "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"<|", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{
+                "\"\<UUID\>\"", "\[Rule]", 
+                 "\"\<f6b7d6c3-92aa-401b-af5e-daee1477088f\>\""}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"\"\<LineNumber\>\"", "\[Rule]", "2"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"\"\<Date\>\"", "\[Rule]", 
+                 RowBox[{"inputMonthDay", "[", 
+                  RowBox[{
+                   RowBox[{"Missing", "[", "\"\<Destroyed\>\"", "]"}], ",", 
+                   RowBox[{"Missing", "[", "\"\<Destroyed\>\"", "]"}]}], 
+                  "]"}]}], ",", "\[IndentingNewLine]", 
+                RowBox[{
+                "\"\<Type\>\"", "\[Rule]", "\"\<RelativePosition\>\""}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"\"\<Inferred\>\"", "\[Rule]", "False"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"\"\<Content\>\"", "\[Rule]", 
+                 RowBox[{"<|", "\[IndentingNewLine]", 
+                  RowBox[{
+                   RowBox[{"\"\<Object\>\"", "\[Rule]", 
+                    TemplateBox[{"\"Moon\"", 
+                    RowBox[{"Entity", "[", 
+                    RowBox[{"\"PlanetaryMoon\"", ",", "\"Moon\""}], "]"}], 
+                    "\"Entity[\\\"PlanetaryMoon\\\", \\\"Moon\\\"]\"", 
+                    "\"planetary moon\""},
+                    "Entity"]}], ",", "\[IndentingNewLine]", 
+                   RowBox[{"\"\<Reference\>\"", "\[Rule]", 
+                    RowBox[{"Missing", "[", "\"\<Destroyed\>\"", "]"}]}], ",",
+                    "\[IndentingNewLine]", 
+                   RowBox[{"\"\<Displacement\>\"", "\[Rule]", 
+                    RowBox[{"DiaryDisplacement", "[", 
+                    RowBox[{"<|", "\[IndentingNewLine]", 
+                    RowBox[{
+                    RowBox[{"\"\<Distances\>\"", "\[Rule]", 
+                    RowBox[{"{", "\[IndentingNewLine]", 
+                    RowBox[{
+                    RowBox[{"Missing", "[", "\"\<Destroyed\>\"", "]"}], ",", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"DiaryDistance", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"5", ",", "0"}], "}"}], "]"}]}], "}"}]}], ",", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"\"\<Relations\>\"", "\[Rule]", 
+                    RowBox[{"{", "\[IndentingNewLine]", 
+                    RowBox[{
+                    RowBox[{"Missing", "[", "\"\<Destroyed\>\"", "]"}], ",", 
+                    "\[IndentingNewLine]", "\"\<North\>\""}], "}"}]}]}], 
+                    "\[IndentingNewLine]", "|>"}], "]"}]}]}], 
+                  "\[IndentingNewLine]", "|>"}]}], ",", "\[IndentingNewLine]", 
+                RowBox[{"\"\<Notes\>\"", "\[Rule]", 
+                 RowBox[{"Missing", "[", "]"}]}]}], "\[IndentingNewLine]", 
+               "|>"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"<|", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{
+                "\"\<UUID\>\"", "\[Rule]", 
+                 "\"\<6e366c63-cda3-4245-ac94-7042344d7196\>\""}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"\"\<LineNumber\>\"", "\[Rule]", "3"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"\"\<Date\>\"", "\[Rule]", 
+                 RowBox[{"inputMonthDay", "[", 
+                  RowBox[{
+                   RowBox[{"Missing", "[", "\"\<Destroyed\>\"", "]"}], ",", 
+                   RowBox[{"Missing", "[", "\"\<Destroyed\>\"", "]"}]}], 
+                  "]"}]}], ",", "\[IndentingNewLine]", 
+                RowBox[{
+                "\"\<Type\>\"", "\[Rule]", "\"\<RelativePosition\>\""}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"\"\<Inferred\>\"", "\[Rule]", "False"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"\"\<Content\>\"", "\[Rule]", 
+                 RowBox[{"<|", "\[IndentingNewLine]", 
+                  RowBox[{
+                   RowBox[{"\"\<Object\>\"", "\[Rule]", 
+                    TemplateBox[{"\"Moon\"", 
+                    RowBox[{"Entity", "[", 
+                    RowBox[{"\"PlanetaryMoon\"", ",", "\"Moon\""}], "]"}], 
+                    "\"Entity[\\\"PlanetaryMoon\\\", \\\"Moon\\\"]\"", 
+                    "\"planetary moon\""},
+                    "Entity"]}], ",", "\[IndentingNewLine]", 
+                   RowBox[{"\"\<Reference\>\"", "\[Rule]", 
+                    RowBox[{
+                    "getNormalStars", "[", "\"\<DeltaCancri\>\"", "]"}]}], 
+                   ",", "\[IndentingNewLine]", 
+                   RowBox[{"\"\<Displacement\>\"", "\[Rule]", 
+                    RowBox[{"DiaryDisplacement", "[", 
+                    RowBox[{"<|", "\[IndentingNewLine]", 
+                    RowBox[{
+                    RowBox[{"\"\<Distances\>\"", "\[Rule]", 
+                    RowBox[{"{", "\[IndentingNewLine]", 
+                    RowBox[{
+                    RowBox[{"Missing", "[", "\"\<Destroyed\>\"", "]"}], ",", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"Missing", "[", "\"\<Destroyed\>\"", "]"}]}], 
+                    "}"}]}], ",", "\[IndentingNewLine]", 
+                    RowBox[{"\"\<Relations\>\"", "\[Rule]", 
+                    RowBox[{"{", "\[IndentingNewLine]", 
+                    RowBox[{
+                    RowBox[{"Missing", "[", "\"\<Destroyed\>\"", "]"}], ",", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"Missing", "[", "\"\<Destroyed\>\"", "]"}]}], 
+                    "}"}]}]}], "\[IndentingNewLine]", "|>"}], "]"}]}]}], 
+                  "\[IndentingNewLine]", "|>"}]}], ",", "\[IndentingNewLine]", 
+                RowBox[{"\"\<Notes\>\"", "\[Rule]", 
+                 RowBox[{"Missing", "[", "]"}]}]}], "\[IndentingNewLine]", 
+               "|>"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"<|", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{
+                "\"\<UUID\>\"", "\[Rule]", 
+                 "\"\<93573c8c-0f37-4354-9463-f6b2f2ddf9d6\>\""}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"\"\<LineNumber\>\"", "\[Rule]", "4"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"\"\<Date\>\"", "\[Rule]", 
+                 RowBox[{"inputMonthDay", "[", 
+                  RowBox[{"6", ",", "\"\<BeginningOfTheNight\>\""}], "]"}]}], 
+                ",", "\[IndentingNewLine]", 
+                RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<Other\>\""}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"\"\<Inferred\>\"", "\[Rule]", "True"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"\"\<Content\>\"", "\[Rule]", 
+                 RowBox[{"<|", "\[IndentingNewLine]", 
+                  RowBox[{
+                   RowBox[{"\"\<Tags\>\"", "\[Rule]", 
+                    RowBox[{"{", "\"\<NotEnoughInformation\>\"", "}"}]}], ",",
+                    "\[IndentingNewLine]", 
+                   RowBox[{
+                   "\"\<Note\>\"", "\[Rule]", 
+                    "\"\<Cannot tell if the 1 cubit is a vertical or \
+horizontal relation\>\""}]}], "\[IndentingNewLine]", "|>"}]}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"\"\<Notes\>\"", "\[Rule]", 
+                 RowBox[{"Missing", "[", "]"}]}]}], "\[IndentingNewLine]", 
+               "|>"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"<|", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{
+                "\"\<UUID\>\"", "\[Rule]", 
+                 "\"\<4536c553-d044-47d5-ac30-ffa267502539\>\""}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"\"\<LineNumber\>\"", "\[Rule]", "4"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"\"\<Date\>\"", "\[Rule]", 
+                 RowBox[{"inputMonthDay", "[", 
+                  RowBox[{"7", ",", "\"\<BeginningOfTheNight\>\""}], "]"}]}], 
+                ",", "\[IndentingNewLine]", 
+                RowBox[{
+                "\"\<Type\>\"", "\[Rule]", "\"\<RelativePosition\>\""}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"\"\<Inferred\>\"", "\[Rule]", "True"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"\"\<Content\>\"", "\[Rule]", 
+                 RowBox[{"<|", "\[IndentingNewLine]", 
+                  RowBox[{
+                   RowBox[{"\"\<Object\>\"", "\[Rule]", 
+                    TemplateBox[{"\"Moon\"", 
+                    RowBox[{"Entity", "[", 
+                    RowBox[{"\"PlanetaryMoon\"", ",", "\"Moon\""}], "]"}], 
+                    "\"Entity[\\\"PlanetaryMoon\\\", \\\"Moon\\\"]\"", 
+                    "\"planetary moon\""},
+                    "Entity"]}], ",", "\[IndentingNewLine]", 
+                   RowBox[{"\"\<Reference\>\"", "\[Rule]", 
+                    RowBox[{
+                    "getNormalStars", "[", "\"\<ThetaLeonis\>\"", "]"}]}], 
+                   ",", "\[IndentingNewLine]", 
+                   RowBox[{"\"\<Displacement\>\"", "\[Rule]", 
+                    RowBox[{"DiaryDisplacement", "[", 
+                    RowBox[{"<|", "\[IndentingNewLine]", 
+                    RowBox[{
+                    RowBox[{"\"\<Distances\>\"", "\[Rule]", 
+                    RowBox[{"{", "\[IndentingNewLine]", 
+                    RowBox[{
+                    RowBox[{"Missing", "[", "\"\<Destroyed\>\"", "]"}], ",", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"DiaryDistance", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"3", ",", "0"}], "}"}], "]"}]}], "}"}]}], ",", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"\"\<Relations\>\"", "\[Rule]", 
+                    RowBox[{"{", "\[IndentingNewLine]", 
+                    RowBox[{
+                    RowBox[{"Missing", "[", "\"\<Destroyed\>\"", "]"}], ",", 
+                    "\[IndentingNewLine]", "\"\<Below\>\""}], "}"}]}]}], 
+                    "\[IndentingNewLine]", "|>"}], "]"}]}]}], 
+                  "\[IndentingNewLine]", "|>"}]}], ",", "\[IndentingNewLine]", 
+                RowBox[{"\"\<Notes\>\"", "\[Rule]", 
+                 RowBox[{"Missing", "[", "]"}]}]}], "\[IndentingNewLine]", 
+               "|>"}], ",", "\[IndentingNewLine]", 
+              TagBox[
+               FrameBox["\<\"next observation\"\>"],
+               "Placeholder"]}], "\[IndentingNewLine]", "}"}]}]}], 
+          "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]", 
+         TagBox[
+          FrameBox["\<\"next month\"\>"],
+          "Placeholder"]}], "\[IndentingNewLine]", "}"}]}]}], 
+     "\[IndentingNewLine]", "|>"}], "\[IndentingNewLine]", "}"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.798343930438504*^9, 3.7983439444636917`*^9}, {
+  3.7983446645393333`*^9, 3.798344914399864*^9}, {3.7983449483068247`*^9, 
+  3.79834505569881*^9}},ExpressionUUID->"0e11bd57-3377-4584-8d53-\
+e04d9bf317c8"]
+},
+WindowSize->{808, 905},
+WindowMargins->{{Automatic, -86}, {Automatic, 0}},
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (March 18, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"308f3762-ef63-4dcf-8489-eccc9d26ad22"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 12881, 245, 2076, "Input",ExpressionUUID->"0e11bd57-3377-4584-8d53-e04d9bf317c8"]
+}
+]
+*)
+

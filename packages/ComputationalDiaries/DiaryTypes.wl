@@ -111,8 +111,10 @@ DiaryDistance[{cubits_,fingers_}]["TotalCubits"] :=
 		Missing[],
 		If[MissingQ[cubits],0,cubits] + If[MissingQ[fingers],0,fingers]/24
 	]
-dd_DiaryDistance["Degrees"] :=
+dd_DiaryDistance["IdealDegrees"] :=
 	With[{totalCubits=dd["TotalCubits"]}, If[MissingQ[totalCubits],Missing[],2*totalCubits]]
+dd_DiaryDistance["RealDegrees"] :=
+	With[{totalCubits=dd["TotalCubits"]}, If[MissingQ[totalCubits],Missing[],2.27*totalCubits]]
 
 
 DiaryDistance["ALittle"]["Cubits"] := Missing[]
