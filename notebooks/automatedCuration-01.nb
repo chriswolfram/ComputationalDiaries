@@ -1,0 +1,571 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     24843,        563]
+NotebookOptionsPosition[     23669,        537]
+NotebookOutlinePosition[     24064,        553]
+CellTagsIndexPosition[     24021,        550]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"durationPattern", "[", 
+    RowBox[{"deg_", ",", "ninda_"}], "]"}], " ", ":=", "\n", "\t", 
+   RowBox[{"Shortest", "[", 
+    RowBox[{"deg", "~~", "\"\<\[Degree]\>\"", "~~", 
+     RowBox[{"Longest", "[", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"\"\<?\>\"", "|", "\"\<\>\""}], ")"}], "~~", 
+       RowBox[{"(", 
+        RowBox[{"\"\< \>\"", "|", "\"\<\>\""}], ")"}]}], "]"}], "~~", 
+     RowBox[{"Longest", "[", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"ninda", "~~", "\"\<'\>\""}], ")"}], "|", "\"\<\>\""}], 
+      "]"}]}], "]"}]}], ";"}]], "Code",
+ CellChangeTimes->{{3.798666624881525*^9, 3.7986667608444633`*^9}, {
+  3.798666803664633*^9, 3.7986668111040573`*^9}, {3.798666851935884*^9, 
+  3.798666897773703*^9}, {3.7986687900959463`*^9, 3.798668805826275*^9}, {
+  3.798668939992507*^9, 3.798668953163299*^9}, {3.7986689833780727`*^9, 
+  3.79866898425662*^9}, {3.798669200335085*^9, 3.798669200729999*^9}},
+ CellLabel->
+  "In[445]:=",ExpressionUUID->"17df2d8e-4d4d-4b3c-930d-f271578cb165"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"durationBoxes", "[", 
+   RowBox[{"deg_", ",", " ", "ninda_"}], "]"}], " ", ":=", "\n", "\t", 
+  RowBox[{"RowBox", "[", 
+   RowBox[{"{", 
+    RowBox[{
+    "\"\<DiaryDuration\>\"", ",", "\"\<[\>\"", ",", "\"\<{\>\"", ",", "\n", 
+     "\t\t", 
+     RowBox[{"deg", "/.", 
+      RowBox[{"\"\<\>\"", "\[Rule]", 
+       RowBox[{"ToBoxes", "@", 
+        RowBox[{"Placeholder", "[", "\"\<degrees\>\"", "]"}]}]}]}], ",", 
+     "\"\<,\>\"", ",", "\n", "\t\t", 
+     RowBox[{"ninda", "/.", 
+      RowBox[{"\"\<\>\"", "\[Rule]", 
+       RowBox[{"ToBoxes", "@", 
+        RowBox[{"Placeholder", "[", "\"\<ninda\>\"", "]"}]}]}]}], ",", "\n", 
+     "\t", "\"\<}\>\"", ",", "\"\<]\>\""}], "}"}], "]"}]}]], "Code",
+ CellChangeTimes->{{3.798668139827516*^9, 3.7986682318351192`*^9}, {
+  3.7986688695898027`*^9, 3.798668918654255*^9}, {3.798669135414641*^9, 
+  3.7986692644377747`*^9}},ExpressionUUID->"17a8a672-5165-41c0-a80d-\
+60d2b247872f"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"observationPatterns", " ", "=", " ", 
+   RowBox[{"{", "\n", "\t", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"\"\<sunset to moonset: \>\"", " ", "~~", " ", 
+       RowBox[{"durationPattern", "[", 
+        RowBox[{"deg__", ",", 
+         RowBox[{"ninda", ":", 
+          RowBox[{"Repeated", "[", 
+           RowBox[{"_", ",", 
+            RowBox[{"{", 
+             RowBox[{"1", ",", "5"}], "}"}]}], "]"}]}]}], "]"}]}], " ", 
+      "\[RuleDelayed]", " ", 
+      RowBox[{"<|", "\n", "\t\t\t", 
+       RowBox[{
+        RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<SunsetToMoonset\>\""}], ",", 
+        "\n", "\t\t\t", 
+        RowBox[{"\"\<Duration\>\"", "\[Rule]", 
+         RowBox[{"durationBoxes", "[", 
+          RowBox[{"deg", ",", "ninda"}], "]"}]}]}], "\n", "\t\t", "|>"}]}], 
+     ",", "\n", "\t", 
+     RowBox[{
+      RowBox[{"\"\<moonset to sunrise: \>\"", " ", "~~", " ", 
+       RowBox[{"durationPattern", "[", 
+        RowBox[{"deg__", ",", 
+         RowBox[{"ninda", ":", 
+          RowBox[{"Repeated", "[", 
+           RowBox[{"_", ",", 
+            RowBox[{"{", 
+             RowBox[{"1", ",", "5"}], "}"}]}], "]"}]}]}], "]"}]}], " ", 
+      "\[RuleDelayed]", " ", 
+      RowBox[{"<|", "\n", "\t\t\t", 
+       RowBox[{
+        RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<MoonsetToSunrise\>\""}], ",", 
+        "\n", "\t\t\t", 
+        RowBox[{"\"\<Duration\>\"", "\[Rule]", 
+         RowBox[{"durationBoxes", "[", 
+          RowBox[{"deg", ",", "ninda"}], "]"}]}]}], "\n", "\t\t", "|>"}]}], 
+     ",", "\n", "\t", 
+     RowBox[{
+      RowBox[{"\"\<sunrise to moonset: \>\"", " ", "~~", " ", 
+       RowBox[{"durationPattern", "[", 
+        RowBox[{"deg__", ",", 
+         RowBox[{"ninda", ":", 
+          RowBox[{"Repeated", "[", 
+           RowBox[{"_", ",", 
+            RowBox[{"{", 
+             RowBox[{"1", ",", "5"}], "}"}]}], "]"}]}]}], "]"}]}], " ", 
+      "\[RuleDelayed]", " ", 
+      RowBox[{"<|", "\n", "\t\t\t", 
+       RowBox[{
+        RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<sunriseToMoonset\>\""}], ",", 
+        "\n", "\t\t\t", 
+        RowBox[{"\"\<Duration\>\"", "\[Rule]", 
+         RowBox[{"durationBoxes", "[", 
+          RowBox[{"deg", ",", "ninda"}], "]"}]}]}], "\n", "\t\t", "|>"}]}], 
+     ",", "\n", "\t", 
+     RowBox[{
+      RowBox[{"\"\<moonrise to sunset: \>\"", " ", "~~", " ", 
+       RowBox[{"durationPattern", "[", 
+        RowBox[{"deg__", ",", 
+         RowBox[{"ninda", ":", 
+          RowBox[{"Repeated", "[", 
+           RowBox[{"_", ",", 
+            RowBox[{"{", 
+             RowBox[{"1", ",", "5"}], "}"}]}], "]"}]}]}], "]"}]}], " ", 
+      "\[RuleDelayed]", " ", 
+      RowBox[{"<|", "\n", "\t\t\t", 
+       RowBox[{
+        RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<MoonriseToSunset\>\""}], ",", 
+        "\n", "\t\t\t", 
+        RowBox[{"\"\<Duration\>\"", "\[Rule]", 
+         RowBox[{"durationBoxes", "[", 
+          RowBox[{"deg", ",", "ninda"}], "]"}]}]}], "\n", "\t\t", "|>"}]}], 
+     ",", "\n", "\t", 
+     RowBox[{
+      RowBox[{"\"\<sunset to moonrise: \>\"", " ", "~~", " ", 
+       RowBox[{"durationPattern", "[", 
+        RowBox[{"deg__", ",", 
+         RowBox[{"ninda", ":", 
+          RowBox[{"Repeated", "[", 
+           RowBox[{"_", ",", 
+            RowBox[{"{", 
+             RowBox[{"1", ",", "5"}], "}"}]}], "]"}]}]}], "]"}]}], " ", 
+      "\[RuleDelayed]", " ", 
+      RowBox[{"<|", "\n", "\t\t\t", 
+       RowBox[{
+        RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<SunsetToMoonrise\>\""}], ",", 
+        "\n", "\t\t\t", 
+        RowBox[{"\"\<Duration\>\"", "\[Rule]", 
+         RowBox[{"durationBoxes", "[", 
+          RowBox[{"deg", ",", "ninda"}], "]"}]}]}], "\n", "\t\t", "|>"}]}], 
+     ",", "\n", "\t", 
+     RowBox[{
+      RowBox[{"\"\<moonrise to sunrise: \>\"", " ", "~~", " ", 
+       RowBox[{"durationPattern", "[", 
+        RowBox[{"deg__", ",", 
+         RowBox[{"ninda", ":", 
+          RowBox[{"Repeated", "[", 
+           RowBox[{"_", ",", 
+            RowBox[{"{", 
+             RowBox[{"1", ",", "5"}], "}"}]}], "]"}]}]}], "]"}]}], " ", 
+      "\[RuleDelayed]", " ", 
+      RowBox[{"<|", "\n", "\t\t\t", 
+       RowBox[{
+        RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<MoonriseToSunset\>\""}], ",", 
+        "\n", "\t\t\t", 
+        RowBox[{"\"\<Duration\>\"", "\[Rule]", 
+         RowBox[{"durationBoxes", "[", 
+          RowBox[{"deg", ",", "ninda"}], "]"}]}]}], "\n", "\t\t", "|>"}]}]}], 
+    "\n", "}"}]}], ";"}]], "Code",
+ CellChangeTimes->{{3.798666513342465*^9, 3.7986665556237507`*^9}, {
+  3.7986665905997458`*^9, 3.798666604885742*^9}, {3.798666909180513*^9, 
+  3.798666918000352*^9}, {3.798666995196459*^9, 3.798667024062599*^9}, {
+  3.798667064359007*^9, 3.798667076517589*^9}, {3.7986682504013033`*^9, 
+  3.798668254227469*^9}, {3.798668379940083*^9, 3.7986684884994783`*^9}, {
+  3.798668571453042*^9, 3.798668618818459*^9}, {3.798668828235859*^9, 
+  3.79866884641803*^9}, {3.7986690482881737`*^9, 3.79866907214758*^9}, {
+  3.7986702280820417`*^9, 
+  3.798670237769079*^9}},ExpressionUUID->"521fc3dd-bcac-4280-b14d-\
+7830fa9173a1"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"rawTabletText", "=", 
+   RowBox[{"StringRiffle", "[", 
+    RowBox[{
+     RowBox[{"StringDelete", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"DeleteCases", "[", 
+         RowBox[{
+          RowBox[{"getTabletLines", "[", "\"\<X201701\>\"", "]"}], ",", 
+          "Delimiter"}], "]"}], "[", 
+        RowBox[{"[", 
+         RowBox[{"All", ",", "3"}], "]"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+        "\"\<[\>\"", ",", "\"\<(\>\"", ",", "\"\<)\>\"", ",", "\"\<]\>\""}], 
+        "}"}]}], "]"}], ",", "\"\< \>\""}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.798668642369084*^9, 3.798668697129201*^9}},
+ CellLabel->
+  "In[420]:=",ExpressionUUID->"c9942cb0-9688-4302-80e7-125d37a31248"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"StringCases", "[", 
+  RowBox[{"rawTabletText", ",", "observationPatterns"}], "]"}]], "Input",
+ CellChangeTimes->{{3.79866677494051*^9, 3.7986667950150747`*^9}, {
+   3.798666872355682*^9, 3.7986668826683283`*^9}, {3.7986670935034943`*^9, 
+   3.7986670997696667`*^9}, {3.7986683063226748`*^9, 3.798668347669416*^9}, 
+   3.798668497857621*^9, 3.798668700415588*^9, {3.79868175883048*^9, 
+   3.798681764153104*^9}},
+ CellLabel->
+  "In[459]:=",ExpressionUUID->"11f94c70-b2e6-4d1d-9e0c-cde0cee015a2"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Type\"\>", "\[Rule]", "\<\"MoonsetToSunrise\"\>"}], ",", 
+     RowBox[{"\<\"Duration\"\>", "\[Rule]", 
+      RowBox[{"RowBox", "[", 
+       RowBox[{"{", 
+        RowBox[{"\<\"DiaryDuration\"\>", ",", "\<\"[\"\>", ",", "\<\"{\"\>", 
+         ",", "\<\"6\"\>", ",", "\<\",\"\>", ",", "\<\"50\"\>", 
+         ",", "\<\"}\"\>", ",", "\<\"]\"\>"}], "}"}], "]"}]}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Type\"\>", "\[Rule]", "\<\"SunsetToMoonrise\"\>"}], ",", 
+     RowBox[{"\<\"Duration\"\>", "\[Rule]", 
+      RowBox[{"RowBox", "[", 
+       RowBox[{"{", 
+        RowBox[{"\<\"DiaryDuration\"\>", ",", "\<\"[\"\>", ",", "\<\"{\"\>", 
+         ",", "\<\"4\"\>", ",", "\<\",\"\>", ",", "\<\"10+x\"\>", 
+         ",", "\<\"}\"\>", ",", "\<\"]\"\>"}], "}"}], "]"}]}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Type\"\>", "\[Rule]", "\<\"MoonsetToSunrise\"\>"}], ",", 
+     RowBox[{"\<\"Duration\"\>", "\[Rule]", 
+      RowBox[{"RowBox", "[", 
+       RowBox[{"{", 
+        RowBox[{"\<\"DiaryDuration\"\>", ",", "\<\"[\"\>", ",", "\<\"{\"\>", 
+         ",", "\<\"11\"\>", ",", "\<\",\"\>", ",", 
+         RowBox[{"TagBox", "[", 
+          RowBox[{
+           RowBox[{"FrameBox", "[", "\<\"\\\"ninda\\\"\"\>", "]"}], 
+           ",", "\<\"Placeholder\"\>"}], "]"}], ",", "\<\"}\"\>", 
+         ",", "\<\"]\"\>"}], "}"}], "]"}]}]}], "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Type\"\>", "\[Rule]", "\<\"SunsetToMoonrise\"\>"}], ",", 
+     RowBox[{"\<\"Duration\"\>", "\[Rule]", 
+      RowBox[{"RowBox", "[", 
+       RowBox[{"{", 
+        RowBox[{"\<\"DiaryDuration\"\>", ",", "\<\"[\"\>", ",", "\<\"{\"\>", 
+         ",", "\<\"15\"\>", ",", "\<\",\"\>", ",", 
+         RowBox[{"TagBox", "[", 
+          RowBox[{
+           RowBox[{"FrameBox", "[", "\<\"\\\"ninda\\\"\"\>", "]"}], 
+           ",", "\<\"Placeholder\"\>"}], "]"}], ",", "\<\"}\"\>", 
+         ",", "\<\"]\"\>"}], "}"}], "]"}]}]}], "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Type\"\>", "\[Rule]", "\<\"SunsetToMoonset\"\>"}], ",", 
+     RowBox[{"\<\"Duration\"\>", "\[Rule]", 
+      RowBox[{"RowBox", "[", 
+       RowBox[{"{", 
+        RowBox[{"\<\"DiaryDuration\"\>", ",", "\<\"[\"\>", ",", "\<\"{\"\>", 
+         ",", "\<\"nn\"\>", ",", "\<\",\"\>", ",", 
+         RowBox[{"TagBox", "[", 
+          RowBox[{
+           RowBox[{"FrameBox", "[", "\<\"\\\"ninda\\\"\"\>", "]"}], 
+           ",", "\<\"Placeholder\"\>"}], "]"}], ",", "\<\"}\"\>", 
+         ",", "\<\"]\"\>"}], "}"}], "]"}]}]}], "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Type\"\>", "\[Rule]", "\<\"MoonriseToSunset\"\>"}], ",", 
+     RowBox[{"\<\"Duration\"\>", "\[Rule]", 
+      RowBox[{"RowBox", "[", 
+       RowBox[{"{", 
+        RowBox[{"\<\"DiaryDuration\"\>", ",", "\<\"[\"\>", ",", "\<\"{\"\>", 
+         ",", "\<\"10+x\"\>", ",", "\<\",\"\>", ",", 
+         RowBox[{"TagBox", "[", 
+          RowBox[{
+           RowBox[{"FrameBox", "[", "\<\"\\\"ninda\\\"\"\>", "]"}], 
+           ",", "\<\"Placeholder\"\>"}], "]"}], ",", "\<\"}\"\>", 
+         ",", "\<\"]\"\>"}], "}"}], "]"}]}]}], "\[RightAssociation]"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{
+  3.798668347910018*^9, 3.79866849820406*^9, 3.7986686199665956`*^9, 
+   3.7986687015916348`*^9, 3.7986687548609533`*^9, {3.798668810842098*^9, 
+   3.79866881281698*^9}, 3.7986688487650347`*^9, 3.7986688804420023`*^9, {
+   3.798668968242538*^9, 3.798668974845896*^9}, 3.79866907787437*^9, {
+   3.798669148408165*^9, 3.798669163750849*^9}, 3.798669205077786*^9, 
+   3.798669241000908*^9, 3.7986692773404627`*^9, {3.7986817605750647`*^9, 
+   3.7986817644889183`*^9}},
+ CellLabel->
+  "Out[459]=",ExpressionUUID->"e675f05b-960c-4e51-9550-293fdb0ab864"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"showTablet", "[", "\"\<X201701\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.798668628687482*^9, 3.7986686298336287`*^9}},
+ CellLabel->
+  "In[404]:=",ExpressionUUID->"6ea7c5a6-e5ce-4e83-a77c-cdcc28242c27"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"\<\"(o 1')\"\>", "1", "\<\"[...] sacrifices [...]\"\>"},
+    {"", "", ""},
+    {"\<\"(o 2')\"\>", 
+     "2", "\<\"[Month II ... cu]bits, the moon being 5 cubits [high] to the \
+north [...]\"\>"},
+    {"\<\"(o 3')\"\>", 
+     "3", "\<\"[... beginn]ing of the night, the moon was [...] above \
+\[Delta]? Cancri [...]\"\>"},
+    {"\<\"(o 4')\"\>", 
+     "4", "\<\"[... Night of the 6th, beginning of the night, the moon was] 1 \
+cubit [...] \[Alpha] Leonis. Night of the 7th, beginning of the night, the \
+moon was [3 cubits] below [\[CurlyTheta] Leonis ...]\"\>"},
+    {"\<\"(o 5')\"\>", 
+     "5", "\<\"[... Night of the 9th, beg]inning of the night, the moon was 2 \
+cubits below \[Gamma] Virginis ... [...]\"\>"},
+    {"\<\"(o 6')\"\>", 
+     "6", "\<\"[... first] part of the night, Mars was 4 cubits below \
+\[CurlyEpsilon] Leonis. Night of the 13th, beginning of the night, the moo[n \
+...]\"\>"},
+    {"\<\"(o 7')\"\>", 
+     "7", "\<\"[... Night of the 15th, the moon was] 2 1/2 cubits [... \
+\[CurlyTheta] Ophi]uchi. The 15th, moonset to sunrise: 6\[Degree] 50', \
+measured. Night of the 16th, [sunset to moonrise:] 4\[Degree]? 10+[x' \
+...]\"\>"},
+    {"\<\"(o 8')\"\>", 
+     "8", "\<\"[...] low to the south. The 20th, Jupiter\[CloseCurlyQuote]s \
+first appearance in Taurus; it was bright (and) high, rising of Jupiter to \
+sunrise: 12\[Degree] 30'; [(ideal) first appearance on the 18th ...]\"\>"},
+    {"\<\"(o 9')\"\>", 
+     "9", "\<\"[...] last part of the night, Venus was 3 cubits below \[Eta] \
+Tauri. Night of the 26th, last part of the night, the moon was 1+[x mm] \
+behind \[Eta] Tauri [...]\"\>"},
+    {"\<\"(o 10')\"\>", 
+     "10", "\<\"[... Night of the 28th,] last part of the night, the moon was \
+3 cubits behind \[Beta] Tauri, 3 1/2 cubits behind Jupiter, the moon being 4 \
+cubits [high to the north ...]\"\>"},
+    {"\<\"(o 11')\"\>", 
+     "11", "\<\"[...] 3 s\:016btu; sesame, 4 s\:016btu; wool, 4 1/2 minas. At \
+that time, around the 18th, Jupiter\[CloseCurlyQuote]s [first appearance] in \
+Tau[rus ...]\"\>"},
+    {"\<\"(o 12')\"\>", 
+     "12", "\<\"[...] the river level receded 4 fingers, total: 17 was the na \
+na-gauge. That month, the 25th, the temple E-nam-dumu?-... [...]\"\>"},
+    {"\<\"(o 13')\"\>", 
+     "13", "\<\"[...] ... a man who ... the ak\:012btu temple ... \
+[...]\"\>"},
+    {"\<\"(o 14')\"\>", 
+     "14", "\<\"[...] merry-making was set up in the land.\"\>"},
+    {"", "", ""},
+    {"\<\"(o 15')\"\>", 
+     "15", "\<\"[Month III, the 1st (of which followed the 30th of the \
+preceding month), ... x]+1 cubits, the moon being 4 cubits low to the south; \
+first part of the night, Saturn was 1/2 cubit above \[Beta] Virginis. Night \
+of the 3rd, the moon was [... \[Alpha] Leonis ...]\"\>"},
+    {"\<\"(o 16')\"\>", 
+     "16", "\<\"[...] low to the south. Night of the 5th, beginning of the \
+night, the moon was 1/2 cubit below \[Beta] Virginis, the moon having passed \
+1/2 cubit to the westsic [...]\"\>"},
+    {"\<\"(o 17')\"\>", 
+     "17", "\<\"[...] ... 2? 1/2 cubits. Night [of the 9th,] beginning of the \
+night, the moon was 1 cubit in front of \[Alpha] Librae. Night [of the 10th,] \
+beginning of the night, the moon was in [...]\"\>"},
+    {"\<\"(o 18')\"\>", 
+     "18", "\<\"[...] ... the moon was 2 cubits in front of \[Alpha] Scorpii. \
+Night of the 12th, [beginning of the ni]ght, the moon was 2 cubits in front \
+of \[CurlyTheta] Ophiuchi. The 14th, moonset to sunrise: 11\[Degree], \
+measu[red ...]\"\>"},
+    {"\<\"(o 19')\"\>", 
+     "19", "\<\"[... Night of the 16th, sunset] to moonrise: [15\[Degree]]; \
+last part of the night, the moon was 3 cubits in front of \[Gamma] \
+Capricorni, the moon being [1 1/2 cubits] low to the south. The 16th, \
+sol[stice ...]\"\>"},
+    {"\<\"(o 20')\"\>", 
+     "20", "\<\"[...] back to the west; last part of the night, Venus was 2/3 \
+cubit below Jupiter. Night of the 22nd, last [part of the night,] the m[oon \
+was ...] \[Alpha] Arie[tis ...]\"\>"},
+    {"\<\"(o 21')\"\>", 
+     "21", "\<\"[... Ni]ght of the 24th, last part of the night, the moon was \
+5 cubits above \[Alpha] Tauri, the moon having passed a little to the east \
+[...]\"\>"},
+    {"\<\"(o 22')\"\>", 
+     "22", "\<\"[... Night of the 25th, last part of the night, the moon was] \
+1 1/2 cubits in front of Venus, the moon being 3 cubits high to the north. \
+Night of the 26th, [...]\"\>"},
+    {"\<\"(o 23')\"\>", 
+     "23", "\<\"[...] low, it stood 2 cubits in front of Mercury to the west. \
+The 27th, [...]\"\>"},
+    {"\<\"(o 24')\"\>", 
+     "24", "\<\"[... cr]ess, 1 p\[ABar]nu 2 s\:016btu?; sesame, 3 s\:016btu 3 \
+[qa ...]\"\>"},
+    {"\<\"(o 25')\"\>", 
+     "25", "\<\"[...] That [mon]th, the river level [...] 1 [...]\"\>"},
+    {"\<\"(r 1')\"\>", "26", "\<\"[...] ... [...]\"\>"},
+    {"\<\"(r 2')\"\>", 
+     "27", "\<\"[...] Night of the 19th, last part of the night, the m[oon \
+...]\"\>"},
+    {"\<\"(r 3')\"\>", 
+     "28", "\<\"[... Night of the 21st, last part of the night, the moon was] \
+3 cubits in front of \[Alpha] Tauri, the moon being [...]\"\>"},
+    {"\<\"(r 4')\"\>", 
+     "29", "\<\"[...] having passed to the east. Night of the 25th, last part \
+of the night, the moon was in [front of ...]\"\>"},
+    {"\<\"(r 5')\"\>", 
+     "30", "\<\"[... measur]ed. Night of the 29th, last part of the night, \
+Venus was [...] above \[Delta] Can[cri ...]\"\>"},
+    {"\<\"(r 6')\"\>", 
+     "31", "\<\"[...] 5 s\:016btu; wool, 4 minas. At that time, Jupiter was \
+in Gemin[i ...]\"\>"},
+    {"\<\"(r 7')\"\>", 
+     "32", "\<\"[...] That month, [the river level] receded 8 fingers, total: \
+31 was the na na-gauge.\"\>"},
+    {"", "", ""},
+    {"\<\"(r 8')\"\>", 
+     "33", "\<\"[Month V, (the 1st of which was identical with) the 30th (of \
+the preceding month), sunset to] moonset: [nn\[Degree]]; it was faint, it was \
+low to the sun; (the moon) [stood] 3 cubits in front of Mars, 5 cubits in \
+front of ??? to the west [...]\"\>"},
+    {"\<\"(r 9')\"\>", 
+     "34", "\<\"[... Night of the 4th, the moon was] 4 1/2 cubits in front of \
+\[Alpha] Librae. Night of the 5th, beginning of the night, the moon was [...] \
+behind \[Beta] Lib[rae ...]\"\>"},
+    {"\<\"(r 10')\"\>", 
+     "35", "\<\"[... Night of the 7th, beginning of the night, the moon was] \
+1/2 cubit below \[Alpha] Scorpii, the moon having passed 1/2 cubit to the \
+east. Night of the 7th?, beginning of the ni[ght, ...]\"\>"},
+    {"\<\"(r 11')\"\>", 
+     "36", "\<\"[...] 4 fingers [...] Geminorum. Night of the 11th, beginning \
+of the night, the moon was [...] ... [...]\"\>"},
+    {"\<\"(r 12')\"\>", 
+     "37", "\<\"[...] ... when the moon came out, it was completely covered; \
+when it began to clear, [...]\"\>"},
+    {"\<\"(r 13')\"\>", 
+     "38", "\<\"[... the remainder of the pla]nets did not stand there; it \
+was eclipsed in the end of Aquarius; at 42\[Degree] before sunset. The 15th, \
+... [...]\"\>"},
+    {"\<\"(r 14')\"\>", 
+     "39", "\<\"[...] 3 1/2 cubits [...] \[Alpha] Arietis. Night of the 19th, \
+last part of the night, the moon was 1 1/2 cubits behind \[Eta] Tauri. Night \
+of the 20th, [... Night of the 21st, last part of the night, the moon]\"\>"},
+    {"\<\"(r 15')\"\>", 
+     "40", "\<\"stood [... in front of Jupiter to the west,] the moon being 2 \
+1/2 cubits high to the north. Night of the 22nd, last part of the night, the \
+moon was [...] in front of \[Alpha] Geminorum [... Night of the 26th, last \
+part of the night, the moon ...]\"\>"},
+    {"\<\"(r 16')\"\>", 
+     "41", "\<\"[...] it stood 2 cubits [in front of Ven]us to the west. \
+Night of the 27th, last part of the night, Jupiter was 4 fingers above \[Mu] \
+Geminorum. The 27th, [moonrise to sunrise:] 10+[x\[Degree] ...]\"\>"},
+    {"\<\"(r 17')\"\>", 
+     "42", "\<\"[...] sesame, 4 s\:016btu; wool, 5 minas. At that time, [...]\
+\"\>"},
+    {"\<\"(r 18')\"\>", 
+     "43", "\<\"[...] around the 7th, Saturn\[CloseCurlyQuote]s last \
+appearance in Virgo. That month, the river level [...] 8 [...]\"\>"},
+    {"\<\"(r 19')\"\>", 
+     "44", "\<\"[...] ... of Babylon carried? ... [...]\"\>"},
+    {"", "", ""},
+    {"\<\"(r 20')\"\>", 
+     "45", "\<\"[Month VI, the 1st (of which followed the 30th of the \
+preceding month), ...] Night of the 2nd, last part of the night, Venus was 5 \
+cubits below \[CurlyTheta] Leonis. Night of the 3rd, the moon was \
+[...]\"\>"},
+    {"\<\"(r 21')\"\>", 
+     "46", "\<\"[... Night of the 4th, the moon was ... \[Alpha] Scorpii], \
+the moon being 1/2 cubit low to the south. Night of the 5th, beginning of the \
+night, the moon was be[hind ...]\"\>"},
+    {"\<\"(r 22')\"\>", 
+     "47", "\<\"[...] 1/2 cubit [... \[Delta] Capri]corni, the moon being 1/2 \
+cubit back to the west. Around the 10+[xth, ...]\"\>"},
+    {"\<\"(r 23')\"\>", 
+     "48", "\<\"[... Saturn\[CloseCurlyQuote]s first appearance in Virgo; it \
+was bri]ght (and) high, rising of Saturn to sunrise: 17\[Degree]; (ideal) \
+first appearance on the 12th? [...]\"\>"},
+    {"\<\"(r 24')\"\>", 
+     "49", "\<\"[...] 2 1/2 cubits, the moon having passed a little to the \
+east [...]\"\>"},
+    {"\<\"(r 25')\"\>", 
+     "50", "\<\"[... when Jupiter became stationary to the east,] it became \
+stationary [... behind \[Mu] Geminorum,] the moon being 4? fingers high to \
+the north [...]\"\>"},
+    {"\<\"(r 26')\"\>", 
+     "51", "\<\"[... Ni]ght of the 21st, last part of the night, the monn was \
+above [...]\"\>"},
+    {"\<\"(r 27')\"\>", 
+     "52", "\<\"[... Night of the 23rd, last part of the ni]ght, the moon was \
+1+[x mm] behind \[Alpha] Leonis [...]\"\>"},
+    {"\<\"(r 28')\"\>", "53", "\<\"[...] ..., 2 [mm] below Saturn [...]\"\>"}
+   },
+   AutoDelete->False,
+   GridBoxAlignment->{"Columns" -> {{Left}}},
+   GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Grid"]], "Output",
+ CellChangeTimes->{3.798668631273816*^9},
+ CellLabel->
+  "Out[404]=",ExpressionUUID->"cb9b99ea-d5f0-458e-925a-4f62cccc61ec"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DeleteCases", "[", 
+   RowBox[{
+    RowBox[{"getTabletLines", "[", "\"\<X201701\>\"", "]"}], ",", 
+    "Delimiter"}], "]"}], "[", 
+  RowBox[{"[", 
+   RowBox[{"All", ",", "3"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.798665922944718*^9, 3.7986660117454023`*^9}},
+ CellLabel->
+  "In[341]:=",ExpressionUUID->"fa0cea1d-52be-4f95-8568-8795b08f347a"]
+},
+WindowSize->{808, 905},
+WindowMargins->{{Automatic, 190}, {38, Automatic}},
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (March 18, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"ee7f53a3-3579-41c8-ba1b-33b36e01e158"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1063, 24, 72, "Code",ExpressionUUID->"17df2d8e-4d4d-4b3c-930d-f271578cb165"],
+Cell[1624, 46, 957, 22, 129, "Code",ExpressionUUID->"17a8a672-5165-41c0-a80d-60d2b247872f"],
+Cell[2584, 70, 5064, 122, 528, "Code",ExpressionUUID->"521fc3dd-bcac-4280-b14d-7830fa9173a1"],
+Cell[7651, 194, 747, 20, 73, "Input",ExpressionUUID->"c9942cb0-9688-4302-80e7-125d37a31248"],
+Cell[CellGroupData[{
+Cell[8423, 218, 518, 9, 30, "Input",ExpressionUUID->"11f94c70-b2e6-4d1d-9e0c-cde0cee015a2"],
+Cell[8944, 229, 4014, 85, 244, "Output",ExpressionUUID->"e675f05b-960c-4e51-9550-293fdb0ab864"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12995, 319, 228, 4, 30, "Input",ExpressionUUID->"6ea7c5a6-e5ce-4e83-a77c-cdcc28242c27"],
+Cell[13226, 325, 10038, 197, 2567, "Output",ExpressionUUID->"cb9b99ea-d5f0-458e-925a-4f62cccc61ec"]
+}, Open  ]],
+Cell[23279, 525, 386, 10, 30, "Input",ExpressionUUID->"fa0cea1d-52be-4f95-8568-8795b08f347a"]
+}
+]
+*)
+

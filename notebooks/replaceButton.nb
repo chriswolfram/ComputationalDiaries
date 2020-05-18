@@ -1,0 +1,985 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     37355,        977]
+NotebookOptionsPosition[     34571,        931]
+NotebookOutlinePosition[     34966,        947]
+CellTagsIndexPosition[     34923,        944]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"CurrentValue", "[", 
+  RowBox[{"{", 
+   RowBox[{
+   "StyleDefinitions", ",", "\"\<Placeholder\>\"", ",", "Background"}], "}"}],
+   "]"}]], "Input",
+ CellLabel->
+  "In[559]:=",ExpressionUUID->"12a75382-ad39-4e6f-96f1-d7cc0e451f21"],
+
+Cell[BoxData[
+ InterpretationBox[
+  ButtonBox[
+   TooltipBox[
+    GraphicsBox[{
+      {GrayLevel[0], RectangleBox[{0, 0}]}, 
+      {GrayLevel[0], RectangleBox[{1, -1}]}, 
+      {RGBColor[1., 0.9724879835202563, 0.7976806286717022], 
+       RectangleBox[{0, -1}, {2, 1}]}},
+     AspectRatio->1,
+     DefaultBaseStyle->"ColorSwatchGraphics",
+     Frame->True,
+     FrameStyle->RGBColor[
+      0.6666666666666667, 0.6483253223468376, 0.5317870857811349],
+     FrameTicks->None,
+     ImageSize->
+      Dynamic[{Automatic, 1.35 CurrentValue["FontCapHeight"]/
+        AbsoluteCurrentValue[Magnification]}],
+     PlotRangePadding->None],
+    StyleBox[
+     RowBox[{"RGBColor", "[", 
+       RowBox[{
+        "1.`", ",", "0.9724879835202563`", ",", "0.7976806286717022`"}], 
+       "]"}], NumberMarks -> False]],
+   Appearance->None,
+   BaseStyle->{},
+   BaselinePosition->Baseline,
+   ButtonFunction:>With[{Typeset`box$ = EvaluationBox[]}, 
+     If[
+      Not[
+       AbsoluteCurrentValue["Deployed"]], 
+      SelectionMove[Typeset`box$, All, Expression]; 
+      FrontEnd`Private`$ColorSelectorInitialAlpha = 1; 
+      FrontEnd`Private`$ColorSelectorInitialColor = 
+       RGBColor[1., 0.9724879835202563, 0.7976806286717022]; 
+      FrontEnd`Private`$ColorSelectorUseMakeBoxes = True; 
+      MathLink`CallFrontEnd[
+        FrontEnd`AttachCell[Typeset`box$, 
+         FrontEndResource["RGBColorValueSelector"], {0, {Left, Bottom}}, {
+         Left, Top}, 
+         "ClosingActions" -> {
+          "SelectionDeparture", "ParentChanged", "EvaluatorQuit"}]]]],
+   DefaultBaseStyle->{},
+   Evaluator->Automatic,
+   Method->"Preemptive"],
+  RGBColor[1., 0.9724879835202563, 0.7976806286717022],
+  Editable->False,
+  Selectable->False]], "Output",
+ CellChangeTimes->{3.798682896901325*^9},
+ CellLabel->
+  "Out[559]=",ExpressionUUID->"2819f7f8-c37c-4ff1-a9a0-1086c0d36dcf"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"List", "@@", 
+  RowBox[{"ColorConvert", "[", 
+   RowBox[{
+    RowBox[{"CurrentValue", "[", 
+     RowBox[{"{", 
+      RowBox[{
+      "StyleDefinitions", ",", "\"\<Placeholder\>\"", ",", "Background"}], 
+      "}"}], "]"}], ",", "\"\<HSB\>\""}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.798682256727559*^9, 3.79868227593923*^9}, 
+   3.7986825249756927`*^9},
+ CellLabel->
+  "In[507]:=",ExpressionUUID->"5126caa1-0e33-49b9-a2d2-d6c120154f98"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0.14400281569751364`", ",", "0.2023193713282978`", ",", "1.`"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.798682260851117*^9, 3.798682276220601*^9}, 
+   3.7986825253648863`*^9},
+ CellLabel->
+  "Out[507]=",ExpressionUUID->"47ed8697-3a91-459b-bc38-cf7b56f33794"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"replaceButton", "[", "name_", "]"}], ":=", 
+  RowBox[{"Button", "[", 
+   RowBox[{"name", ",", 
+    RowBox[{"NotebookWrite", "[", 
+     RowBox[{
+      RowBox[{"ParentBox", "[", 
+       RowBox[{"EvaluationBox", "[", "]"}], "]"}], ",", 
+      RowBox[{"\"\<\\\"\>\"", "<>", "name", "<>", "\"\<\\\"\>\""}]}], "]"}], 
+    ",", 
+    RowBox[{"Appearance", "\[Rule]", "\"\<Palette\>\""}], ",", 
+    RowBox[{"Background", "\[Rule]", 
+     RowBox[{"Hue", "[", 
+      RowBox[{"0.6`", ",", "0.21568627450980393`", ",", "1.`"}], "]"}]}]}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.7986818810879107`*^9, 3.798681993388549*^9}, {
+   3.798682027423471*^9, 3.798682036438857*^9}, {3.798682066775195*^9, 
+   3.7986820687956*^9}, {3.7986821821418943`*^9, 3.7986821986696453`*^9}, 
+   3.798682304064377*^9, {3.798682559419271*^9, 3.798682637391079*^9}, {
+   3.798682794096962*^9, 3.79868286842393*^9}, {3.798687559207471*^9, 
+   3.79868756150043*^9}, {3.798732356421664*^9, 3.798732358823861*^9}, {
+   3.7987324235945187`*^9, 3.7987324567204523`*^9}, {3.798732690661257*^9, 
+   3.798732768168469*^9}},
+ CellLabel->"In[79]:=",ExpressionUUID->"f7fdbc97-c433-4e92-a0f0-9f5bea2dac05"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"replaceButtonRow", "[", "names_", "]"}], ":=", 
+  RowBox[{"Alternatives", "@@", 
+   RowBox[{"(", 
+    RowBox[{"replaceButton", "/@", "names"}], 
+    ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"replaceButtonColumn", "[", 
+   RowBox[{"names_", ",", 
+    RowBox[{"n_", ":", "3"}]}], "]"}], ":=", 
+  RowBox[{"Multicolumn", "[", 
+   RowBox[{
+    RowBox[{"replaceButton", "/@", "names"}], ",", "n"}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.798686830623722*^9, 3.7986868689635077`*^9}, {
+  3.798687000840468*^9, 3.798687020159278*^9}, {3.7986871257449493`*^9, 
+  3.798687129497855*^9}, {3.7986873259349194`*^9, 3.798687354931941*^9}, {
+  3.798732072189176*^9, 3.798732093854579*^9}, {3.798732139895587*^9, 
+  3.798732170396006*^9}, {3.798732576434969*^9, 3.798732670826421*^9}, {
+  3.7987327403599052`*^9, 3.798732766184121*^9}},
+ CellLabel->"In[80]:=",ExpressionUUID->"b1995978-b3f2-4327-997b-8a6553ce5d9d"],
+
+Cell[BoxData[
+ RowBox[{"replaceButton", "/@", 
+  RowBox[{"(", 
+   RowBox[{
+   "\"\<BeginningOfTheNight\>\"", "|", "\"\<FirstPartOfTheNight\>\"", "|", 
+    "\"\<MiddlePartOfTheNight\>\"", "|", "\"\<LastPartOfTheNight\>\"", "|", 
+    "\"\<Morning\>\"", "|", "\"\<Noon\>\"", "|", "\"\<Afternoon\>\"", "|", 
+    "\"\<Sunset\>\""}], ")"}]}]], "Input",
+ CellChangeTimes->{
+  3.798681860830386*^9, {3.798681932644858*^9, 3.7986819399626837`*^9}},
+ CellLabel->"In[41]:=",ExpressionUUID->"20c22e68-ed23-4847-baf3-b3964d21a0a4"],
+
+Cell[BoxData[
+ RowBox[{
+  ButtonBox["\<\"BeginningOfTheNight\"\>",
+   Appearance->"Palette",
+   Background->Hue[0.6, 0.21568627450980393`, 1.],
+   ButtonFunction:>NotebookWrite[
+     ParentBox[
+      EvaluationBox[]], 
+     StringJoin["\"", "BeginningOfTheNight", "\""]],
+   Evaluator->Automatic,
+   Method->"Preemptive"], "|", 
+  ButtonBox["\<\"FirstPartOfTheNight\"\>",
+   Appearance->"Palette",
+   Background->Hue[0.6, 0.21568627450980393`, 1.],
+   ButtonFunction:>NotebookWrite[
+     ParentBox[
+      EvaluationBox[]], 
+     StringJoin["\"", "FirstPartOfTheNight", "\""]],
+   Evaluator->Automatic,
+   Method->"Preemptive"], "|", 
+  ButtonBox["\<\"MiddlePartOfTheNight\"\>",
+   Appearance->"Palette",
+   Background->Hue[0.6, 0.21568627450980393`, 1.],
+   ButtonFunction:>NotebookWrite[
+     ParentBox[
+      EvaluationBox[]], 
+     StringJoin["\"", "MiddlePartOfTheNight", "\""]],
+   Evaluator->Automatic,
+   Method->"Preemptive"], "|", 
+  ButtonBox["\<\"LastPartOfTheNight\"\>",
+   Appearance->"Palette",
+   Background->Hue[0.6, 0.21568627450980393`, 1.],
+   ButtonFunction:>NotebookWrite[
+     ParentBox[
+      EvaluationBox[]], 
+     StringJoin["\"", "LastPartOfTheNight", "\""]],
+   Evaluator->Automatic,
+   Method->"Preemptive"], "|", 
+  ButtonBox["\<\"Morning\"\>",
+   Appearance->"Palette",
+   Background->Hue[0.6, 0.21568627450980393`, 1.],
+   ButtonFunction:>NotebookWrite[
+     ParentBox[
+      EvaluationBox[]], 
+     StringJoin["\"", "Morning", "\""]],
+   Evaluator->Automatic,
+   Method->"Preemptive"], "|", 
+  ButtonBox["\<\"Noon\"\>",
+   Appearance->"Palette",
+   Background->Hue[0.6, 0.21568627450980393`, 1.],
+   ButtonFunction:>NotebookWrite[
+     ParentBox[
+      EvaluationBox[]], 
+     StringJoin["\"", "Noon", "\""]],
+   Evaluator->Automatic,
+   Method->"Preemptive"], "|", 
+  ButtonBox["\<\"Afternoon\"\>",
+   Appearance->"Palette",
+   Background->Hue[0.6, 0.21568627450980393`, 1.],
+   ButtonFunction:>NotebookWrite[
+     ParentBox[
+      EvaluationBox[]], 
+     StringJoin["\"", "Afternoon", "\""]],
+   Evaluator->Automatic,
+   Method->"Preemptive"], "|", 
+  ButtonBox["\<\"Sunset\"\>",
+   Appearance->"Palette",
+   Background->Hue[0.6, 0.21568627450980393`, 1.],
+   ButtonFunction:>NotebookWrite[
+     ParentBox[
+      EvaluationBox[]], 
+     StringJoin["\"", "Sunset", "\""]],
+   Evaluator->Automatic,
+   Method->"Preemptive"]}]], "Input",
+ CellChangeTimes->{3.7987324596135883`*^9},
+ CellLabel->"Out[41]=",ExpressionUUID->"510f03a3-84ed-45af-a59d-0d3523243742"],
+
+Cell[BoxData[
+ RowBox[{"replaceButtonColumn", "[", 
+  RowBox[{
+   RowBox[{"List", "@@", 
+    RowBox[{"(", 
+     RowBox[{
+     "\"\<BeginningOfTheNight\>\"", "|", "\"\<FirstPartOfTheNight\>\"", "|", 
+      "\"\<MiddlePartOfTheNight\>\"", "|", "\"\<LastPartOfTheNight\>\"", "|", 
+      "\"\<Morning\>\"", "|", "\"\<Noon\>\"", "|", "\"\<Afternoon\>\"", "|", 
+      "\"\<Sunset\>\""}], ")"}]}], ",", "2"}], "]"}]], "Input",
+ CellChangeTimes->{{3.798682977900133*^9, 3.798682984762121*^9}, {
+  3.798686650540765*^9, 3.7986866507471113`*^9}, {3.798686875200639*^9, 
+  3.798686877016223*^9}, {3.798687365515627*^9, 3.7986873661214*^9}},
+ CellLabel->"In[82]:=",ExpressionUUID->"6157e596-cc90-44fc-a832-84cf05f28c7c"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     ButtonBox["\<\"BeginningOfTheNight\"\>",
+      Appearance->"Palette",
+      Background->Hue[0.6, 0.21568627450980393`, 1.],
+      ButtonFunction:>NotebookWrite[
+        ParentBox[
+         EvaluationBox[]], 
+        StringJoin["\"", "BeginningOfTheNight", "\""]],
+      Evaluator->Automatic,
+      Method->"Preemptive"], 
+     ButtonBox["\<\"Morning\"\>",
+      Appearance->"Palette",
+      Background->Hue[0.6, 0.21568627450980393`, 1.],
+      ButtonFunction:>NotebookWrite[
+        ParentBox[
+         EvaluationBox[]], 
+        StringJoin["\"", "Morning", "\""]],
+      Evaluator->Automatic,
+      Method->"Preemptive"]},
+    {
+     ButtonBox["\<\"FirstPartOfTheNight\"\>",
+      Appearance->"Palette",
+      Background->Hue[0.6, 0.21568627450980393`, 1.],
+      ButtonFunction:>NotebookWrite[
+        ParentBox[
+         EvaluationBox[]], 
+        StringJoin["\"", "FirstPartOfTheNight", "\""]],
+      Evaluator->Automatic,
+      Method->"Preemptive"], 
+     ButtonBox["\<\"Noon\"\>",
+      Appearance->"Palette",
+      Background->Hue[0.6, 0.21568627450980393`, 1.],
+      ButtonFunction:>NotebookWrite[
+        ParentBox[
+         EvaluationBox[]], 
+        StringJoin["\"", "Noon", "\""]],
+      Evaluator->Automatic,
+      Method->"Preemptive"]},
+    {
+     ButtonBox["\<\"MiddlePartOfTheNight\"\>",
+      Appearance->"Palette",
+      Background->Hue[0.6, 0.21568627450980393`, 1.],
+      ButtonFunction:>NotebookWrite[
+        ParentBox[
+         EvaluationBox[]], 
+        StringJoin["\"", "MiddlePartOfTheNight", "\""]],
+      Evaluator->Automatic,
+      Method->"Preemptive"], 
+     ButtonBox["\<\"Afternoon\"\>",
+      Appearance->"Palette",
+      Background->Hue[0.6, 0.21568627450980393`, 1.],
+      ButtonFunction:>NotebookWrite[
+        ParentBox[
+         EvaluationBox[]], 
+        StringJoin["\"", "Afternoon", "\""]],
+      Evaluator->Automatic,
+      Method->"Preemptive"]},
+    {
+     ButtonBox["\<\"LastPartOfTheNight\"\>",
+      Appearance->"Palette",
+      Background->Hue[0.6, 0.21568627450980393`, 1.],
+      ButtonFunction:>NotebookWrite[
+        ParentBox[
+         EvaluationBox[]], 
+        StringJoin["\"", "LastPartOfTheNight", "\""]],
+      Evaluator->Automatic,
+      Method->"Preemptive"], 
+     ButtonBox["\<\"Sunset\"\>",
+      Appearance->"Palette",
+      Background->Hue[0.6, 0.21568627450980393`, 1.],
+      ButtonFunction:>NotebookWrite[
+        ParentBox[
+         EvaluationBox[]], 
+        StringJoin["\"", "Sunset", "\""]],
+      Evaluator->Automatic,
+      Method->"Preemptive"]}
+   },
+   AutoDelete->False,
+   GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Grid"]], "Input",
+ CellChangeTimes->{3.798739750229525*^9},
+ CellLabel->"Out[82]=",ExpressionUUID->"56e4383b-54fd-4a53-ad36-17f2ff17e3c1"],
+
+Cell[BoxData[
+ RowBox[{"replaceButtonRow", "[", 
+  RowBox[{"List", "@@", 
+   RowBox[{"(", 
+    RowBox[{
+    "\"\<BeginningOfTheNight\>\"", "|", "\"\<FirstPartOfTheNight\>\"", "|", 
+     "\"\<MiddlePartOfTheNight\>\"", "|", "\"\<LastPartOfTheNight\>\"", "|", 
+     "\"\<Morning\>\"", "|", "\"\<Noon\>\"", "|", "\"\<Afternoon\>\"", "|", 
+     "\"\<Sunset\>\""}], ")"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.798732148210947*^9, 3.7987321518358917`*^9}},
+ CellLabel->"In[15]:=",ExpressionUUID->"150486b3-e226-44ce-8cf1-b78d6e578d48"],
+
+Cell[BoxData[
+ RowBox[{
+  ButtonBox["\<\"BeginningOfTheNight\"\>",
+   Appearance->"Palette",
+   Background->Hue[0.6, 0.21568627450980393`, 1.],
+   ButtonFunction:>NotebookWrite[
+     ParentBox[
+      EvaluationBox[]], "\"BeginningOfTheNight\"", All],
+   Evaluator->Automatic,
+   Method->"Preemptive"], "|", 
+  ButtonBox["\<\"FirstPartOfTheNight\"\>",
+   Appearance->"Palette",
+   Background->Hue[0.6, 0.21568627450980393`, 1.],
+   ButtonFunction:>NotebookWrite[
+     ParentBox[
+      EvaluationBox[]], "\"FirstPartOfTheNight\"", All],
+   Evaluator->Automatic,
+   Method->"Preemptive"], "|", 
+  ButtonBox["\<\"MiddlePartOfTheNight\"\>",
+   Appearance->"Palette",
+   Background->Hue[0.6, 0.21568627450980393`, 1.],
+   ButtonFunction:>NotebookWrite[
+     ParentBox[
+      EvaluationBox[]], "\"MiddlePartOfTheNight\"", All],
+   Evaluator->Automatic,
+   Method->"Preemptive"], "|", 
+  ButtonBox["\<\"LastPartOfTheNight\"\>",
+   Appearance->"Palette",
+   Background->Hue[0.6, 0.21568627450980393`, 1.],
+   ButtonFunction:>NotebookWrite[
+     ParentBox[
+      EvaluationBox[]], "\"LastPartOfTheNight\"", All],
+   Evaluator->Automatic,
+   Method->"Preemptive"], "|", 
+  ButtonBox["\<\"Morning\"\>",
+   Appearance->"Palette",
+   Background->Hue[0.6, 0.21568627450980393`, 1.],
+   ButtonFunction:>NotebookWrite[
+     ParentBox[
+      EvaluationBox[]], "\"Morning\"", All],
+   Evaluator->Automatic,
+   Method->"Preemptive"], "|", 
+  ButtonBox["\<\"Noon\"\>",
+   Appearance->"Palette",
+   Background->Hue[0.6, 0.21568627450980393`, 1.],
+   ButtonFunction:>NotebookWrite[
+     ParentBox[
+      EvaluationBox[]], "\"Noon\"", All],
+   Evaluator->Automatic,
+   Method->"Preemptive"], "|", 
+  ButtonBox["\<\"Afternoon\"\>",
+   Appearance->"Palette",
+   Background->Hue[0.6, 0.21568627450980393`, 1.],
+   ButtonFunction:>NotebookWrite[
+     ParentBox[
+      EvaluationBox[]], "\"Afternoon\"", All],
+   Evaluator->Automatic,
+   Method->"Preemptive"], "|", 
+  ButtonBox["\<\"Sunset\"\>",
+   Appearance->"Palette",
+   Background->Hue[0.6, 0.21568627450980393`, 1.],
+   ButtonFunction:>NotebookWrite[
+     ParentBox[
+      EvaluationBox[]], "\"Sunset\"", All],
+   Evaluator->Automatic,
+   Method->"Preemptive"]}]], "Input",
+ CellChangeTimes->{3.798740055270479*^9},
+ CellLabel->"Out[15]=",ExpressionUUID->"2aa4dbd5-adb0-45d4-b6cc-ebb859505083"],
+
+Cell[BoxData["NotebookApply"], "Input",
+ CellChangeTimes->{{3.79874001101233*^9, 
+  3.798740013782833*^9}},ExpressionUUID->"c0a25b05-1f4b-4cd9-91f1-\
+42cb7e857225"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"launchCurationPalette", "[", "]"}]], "Input",
+ CellChangeTimes->{{3.798740199986876*^9, 3.798740203514256*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"6ad7a3f3-4b7b-44f0-a418-acf256a3ceca"],
+
+Cell[BoxData[
+ TemplateBox[{
+   FrontEndObject[
+    LinkObject["8y7v3_shm", 3, 1]], 415, 
+   "FrontEndObject[LinkObject[\"8y7v3_shm\", 3, 1]]", "415", "\"Curation\""},
+  "NotebookObjectUnsaved"]], "Output",
+ CellChangeTimes->{3.798740204073406*^9, 3.7987402354443407`*^9},
+ CellLabel->"Out[5]=",ExpressionUUID->"60fdd045-9c2e-4dd2-aa3f-6a3b5770509a"]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"replaceButton", "[", 
+   RowBox[{"name_", ",", " ", "payload_"}], "]"}], " ", ":=", " ", "\n", "\t", 
+  RowBox[{"Button", "[", 
+   RowBox[{"name", ",", "\n", "\t\t", 
+    RowBox[{"NotebookWrite", "[", 
+     RowBox[{
+      RowBox[{"ParentBox", "[", 
+       RowBox[{"EvaluationBox", "[", "]"}], "]"}], ",", "payload", ",", 
+      "All"}], "]"}], ",", "\n", "\t\t", 
+    RowBox[{"Appearance", "->", "\"\<Palette\>\""}], ",", 
+    RowBox[{"Background", "->", 
+     RowBox[{"Hue", "[", 
+      RowBox[{"0.6`", ",", "0.21568627450980393`", ",", "1.`"}], "]"}]}]}], 
+   "\n", "\t", "]"}]}], "\n", 
+ RowBox[{
+  RowBox[{"replaceButton", "[", "name_", "]"}], " ", ":=", " ", 
+  RowBox[{"replaceButton", "[", 
+   RowBox[{"name", ",", 
+    RowBox[{"ToBoxes", "[", "name", "]"}]}], "]"}]}], "\n", 
+ RowBox[{
+  RowBox[{"replaceButtonRow", "[", "names_", "]"}], " ", ":=", " ", 
+  RowBox[{"Alternatives", "@@", 
+   RowBox[{"(", 
+    RowBox[{"replaceButton", "/@", "names"}], ")"}]}]}], "\n", 
+ RowBox[{
+  RowBox[{"replaceButtonColumn", "[", 
+   RowBox[{"names_", ",", 
+    RowBox[{"n_", ":", "3"}]}], "]"}], ":=", " ", 
+  RowBox[{"Multicolumn", "[", 
+   RowBox[{
+    RowBox[{"replaceButton", "/@", "names"}], ",", "n"}], "]"}]}], "\n", 
+ RowBox[{
+  RowBox[{"missingReplaceButton", "[", "name_", "]"}], " ", ":=", "\n", "\t", 
+  
+  RowBox[{"replaceButtonRow", "[", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Placeholder", "[", "name", "]"}], ",", 
+     RowBox[{"Missing", "[", "\"\<Destroyed\>\"", "]"}], ",", 
+     RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], "}"}], 
+   "]"}]}]}], "Code",
+ CellChangeTimes->{{3.798740049681879*^9, 3.798740050089241*^9}, 
+   3.7987420410091867`*^9},
+ CellLabel->"In[10]:=",ExpressionUUID->"1bdec3cc-0a22-4d6a-a6de-68e68cd3dd0c"],
+
+Cell[BoxData[
+ RowBox[{"replaceButtonRow", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    TemplateBox[{"\"Moon\"", 
+      RowBox[{"Entity", "[", 
+        RowBox[{"\"PlanetaryMoon\"", ",", "\"Moon\""}], "]"}], 
+      "\"Entity[\\\"PlanetaryMoon\\\", \\\"Moon\\\"]\"", "\"planetary moon\""},
+     "Entity"], ",", 
+    TemplateBox[{"\"Mercury\"", 
+      RowBox[{"Entity", "[", 
+        RowBox[{"\"Planet\"", ",", "\"Mercury\""}], "]"}], 
+      "\"Entity[\\\"Planet\\\", \\\"Mercury\\\"]\"", "\"planet\""},
+     "Entity"], ",", 
+    TemplateBox[{"\"Venus\"", 
+      RowBox[{"Entity", "[", 
+        RowBox[{"\"Planet\"", ",", "\"Venus\""}], "]"}], 
+      "\"Entity[\\\"Planet\\\", \\\"Venus\\\"]\"", "\"planet\""},
+     "Entity"], ",", 
+    TemplateBox[{"\"Mars\"", 
+      RowBox[{"Entity", "[", 
+        RowBox[{"\"Planet\"", ",", "\"Mars\""}], "]"}], 
+      "\"Entity[\\\"Planet\\\", \\\"Mars\\\"]\"", "\"planet\""},
+     "Entity"], ",", 
+    TemplateBox[{"\"Jupiter\"", 
+      RowBox[{"Entity", "[", 
+        RowBox[{"\"Planet\"", ",", "\"Jupiter\""}], "]"}], 
+      "\"Entity[\\\"Planet\\\", \\\"Jupiter\\\"]\"", "\"planet\""},
+     "Entity"], ",", 
+    TemplateBox[{"\"Saturn\"", 
+      RowBox[{"Entity", "[", 
+        RowBox[{"\"Planet\"", ",", "\"Saturn\""}], "]"}], 
+      "\"Entity[\\\"Planet\\\", \\\"Saturn\\\"]\"", "\"planet\""},
+     "Entity"]}], "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.798743148147431*^9, 3.79874318033384*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"4db4f6e1-9a44-4a00-835f-e93768fa72d7"],
+
+Cell[BoxData[
+ RowBox[{"Normal", "[", 
+  "ComputationalDiaries`Constants`Private`normalStarMap", "]"}]], "Input",
+ CellChangeTimes->{{3.7987433087956133`*^9, 
+  3.798743318514572*^9}},ExpressionUUID->"ba6ce57d-7239-4606-91c8-\
+37408b90b0a5"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"starGroups", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\"\<Moon\>\"", ",", 
+         RowBox[{"ToBoxes", "@", 
+          TemplateBox[{"\"Moon\"", 
+            RowBox[{"Entity", "[", 
+              RowBox[{"\"PlanetaryMoon\"", ",", "\"Moon\""}], "]"}], 
+            "\"Entity[\\\"PlanetaryMoon\\\", \\\"Moon\\\"]\"", 
+            "\"planetary moon\""},
+           "Entity"]}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"\"\<Mercury\>\"", ",", 
+         RowBox[{"ToBoxes", "@", 
+          TemplateBox[{"\"Mercury\"", 
+            RowBox[{"Entity", "[", 
+              RowBox[{"\"Planet\"", ",", "\"Mercury\""}], "]"}], 
+            "\"Entity[\\\"Planet\\\", \\\"Mercury\\\"]\"", "\"planet\""},
+           "Entity"]}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"\"\<Venus\>\"", ",", 
+         RowBox[{"ToBoxes", "@", 
+          TemplateBox[{"\"Venus\"", 
+            RowBox[{"Entity", "[", 
+              RowBox[{"\"Planet\"", ",", "\"Venus\""}], "]"}], 
+            "\"Entity[\\\"Planet\\\", \\\"Venus\\\"]\"", "\"planet\""},
+           "Entity"]}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"\"\<Mars\>\"", ",", 
+         RowBox[{"ToBoxes", "@", 
+          TemplateBox[{"\"Mars\"", 
+            RowBox[{"Entity", "[", 
+              RowBox[{"\"Planet\"", ",", "\"Mars\""}], "]"}], 
+            "\"Entity[\\\"Planet\\\", \\\"Mars\\\"]\"", "\"planet\""},
+           "Entity"]}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"\"\<Jupiter\>\"", ",", 
+         RowBox[{"ToBoxes", "@", 
+          TemplateBox[{"\"Jupiter\"", 
+            RowBox[{"Entity", "[", 
+              RowBox[{"\"Planet\"", ",", "\"Jupiter\""}], "]"}], 
+            "\"Entity[\\\"Planet\\\", \\\"Jupiter\\\"]\"", "\"planet\""},
+           "Entity"]}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"\"\<Saturn\>\"", ",", 
+         RowBox[{"ToBoxes", "@", 
+          TemplateBox[{"\"Saturn\"", 
+            RowBox[{"Entity", "[", 
+              RowBox[{"\"Planet\"", ",", "\"Saturn\""}], "]"}], 
+            "\"Entity[\\\"Planet\\\", \\\"Saturn\\\"]\"", "\"planet\""},
+           "Entity"]}]}], "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"{", 
+       RowBox[{"\"\<EtaPiscium\>\"", ",", 
+        RowBox[{"MakeBoxes", "@", 
+         RowBox[{"getNormalStars", "[", "\"\<EtaPiscium\>\"", "]"}]}]}], 
+       "}"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\"\<BetaArietis\>\"", ",", 
+         RowBox[{"MakeBoxes", "@", 
+          RowBox[{"getNormalStars", "[", "\"\<BetaArietis\>\"", "]"}]}]}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"\"\<AlphaArietis\>\"", ",", 
+         RowBox[{"MakeBoxes", "@", 
+          RowBox[{"getNormalStars", "[", "\"\<AlphaArietis\>\"", "]"}]}]}], 
+        "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\"\<EtaTauri\>\"", ",", 
+         RowBox[{"MakeBoxes", "@", 
+          RowBox[{"getNormalStars", "[", "\"\<EtaTauri\>\"", "]"}]}]}], "}"}],
+        ",", 
+       RowBox[{"{", 
+        RowBox[{"\"\<AlphaTauri\>\"", ",", 
+         RowBox[{"MakeBoxes", "@", 
+          RowBox[{"getNormalStars", "[", "\"\<AlphaTauri\>\"", "]"}]}]}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"\"\<BetaTauri\>\"", ",", 
+         RowBox[{"MakeBoxes", "@", 
+          RowBox[{"getNormalStars", "[", "\"\<BetaTauri\>\"", "]"}]}]}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"\"\<ZetaTauri\>\"", ",", 
+         RowBox[{"MakeBoxes", "@", 
+          RowBox[{"getNormalStars", "[", "\"\<ZetaTauri\>\"", "]"}]}]}], 
+        "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\"\<EtaGeminorum\>\"", ",", 
+         RowBox[{"MakeBoxes", "@", 
+          RowBox[{"getNormalStars", "[", "\"\<EtaGeminorum\>\"", "]"}]}]}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"\"\<MuGeminorum\>\"", ",", 
+         RowBox[{"MakeBoxes", "@", 
+          RowBox[{"getNormalStars", "[", "\"\<MuGeminorum\>\"", "]"}]}]}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"\"\<GammaGeminorum\>\"", ",", 
+         RowBox[{"MakeBoxes", "@", 
+          RowBox[{"getNormalStars", "[", "\"\<GammaGeminorum\>\"", "]"}]}]}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"\"\<AlphaGeminorum\>\"", ",", 
+         RowBox[{"MakeBoxes", "@", 
+          RowBox[{"getNormalStars", "[", "\"\<AlphaGeminorum\>\"", "]"}]}]}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"\"\<BetaGeminorum\>\"", ",", 
+         RowBox[{"MakeBoxes", "@", 
+          RowBox[{"getNormalStars", "[", "\"\<BetaGeminorum\>\"", "]"}]}]}], 
+        "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\"\<EtaCancri\>\"", ",", 
+         RowBox[{"MakeBoxes", "@", 
+          RowBox[{"getNormalStars", "[", "\"\<EtaCancri\>\"", "]"}]}]}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"\"\<ThetaCancri\>\"", ",", 
+         RowBox[{"MakeBoxes", "@", 
+          RowBox[{"getNormalStars", "[", "\"\<ThetaCancri\>\"", "]"}]}]}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"\"\<GammaCancri\>\"", ",", 
+         RowBox[{"MakeBoxes", "@", 
+          RowBox[{"getNormalStars", "[", "\"\<GammaCancri\>\"", "]"}]}]}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"\"\<DeltaCancri\>\"", ",", 
+         RowBox[{"MakeBoxes", "@", 
+          RowBox[{"getNormalStars", "[", "\"\<DeltaCancri\>\"", "]"}]}]}], 
+        "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\"\<EpsilonLeonis\>\"", ",", 
+         RowBox[{"MakeBoxes", "@", 
+          RowBox[{"getNormalStars", "[", "\"\<EpsilonLeonis\>\"", "]"}]}]}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"\"\<AlphaLeonis\>\"", ",", 
+         RowBox[{"MakeBoxes", "@", 
+          RowBox[{"getNormalStars", "[", "\"\<AlphaLeonis\>\"", "]"}]}]}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"\"\<RhoLeonis\>\"", ",", 
+         RowBox[{"MakeBoxes", "@", 
+          RowBox[{"getNormalStars", "[", "\"\<RhoLeonis\>\"", "]"}]}]}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"\"\<ThetaLeonis\>\"", ",", 
+         RowBox[{"MakeBoxes", "@", 
+          RowBox[{"getNormalStars", "[", "\"\<ThetaLeonis\>\"", "]"}]}]}], 
+        "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\"\<BetaVirginis\>\"", ",", 
+         RowBox[{"MakeBoxes", "@", 
+          RowBox[{"getNormalStars", "[", "\"\<BetaVirginis\>\"", "]"}]}]}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"\"\<GammaVirginis\>\"", ",", 
+         RowBox[{"MakeBoxes", "@", 
+          RowBox[{"getNormalStars", "[", "\"\<GammaVirginis\>\"", "]"}]}]}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"\"\<AlphaVirginis\>\"", ",", 
+         RowBox[{"MakeBoxes", "@", 
+          RowBox[{"getNormalStars", "[", "\"\<AlphaVirginis\>\"", "]"}]}]}], 
+        "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\"\<AlphaLibrae\>\"", ",", 
+         RowBox[{"MakeBoxes", "@", 
+          RowBox[{"getNormalStars", "[", "\"\<AlphaLibrae\>\"", "]"}]}]}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"\"\<BetaLibrae\>\"", ",", 
+         RowBox[{"MakeBoxes", "@", 
+          RowBox[{"getNormalStars", "[", "\"\<BetaLibrae\>\"", "]"}]}]}], 
+        "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\"\<DeltaScorpii\>\"", ",", 
+         RowBox[{"MakeBoxes", "@", 
+          RowBox[{"getNormalStars", "[", "\"\<DeltaScorpii\>\"", "]"}]}]}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"\"\<BetaScorpii\>\"", ",", 
+         RowBox[{"MakeBoxes", "@", 
+          RowBox[{"getNormalStars", "[", "\"\<BetaScorpii\>\"", "]"}]}]}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"\"\<AlphaScorpii\>\"", ",", 
+         RowBox[{"MakeBoxes", "@", 
+          RowBox[{"getNormalStars", "[", "\"\<AlphaScorpii\>\"", "]"}]}]}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"\"\<PiScorpii\>\"", ",", 
+         RowBox[{"MakeBoxes", "@", 
+          RowBox[{"getNormalStars", "[", "\"\<PiScorpii\>\"", "]"}]}]}], 
+        "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"{", 
+       RowBox[{"\"\<ThetaOphiuchi\>\"", ",", 
+        RowBox[{"MakeBoxes", "@", 
+         RowBox[{"getNormalStars", "[", "\"\<ThetaOphiuchi\>\"", "]"}]}]}], 
+       "}"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\"\<BetaCapricorni\>\"", ",", 
+         RowBox[{"MakeBoxes", "@", 
+          RowBox[{"getNormalStars", "[", "\"\<BetaCapricorni\>\"", "]"}]}]}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"\"\<GammaCapricorni\>\"", ",", 
+         RowBox[{"MakeBoxes", "@", 
+          RowBox[{"getNormalStars", "[", "\"\<GammaCapricorni\>\"", "]"}]}]}],
+         "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"\"\<DeltaCapricorni\>\"", ",", 
+         RowBox[{"MakeBoxes", "@", 
+          RowBox[{"getNormalStars", "[", "\"\<DeltaCapricorni\>\"", "]"}]}]}],
+         "}"}]}], "}"}]}], "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.798749775111103*^9, 3.798749779982132*^9}, {
+  3.798751240903077*^9, 3.7987512871687193`*^9}, {3.7987514493885193`*^9, 
+  3.798751667042501*^9}, {3.79875189324553*^9, 3.7987519088761473`*^9}, {
+  3.798751943926859*^9, 3.798751976772204*^9}},
+ CellLabel->"In[41]:=",ExpressionUUID->"7e991759-c5f5-46e7-9ab3-db49a74bf5f4"],
+
+Cell[BoxData[
+ RowBox[{"Panel", "[", 
+  RowBox[{"Row", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Column", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"replaceButton", "[", 
+         RowBox[{
+          RowBox[{"#", "[", 
+           RowBox[{"[", "1", "]"}], "]"}], ",", 
+          RowBox[{
+           RowBox[{"#", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], "4"}]}], "]"}], "&"}], "/@", 
+       "#"}], "]"}], "&"}], "/@", "starGroups"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.798743692135747*^9, 3.798743766451828*^9}, {
+  3.798749706185704*^9, 3.798749706234912*^9}, {3.798749753722787*^9, 
+  3.798749785874001*^9}},
+ CellLabel->"In[30]:=",ExpressionUUID->"2a6548b8-6b95-4b5a-926f-bcff7182a1e2"],
+
+Cell[BoxData[
+ RowBox[{"Panel", "[", 
+  RowBox[{"Grid", "@", 
+   RowBox[{"Map", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"replaceButton", "[", 
+       RowBox[{
+        RowBox[{"#", "[", 
+         RowBox[{"[", "1", "]"}], "]"}], ",", 
+        RowBox[{"#", "[", 
+         RowBox[{"[", "2", "]"}], "]"}], ",", "3"}], "]"}], "&"}], ",", 
+     "starGroups", ",", 
+     RowBox[{"{", "2", "}"}]}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.798749850069272*^9, 3.7987498935640078`*^9}, {
+  3.7987513939427834`*^9, 3.7987513969589243`*^9}, {3.798751686527646*^9, 
+  3.798751687274839*^9}},
+ CellLabel->"In[42]:=",ExpressionUUID->"6e749e82-459e-4bd2-b73a-67a79311ac2f"],
+
+Cell[BoxData[
+ RowBox[{"replaceButtonTemplate", "[", 
+  RowBox[{"\"\<Row\>\"", ",", 
+   RowBox[{"{", 
+    RowBox[{"\"\<a\>\"", ",", "\"\<b\>\"", ",", "False"}], "}"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.798752298417808*^9, 3.798752315224572*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"b0c1342d-a4d2-4426-8965-580c8cc4776e"],
+
+Cell[BoxData[
+ RowBox[{"replaceButtonTemplate", "[", "\"\<Boolean\>\"", "]"}]], "Input",
+ CellLabel->"In[16]:=",ExpressionUUID->"bf2bd52e-bd10-483b-99bf-9344d2054532"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Interpreter", "[", "\"\<Constellation\>\"", "]"}], "/@", 
+  RowBox[{"{", 
+   RowBox[{
+   "\"\<Aries\>\"", ",", "\"\<Taurus\>\"", ",", "\"\<Gemini\>\"", ",", 
+    "\"\<Cancer\>\"", ",", "\"\<Leo\>\"", ",", "\"\<Virgo\>\"", ",", 
+    "\"\<Libra\>\"", ",", "\"\<Scorpio\>\"", ",", "\"\<Sagittarius\>\"", ",", 
+    "\"\<Capricorn\>\"", ",", "\"\<Aquarius\>\"", ",", "\"\<Pisces\>\""}], 
+   "}"}]}]], "Input",
+ CellChangeTimes->{{3.798752522303982*^9, 3.798752590763419*^9}},
+ CellLabel->"In[17]:=",ExpressionUUID->"1910a103-50b2-4cc3-a61e-382e1e851128"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{"\"Aries\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"Constellation\"", ",", "\"Aries\""}], "]"}], 
+     "\"Entity[\\\"Constellation\\\", \\\"Aries\\\"]\"", "\"constellation\""},
+    
+    "Entity"], ",", 
+   TemplateBox[{"\"Taurus\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"Constellation\"", ",", "\"Taurus\""}], "]"}], 
+     "\"Entity[\\\"Constellation\\\", \\\"Taurus\\\"]\"", "\"constellation\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Gemini\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"Constellation\"", ",", "\"Gemini\""}], "]"}], 
+     "\"Entity[\\\"Constellation\\\", \\\"Gemini\\\"]\"", "\"constellation\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Cancer\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"Constellation\"", ",", "\"Cancer\""}], "]"}], 
+     "\"Entity[\\\"Constellation\\\", \\\"Cancer\\\"]\"", "\"constellation\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Leo\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"Constellation\"", ",", "\"Leo\""}], "]"}], 
+     "\"Entity[\\\"Constellation\\\", \\\"Leo\\\"]\"", "\"constellation\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Virgo\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"Constellation\"", ",", "\"Virgo\""}], "]"}], 
+     "\"Entity[\\\"Constellation\\\", \\\"Virgo\\\"]\"", "\"constellation\""},
+    
+    "Entity"], ",", 
+   TemplateBox[{"\"Libra\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"Constellation\"", ",", "\"Libra\""}], "]"}], 
+     "\"Entity[\\\"Constellation\\\", \\\"Libra\\\"]\"", "\"constellation\""},
+    
+    "Entity"], ",", 
+   TemplateBox[{"\"Scorpius\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"Constellation\"", ",", "\"Scorpius\""}], "]"}], 
+     "\"Entity[\\\"Constellation\\\", \\\"Scorpius\\\"]\"", 
+     "\"constellation\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Sagittarius\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"Constellation\"", ",", "\"Sagittarius\""}], "]"}], 
+     "\"Entity[\\\"Constellation\\\", \\\"Sagittarius\\\"]\"", 
+     "\"constellation\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Capricornus\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"Constellation\"", ",", "\"Capricornus\""}], "]"}], 
+     "\"Entity[\\\"Constellation\\\", \\\"Capricornus\\\"]\"", 
+     "\"constellation\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Aquarius\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"Constellation\"", ",", "\"Aquarius\""}], "]"}], 
+     "\"Entity[\\\"Constellation\\\", \\\"Aquarius\\\"]\"", 
+     "\"constellation\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Pisces\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"Constellation\"", ",", "\"Pisces\""}], "]"}], 
+     "\"Entity[\\\"Constellation\\\", \\\"Pisces\\\"]\"", "\"constellation\""},
+    "Entity"]}], "}"}]], "Output",
+ CellChangeTimes->{3.798752595219839*^9},
+ CellLabel->"Out[17]=",ExpressionUUID->"47767d61-2a76-4837-8024-4154c36385ec"]
+}, Open  ]]
+},
+WindowSize->{808, 905},
+WindowMargins->{{247, Automatic}, {47, Automatic}},
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (March 18, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"1c4eeeb0-db1e-43be-90e9-d29cc565781d"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 254, 7, 30, "Input",ExpressionUUID->"12a75382-ad39-4e6f-96f1-d7cc0e451f21"],
+Cell[837, 31, 1858, 50, 34, "Output",ExpressionUUID->"2819f7f8-c37c-4ff1-a9a0-1086c0d36dcf"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2732, 86, 462, 12, 30, "Input",ExpressionUUID->"5126caa1-0e33-49b9-a2d2-d6c120154f98"],
+Cell[3197, 100, 302, 7, 34, "Output",ExpressionUUID->"47ed8697-3a91-459b-bc38-cf7b56f33794"]
+}, Open  ]],
+Cell[3514, 110, 1198, 24, 73, "Input",ExpressionUUID->"f7fdbc97-c433-4e92-a0f0-9f5bea2dac05"],
+Cell[4715, 136, 952, 20, 52, "Input",ExpressionUUID->"b1995978-b3f2-4327-997b-8a6553ce5d9d"],
+Cell[5670, 158, 518, 10, 74, "Input",ExpressionUUID->"20c22e68-ed23-4847-baf3-b3964d21a0a4"],
+Cell[6191, 170, 2492, 75, 76, InheritFromParent,ExpressionUUID->"510f03a3-84ed-45af-a59d-0d3523243742"],
+Cell[8686, 247, 708, 13, 74, "Input",ExpressionUUID->"6157e596-cc90-44fc-a832-84cf05f28c7c"],
+Cell[9397, 262, 2886, 84, 135, InheritFromParent,ExpressionUUID->"56e4383b-54fd-4a53-ad36-17f2ff17e3c1"],
+Cell[12286, 348, 533, 10, 74, "Input",ExpressionUUID->"150486b3-e226-44ce-8cf1-b78d6e578d48"],
+Cell[12822, 360, 2322, 67, 76, InheritFromParent,ExpressionUUID->"2aa4dbd5-adb0-45d4-b6cc-ebb859505083"],
+Cell[15147, 429, 164, 3, 30, "Input",ExpressionUUID->"c0a25b05-1f4b-4cd9-91f1-42cb7e857225"],
+Cell[CellGroupData[{
+Cell[15336, 436, 213, 3, 30, "Input",ExpressionUUID->"6ad7a3f3-4b7b-44f0-a418-acf256a3ceca"],
+Cell[15552, 441, 350, 7, 43, "Output",ExpressionUUID->"60fdd045-9c2e-4dd2-aa3f-6a3b5770509a"]
+}, Open  ]],
+Cell[15917, 451, 1795, 45, 224, "Code",ExpressionUUID->"1bdec3cc-0a22-4d6a-a6de-68e68cd3dd0c"],
+Cell[17715, 498, 1512, 35, 71, "Input",ExpressionUUID->"4db4f6e1-9a44-4a00-835f-e93768fa72d7"],
+Cell[19230, 535, 241, 5, 30, "Input",ExpressionUUID->"ba6ce57d-7239-4606-91c8-37408b90b0a5"],
+Cell[19474, 542, 9617, 245, 823, "Input",ExpressionUUID->"7e991759-c5f5-46e7-9ab3-db49a74bf5f4"],
+Cell[29094, 789, 720, 19, 30, "Input",ExpressionUUID->"2a6548b8-6b95-4b5a-926f-bcff7182a1e2"],
+Cell[29817, 810, 671, 17, 30, "Input",ExpressionUUID->"6e749e82-459e-4bd2-b73a-67a79311ac2f"],
+Cell[30491, 829, 333, 7, 30, "Input",ExpressionUUID->"b0c1342d-a4d2-4426-8965-580c8cc4776e"],
+Cell[30827, 838, 167, 2, 30, "Input",ExpressionUUID->"bf2bd52e-bd10-483b-99bf-9344d2054532"],
+Cell[CellGroupData[{
+Cell[31019, 844, 584, 11, 73, "Input",ExpressionUUID->"1910a103-50b2-4cc3-a61e-382e1e851128"],
+Cell[31606, 857, 2949, 71, 75, "Output",ExpressionUUID->"47767d61-2a76-4837-8024-4154c36385ec"]
+}, Open  ]]
+}
+]
+*)
+
