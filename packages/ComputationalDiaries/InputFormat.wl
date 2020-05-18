@@ -110,8 +110,8 @@ replaceButtonTemplate["Boolean"] := replaceButtonTemplate["Row",
 replaceButtonTemplate["Object"] :=
 	Panel[Grid[Append[
 			Map[replaceButton[#[[1]],#[[2]],3]&,objectGroups,{2}],{
-				replaceButton[Missing["Unmentioned"],Missing["Unmentioned"],3],
-				replaceButton[Missing["Destroyed"],Missing["Destroyed"],3]
+				replaceButton[Missing["Unmentioned"],ToBoxes@Missing["Unmentioned"],3],
+				replaceButton[Missing["Destroyed"],ToBoxes@Missing["Destroyed"],3]
 			}]]]
 replaceButtonTemplate["Planet"] := replaceButtonTemplate["Row",{
 		Entity["PlanetaryMoon","Moon"],

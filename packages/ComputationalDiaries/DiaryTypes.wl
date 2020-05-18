@@ -35,10 +35,6 @@ DiaryDate[{julYear_,babMonth_,babDay_}] :=
 (*Accessors*)
 
 
-(* ::Text:: *)
-(*TODO: Look at time conversions. Right now we do approximately midnight in the morning (at the start of the day by the Julian calendar).*)
-
-
 DiaryDate[data_]["Data"] := data
 DiaryDate[data_]["BabylonianYear"] := data["BabylonianYear"]
 DiaryDate[data_]["BabylonianMonth"] := data["BabylonianMonth"]
@@ -99,22 +95,20 @@ DiaryDistance::invalid = "`` is not a valid DiaryDistance.";
 (*Accessors*)
 
 
-(* ::Text:: *)
-(*TODO: add support for non-numerical distances like "ALittle", etc.*)
-
-
 DiaryDistance[data_]["Data"] := data
 DiaryDistance[{cubits_,fingers_}]["Cubits"] := cubits
 DiaryDistance[{cubits_,fingers_}]["Fingers"] := fingers
-DiaryDistance[{cubits_,fingers_}]["TotalCubits"] :=
-	If[MissingQ[cubits] && MissingQ[fingers],
-		Missing[],
-		If[MissingQ[cubits],0,cubits] + If[MissingQ[fingers],0,fingers]/24
+DiaryDistance[{cubits_,fingers_}]["TotalCubits"] := Module[{cubitsM,fingersM},
+		{cubitsM,fingersM} = {cubits,fingers}/.Missing["Unmentioned"]->0;
+		If[MissingQ[cubitsM]||MissingQ[fingersM],
+			combineMissings[{cubitsM,fingersM}],
+			cubitsM + fingersM/24
+		]
 	]
 dd_DiaryDistance["IdealDegrees"] :=
-	With[{totalCubits=dd["TotalCubits"]}, If[MissingQ[totalCubits],Missing[],2*totalCubits]]
+	With[{totalCubits=dd["TotalCubits"]}, If[MissingQ[totalCubits],totalCubits,2*totalCubits]]
 dd_DiaryDistance["RealDegrees"] :=
-	With[{totalCubits=dd["TotalCubits"]}, If[MissingQ[totalCubits],Missing[],2.27*totalCubits]]
+	With[{totalCubits=dd["TotalCubits"]}, If[MissingQ[totalCubits],totalCubits,2.27*totalCubits]]
 
 
 DiaryDistance["ALittle"]["Cubits"] := Missing[]
@@ -130,67 +124,6 @@ dd:DiaryDistance[Except[
 		{_Rational|_Integer|_Missing,_Rational|_Integer|_Missing}|
 		"ALittle"]] :=
 	(Message[DiaryDistance::invalid, Hold[dd]]; Missing["InvalidDiaryDistance"])
-
-
-(* ::Subsection:: *)
-(*DiaryDisplacement*)
-
-
-DiaryDisplacement::invalid = "`` is not a valid DiaryDisplacement.";
-
-
-(* ::Subsubsection:: *)
-(*Constructors*)
-
-
-DiaryDisplacement[{dlong_,rlong_},{dlat_,rlat_}] :=
-	DiaryDisplacement[<|
-		"Distances"->{dlong,dlat},
-		"Relations"->{rlong,rlat}
-	|>]
-
-
-(* ::Subsubsection:: *)
-(*Accessors*)
-
-
-negativeRelations = {"Below","South","InFrontOf","West"};
-
-
-DiaryDisplacement[data_]["Data"] := data
-DiaryDisplacement[data_]["Distances"] := data["Distances"]
-DiaryDisplacement[data_]["Relations"] := data["Relations"]
-DiaryDisplacement[data_]["Degrees"] := 
-	MapThread[Function[{d,r},
-		If[MissingQ[d]||MissingQ[r],
-			If[MatchQ[d,Missing["Unmentioned"]]||MatchQ[d,Missing["Unmentioned"]],
-				0,
-				Missing[]
-			],
-			With[{deg = d["Degrees"]},
-				If[MissingQ[deg],
-					Missing[],
-					deg*If[MemberQ[negativeRelations,r],-1,1]
-				]
-			]
-		]
-	],{data["Distances"],data["Relations"]}]
-
-
-(* ::Subsubsection:: *)
-(*Verifiers*)
-
-
-dd:DiaryDisplacement[Except[
-		<|
-			"Distances"->{_DiaryDistance|_Missing,_DiaryDistance|_Missing},
-			"Relations"->{
-				"InFrontOf"|"Behind"|"East"|"West"|_Missing,
-				"Above"|"Below"|"North"|"South"|_Missing}
-		|> |
-		{{_,_},{_,_}} (*Constructor*)
-	]] :=
-	(Message[DiaryDisplacement::invalid, Hold[dd]]; Missing["InvalidDiaryDisplacement"])
 
 
 (* ::Subsection:: *)
@@ -294,27 +227,6 @@ DiaryDistance /:
 				Background->Transparent
 			],
 			{{"cubits: ",cubits},{"fingers: ",fingers}},
-			{},
-			StandardForm
-		]
-
-
-DiaryDisplacement /:
-	MakeBoxes[dis:DiaryDisplacement[_Association],StandardForm] :=
-		BoxForm`ArrangeSummaryBox[
-			DiaryDisplacement,
-			dist,
-			Graphics[{
-					{Orange,Dashing[0.1],Line[{{-0.5,-0.5},{0.5,0.5}}]},
-					Circle[],Red,Point[{-0.5,-0.5}],Blue,Point[{0.5,0.5}]},
-				ImageSize->30,
-				Background->Transparent
-			],
-			{
-				{"distances: ",
-					Row[{If[MissingQ[#],Missing[],#["TotalCubits"]]&/@dis["Distances"]," cubits"}]},
-				{"relations: ",dis["Relations"]}
-			},
 			{},
 			StandardForm
 		]

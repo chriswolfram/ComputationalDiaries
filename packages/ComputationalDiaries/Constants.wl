@@ -3,6 +3,7 @@
 BeginPackage["ComputationalDiaries`Constants`"];
 
 
+combineMissings::usage = "Algebraically combines Missing[]s.";
 getNormalStars::usage = "getNormalStars[] returns the list of normal stars.
 getNormalStars[\!\(\*
 StyleBox[\"name\",\nFontSlant->\"Italic\"]\)] returrns the normal star associated with the name \!\(\*
@@ -14,6 +15,19 @@ StyleBox[\"obj\",\nFontSlant->\"Italic\"]\) is a normal star and False otherwise
 
 
 Begin["`Private`"];
+
+
+(* ::Subsection:: *)
+(*combineMissings*)
+
+
+combineMissings[missings_] :=
+	Which[
+		MemberQ[missings,Missing[]],Missing[],
+		MemberQ[missings,Missing["Destroyed"]],Missing["Destroyed"],
+		MemberQ[missings,Missing["Unmentioned"]],Missing["Unmentioned"],
+		True,Missing[]
+	]
 
 
 (* ::Subsection:: *)

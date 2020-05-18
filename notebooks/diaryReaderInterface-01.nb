@@ -1,0 +1,305 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     12973,        295]
+NotebookOptionsPosition[     12494,        278]
+NotebookOutlinePosition[     12889,        294]
+CellTagsIndexPosition[     12846,        291]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"DynamicModule", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"n", "=", "1"}], ",", 
+     RowBox[{"lines", "=", 
+      RowBox[{"getTabletLines", "[", "\"\<X201701\>\"", "]"}]}]}], "}"}], ",", 
+   RowBox[{"Column", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Row", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Button", "[", 
+          RowBox[{"\"\<Pervious\>\"", ",", 
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{"n", ">", "1"}], ",", 
+             RowBox[{"n", "-=", "1"}]}], "]"}]}], "]"}], ",", 
+         RowBox[{"Button", "[", 
+          RowBox[{"\"\<Next\>\"", ",", 
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{"n", "<", 
+              RowBox[{"Length", "[", "lines", "]"}]}], ",", 
+             RowBox[{"n", "+=", "1"}]}], "]"}]}], "]"}]}], "}"}], "]"}], ",", 
+      
+      RowBox[{"Dynamic", "[", 
+       RowBox[{"Grid", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Take", "[", 
+           RowBox[{"lines", ",", 
+            RowBox[{"{", 
+             RowBox[{"n", ",", 
+              RowBox[{"UpTo", "[", 
+               RowBox[{"n", "+", "5"}], "]"}]}], "}"}]}], "]"}], "/.", 
+          RowBox[{"Delimiter", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<\>\"", ",", "\"\<\>\"", ",", "\"\<\>\""}], "}"}]}]}],
+          ",", 
+         RowBox[{"Background", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"None", ",", 
+            RowBox[{"{", "Yellow", "}"}]}], "}"}]}], ",", 
+         RowBox[{"Frame", "\[Rule]", "All"}]}], "]"}], "]"}]}], "}"}], 
+    "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.798778180950169*^9, 3.798778362740181*^9}, {
+  3.798778413554001*^9, 3.798778478233458*^9}, {3.798809707427761*^9, 
+  3.7988097082931347`*^9}},
+ CellLabel->"In[39]:=",ExpressionUUID->"a6c540de-6179-42d4-bc4d-1607dd158a71"],
+
+Cell[BoxData[
+ DynamicModuleBox[{$CellContext`n$$ = 
+  8, $CellContext`lines$$ = {{"(o 1')", 1, "[...] sacrifices [...]"}, 
+   Delimiter, {
+   "(o 2')", 2, 
+    "[Month II ... cu]bits, the moon being 5 cubits [high] to the north \
+[...]"}, {
+   "(o 3')", 3, 
+    "[... beginn]ing of the night, the moon was [...] above \[Delta]? Cancri \
+[...]"}, {
+   "(o 4')", 4, 
+    "[... Night of the 6th, beginning of the night, the moon was] 1 cubit \
+[...] \[Alpha] Leonis. Night of the 7th, beginning of the night, the moon was \
+[3 cubits] below [\[CurlyTheta] Leonis ...]"}, {
+   "(o 5')", 5, 
+    "[... Night of the 9th, beg]inning of the night, the moon was 2 cubits \
+below \[Gamma] Virginis ... [...]"}, {
+   "(o 6')", 6, 
+    "[... first] part of the night, Mars was 4 cubits below \[CurlyEpsilon] \
+Leonis. Night of the 13th, beginning of the night, the moo[n ...]"}, {
+   "(o 7')", 7, 
+    "[... Night of the 15th, the moon was] 2 1/2 cubits [... \[CurlyTheta] \
+Ophi]uchi. The 15th, moonset to sunrise: 6\[Degree] 50', measured. Night of \
+the 16th, [sunset to moonrise:] 4\[Degree]? 10+[x' ...]"}, {
+   "(o 8')", 8, 
+    "[...] low to the south. The 20th, Jupiter\[CloseCurlyQuote]s first \
+appearance in Taurus; it was bright (and) high, rising of Jupiter to sunrise: \
+12\[Degree] 30'; [(ideal) first appearance on the 18th ...]"}, {
+   "(o 9')", 9, 
+    "[...] last part of the night, Venus was 3 cubits below \[Eta] Tauri. \
+Night of the 26th, last part of the night, the moon was 1+[x mm] behind \
+\[Eta] Tauri [...]"}, {
+   "(o 10')", 10, 
+    "[... Night of the 28th,] last part of the night, the moon was 3 cubits \
+behind \[Beta] Tauri, 3 1/2 cubits behind Jupiter, the moon being 4 cubits \
+[high to the north ...]"}, {
+   "(o 11')", 11, 
+    "[...] 3 s\:016btu; sesame, 4 s\:016btu; wool, 4 1/2 minas. At that time, \
+around the 18th, Jupiter\[CloseCurlyQuote]s [first appearance] in Tau[rus \
+...]"}, {"(o 12')", 12, 
+    "[...] the river level receded 4 fingers, total: 17 was the na na-gauge. \
+That month, the 25th, the temple E-nam-dumu?-... [...]"}, {
+   "(o 13')", 13, 
+    "[...] ... a man who ... the ak\:012btu temple ... [...]"}, {
+   "(o 14')", 14, "[...] merry-making was set up in the land."}, Delimiter, {
+   "(o 15')", 15, 
+    "[Month III, the 1st (of which followed the 30th of the preceding month), \
+... x]+1 cubits, the moon being 4 cubits low to the south; first part of the \
+night, Saturn was 1/2 cubit above \[Beta] Virginis. Night of the 3rd, the \
+moon was [... \[Alpha] Leonis ...]"}, {
+   "(o 16')", 16, 
+    "[...] low to the south. Night of the 5th, beginning of the night, the \
+moon was 1/2 cubit below \[Beta] Virginis, the moon having passed 1/2 cubit \
+to the westsic [...]"}, {
+   "(o 17')", 17, 
+    "[...] ... 2? 1/2 cubits. Night [of the 9th,] beginning of the night, the \
+moon was 1 cubit in front of \[Alpha] Librae. Night [of the 10th,] beginning \
+of the night, the moon was in [...]"}, {
+   "(o 18')", 18, 
+    "[...] ... the moon was 2 cubits in front of \[Alpha] Scorpii. Night of \
+the 12th, [beginning of the ni]ght, the moon was 2 cubits in front of \
+\[CurlyTheta] Ophiuchi. The 14th, moonset to sunrise: 11\[Degree], measu[red \
+...]"}, {"(o 19')", 19, 
+    "[... Night of the 16th, sunset] to moonrise: [15\[Degree]]; last part of \
+the night, the moon was 3 cubits in front of \[Gamma] Capricorni, the moon \
+being [1 1/2 cubits] low to the south. The 16th, sol[stice ...]"}, {
+   "(o 20')", 20, 
+    "[...] back to the west; last part of the night, Venus was 2/3 cubit \
+below Jupiter. Night of the 22nd, last [part of the night,] the m[oon was \
+...] \[Alpha] Arie[tis ...]"}, {
+   "(o 21')", 21, 
+    "[... Ni]ght of the 24th, last part of the night, the moon was 5 cubits \
+above \[Alpha] Tauri, the moon having passed a little to the east [...]"}, {
+   "(o 22')", 22, 
+    "[... Night of the 25th, last part of the night, the moon was] 1 1/2 \
+cubits in front of Venus, the moon being 3 cubits high to the north. Night of \
+the 26th, [...]"}, {
+   "(o 23')", 23, 
+    "[...] low, it stood 2 cubits in front of Mercury to the west. The 27th, \
+[...]"}, {
+   "(o 24')", 24, 
+    "[... cr]ess, 1 p\[ABar]nu 2 s\:016btu?; sesame, 3 s\:016btu 3 [qa \
+...]"}, {"(o 25')", 25, 
+    "[...] That [mon]th, the river level [...] 1 [...]"}, {
+   "(r 1')", 26, "[...] ... [...]"}, {
+   "(r 2')", 27, 
+    "[...] Night of the 19th, last part of the night, the m[oon ...]"}, {
+   "(r 3')", 28, 
+    "[... Night of the 21st, last part of the night, the moon was] 3 cubits \
+in front of \[Alpha] Tauri, the moon being [...]"}, {
+   "(r 4')", 29, 
+    "[...] having passed to the east. Night of the 25th, last part of the \
+night, the moon was in [front of ...]"}, {
+   "(r 5')", 30, 
+    "[... measur]ed. Night of the 29th, last part of the night, Venus was \
+[...] above \[Delta] Can[cri ...]"}, {
+   "(r 6')", 31, 
+    "[...] 5 s\:016btu; wool, 4 minas. At that time, Jupiter was in Gemin[i \
+...]"}, {"(r 7')", 32, 
+    "[...] That month, [the river level] receded 8 fingers, total: 31 was the \
+na na-gauge."}, Delimiter, {
+   "(r 8')", 33, 
+    "[Month V, (the 1st of which was identical with) the 30th (of the \
+preceding month), sunset to] moonset: [nn\[Degree]]; it was faint, it was low \
+to the sun; (the moon) [stood] 3 cubits in front of Mars, 5 cubits in front \
+of ??? to the west [...]"}, {
+   "(r 9')", 34, 
+    "[... Night of the 4th, the moon was] 4 1/2 cubits in front of \[Alpha] \
+Librae. Night of the 5th, beginning of the night, the moon was [...] behind \
+\[Beta] Lib[rae ...]"}, {
+   "(r 10')", 35, 
+    "[... Night of the 7th, beginning of the night, the moon was] 1/2 cubit \
+below \[Alpha] Scorpii, the moon having passed 1/2 cubit to the east. Night \
+of the 7th?, beginning of the ni[ght, ...]"}, {
+   "(r 11')", 36, 
+    "[...] 4 fingers [...] Geminorum. Night of the 11th, beginning of the \
+night, the moon was [...] ... [...]"}, {
+   "(r 12')", 37, 
+    "[...] ... when the moon came out, it was completely covered; when it \
+began to clear, [...]"}, {
+   "(r 13')", 38, 
+    "[... the remainder of the pla]nets did not stand there; it was eclipsed \
+in the end of Aquarius; at 42\[Degree] before sunset. The 15th, ... [...]"}, {
+   "(r 14')", 39, 
+    "[...] 3 1/2 cubits [...] \[Alpha] Arietis. Night of the 19th, last part \
+of the night, the moon was 1 1/2 cubits behind \[Eta] Tauri. Night of the \
+20th, [... Night of the 21st, last part of the night, the moon]"}, {
+   "(r 15')", 40, 
+    "stood [... in front of Jupiter to the west,] the moon being 2 1/2 cubits \
+high to the north. Night of the 22nd, last part of the night, the moon was \
+[...] in front of \[Alpha] Geminorum [... Night of the 26th, last part of the \
+night, the moon ...]"}, {
+   "(r 16')", 41, 
+    "[...] it stood 2 cubits [in front of Ven]us to the west. Night of the \
+27th, last part of the night, Jupiter was 4 fingers above \[Mu] Geminorum. \
+The 27th, [moonrise to sunrise:] 10+[x\[Degree] ...]"}, {
+   "(r 17')", 42, 
+    "[...] sesame, 4 s\:016btu; wool, 5 minas. At that time, [...]"}, {
+   "(r 18')", 43, 
+    "[...] around the 7th, Saturn\[CloseCurlyQuote]s last appearance in \
+Virgo. That month, the river level [...] 8 [...]"}, {
+   "(r 19')", 44, "[...] ... of Babylon carried? ... [...]"}, Delimiter, {
+   "(r 20')", 45, 
+    "[Month VI, the 1st (of which followed the 30th of the preceding month), \
+...] Night of the 2nd, last part of the night, Venus was 5 cubits below \
+\[CurlyTheta] Leonis. Night of the 3rd, the moon was [...]"}, {
+   "(r 21')", 46, 
+    "[... Night of the 4th, the moon was ... \[Alpha] Scorpii], the moon \
+being 1/2 cubit low to the south. Night of the 5th, beginning of the night, \
+the moon was be[hind ...]"}, {
+   "(r 22')", 47, 
+    "[...] 1/2 cubit [... \[Delta] Capri]corni, the moon being 1/2 cubit back \
+to the west. Around the 10+[xth, ...]"}, {
+   "(r 23')", 48, 
+    "[... Saturn\[CloseCurlyQuote]s first appearance in Virgo; it was bri]ght \
+(and) high, rising of Saturn to sunrise: 17\[Degree]; (ideal) first \
+appearance on the 12th? [...]"}, {
+   "(r 24')", 49, 
+    "[...] 2 1/2 cubits, the moon having passed a little to the east [...]"}, \
+{"(r 25')", 50, 
+    "[... when Jupiter became stationary to the east,] it became stationary \
+[... behind \[Mu] Geminorum,] the moon being 4? fingers high to the north \
+[...]"}, {
+   "(r 26')", 51, 
+    "[... Ni]ght of the 21st, last part of the night, the monn was above \
+[...]"}, {
+   "(r 27')", 52, 
+    "[... Night of the 23rd, last part of the ni]ght, the moon was 1+[x mm] \
+behind \[Alpha] Leonis [...]"}, {
+   "(r 28')", 53, "[...] ..., 2 [mm] below Saturn [...]"}}}, 
+  TagBox[GridBox[{
+     {
+      TemplateBox[{
+        ButtonBox["\"Pervious\"", ButtonFunction :> If[$CellContext`n$$ > 1, 
+           SubtractFrom[$CellContext`n$$, 1]], Appearance -> Automatic, 
+         Evaluator -> Automatic, Method -> "Preemptive"], 
+        ButtonBox[
+        "\"Next\"", ButtonFunction :> 
+         If[$CellContext`n$$ < Length[$CellContext`lines$$], 
+           AddTo[$CellContext`n$$, 1]], Appearance -> Automatic, Evaluator -> 
+         Automatic, Method -> "Preemptive"]},
+       "RowDefault"]},
+     {
+      DynamicBox[ToBoxes[
+        Grid[
+         ReplaceAll[
+          Take[$CellContext`lines$$, {$CellContext`n$$, 
+            UpTo[$CellContext`n$$ + 5]}], Delimiter -> {"", "", ""}], 
+         Background -> {None, {Yellow}}, Frame -> All], StandardForm],
+       ImageSizeCache->{695., {173., 179.}}]}
+    },
+    DefaultBaseStyle->"Column",
+    GridBoxAlignment->{"Columns" -> {{Left}}},
+    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+   "Column"],
+  DynamicModuleValues:>{}]], "Output",
+ CellChangeTimes->{
+  3.798778217908144*^9, {3.79877825967138*^9, 3.7987782722311373`*^9}, {
+   3.7987783294997377`*^9, 3.798778362990202*^9}, {3.798778417261573*^9, 
+   3.7987784784989357`*^9}, 3.7988097088338327`*^9},
+ CellLabel->"Out[39]=",ExpressionUUID->"743fc6f9-587e-436b-b1bd-9079328e18ba"]
+}, Open  ]]
+},
+WindowSize->{808, 911},
+WindowMargins->{{Automatic, 313}, {Automatic, 38}},
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (March 18, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"758517c6-fbcc-4163-912a-24aff2318f09"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 1890, 51, 136, "Input",ExpressionUUID->"a6c540de-6179-42d4-bc4d-1607dd158a71"],
+Cell[2473, 75, 10005, 200, 403, "Output",ExpressionUUID->"743fc6f9-587e-436b-b1bd-9079328e18ba"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
