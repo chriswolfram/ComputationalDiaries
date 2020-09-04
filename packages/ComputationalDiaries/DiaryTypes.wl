@@ -27,8 +27,8 @@ DiaryDate::invalid = "`` is not a valid DiaryDate.";
 (*Constructors*)
 
 
-DiaryDate[{julYear_,babMonth_,babDay_}] :=
-	DiaryDate[]
+(*DiaryDate[{julYear_,babMonth_,babDay_}] :=
+	DiaryDate[]*)
 
 
 (* ::Subsubsection:: *)
