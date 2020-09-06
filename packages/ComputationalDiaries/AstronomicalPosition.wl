@@ -1,17 +1,6 @@
 (* ::Package:: *)
 
-BeginPackage["ComputationalDiaries`AstronomicalPosition`",{
-	"ComputationalDiaries`DiaryTypes`",
-	"ComputationalDiaries`Constants`"
-}];
-
-
-astronomicalPosition::usage =
-	"astronomicalPosition[\!\(\*
-StyleBox[\"obj\",\nFontSlant->\"Italic\"]\),\!\(\*
-StyleBox[\"date\",\nFontSlant->\"Italic\"]\)] computes the ecliptic coordinantes for \!\(\*
-StyleBox[\"obj\",\nFontSlant->\"Italic\"]\) on \!\(\*
-StyleBox[\"date\",\nFontSlant->\"Italic\"]\).";
+BeginPackage["ComputationalDiaries`AstronomicalPosition`", {"ComputationalDiaries`"}];
 
 
 Begin["`Private`"];

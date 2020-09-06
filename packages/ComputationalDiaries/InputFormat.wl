@@ -1,20 +1,6 @@
 (* ::Package:: *)
 
-BeginPackage["ComputationalDiaries`InputFormat`",{
-	"ComputationalDiaries`DiaryTypes`",
-	"ComputationalDiaries`DiaryObservation`"
-}];
-
-
-processInputFormat::usage = "Canonicalizes the input format.";
-launchCurationPalette::usage = "Opens a palette with useful templates for Diary curation.";
-inputMonthDay::usage =
-	"inputMonthDay[\!\(\*
-StyleBox[\"day\",\nFontSlant->\"Italic\"]\), \!\(\*
-StyleBox[\"time\",\nFontSlant->\"Italic\"]\)] represents a day and time of the month for the input format.";
-replaceButton::usage = "Makes a button that replaces its parent box when pressed.";
-replaceButtonTemplate::usage =
-	"Makes a collection of replaceButtons for importing common formats.";
+BeginPackage["ComputationalDiaries`InputFormat`", {"ComputationalDiaries`"}];
 
 
 Begin["`Private`"];

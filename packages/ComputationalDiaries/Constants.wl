@@ -3,17 +3,6 @@
 BeginPackage["ComputationalDiaries`Constants`"];
 
 
-combineMissings::usage = "Algebraically combines Missing[]s.";
-getNormalStars::usage = "getNormalStars[] returns the list of normal stars.
-getNormalStars[\!\(\*
-StyleBox[\"name\",\nFontSlant->\"Italic\"]\)] returrns the normal star associated with the name \!\(\*
-StyleBox[\"name\",\nFontSlant->\"Italic\"]\).";
-normalStarQ::usage = 
-	"normalStar[\!\(\*
-StyleBox[\"obj\",\nFontSlant->\"Italic\"]\)] returns True of \!\(\*
-StyleBox[\"obj\",\nFontSlant->\"Italic\"]\) is a normal star and False otherwise.";
-
-
 Begin["`Private`"];
 
 

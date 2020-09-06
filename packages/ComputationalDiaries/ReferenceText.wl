@@ -1,11 +1,6 @@
 (* ::Package:: *)
 
-BeginPackage["ComputationalDiaries`ReferenceText`"];
-
-
-getTabletLines::usage =
-	"Uses a reference copy of Oracc adsd to give the content of a tablet.";
-showTablet::usage = "Uses getTabletLines to show the content of the specified tablet.";
+BeginPackage["ComputationalDiaries`ReferenceText`", {"ComputationalDiaries`"}];
 
 
 Begin["`Private`"];

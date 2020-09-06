@@ -1,16 +1,6 @@
 (* ::Package:: *)
 
-BeginPackage["ComputationalDiaries`DiaryTypes`",{
-	"ComputationalDiaries`Constants`"
-}];
-
-
-DiaryDate::usage = "Represents a date in a combination of the Julian and Babylonian calendars.";
-DiaryDistance::usage = "Represents a distance in the sky in cubits (K\[CapitalUGrave]\[CapitalSHacek]) and fingers (\[CapitalSHacek]I or U).";
-DiaryDisplacement::usage = "Represents the displacement between two objects in the sky.";
-DiaryDuration::usage = "Represents a duration in Babylonian units.";
-DiaryCapacity::usage =
-	"Represents an amount of barely, dates, mustard, cress, or sesame in MarketRates observations.";
+BeginPackage["ComputationalDiaries`DiaryTypes`", {"ComputationalDiaries`"}];
 
 
 Begin["`Private`"];
@@ -65,7 +55,7 @@ DiaryDate[data_]["JulianDate"] :=
 
 months = {"I","II","III","IV","V","VI","VII","VIII","IX","X","XI","XII","VI2","XII2"};
 times = {"BeginningOfTheNight","FirstPartOfTheNight","MiddlePartOfTheNight",
-		"LastPartOfTheNight","Morning","Noon","Afternoon","Sunset"};
+		"LastPartOfTheNight","Morning","Noon","Afternoon","Sunset","Day","Night"};
 
 
 dd:DiaryDate[Except[KeyValuePattern[{

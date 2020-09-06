@@ -1,12 +1,6 @@
 (* ::Package:: *)
 
-BeginPackage["ComputationalDiaries`DiaryObservation`",{
-	"ComputationalDiaries`DiaryTypes`",
-	"ComputationalDiaries`Constants`"
-}];
-
-
-DiaryObservation::usage = "Represents an observation in the Astronomical Diaries.";
+BeginPackage["ComputationalDiaries`DiaryObservation`", {"ComputationalDiaries`"}];
 
 
 Begin["`Private`"];

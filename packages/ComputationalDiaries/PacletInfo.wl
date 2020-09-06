@@ -2,7 +2,7 @@
 
 PacletObject[<|
 	"Name"->"ComputationalDiaries",
-	"Version"->"1.0",
+	"Version"->"0.9",
 	"Creator"->"Christopher Wolfram",
 	"Extensions"->{{"Kernel", "Context"->"ComputationalDiaries`"}}
 |>]
