@@ -25,7 +25,7 @@ diaryDateAddDay[date_DiaryDate, days_Missing, time_] := days
 diaryDateAddDay[date_Missing, days_, time_] := date
 
 
-processInputFormat[tablets_] :=
+DiaryParse[tablets_] :=
 	Flatten[Function[tab, Module[{tabletID,creator},
 		tabletID = tab["TabletID"];
 		creator = tab["Creator"];
@@ -45,7 +45,7 @@ processInputFormat[tablets_] :=
 							"LineNumber"->observation["LineNumber"],
 							"Notes"->observation["Notes"]
 						|>
-					|>]/.inputMonthDay[day_,time_]:>diaryDateAddDay[dayZero,day,time]]]
+					|>]/.DiaryInputDate[day_,time_]:>diaryDateAddDay[dayZero,day,time]]]
 				]
 			]/@month["Observations"]
 		]]/@tab["Months"]
@@ -69,7 +69,7 @@ referenceNBPath =
 	FileNameJoin[{DirectoryName[$InputFileName],"curationPaletteReference.nb"}];
 
 
-launchCurationPalette[] :=
+DiaryCurationPalette[] :=
 	CreatePalette[makePalette[First[Import[referenceNBPath,"Notebook"]]],WindowTitle->"Curation"]
 
 
@@ -85,21 +85,21 @@ replaceButton[name_, payload_, depth_:1] :=
 replaceButton[name_] := replaceButton[name,ToBoxes[name]]
 
 
-replaceButtonTemplate["Row", names_] :=
+DiaryInputTemplate["Row", names_] :=
 	Panel[Alternatives@@(replaceButton[#,ToBoxes[#],2]&/@names)]
-replaceButtonTemplate["Column", names_, n_:3] :=
+DiaryInputTemplate["Column", names_, n_:3] :=
 	Panel[Multicolumn[replaceButton[#,ToBoxes[#],3]&/@names,n]]
-replaceButtonTemplate["Missing", name_] := replaceButtonTemplate["Row",
+DiaryInputTemplate["Missing", name_] := DiaryInputTemplate["Row",
 		{Placeholder[name],Missing["Destroyed"],Missing["Unmentioned"]}]
-replaceButtonTemplate["Boolean"] := replaceButtonTemplate["Row",
+DiaryInputTemplate["Boolean"] := DiaryInputTemplate["Row",
 	{True,False,Missing["Destroyed"],Missing["Unmentioned"]}]
-replaceButtonTemplate["Object"] :=
+DiaryInputTemplate["Object"] :=
 	Panel[Grid[Append[
 			Map[replaceButton[#[[1]],#[[2]],3]&,objectGroups,{2}],{
 				replaceButton[Missing["Unmentioned"],ToBoxes@Missing["Unmentioned"],3],
 				replaceButton[Missing["Destroyed"],ToBoxes@Missing["Destroyed"],3]
 			}]]]
-replaceButtonTemplate["Planet"] := replaceButtonTemplate["Row",{
+DiaryInputTemplate["Planet"] := DiaryInputTemplate["Row",{
 		Entity["PlanetaryMoon","Moon"],
 		Entity["Planet","Mercury"],
 		Entity["Planet","Venus"],
@@ -109,7 +109,7 @@ replaceButtonTemplate["Planet"] := replaceButtonTemplate["Row",{
 		Entity["Star","Sirius"],
 		Missing["Destroyed"],
 		Missing["Unmentioned"]}]
-replaceButtonTemplate["ZodiacSign"] := replaceButtonTemplate["Row",{
+DiaryInputTemplate["ZodiacSign"] := DiaryInputTemplate["Row",{
 		Entity["Constellation","Aries"],
 		Entity["Constellation","Taurus"],
 		Entity["Constellation","Gemini"],
@@ -124,7 +124,7 @@ replaceButtonTemplate["ZodiacSign"] := replaceButtonTemplate["Row",{
 		Entity["Constellation","Pisces"],
 		Missing["Destroyed"],
 		Missing["Unmentioned"]}]
-replaceButtonTemplate["King"] := replaceButtonTemplate["Row",{
+DiaryInputTemplate["King"] := DiaryInputTemplate["Row",{
 		"\[CapitalSHacek]ama\[SHacek]\[SHacek]umukin",
 		"NebukadnezarII",
 		"ArtaxerxesI",
@@ -136,7 +136,7 @@ replaceButtonTemplate["King"] := replaceButtonTemplate["Row",{
 		"PhilipArrhidaeus",
 		"AlexanderIV",
 		"SE"}]
-replaceButtonTemplate["Time"] := replaceButtonTemplate["Column",{
+DiaryInputTemplate["Time"] := DiaryInputTemplate["Column",{
 		"BeginningOfTheNight",
 		"FirstPartOfTheNight",
 		"MiddlePartOfTheNight",
@@ -156,39 +156,39 @@ objectGroups = {{
 	{"Mars",ToBoxes@Entity["Planet","Mars"]},
 	{"Jupiter",ToBoxes@Entity["Planet","Jupiter"]},
 	{"Saturn",ToBoxes@Entity["Planet","Saturn"]}},{
-	{"EtaPiscium",MakeBoxes@getNormalStars["EtaPiscium"]}},{
-	{"BetaArietis",MakeBoxes@getNormalStars["BetaArietis"]},
-	{"AlphaArietis",MakeBoxes@getNormalStars["AlphaArietis"]}},{
-	{"EtaTauri",MakeBoxes@getNormalStars["EtaTauri"]},
-	{"AlphaTauri",MakeBoxes@getNormalStars["AlphaTauri"]},
-	{"BetaTauri",MakeBoxes@getNormalStars["BetaTauri"]},
-	{"ZetaTauri",MakeBoxes@getNormalStars["ZetaTauri"]}},{
-	{"EtaGeminorum",MakeBoxes@getNormalStars["EtaGeminorum"]},
-	{"MuGeminorum",MakeBoxes@getNormalStars["MuGeminorum"]},
-	{"GammaGeminorum",MakeBoxes@getNormalStars["GammaGeminorum"]},
-	{"AlphaGeminorum",MakeBoxes@getNormalStars["AlphaGeminorum"]},
-	{"BetaGeminorum",MakeBoxes@getNormalStars["BetaGeminorum"]}},{
-	{"EtaCancri",MakeBoxes@getNormalStars["EtaCancri"]},
-	{"ThetaCancri",MakeBoxes@getNormalStars["ThetaCancri"]},
-	{"GammaCancri",MakeBoxes@getNormalStars["GammaCancri"]},
-	{"DeltaCancri",MakeBoxes@getNormalStars["DeltaCancri"]}},{
-	{"EpsilonLeonis",MakeBoxes@getNormalStars["EpsilonLeonis"]},
-	{"AlphaLeonis",MakeBoxes@getNormalStars["AlphaLeonis"]},
-	{"RhoLeonis",MakeBoxes@getNormalStars["RhoLeonis"]},
-	{"ThetaLeonis",MakeBoxes@getNormalStars["ThetaLeonis"]}},{
-	{"BetaVirginis",MakeBoxes@getNormalStars["BetaVirginis"]},
-	{"GammaVirginis",MakeBoxes@getNormalStars["GammaVirginis"]},
-	{"AlphaVirginis",MakeBoxes@getNormalStars["AlphaVirginis"]}},{
-	{"AlphaLibrae",MakeBoxes@getNormalStars["AlphaLibrae"]},
-	{"BetaLibrae",MakeBoxes@getNormalStars["BetaLibrae"]}},{
-	{"DeltaScorpii",MakeBoxes@getNormalStars["DeltaScorpii"]},
-	{"BetaScorpii",MakeBoxes@getNormalStars["BetaScorpii"]},
-	{"AlphaScorpii",MakeBoxes@getNormalStars["AlphaScorpii"]},
-	{"PiScorpii",MakeBoxes@getNormalStars["PiScorpii"]}},{
-	{"ThetaOphiuchi",MakeBoxes@getNormalStars["ThetaOphiuchi"]}},{
-	{"BetaCapricorni",MakeBoxes@getNormalStars["BetaCapricorni"]},
-	{"GammaCapricorni",MakeBoxes@getNormalStars["GammaCapricorni"]},
-	{"DeltaCapricorni",MakeBoxes@getNormalStars["DeltaCapricorni"]}}};
+	{"EtaPiscium",MakeBoxes@DiaryNormalStar["EtaPiscium"]}},{
+	{"BetaArietis",MakeBoxes@DiaryNormalStar["BetaArietis"]},
+	{"AlphaArietis",MakeBoxes@DiaryNormalStar["AlphaArietis"]}},{
+	{"EtaTauri",MakeBoxes@DiaryNormalStar["EtaTauri"]},
+	{"AlphaTauri",MakeBoxes@DiaryNormalStar["AlphaTauri"]},
+	{"BetaTauri",MakeBoxes@DiaryNormalStar["BetaTauri"]},
+	{"ZetaTauri",MakeBoxes@DiaryNormalStar["ZetaTauri"]}},{
+	{"EtaGeminorum",MakeBoxes@DiaryNormalStar["EtaGeminorum"]},
+	{"MuGeminorum",MakeBoxes@DiaryNormalStar["MuGeminorum"]},
+	{"GammaGeminorum",MakeBoxes@DiaryNormalStar["GammaGeminorum"]},
+	{"AlphaGeminorum",MakeBoxes@DiaryNormalStar["AlphaGeminorum"]},
+	{"BetaGeminorum",MakeBoxes@DiaryNormalStar["BetaGeminorum"]}},{
+	{"EtaCancri",MakeBoxes@DiaryNormalStar["EtaCancri"]},
+	{"ThetaCancri",MakeBoxes@DiaryNormalStar["ThetaCancri"]},
+	{"GammaCancri",MakeBoxes@DiaryNormalStar["GammaCancri"]},
+	{"DeltaCancri",MakeBoxes@DiaryNormalStar["DeltaCancri"]}},{
+	{"EpsilonLeonis",MakeBoxes@DiaryNormalStar["EpsilonLeonis"]},
+	{"AlphaLeonis",MakeBoxes@DiaryNormalStar["AlphaLeonis"]},
+	{"RhoLeonis",MakeBoxes@DiaryNormalStar["RhoLeonis"]},
+	{"ThetaLeonis",MakeBoxes@DiaryNormalStar["ThetaLeonis"]}},{
+	{"BetaVirginis",MakeBoxes@DiaryNormalStar["BetaVirginis"]},
+	{"GammaVirginis",MakeBoxes@DiaryNormalStar["GammaVirginis"]},
+	{"AlphaVirginis",MakeBoxes@DiaryNormalStar["AlphaVirginis"]}},{
+	{"AlphaLibrae",MakeBoxes@DiaryNormalStar["AlphaLibrae"]},
+	{"BetaLibrae",MakeBoxes@DiaryNormalStar["BetaLibrae"]}},{
+	{"DeltaScorpii",MakeBoxes@DiaryNormalStar["DeltaScorpii"]},
+	{"BetaScorpii",MakeBoxes@DiaryNormalStar["BetaScorpii"]},
+	{"AlphaScorpii",MakeBoxes@DiaryNormalStar["AlphaScorpii"]},
+	{"PiScorpii",MakeBoxes@DiaryNormalStar["PiScorpii"]}},{
+	{"ThetaOphiuchi",MakeBoxes@DiaryNormalStar["ThetaOphiuchi"]}},{
+	{"BetaCapricorni",MakeBoxes@DiaryNormalStar["BetaCapricorni"]},
+	{"GammaCapricorni",MakeBoxes@DiaryNormalStar["GammaCapricorni"]},
+	{"DeltaCapricorni",MakeBoxes@DiaryNormalStar["DeltaCapricorni"]}}};
 
 
 (* ::Subsection:: *)

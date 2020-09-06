@@ -1,16 +1,16 @@
 (* ::Package:: *)
 
-BeginPackage["ComputationalDiaries`Constants`"];
+BeginPackage["ComputationalDiaries`Constants`", {"ComputationalDiaries`"}];
 
 
 Begin["`Private`"];
 
 
 (* ::Subsection:: *)
-(*combineMissings*)
+(*DiaryMergeMissing*)
 
 
-combineMissings[missings_] :=
+DiaryMergeMissing[missings_] :=
 	Which[
 		MemberQ[missings,Missing[]],Missing[],
 		MemberQ[missings,Missing["Destroyed"]],Missing["Destroyed"],
@@ -20,7 +20,7 @@ combineMissings[missings_] :=
 
 
 (* ::Subsection:: *)
-(*Normal stars*)
+(*DiaryNormalStar*)
 
 
 normalStarMap = <|
@@ -60,11 +60,8 @@ normalStarMap = <|
 |>;
 
 
-getNormalStars[] := Values[normalStarMap]
-getNormalStars[name_String] := normalStarMap[name]
-
-
-normalStarQ[obj_] := MemberQ[Values[normalStarMap],obj]
+DiaryNormalStar[] := Values[normalStarMap]
+DiaryNormalStar[name_String] := normalStarMap[name]
 
 
 (* ::Subsection:: *)

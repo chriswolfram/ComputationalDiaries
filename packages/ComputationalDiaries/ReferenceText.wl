@@ -16,15 +16,18 @@ Begin["`Private`"];
 tabletTexts = Import[FileNameJoin[{DirectoryName[$InputFileName],"tabletTexts.mx"}]];
 
 
-getTabletLines::unknownTablet = "`` is not a valid tablet ID.";
+DiaryTabletData[] := AssociationThread[Keys[tabletTexts], <||>] (*placeholder*)
 
 
-getTabletLines[] := tabletTexts
-getTabletLines[tabletID_] :=
-	Lookup[tabletTexts, tabletID, Message[getTabletLines::unknownTablet,tabletID];$Failed]
+DiaryTabletText::unknownTablet = "`` is not a valid tablet ID.";
 
 
-showTablet[tabletID_] := With[{lines = getTabletLines[tabletID]},
+DiaryTabletText[] := tabletTexts
+DiaryTabletText[tabletID_] :=
+	Lookup[tabletTexts, tabletID, Message[DiaryTabletText::unknownTablet,tabletID];$Failed]
+
+
+DiaryTabletTable[tabletID_] := With[{lines = DiaryTabletText[tabletID]},
 	If[lines === $Failed, $Failed,
 		Grid[lines/.Delimiter->{},Alignment->Left,Frame->All]
 	]

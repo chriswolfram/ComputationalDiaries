@@ -50,7 +50,7 @@ def star_position(hip,day):
 "];
 
 
-normalStarHIPNumbers = EntityValue[getNormalStars[],"HipparcosNumber","EntityAssociation"];
+normalStarHIPNumbers = EntityValue[DiaryNormalStar[],"HipparcosNumber","EntityAssociation"];
 
 
 synodicObjectNames = <|
@@ -64,19 +64,19 @@ synodicObjectNames = <|
 |>;
 
 
-astronomicalPosition::invalidObject = "`` is not a valid normal star or synodic object.";
+DiaryAstronomicalPosition::invalidObject = "`` is not a valid normal star or synodic object.";
 
 
-astronomicalPosition[obj_, jd_?NumberQ] :=
+DiaryAstronomicalPosition[obj_, jd_?NumberQ] :=
 	Which[
 		KeyExistsQ[synodicObjectNames, obj],synodicPosition[synodicObjectNames[obj],jd],
 		KeyExistsQ[normalStarHIPNumbers, obj],normalStarPosition[normalStarHIPNumbers[obj],jd],
 		MissingQ[obj], obj,
-		True,Message[astronomicalPosition::invalidObject, obj];$Failed
+		True,Message[DiaryAstronomicalPosition::invalidObject, obj];$Failed
 	]
-astronomicalPosition[obj_, date_?DateObjectQ] := astronomicalPosition[obj,JulianDate[date]]
-astronomicalPosition[obj_, date_DiaryDate] := astronomicalPosition[obj,date["JulianDate"]]
-astronomicalPosition[obj_, date_?MissingQ] := date
+DiaryAstronomicalPosition[obj_, date_?DateObjectQ] := DiaryAstronomicalPosition[obj,JulianDate[date]]
+DiaryAstronomicalPosition[obj_, date_DiaryDate] := DiaryAstronomicalPosition[obj,date["JulianDate"]]
+DiaryAstronomicalPosition[obj_, date_?MissingQ] := date
 
 
 (* ::Subsection:: *)

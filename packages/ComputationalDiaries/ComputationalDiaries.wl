@@ -1,5 +1,8 @@
 (* ::Package:: *)
 
+pink 
+
+
 BeginPackage["ComputationalDiaries`"];
 
 
@@ -7,69 +10,102 @@ BeginPackage["ComputationalDiaries`"];
 (*Constants*)
 
 
-combineMissings::usage = "Algebraically combines Missing[]s.";
-getNormalStars::usage = "getNormalStars[] returns the list of normal stars.
-getNormalStars[\!\(\*
-StyleBox[\"name\",\nFontSlant->\"Italic\"]\)] returrns the normal star associated with the name \!\(\*
-StyleBox[\"name\",\nFontSlant->\"Italic\"]\).";
-normalStarQ::usage = 
-	"normalStar[\!\(\*
-StyleBox[\"obj\",\nFontSlant->\"Italic\"]\)] returns True of \!\(\*
-StyleBox[\"obj\",\nFontSlant->\"Italic\"]\) is a normal star and False otherwise.";
+GeneralUtilities`SetUsage[DiaryMergeMissing, "
+DiaryMergeMissing[{m$1,m$2,$$}] algebraically combines missing values m$1, m$2, $$."];
+
+
+GeneralUtilities`SetUsage[DiaryNormalStar, "
+DiaryNormalStar[] returns the list of Normal Stars.
+DiaryNormalStar[name$] returns the Normal Star associated with the specified name$."];
 
 
 (* ::Subsection:: *)
 (*DiaryTypes*)
 
 
-DiaryDate::usage = "Represents a date in a combination of the Julian and Babylonian calendars.";
-DiaryDistance::usage = "Represents a distance in the sky in cubits (K\[CapitalUGrave]\[CapitalSHacek]) and fingers (\[CapitalSHacek]I or U).";
-DiaryDuration::usage = "Represents a duration in Babylonian units.";
-DiaryCapacity::usage =
-	"Represents an amount of barely, dates, mustard, cress, or sesame in MarketRates observations.";
+GeneralUtilities`SetUsage[DiaryDate, "
+DiaryDate[$$] represents a date in a combination of the Julian and Babylonian calendars."];
+
+
+GeneralUtilities`SetUsage[DiaryDistance, "
+DiaryDistance[{cubits$,fingers$}] represents a distance on the sky in cubits (K\[CapitalUGrave]\[CapitalSHacek]) and fingers (\[CapitalSHacek]I or U)."];
+
+
+GeneralUtilities`SetUsage[DiaryDuration, "
+DiaryDuration[{deg$,nin$}] represents a duration in degrees and NINDA."];
+
+
+GeneralUtilities`SetUsage[DiaryCapacity, "
+DiaryCapacity[{kur$,pan$,sut$,qa$}] represents a capacity of a commodity in kurru, p\[ABar]nu, s\:016btu, and qa."];
 
 
 (* ::Subsection:: *)
 (*DiaryObservation*)
 
 
-DiaryObservation::usage = "Represents an observation in the Astronomical Diaries.";
+GeneralUtilities`SetUsage[DiaryObservation, "
+DiaryObservation[$$] represents an observation in the Astronomical Diaries."];
 
 
 (* ::Subsection:: *)
 (*AstronomicalPosition*)
 
 
-astronomicalPosition::usage =
-	"astronomicalPosition[\!\(\*
-StyleBox[\"obj\",\nFontSlant->\"Italic\"]\),\!\(\*
-StyleBox[\"date\",\nFontSlant->\"Italic\"]\)] computes the ecliptic coordinantes for \!\(\*
-StyleBox[\"obj\",\nFontSlant->\"Italic\"]\) on \!\(\*
-StyleBox[\"date\",\nFontSlant->\"Italic\"]\).";
+GeneralUtilities`SetUsage[DiaryAstronomicalPosition, "
+DiaryAstronomicalPosition[obj$,dateSpec$] computes the position of obj$ at time dateSpec$ relative to the ecliptic."];
 
 
 (* ::Subsection:: *)
 (*InputFormat*)
 
 
-processInputFormat::usage = "Canonicalizes the input format.";
-launchCurationPalette::usage = "Opens a palette with useful templates for Diary curation.";
-inputMonthDay::usage =
-	"inputMonthDay[\!\(\*
-StyleBox[\"day\",\nFontSlant->\"Italic\"]\), \!\(\*
-StyleBox[\"time\",\nFontSlant->\"Italic\"]\)] represents a day and time of the month for the input format.";
-replaceButton::usage = "Makes a button that replaces its parent box when pressed.";
-replaceButtonTemplate::usage =
-	"Makes a collection of replaceButtons for importing common formats.";
+GeneralUtilities`SetUsage[DiaryParse, "
+DiaryParse[data$] processes data$, returning a list of DiaryObservations.
+"];
+
+
+GeneralUtilities`SetUsage[DiaryCurationPalette, "
+DiaryCurationPalette[] launches the curation palette.
+"];
+
+
+GeneralUtilities`SetUsage[DiaryInputDate, "
+DiaryInputDay[day$,time$] represents a date and time in the input format.
+"];
+
+
+GeneralUtilities`SetUsage[DiaryInputDate, "
+DiaryInputDay[day$,time$] represents a date and time in the input format.
+"];
+
+
+GeneralUtilities`SetUsage[DiaryInputTemplate, "
+DiaryInputTemplate[t$] returns the input format template specified by t$.
+DiaryInputTemplate[\"Row\",l$] returns a template row of the elements of l$.
+DiaryInputTemplate[\"Column\",l$] returns a template column of the elements of l$.
+DiaryInputTemplate[\"Missing\",n$] returns a template supporting selection of n$ or Missing.
+"];
 
 
 (* ::Subsection:: *)
 (*ReferenceText*)
 
 
-getTabletLines::usage =
-	"Uses a reference copy of Oracc adsd to give the content of a tablet.";
-showTablet::usage = "Uses getTabletLines to show the content of the specified tablet.";
+GeneralUtilities`SetUsage[DiaryTabletData, "
+DiaryTabletData[tablet$] returns metadata associated with the specified tablet.
+DiaryTabletData[] returns an association containing metadata for all known tablets.
+"];
+
+
+GeneralUtilities`SetUsage[DiaryTabletText, "
+DiaryTabletText[tablet$] returns the text of the specified tablet.
+DiaryTabletText[] returns an association containing text for all known tablets.
+"];
+
+
+GeneralUtilities`SetUsage[DiaryTabletTable, "
+DiaryTabletTable[tablet$] makes a visual representation of the specified tablet.
+"];
 
 
 (* ::Subsection:: *)
