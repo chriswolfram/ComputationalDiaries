@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     47125,        827]
-NotebookOptionsPosition[     45811,        802]
-NotebookOutlinePosition[     46244,        819]
-CellTagsIndexPosition[     46201,        816]
+NotebookDataLength[     47361,        834]
+NotebookOptionsPosition[     46046,        809]
+NotebookOutlinePosition[     46480,        826]
+CellTagsIndexPosition[     46437,        823]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -25,6 +25,9 @@ Cell["Load the paclet:", "Text",
 
 Cell[BoxData[{
  RowBox[{
+  RowBox[{"PacletDirectoryLoad", "[", "\"\<~/git/errorhandling/\>\"", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
   RowBox[{
   "PacletDirectoryLoad", "[", 
    "\"\</Users/christopher/git/ComputationalDiaries/packages\>\"", "]"}], 
@@ -32,8 +35,9 @@ Cell[BoxData[{
  RowBox[{"Needs", "[", "\"\<ComputationalDiaries`\>\"", "]"}]}], "Input",
  CellChangeTimes->{{3.7970049170244207`*^9, 3.7970049772041807`*^9}, {
   3.8083315498550386`*^9, 3.808331556885096*^9}, {3.808331636182783*^9, 
-  3.8083316367998543`*^9}},
- CellLabel->"In[1]:=",ExpressionUUID->"da447a00-1215-4da6-8bba-54afb85cba84"],
+  3.8083316367998543`*^9}, {3.808405776633456*^9, 
+  3.808405778455339*^9}},ExpressionUUID->"448de155-4151-44e7-b7b1-\
+3540f8147f84"],
 
 Cell["Oracc URL:", "Text",
  CellChangeTimes->{{3.808332018997795*^9, 
@@ -779,15 +783,18 @@ GIZhGIZhGMb08H/srj85
 4ca1-8b51-aae35dfdfc32"],
 
 Cell[BoxData[
- RowBox[{"showTablet", "[", "\"\<X202470\>\"", "]"}]], "Input",
- CellChangeTimes->{3.808332151415304*^9},
- CellLabel->"In[14]:=",ExpressionUUID->"dcd06dac-3d19-46bc-b33d-4f48c4817a54"],
+ RowBox[{"DiaryTabletTable", "[", "\"\<X202470\>\"", "]"}]], "Input",
+ CellChangeTimes->{
+  3.808332151415304*^9, {3.808405740457898*^9, 3.8084057427577047`*^9}},
+ CellLabel->"In[44]:=",ExpressionUUID->"dcd06dac-3d19-46bc-b33d-4f48c4817a54"],
 
 Cell[BoxData[
  RowBox[{
-  RowBox[{"launchCurationPalette", "[", "]"}], ";"}]], "Input",
- CellChangeTimes->{{3.808331707524468*^9, 3.808331718659109*^9}},
- CellLabel->"In[12]:=",ExpressionUUID->"d109a0c1-a29f-4092-9e80-e96d6f6623e4"],
+  RowBox[{"DiaryCurationPalette", "[", "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.808331707524468*^9, 3.808331718659109*^9}, {
+  3.808405745539071*^9, 
+  3.808405747178763*^9}},ExpressionUUID->"d109a0c1-a29f-4092-9e80-\
+e96d6f6623e4"],
 
 Cell[BoxData[
  RowBox[{
@@ -801,7 +808,7 @@ Cell[BoxData[
 9b7af329921a"]
 },
 WindowSize->{808, 905},
-WindowMargins->{{Automatic, 242}, {Automatic, 40}},
+WindowMargins->{{Automatic, 267}, {-32, Automatic}},
 TaggingRules->{"TryRealOnly" -> False},
 FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (June 9, 2020)",
 StyleDefinitions->"Default.nb",
@@ -819,16 +826,16 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[558, 20, 160, 3, 35, "Text",ExpressionUUID->"212fa99a-a478-4ad0-870e-30e84403b47c"],
-Cell[721, 25, 481, 10, 52, "Input",ExpressionUUID->"da447a00-1215-4da6-8bba-54afb85cba84"],
-Cell[1205, 37, 151, 3, 35, "Text",ExpressionUUID->"e77e1caa-206a-47fe-b7a3-211e4bfaf2f4"],
-Cell[1359, 42, 166, 3, 35, "Text",ExpressionUUID->"c62d1acd-f96d-4f80-ab64-16ac1210d462"],
-Cell[1528, 47, 151, 3, 35, "Text",ExpressionUUID->"d772d491-7f7d-456a-9ea7-9781adce0626"],
-Cell[1682, 52, 167, 3, 35, "Text",ExpressionUUID->"70cc62ad-792f-4530-b8ec-3124cba06b5a"],
-Cell[1852, 57, 36957, 611, 140, "Input",ExpressionUUID->"7e39a5c8-5645-439c-bc34-f12b80d3bdcf"],
-Cell[38812, 670, 6267, 108, 46, "Input",ExpressionUUID->"ff7b0eb1-5725-4ca1-8b51-aae35dfdfc32"],
-Cell[45082, 780, 198, 3, 30, "Input",ExpressionUUID->"dcd06dac-3d19-46bc-b33d-4f48c4817a54"],
-Cell[45283, 785, 232, 4, 30, "Input",ExpressionUUID->"d109a0c1-a29f-4092-9e80-e96d6f6623e4"],
-Cell[45518, 791, 289, 9, 34, "Input",ExpressionUUID->"842827b1-f0a0-49ca-b697-9b7af329921a"]
+Cell[721, 25, 630, 14, 73, "Input",ExpressionUUID->"448de155-4151-44e7-b7b1-3540f8147f84"],
+Cell[1354, 41, 151, 3, 35, "Text",ExpressionUUID->"e77e1caa-206a-47fe-b7a3-211e4bfaf2f4"],
+Cell[1508, 46, 166, 3, 35, "Text",ExpressionUUID->"c62d1acd-f96d-4f80-ab64-16ac1210d462"],
+Cell[1677, 51, 151, 3, 35, "Text",ExpressionUUID->"d772d491-7f7d-456a-9ea7-9781adce0626"],
+Cell[1831, 56, 167, 3, 35, "Text",ExpressionUUID->"70cc62ad-792f-4530-b8ec-3124cba06b5a"],
+Cell[2001, 61, 36957, 611, 140, "Input",ExpressionUUID->"7e39a5c8-5645-439c-bc34-f12b80d3bdcf"],
+Cell[38961, 674, 6267, 108, 46, "Input",ExpressionUUID->"ff7b0eb1-5725-4ca1-8b51-aae35dfdfc32"],
+Cell[45231, 784, 255, 4, 30, "Input",ExpressionUUID->"dcd06dac-3d19-46bc-b33d-4f48c4817a54"],
+Cell[45489, 790, 261, 6, 30, "Input",ExpressionUUID->"d109a0c1-a29f-4092-9e80-e96d6f6623e4"],
+Cell[45753, 798, 289, 9, 34, "Input",ExpressionUUID->"842827b1-f0a0-49ca-b697-9b7af329921a"]
 }
 ]
 *)

@@ -6,31 +6,11 @@ BeginPackage["ComputationalDiaries`InputFormat`", {"ComputationalDiaries`"}];
 Begin["`Private`"];
 
 
-diaryDateAddDay[date_DiaryDate, days_Integer, time_] :=
-	Module[{newJulianDate},
-		newJulianDate = date["JulianDate"]+Quantity[days,"Days"];
-		DiaryDate[<|
-			"BabylonianYear"->date["BabylonianYear"],
-			"BabylonianMonth"->date["BabylonianMonth"],
-			"BabylonianDay"->date["BabylonianDay"]+days,
-			(*Years are transformed to make them AD (so it goes -1,0,1 instead of -1,1)*)
-			"JulianYear"->
-				DateValue[newJulianDate,"Year"]+Boole[Negative[DateValue[newJulianDate,"Year"]]],
-			"JulianMonth"->DateValue[newJulianDate,"Month"],
-			"JulianDay"->DateValue[newJulianDate,"Day"],
-			"Time"->time
-		|>]
-	]
-diaryDateAddDay[date_DiaryDate, days_Missing, time_] := days
-diaryDateAddDay[date_Missing, days_, time_] := date
-
-
 DiaryParse[tablets_] :=
 	Flatten[Function[tab, Module[{tabletID,creator},
 		tabletID = tab["TabletID"];
 		creator = tab["Creator"];
-		Function[month, With[{dayZero = month["DayZero"]},
-			Function[observation,
+		Function[month, Function[observation,
 				Identity//@If[MatchQ[observation,_DiaryObservation],
 					observation,
 					DiaryObservation[Association[Normal[<|
@@ -45,10 +25,16 @@ DiaryParse[tablets_] :=
 							"LineNumber"->observation["LineNumber"],
 							"Notes"->observation["Notes"]
 						|>
-					|>]/.DiaryInputDate[day_,time_]:>diaryDateAddDay[dayZero,day,time]]]
+					|>]/.
+						DiaryInputDate[day_,time_:Missing[]]:>
+							DiaryCombinedDate[
+								DiaryBabylonianDate[{month["BabylonianYear"],month["BabylonianMonth"],day}],
+								time
+							]
+						]
+					]
 				]
-			]/@month["Observations"]
-		]]/@tab["Months"]
+			]/@month["Observations"]]/@tab["Months"]
 	]]/@tablets,2]
 
 
@@ -145,6 +131,8 @@ DiaryInputTemplate["Time"] := DiaryInputTemplate["Column",{
 		"Noon",
 		"Afternoon",
 		"Sunset",
+		"Day",
+		"Night",
 		Missing["Destroyed"],
 		Missing["Unmentioned"]},3]
 

@@ -7,46 +7,82 @@ Begin["`Private`"];
 
 
 (* ::Subsection:: *)
-(*DiaryDate*)
+(*DiaryDates*)
 
 
-DiaryDate::invalid = "`` is not a valid DiaryDate.";
+DiaryJulianDate::invalid = "`` is not a valid DiaryJulianDate.";
+DiaryBabylonianDate::invalid = "`` is not a valid DiaryBabylonianDate.";
+DiaryCombinedDate::invalid = "`` is not a valid DiaryCombinedDate.";
 
 
 (* ::Subsubsection:: *)
 (*Constructors*)
 
 
-(*DiaryDate[{julYear_,babMonth_,babDay_}] :=
-	DiaryDate[]*)
+DiaryJulianDate[d_?DateObjectQ] :=
+	With[{ymd = DateValue[CalendarConvert[d,"Julian"],{"Year","Month","Day"}]},
+		DiaryJulianDate[ymd + {Boole[ymd[[1]]<=0],0,0}]
+	]
+
+
+DiaryJulianDate[dbd_DiaryBabylonianDate, chron_] :=
+	Enclose[
+		With[{
+			alignment = Confirm@SelectFirst[chron,
+				#[[1]]["Year"]===dbd["Year"]&&#[[1]]["Month"]===dbd["Month"]&]},
+			DiaryJulianDate@DatePlus[
+				Confirm[alignment[[2]]["DateObject"]],
+				ConfirmMatch[dbd["Day"],_Integer]-Confirm[alignment[[1]]["Day"]]]
+		],
+		Missing["CouldNotInferJulianDate"]&
+	]
+DiaryJulianDate[dbd_DiaryBabylonianDate] := DiaryJulianDate[dbd, $DiaryChronology]
+
+
+DiaryCombinedDate[dbd_DiaryBabylonianDate, time_] :=
+	DiaryBabylonianDate[<|
+		"JulianDate"->Missing[],
+		"BabylonianDate"->dbd,
+		"Time"->time
+	|>]
 
 
 (* ::Subsubsection:: *)
 (*Accessors*)
 
 
-DiaryDate[data_]["Data"] := data
-DiaryDate[data_]["BabylonianYear"] := data["BabylonianYear"]
-DiaryDate[data_]["BabylonianMonth"] := data["BabylonianMonth"]
-DiaryDate[data_]["BabylonianDay"] := data["BabylonianDay"]
-DiaryDate[data_]["JulianYear"] := data["JulianYear"]
-DiaryDate[data_]["JulianMonth"] := data["JulianMonth"]
-DiaryDate[data_]["JulianDay"] := data["JulianDay"]
-DiaryDate[data_]["Time"] := data["Time"]
-DiaryDate[data_]["JulianDate"] :=
-	If[MissingQ[data["JulianYear"]]||MissingQ[data["JulianMonth"]]||MissingQ[data["JulianDay"]],
-		Missing[],
+DiaryJulianDate[{year_,month_,day_}]["Year"] := year
+DiaryJulianDate[{year_,month_,day_}]["Month"] := month
+DiaryJulianDate[{year_,month_,day_}]["Day"] := day
+djd_DiaryJulianDate["DateObject"] :=
+	If[MissingQ[djd["Year"]]||MissingQ[djd["Month"]]||MissingQ[djd["Day"]],
+		DiaryMergeMissing[{djd["Year"],djd["Month"],djd["Day"]}],
 		DateObject[{
-				data["JulianYear"]-Boole[Negative[data["JulianYear"]]],
-				data["JulianMonth"],
-				data["JulianDay"],
-				12,0,1
-			},
-			"Instant",
+				djd["Year"]-Boole[djd["Year"] <= 0],
+				djd["Month"],
+				djd["Day"]
+			},"Day",
 			CalendarType->"Julian",
-			TimeZone->3(*time zone of Babylon*)
+			TimeZone->3 (*time zone of Babylon*)
 		]
 	]
+
+
+DiaryBabylonianDate[{year_,month_,day_}]["Year"] := year
+DiaryBabylonianDate[{{king_,regnalYear_},month_,day_}]["King"] := king
+DiaryBabylonianDate[{{king_,regnalYear_},month_,day_}]["RegnalYear"] := regnalYear
+DiaryBabylonianDate[{year_,month_,day_}]["Month"] := month
+DiaryBabylonianDate[{year_,month_,day_}]["Day"] := day
+
+
+DiaryCombinedDate[data_]["JulianDate"] :=
+	Which[
+		!MissingQ[data["JulianDate"]], data["JulianDate"],
+		!MissingQ[data["BabylonianDate"]], DiaryJulianDate[data["BabylonianDate"]],
+		True, DiaryMergeMissing[{data["JulianDate"],data["BabylonianDate"]}]
+	]
+DiaryCombinedDate[data_]["BabylonianDate"] := data["BabylonianDate"]
+DiaryCombinedDate[data_]["Time"] := data["Time"]
 
 
 (* ::Subsubsection:: *)
@@ -58,16 +94,24 @@ times = {"BeginningOfTheNight","FirstPartOfTheNight","MiddlePartOfTheNight",
 		"LastPartOfTheNight","Morning","Noon","Afternoon","Sunset","Day","Night"};
 
 
-dd:DiaryDate[Except[KeyValuePattern[{
-		"BabylonianYear"->_Integer|{_String,_Integer}|_Missing,
-		"BabylonianMonth"->(Alternatives@@months)|_Missing,
-		"BabylonianDay"->_Integer|_Missing,
-		"JulianYear"->_Integer|_Missing,
-		"JulianMonth"->_Integer|_Missing,
-		"JulianDay"->_Integer|_Missing,
+djd:DiaryJulianDate[Except[{_Integer|_Missing, _Integer|_Missing, _Integer|_Missing}]] :=
+	(Message[DiaryJulianDate::invalid, HoldForm[djd]]; Missing["InvalidDiaryJulianDate"])
+
+
+dbd:DiaryBabylonianDate[Except[{
+		{_String|_Missing, _Integer|_Missing},
+		(Alternatives@@months)|_Missing,
+		_Integer|"Middle"|"End"|_Missing
+	}]] :=
+	(Message[DiaryBabylonianDate::invalid, HoldForm[dbd]]; Missing["DiaryBabylonianDate"])
+
+
+dcd:DiaryCombinedDate[Except[KeyValuePattern[{
+		"JulianDate"->_DiaryJulianDate|_Missing,
+		"BabylonianDate"->_DiaryBabylonianDate|_Missing,
 		"Time"->(Alternatives@@times)|_Missing
 	}]]] :=
-	(Message[DiaryDate::invalid, HoldForm[dd]]; Missing["InvalidDiaryDate"])
+	(Message[DiaryCombinedDate::invalid, HoldForm[dcd]]; Missing["DiaryCombinedDate"])
 
 
 (* ::Subsection:: *)
@@ -185,23 +229,6 @@ dc:DiaryCapacity[Except[{Repeated[_Rational|_Integer|_Missing,{4}]}]] :=
 
 (* ::Subsection:: *)
 (*Summary boxes*)
-
-
-DiaryDate /:
-	MakeBoxes[date:DiaryDate[_Association],StandardForm] :=
-		BoxForm`ArrangeSummaryBox[
-			DiaryDate,
-			date,
-			Style["\|012000",24],
-			{
-				{"Julian date: ",date["JulianDate"]},
-				{"Babylonian month: ",date["BabylonianMonth"]},
-				{"Babylonian day: ",date["BabylonianDay"]},
-				{"Time: ",date["Time"]}
-			},
-			{},
-			StandardForm
-		]
 
 
 DiaryDistance /:

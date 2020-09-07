@@ -7,6 +7,32 @@ Begin["`Private`"];
 
 
 (* ::Subsection:: *)
+(*DiaryChronology*)
+
+
+$DiaryChronology = {};
+
+
+DiaryCheckChronology[chron:{{_DiaryBabylonianDate,_DiaryJulianDate}...}] :=
+	Enclose[Module[{months},
+		months = GroupBy[chron, {#[[1]]["Year"],#[[1]]["Month"]}&];
+		Function[m,
+			ConfirmAssert[
+				SameQ@@(DiaryJulianDate[DatePlus[#[[2]]["DateObject"],-#[[1]]["Day"]]]&/@m),
+				Failure["InvalidChronology", <|
+					"MessageTemplate"->"Pairs `` are not consistent.",
+					"MessageParameters"->{m},
+					"InvalidPairs"->m|>]]
+		]/@months;
+		Success["ValidChronology",<|"Message"->"Chronology is consistent."|>]
+	], "Information"]
+DiaryCheckChronology[_] :=
+	Failure["InvalidChronology",
+		<|"Message"->"Chronology is not a list of pairs of Babylonian and Julian dates.."|>]
+DiaryCheckChronology[] := DiaryCheckChronology[$DiaryChronology]
+
+
+(* ::Subsection:: *)
 (*DiaryMergeMissing*)
 
 

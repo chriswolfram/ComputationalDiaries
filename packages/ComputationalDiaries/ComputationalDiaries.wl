@@ -19,12 +19,31 @@ DiaryNormalStar[] returns the list of Normal Stars.
 DiaryNormalStar[name$] returns the Normal Star associated with the specified name$."];
 
 
+GeneralUtilities`SetUsage[$DiaryChronology, "
+$DiaryChronology represents the current chronology, represented by pairs of coincident \
+dates in Babylonian and Julian calendars."];
+
+
+GeneralUtilities`SetUsage[DiaryCheckChronology, "
+DiaryCheckChronology[chron$] checks whether the chronology chron$ is consistent.
+DiaryCheckChronology[] checks $DiaryChronology.
+"];
+
+
 (* ::Subsection:: *)
 (*DiaryTypes*)
 
 
-GeneralUtilities`SetUsage[DiaryDate, "
-DiaryDate[$$] represents a date in a combination of the Julian and Babylonian calendars."];
+GeneralUtilities`SetUsage[DiaryJulianDate, "
+DiaryJulianDate[{year$,month$,day$}] represents a date in the Julian calendar."];
+
+
+GeneralUtilities`SetUsage[DiaryBabylonianDate, "
+DiaryBabylonianDate[{{king$,year$},month$,day$}] represents a date in the Babylonian calendar."];
+
+
+GeneralUtilities`SetUsage[DiaryCombinedDate, "
+DiaryCombinedDate[$$] represents a date and time in a combination of the Julian and Babylonian calendars."];
 
 
 GeneralUtilities`SetUsage[DiaryDistance, "
