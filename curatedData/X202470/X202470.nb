@@ -10,34 +10,25 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    357708,       6637]
-NotebookOptionsPosition[    353384,       6568]
-NotebookOutlinePosition[    353817,       6585]
-CellTagsIndexPosition[    353774,       6582]
+NotebookDataLength[    279822,       5197]
+NotebookOptionsPosition[    278140,       5165]
+NotebookOutlinePosition[    278571,       5182]
+CellTagsIndexPosition[    278528,       5179]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
-Cell["Load the paclet:", "Text",
- CellChangeTimes->{{3.8083315067564993`*^9, 
-  3.808331508592225*^9}},ExpressionUUID->"212fa99a-a478-4ad0-870e-\
-30e84403b47c"],
 
-Cell[BoxData[{
- RowBox[{
-  RowBox[{"PacletDirectoryLoad", "[", "\"\<~/git/errorhandling/\>\"", "]"}], 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-  "PacletDirectoryLoad", "[", 
-   "\"\</Users/christopher/git/ComputationalDiaries/packages\>\"", "]"}], 
-  ";"}], "\n", 
- RowBox[{"Needs", "[", "\"\<ComputationalDiaries`\>\"", "]"}]}], "Input",
- CellChangeTimes->{{3.7970049170244207`*^9, 3.7970049772041807`*^9}, {
-  3.8083315498550386`*^9, 3.808331556885096*^9}, {3.808331636182783*^9, 
-  3.8083316367998543`*^9}, {3.808405776633456*^9, 
-  3.808405778455339*^9}},ExpressionUUID->"da447a00-1215-4da6-8bba-\
-54afb85cba84"],
+Cell[CellGroupData[{
+Cell["X202470", "Title",
+ CellChangeTimes->{
+  3.808504557180361*^9},ExpressionUUID->"03ae04e5-94ad-4882-99ca-\
+60aaa5a42156"],
+
+Cell["-247A", "Subtitle",
+ CellChangeTimes->{{3.8085044963485537`*^9, 
+  3.808504501750692*^9}},ExpressionUUID->"44a553b1-75b1-4c8f-9cc4-\
+e347b13ba4ab"],
 
 Cell["Oracc URL:", "Text",
  CellChangeTimes->{{3.808332018997795*^9, 
@@ -784,76 +775,78 @@ GIZhGIZhGMb08H/srj85
 
 Cell[BoxData[
  RowBox[{
-  RowBox[{"$DiaryChronology", "=", 
-   RowBox[{"DeleteDuplicates", "[", 
-    RowBox[{"Join", "[", 
-     RowBox[{"$DiaryChronology", ",", 
-      RowBox[{"{", "\[IndentingNewLine]", 
-       RowBox[{
+  RowBox[{"chronology", "=", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"DiaryBabylonianDate", "[", 
         RowBox[{"{", 
          RowBox[{
-          RowBox[{"DiaryBabylonianDate", "[", 
-           RowBox[{"{", 
-            RowBox[{
-             RowBox[{"{", 
-              RowBox[{"\"\<SE\>\"", ",", "64"}], "}"}], ",", "\"\<VII\>\"", 
-             ",", "0"}], "}"}], "]"}], ",", 
-          RowBox[{"DiaryJulianDate", "[", 
-           RowBox[{"{", 
-            RowBox[{
-             RowBox[{"-", "247"}], ",", "9", ",", "19"}], "}"}], "]"}]}], 
-         "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<SE\>\"", ",", "64"}], "}"}], ",", "\"\<VII\>\"", ",", 
+          "0"}], "}"}], "]"}], ",", 
+       RowBox[{"DiaryJulianDate", "[", 
         RowBox[{"{", 
          RowBox[{
-          RowBox[{"DiaryBabylonianDate", "[", 
-           RowBox[{"{", 
-            RowBox[{
-             RowBox[{"{", 
-              RowBox[{"\"\<SE\>\"", ",", "64"}], "}"}], ",", "\"\<VIII\>\"", 
-             ",", "0"}], "}"}], "]"}], ",", 
-          RowBox[{"DiaryJulianDate", "[", 
-           RowBox[{"{", 
-            RowBox[{
-             RowBox[{"-", "247"}], ",", "10", ",", "19"}], "}"}], "]"}]}], 
-         "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"-", "247"}], ",", "9", ",", "19"}], "}"}], "]"}]}], "}"}], 
+     ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"DiaryBabylonianDate", "[", 
         RowBox[{"{", 
          RowBox[{
-          RowBox[{"DiaryBabylonianDate", "[", 
-           RowBox[{"{", 
-            RowBox[{
-             RowBox[{"{", 
-              RowBox[{"\"\<SE\>\"", ",", "64"}], "}"}], ",", "\"\<X\>\"", ",",
-              "0"}], "}"}], "]"}], ",", 
-          RowBox[{"DiaryJulianDate", "[", 
-           RowBox[{"{", 
-            RowBox[{
-             RowBox[{"-", "247"}], ",", "12", ",", "17"}], "}"}], "]"}]}], 
-         "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<SE\>\"", ",", "64"}], "}"}], ",", "\"\<VIII\>\"", ",",
+           "0"}], "}"}], "]"}], ",", 
+       RowBox[{"DiaryJulianDate", "[", 
         RowBox[{"{", 
          RowBox[{
-          RowBox[{"DiaryBabylonianDate", "[", 
-           RowBox[{"{", 
-            RowBox[{
-             RowBox[{"{", 
-              RowBox[{"\"\<SE\>\"", ",", "64"}], "}"}], ",", "\"\<XI\>\"", 
-             ",", "0"}], "}"}], "]"}], ",", 
-          RowBox[{"DiaryJulianDate", "[", 
-           RowBox[{"{", 
-            RowBox[{
-             RowBox[{"-", "246"}], ",", "1", ",", "15"}], "}"}], "]"}]}], 
-         "}"}]}], "\[IndentingNewLine]", "}"}]}], "]"}], "]"}]}], 
-  ";"}]], "Input",
+          RowBox[{"-", "247"}], ",", "10", ",", "19"}], "}"}], "]"}]}], "}"}],
+      ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"DiaryBabylonianDate", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"\"\<SE\>\"", ",", "64"}], "}"}], ",", "\"\<X\>\"", ",", 
+          "0"}], "}"}], "]"}], ",", 
+       RowBox[{"DiaryJulianDate", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "247"}], ",", "12", ",", "17"}], "}"}], "]"}]}], "}"}],
+      ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"DiaryBabylonianDate", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"\"\<SE\>\"", ",", "64"}], "}"}], ",", "\"\<XI\>\"", ",", 
+          "0"}], "}"}], "]"}], ",", 
+       RowBox[{"DiaryJulianDate", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "246"}], ",", "1", ",", "15"}], "}"}], "]"}]}], 
+      "}"}]}], "\[IndentingNewLine]", "}"}]}], ";"}]], "Input",
  CellChangeTimes->{{3.8084456432374287`*^9, 3.808445802027306*^9}, {
-  3.808494261292077*^9, 3.808494274406739*^9}},
- CellLabel->"In[7]:=",ExpressionUUID->"428da3d3-8402-4eef-8332-fbf041ede472"],
+  3.808494261292077*^9, 3.808494274406739*^9}, {3.808504418237685*^9, 
+  3.8085044280270767`*^9}},
+ CellLabel->"In[31]:=",ExpressionUUID->"428da3d3-8402-4eef-8332-fbf041ede472"],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"DiaryCheckChronology", "[", "]"}]], "Input",
+ RowBox[{"DiaryCheckChronology", "[", 
+  RowBox[{"DeleteDuplicates", "[", 
+   RowBox[{"Join", "[", 
+    RowBox[{"$DiaryChronology", ",", "chronology"}], "]"}], "]"}], 
+  "]"}]], "Input",
  CellChangeTimes->{{3.808445835071754*^9, 3.8084458361543627`*^9}, {
-  3.808494239300508*^9, 3.80849424050007*^9}},
- CellLabel->"In[8]:=",ExpressionUUID->"820d100a-7712-4053-bb34-dfc96aacd304"],
+  3.808494239300508*^9, 3.80849424050007*^9}, {3.8085044195961313`*^9, 
+  3.808504431112136*^9}},
+ CellLabel->"In[32]:=",ExpressionUUID->"820d100a-7712-4053-bb34-dfc96aacd304"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -934,27 +927,16 @@ Cell[BoxData[
   Editable->False,
   SelectWithContents->True,
   Selectable->False]], "Output",
- CellChangeTimes->{3.808500449724798*^9},
- CellLabel->"Out[8]=",ExpressionUUID->"f3d7e377-d99f-49b3-90c7-889ddf862e22"]
+ CellChangeTimes->{
+  3.808500449724798*^9, 3.808501116921823*^9, {3.808503382123193*^9, 
+   3.8085033848867197`*^9}, {3.8085044210594482`*^9, 3.808504431655822*^9}, 
+   3.808507246094047*^9},
+ CellLabel->"Out[32]=",ExpressionUUID->"13d15da8-58c8-43eb-9241-455da94af5fc"]
 }, Open  ]],
 
 Cell[BoxData[
- RowBox[{"DiaryTabletTable", "[", "\"\<X202470\>\"", "]"}]], "Input",
- CellChangeTimes->{
-  3.808332151415304*^9, {3.808405821097843*^9, 3.8084058241572113`*^9}},
- CellLabel->"In[45]:=",ExpressionUUID->"dcd06dac-3d19-46bc-b33d-4f48c4817a54"],
-
-Cell[BoxData[
  RowBox[{
-  RowBox[{"DiaryCurationPalette", "[", "]"}], ";"}]], "Input",
- CellChangeTimes->{{3.808331707524468*^9, 3.808331718659109*^9}, {
-  3.808405827308453*^9, 
-  3.808405828716311*^9}},ExpressionUUID->"d109a0c1-a29f-4092-9e80-\
-e96d6f6623e4"],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"tabletData", "=", 
+  RowBox[{"inputObservations", "=", 
    RowBox[{"{", "\[IndentingNewLine]", 
     RowBox[{"<|", "\[IndentingNewLine]", 
      RowBox[{
@@ -967,29 +949,12 @@ Cell[BoxData[
         RowBox[{
          RowBox[{"<|", "\[IndentingNewLine]", 
           RowBox[{
-           RowBox[{"\"\<DayZero\>\"", "\[Rule]", 
-            RowBox[{"DiaryDate", "[", 
-             RowBox[{"<|", "\[IndentingNewLine]", 
-              RowBox[{
-               RowBox[{"\"\<BabylonianYear\>\"", "\[Rule]", 
-                RowBox[{"{", "\[IndentingNewLine]", 
-                 RowBox[{"\"\<SE\>\"", ",", "\[IndentingNewLine]", "64"}], 
-                 "}"}]}], ",", "\[IndentingNewLine]", 
-               RowBox[{"\"\<BabylonianMonth\>\"", "\[Rule]", "\"\<VII\>\""}], 
-               ",", "\[IndentingNewLine]", 
-               RowBox[{"\"\<BabylonianDay\>\"", "\[Rule]", "0"}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"\"\<JulianYear\>\"", "\[Rule]", 
-                RowBox[{"-", "247"}]}], ",", "\[IndentingNewLine]", 
-               RowBox[{"\"\<JulianMonth\>\"", "\[Rule]", "9"}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"\"\<JulianDay\>\"", "\[Rule]", "19"}], 
-               RowBox[{"(*", 
-                RowBox[{"check", " ", "this"}], "*)"}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"\"\<Time\>\"", "\[Rule]", 
-                RowBox[{"Missing", "[", "]"}]}]}], "\[IndentingNewLine]", 
-              "|>"}], "]"}]}], ",", "\[IndentingNewLine]", 
+           RowBox[{"\"\<BabylonianYear\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<SE\>\"", ",", "64"}], "}"}]}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"\"\<BabylonianMonth\>\"", "\[Rule]", "\"\<VII\>\""}], ",",
+            "\[IndentingNewLine]", 
            RowBox[{"\"\<Observations\>\"", "\[Rule]", 
             RowBox[{"{", "\[IndentingNewLine]", 
              RowBox[{
@@ -1003,9 +968,8 @@ Cell[BoxData[
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{"2", ",", 
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
-                  "]"}]}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"2", ",", "\"\<Night\>\""}], "]"}]}], ",", 
+                "\[IndentingNewLine]", 
                 RowBox[{
                 "\"\<Type\>\"", "\[Rule]", "\"\<RelativePosition\>\""}], ",", 
                 "\[IndentingNewLine]", 
@@ -1222,9 +1186,8 @@ Cell[BoxData[
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{"13", ",", 
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
-                  "]"}]}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"13", ",", "\"\<Day\>\""}], "]"}]}], ",", 
+                "\[IndentingNewLine]", 
                 RowBox[{
                 "\"\<Type\>\"", "\[Rule]", "\"\<MoonsetToSunrise\>\""}], ",", 
                 "\[IndentingNewLine]", 
@@ -1430,9 +1393,8 @@ Cell[BoxData[
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{"15", ",", 
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
-                  "]"}]}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"15", ",", "\"\<Night\>\""}], "]"}]}], ",", 
+                "\[IndentingNewLine]", 
                 RowBox[{
                 "\"\<Type\>\"", "\[Rule]", "\"\<SunsetToMoonrise\>\""}], ",", 
                 "\[IndentingNewLine]", 
@@ -1712,8 +1674,7 @@ Cell[BoxData[
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{
-                   RowBox[{"Missing", "[", "\"\<Destroyed\>\"", "]"}], ",", 
+                  RowBox[{"\"\<End\>\"", ",", 
                    RowBox[{"Missing", "[", "\"\<Destroyed\>\"", "]"}]}], 
                   "]"}]}], ",", "\[IndentingNewLine]", 
                 RowBox[{
@@ -1744,9 +1705,9 @@ Cell[BoxData[
                    RowBox[{"\"\<PositionInSign\>\"", "\[Rule]", 
                     RowBox[{"Missing", "[", "\"\<Destroyed\>\"", "]"}]}]}], 
                   "\[IndentingNewLine]", "|>"}]}], ",", "\[IndentingNewLine]", 
-                RowBox[{
-                "\"\<Notes\>\"", "\[Rule]", "\"\<End of month\>\""}]}], 
-               "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"\"\<Notes\>\"", "\[Rule]", 
+                 RowBox[{"Missing", "[", "]"}]}]}], "\[IndentingNewLine]", 
+               "|>"}], ",", "\[IndentingNewLine]", 
               RowBox[{"<|", "\[IndentingNewLine]", 
                RowBox[{
                 RowBox[{
@@ -1757,8 +1718,7 @@ Cell[BoxData[
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{
-                   RowBox[{"Missing", "[", "\"\<Destroyed\>\"", "]"}], ",", 
+                  RowBox[{"\"\<End\>\"", ",", 
                    RowBox[{"Missing", "[", "\"\<Destroyed\>\"", "]"}]}], 
                   "]"}]}], ",", "\[IndentingNewLine]", 
                 RowBox[{
@@ -1792,9 +1752,9 @@ Cell[BoxData[
                    "\"\<Position\>\"", "\[Rule]", 
                     "\"\<e69e910d-aa01-4e2a-b93e-0cf501fb13d6\>\""}]}], 
                   "\[IndentingNewLine]", "|>"}]}], ",", "\[IndentingNewLine]", 
-                RowBox[{
-                "\"\<Notes\>\"", "\[Rule]", "\"\<End of month\>\""}]}], 
-               "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"\"\<Notes\>\"", "\[Rule]", 
+                 RowBox[{"Missing", "[", "]"}]}]}], "\[IndentingNewLine]", 
+               "|>"}], ",", "\[IndentingNewLine]", 
               RowBox[{"<|", "\[IndentingNewLine]", 
                RowBox[{
                 RowBox[{
@@ -1805,9 +1765,7 @@ Cell[BoxData[
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}], ",", 
-                   
+                  RowBox[{"\"\<End\>\"", ",", 
                    RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
                   "]"}]}], ",", "\[IndentingNewLine]", 
                 RowBox[{
@@ -1837,9 +1795,9 @@ Cell[BoxData[
                    RowBox[{"\"\<PositionInSign\>\"", "\[Rule]", 
                     RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}]}], 
                   "\[IndentingNewLine]", "|>"}]}], ",", "\[IndentingNewLine]", 
-                RowBox[{
-                "\"\<Notes\>\"", "\[Rule]", "\"\<End of month\>\""}]}], 
-               "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"\"\<Notes\>\"", "\[Rule]", 
+                 RowBox[{"Missing", "[", "]"}]}]}], "\[IndentingNewLine]", 
+               "|>"}], ",", "\[IndentingNewLine]", 
               RowBox[{"<|", "\[IndentingNewLine]", 
                RowBox[{
                 RowBox[{
@@ -1850,9 +1808,7 @@ Cell[BoxData[
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}], ",", 
-                   
+                  RowBox[{"\"\<End\>\"", ",", 
                    RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
                   "]"}]}], ",", "\[IndentingNewLine]", 
                 RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<NotVisible\>\""}], 
@@ -1869,9 +1825,9 @@ Cell[BoxData[
                     
                     "Entity"]}], "\[IndentingNewLine]", "|>"}]}], ",", 
                 "\[IndentingNewLine]", 
-                RowBox[{
-                "\"\<Notes\>\"", "\[Rule]", "\"\<End of month\>\""}]}], 
-               "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"\"\<Notes\>\"", "\[Rule]", 
+                 RowBox[{"Missing", "[", "]"}]}]}], "\[IndentingNewLine]", 
+               "|>"}], ",", "\[IndentingNewLine]", 
               RowBox[{"<|", "\[IndentingNewLine]", 
                RowBox[{
                 RowBox[{
@@ -1905,29 +1861,12 @@ Cell[BoxData[
           "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]", 
          RowBox[{"<|", "\[IndentingNewLine]", 
           RowBox[{
-           RowBox[{"\"\<DayZero\>\"", "\[Rule]", 
-            RowBox[{"DiaryDate", "[", 
-             RowBox[{"<|", "\[IndentingNewLine]", 
-              RowBox[{
-               RowBox[{"\"\<BabylonianYear\>\"", "\[Rule]", 
-                RowBox[{"{", "\[IndentingNewLine]", 
-                 RowBox[{"\"\<SE\>\"", ",", "\[IndentingNewLine]", "64"}], 
-                 "}"}]}], ",", "\[IndentingNewLine]", 
-               RowBox[{"\"\<BabylonianMonth\>\"", "\[Rule]", "\"\<VIII\>\""}],
-                ",", "\[IndentingNewLine]", 
-               RowBox[{"\"\<BabylonianDay\>\"", "\[Rule]", "0"}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"\"\<JulianYear\>\"", "\[Rule]", 
-                RowBox[{"-", "247"}]}], ",", "\[IndentingNewLine]", 
-               RowBox[{"\"\<JulianMonth\>\"", "\[Rule]", "10"}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"\"\<JulianDay\>\"", "\[Rule]", "19"}], 
-               RowBox[{"(*", 
-                RowBox[{"check", " ", "this"}], "*)"}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"\"\<Time\>\"", "\[Rule]", 
-                RowBox[{"Missing", "[", "]"}]}]}], "\[IndentingNewLine]", 
-              "|>"}], "]"}]}], ",", "\[IndentingNewLine]", 
+           RowBox[{"\"\<BabylonianYear\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<SE\>\"", ",", "64"}], "}"}]}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"\"\<BabylonianMonth\>\"", "\[Rule]", "\"\<VIII\>\""}], 
+           ",", "\[IndentingNewLine]", 
            RowBox[{"\"\<Observations\>\"", "\[Rule]", 
             RowBox[{"{", "\[IndentingNewLine]", 
              RowBox[{
@@ -2255,7 +2194,19 @@ Cell[BoxData[
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Notes\>\"", "\[Rule]", 
                  RowBox[{"Missing", "[", "]"}]}]}], "\[IndentingNewLine]", 
-               "|>"}], ",", "\[IndentingNewLine]", 
+               "|>"}]}], "\[IndentingNewLine]", "}"}]}]}], 
+          "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]", 
+         RowBox[{"<|", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"\"\<BabylonianYear\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<SE\>\"", ",", "64"}], "}"}]}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"\"\<BabylonianMonth\>\"", "\[Rule]", "\"\<X\>\""}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"\"\<Observations\>\"", "\[Rule]", 
+            RowBox[{"{", "\[IndentingNewLine]", 
+             RowBox[{
               RowBox[{"<|", "\[IndentingNewLine]", 
                RowBox[{
                 RowBox[{
@@ -2557,9 +2508,8 @@ Cell[BoxData[
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{"23", ",", 
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
-                  "]"}]}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"23", ",", "\"\<Night\>\""}], "]"}]}], ",", 
+                "\[IndentingNewLine]", 
                 RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<Weather\>\""}], ",", 
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Inferred\>\"", "\[Rule]", 
@@ -2654,9 +2604,8 @@ Cell[BoxData[
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{"24", ",", 
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
-                  "]"}]}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"24", ",", "\"\<Day\>\""}], "]"}]}], ",", 
+                "\[IndentingNewLine]", 
                 RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<Weather\>\""}], ",", 
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Inferred\>\"", "\[Rule]", 
@@ -2679,9 +2628,8 @@ Cell[BoxData[
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{"24", ",", 
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
-                  "]"}]}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"24", ",", "\"\<Day\>\""}], "]"}]}], ",", 
+                "\[IndentingNewLine]", 
                 RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<Weather\>\""}], ",", 
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Inferred\>\"", "\[Rule]", 
@@ -2703,9 +2651,32 @@ Cell[BoxData[
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{"25", ",", 
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
-                  "]"}]}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"25", ",", "\"\<Night\>\""}], "]"}]}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<Weather\>\""}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"\"\<Inferred\>\"", "\[Rule]", 
+                 RowBox[{"{", "}"}]}], ",", "\[IndentingNewLine]", 
+                RowBox[{"\"\<Content\>\"", "\[Rule]", 
+                 RowBox[{"<|", "\[IndentingNewLine]", 
+                  RowBox[{
+                  "\"\<Tag\>\"", "\[Rule]", "\"\<CrossingClouds\>\""}], 
+                  "\[IndentingNewLine]", "|>"}]}], ",", "\[IndentingNewLine]", 
+                RowBox[{"\"\<Notes\>\"", "\[Rule]", 
+                 RowBox[{"Missing", "[", "]"}]}]}], "\[IndentingNewLine]", 
+               "|>"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"<|", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{
+                "\"\<UUID\>\"", "\[Rule]", 
+                 "\"\<d706e7c6-990a-46be-a41e-7da17934e66e\>\""}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"\"\<LineNumber\>\"", "\[Rule]", "20"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"\"\<Date\>\"", "\[Rule]", 
+                 RowBox[{"DiaryInputDate", "[", 
+                  RowBox[{"25", ",", "\"\<Day\>\""}], "]"}]}], ",", 
+                "\[IndentingNewLine]", 
                 RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<Weather\>\""}], ",", 
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Inferred\>\"", "\[Rule]", 
@@ -2728,9 +2699,8 @@ Cell[BoxData[
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{"25", ",", 
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
-                  "]"}]}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"25", ",", "\"\<Day\>\""}], "]"}]}], ",", 
+                "\[IndentingNewLine]", 
                 RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<Weather\>\""}], ",", 
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Inferred\>\"", "\[Rule]", 
@@ -2752,9 +2722,8 @@ Cell[BoxData[
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{"26", ",", 
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
-                  "]"}]}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"26", ",", "\"\<Night\>\""}], "]"}]}], ",", 
+                "\[IndentingNewLine]", 
                 RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<Weather\>\""}], ",", 
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Inferred\>\"", "\[Rule]", 
@@ -2776,9 +2745,8 @@ Cell[BoxData[
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{"27", ",", 
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
-                  "]"}]}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"27", ",", "\"\<Day\>\""}], "]"}]}], ",", 
+                "\[IndentingNewLine]", 
                 RowBox[{
                 "\"\<Type\>\"", "\[Rule]", "\"\<MoonriseToSunrise\>\""}], ",",
                  "\[IndentingNewLine]", 
@@ -2812,9 +2780,7 @@ Cell[BoxData[
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}], ",", 
-                   
+                  RowBox[{"\"\<End\>\"", ",", 
                    RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
                   "]"}]}], ",", "\[IndentingNewLine]", 
                 RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<MarketRates\>\""}], 
@@ -2877,9 +2843,9 @@ Cell[BoxData[
                    "\[IndentingNewLine]", 
                    RowBox[{"\"\<Wool\>\"", "\[Rule]", "5"}]}], 
                   "\[IndentingNewLine]", "|>"}]}], ",", "\[IndentingNewLine]", 
-                RowBox[{
-                "\"\<Notes\>\"", "\[Rule]", "\"\<End of month\>\""}]}], 
-               "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"\"\<Notes\>\"", "\[Rule]", 
+                 RowBox[{"Missing", "[", "]"}]}]}], "\[IndentingNewLine]", 
+               "|>"}], ",", "\[IndentingNewLine]", 
               RowBox[{"<|", "\[IndentingNewLine]", 
                RowBox[{
                 RowBox[{
@@ -2890,9 +2856,7 @@ Cell[BoxData[
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}], ",", 
-                   
+                  RowBox[{"\"\<End\>\"", ",", 
                    RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
                   "]"}]}], ",", "\[IndentingNewLine]", 
                 RowBox[{
@@ -2923,9 +2887,9 @@ Cell[BoxData[
                    RowBox[{"\"\<PositionInSign\>\"", "\[Rule]", 
                     RowBox[{"Missing", "[", "\"\<Destroyed\>\"", "]"}]}]}], 
                   "\[IndentingNewLine]", "|>"}]}], ",", "\[IndentingNewLine]", 
-                RowBox[{
-                "\"\<Notes\>\"", "\[Rule]", "\"\<End of month\>\""}]}], 
-               "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"\"\<Notes\>\"", "\[Rule]", 
+                 RowBox[{"Missing", "[", "]"}]}]}], "\[IndentingNewLine]", 
+               "|>"}], ",", "\[IndentingNewLine]", 
               RowBox[{"<|", "\[IndentingNewLine]", 
                RowBox[{
                 RowBox[{
@@ -3115,9 +3079,7 @@ Cell[BoxData[
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}], ",", 
-                   
+                  RowBox[{"\"\<End\>\"", ",", 
                    RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
                   "]"}]}], ",", "\[IndentingNewLine]", 
                 RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<NotVisible\>\""}], 
@@ -3134,9 +3096,9 @@ Cell[BoxData[
                     
                     "Entity"]}], "\[IndentingNewLine]", "|>"}]}], ",", 
                 "\[IndentingNewLine]", 
-                RowBox[{
-                "\"\<Notes\>\"", "\[Rule]", "\"\<End of month\>\""}]}], 
-               "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"\"\<Notes\>\"", "\[Rule]", 
+                 RowBox[{"Missing", "[", "]"}]}]}], "\[IndentingNewLine]", 
+               "|>"}], ",", "\[IndentingNewLine]", 
               RowBox[{"<|", "\[IndentingNewLine]", 
                RowBox[{
                 RowBox[{
@@ -3147,9 +3109,7 @@ Cell[BoxData[
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}], ",", 
-                   
+                  RowBox[{"\"\<End\>\"", ",", 
                    RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
                   "]"}]}], ",", "\[IndentingNewLine]", 
                 RowBox[{
@@ -3190,9 +3150,7 @@ month)\>\""}]}], "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]",
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}], ",", 
-                   
+                  RowBox[{"\"\<End\>\"", ",", 
                    RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
                   "]"}]}], ",", "\[IndentingNewLine]", 
                 RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<RiverLevel\>\""}], 
@@ -3203,9 +3161,9 @@ month)\>\""}]}], "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]",
                  RowBox[{"<|", "\[IndentingNewLine]", 
                   RowBox[{"\"\<Value\>\"", "\[Rule]", "22"}], 
                   "\[IndentingNewLine]", "|>"}]}], ",", "\[IndentingNewLine]", 
-                RowBox[{
-                "\"\<Notes\>\"", "\[Rule]", "\"\<End of month\>\""}]}], 
-               "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"\"\<Notes\>\"", "\[Rule]", 
+                 RowBox[{"Missing", "[", "]"}]}]}], "\[IndentingNewLine]", 
+               "|>"}], ",", "\[IndentingNewLine]", 
               RowBox[{"<|", "\[IndentingNewLine]", 
                RowBox[{
                 RowBox[{
@@ -3265,29 +3223,12 @@ month)\>\""}]}], "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]",
           "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]", 
          RowBox[{"<|", "\[IndentingNewLine]", 
           RowBox[{
-           RowBox[{"\"\<DayZero\>\"", "\[Rule]", 
-            RowBox[{"DiaryDate", "[", 
-             RowBox[{"<|", "\[IndentingNewLine]", 
-              RowBox[{
-               RowBox[{"\"\<BabylonianYear\>\"", "\[Rule]", 
-                RowBox[{"{", "\[IndentingNewLine]", 
-                 RowBox[{"\"\<SE\>\"", ",", "\[IndentingNewLine]", "64"}], 
-                 "}"}]}], ",", "\[IndentingNewLine]", 
-               RowBox[{"\"\<BabylonianMonth\>\"", "\[Rule]", "\"\<XI\>\""}], 
-               ",", "\[IndentingNewLine]", 
-               RowBox[{"\"\<BabylonianDay\>\"", "\[Rule]", "0"}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"\"\<JulianYear\>\"", "\[Rule]", 
-                RowBox[{"-", "246"}]}], ",", "\[IndentingNewLine]", 
-               RowBox[{"\"\<JulianMonth\>\"", "\[Rule]", "1"}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"\"\<JulianDay\>\"", "\[Rule]", "15"}], 
-               RowBox[{"(*", 
-                RowBox[{"check", " ", "this"}], "*)"}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"\"\<Time\>\"", "\[Rule]", 
-                RowBox[{"Missing", "[", "]"}]}]}], "\[IndentingNewLine]", 
-              "|>"}], "]"}]}], ",", "\[IndentingNewLine]", 
+           RowBox[{"\"\<BabylonianYear\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<SE\>\"", ",", "64"}], "}"}]}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"\"\<BabylonianMonth\>\"", "\[Rule]", "\"\<XI\>\""}], ",", 
+           "\[IndentingNewLine]", 
            RowBox[{"\"\<Observations\>\"", "\[Rule]", 
             RowBox[{"{", "\[IndentingNewLine]", 
              RowBox[{
@@ -3301,9 +3242,8 @@ month)\>\""}]}], "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]",
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{"1", ",", 
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
-                  "]"}]}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"1", ",", "\"\<Day\>\""}], "]"}]}], ",", 
+                "\[IndentingNewLine]", 
                 RowBox[{
                 "\"\<Type\>\"", "\[Rule]", "\"\<SunsetToMoonset\>\""}], ",", 
                 "\[IndentingNewLine]", 
@@ -3383,9 +3323,8 @@ month)\>\""}]}], "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]",
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{"2", ",", 
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
-                  "]"}]}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"2", ",", "\"\<Day\>\""}], "]"}]}], ",", 
+                "\[IndentingNewLine]", 
                 RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<Weather\>\""}], ",", 
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Inferred\>\"", "\[Rule]", 
@@ -3455,9 +3394,32 @@ month)\>\""}]}], "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]",
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{"7", ",", 
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
-                  "]"}]}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"7", ",", "\"\<Night\>\""}], "]"}]}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<Weather\>\""}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"\"\<Inferred\>\"", "\[Rule]", 
+                 RowBox[{"{", "}"}]}], ",", "\[IndentingNewLine]", 
+                RowBox[{"\"\<Content\>\"", "\[Rule]", 
+                 RowBox[{"<|", "\[IndentingNewLine]", 
+                  RowBox[{
+                  "\"\<Tag\>\"", "\[Rule]", "\"\<CrossingClouds\>\""}], 
+                  "\[IndentingNewLine]", "|>"}]}], ",", "\[IndentingNewLine]", 
+                RowBox[{"\"\<Notes\>\"", "\[Rule]", 
+                 RowBox[{"Missing", "[", "]"}]}]}], "\[IndentingNewLine]", 
+               "|>"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"<|", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{
+                "\"\<UUID\>\"", "\[Rule]", 
+                 "\"\<5ef18b9a-7efd-4d1f-8df4-4e84d0fa0d16\>\""}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"\"\<LineNumber\>\"", "\[Rule]", "24"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"\"\<Date\>\"", "\[Rule]", 
+                 RowBox[{"DiaryInputDate", "[", 
+                  RowBox[{"7", ",", "\"\<Day\>\""}], "]"}]}], ",", 
+                "\[IndentingNewLine]", 
                 RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<Weather\>\""}], ",", 
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Inferred\>\"", "\[Rule]", 
@@ -3480,9 +3442,31 @@ month)\>\""}]}], "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]",
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{"7", ",", 
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
-                  "]"}]}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"7", ",", "\"\<Night\>\""}], "]"}]}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<Weather\>\""}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"\"\<Inferred\>\"", "\[Rule]", 
+                 RowBox[{"{", "}"}]}], ",", "\[IndentingNewLine]", 
+                RowBox[{"\"\<Content\>\"", "\[Rule]", 
+                 RowBox[{"<|", "\[IndentingNewLine]", 
+                  RowBox[{"\"\<Tag\>\"", "\[Rule]", "\"\<Rain\>\""}], 
+                  "\[IndentingNewLine]", "|>"}]}], ",", "\[IndentingNewLine]", 
+                RowBox[{"\"\<Notes\>\"", "\[Rule]", 
+                 RowBox[{"Missing", "[", "]"}]}]}], "\[IndentingNewLine]", 
+               "|>"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"<|", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{
+                "\"\<UUID\>\"", "\[Rule]", 
+                 "\"\<5f06146e-783e-4f99-b09e-08c79128a8ef\>\""}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"\"\<LineNumber\>\"", "\[Rule]", "24"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"\"\<Date\>\"", "\[Rule]", 
+                 RowBox[{"DiaryInputDate", "[", 
+                  RowBox[{"7", ",", "\"\<Day\>\""}], "]"}]}], ",", 
+                "\[IndentingNewLine]", 
                 RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<Weather\>\""}], ",", 
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Inferred\>\"", "\[Rule]", 
@@ -3504,9 +3488,8 @@ month)\>\""}]}], "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]",
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{"8", ",", 
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
-                  "]"}]}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"8", ",", "\"\<Night\>\""}], "]"}]}], ",", 
+                "\[IndentingNewLine]", 
                 RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<Weather\>\""}], ",", 
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Inferred\>\"", "\[Rule]", 
@@ -3626,9 +3609,8 @@ month)\>\""}]}], "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]",
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{"10", ",", 
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
-                  "]"}]}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"10", ",", "\"\<Day\>\""}], "]"}]}], ",", 
+                "\[IndentingNewLine]", 
                 RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<Weather\>\""}], ",", 
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Inferred\>\"", "\[Rule]", 
@@ -3698,9 +3680,8 @@ month)\>\""}]}], "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]",
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{"13", ",", 
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
-                  "]"}]}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"13", ",", "\"\<Night\>\""}], "]"}]}], ",", 
+                "\[IndentingNewLine]", 
                 RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<Weather\>\""}], ",", 
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Inferred\>\"", "\[Rule]", 
@@ -3774,9 +3755,8 @@ month)\>\""}]}], "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]",
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{"13", ",", 
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
-                  "]"}]}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"13", ",", "\"\<Day\>\""}], "]"}]}], ",", 
+                "\[IndentingNewLine]", 
                 RowBox[{
                 "\"\<Type\>\"", "\[Rule]", "\"\<MoonsetToSunrise\>\""}], ",", 
                 "\[IndentingNewLine]", 
@@ -3807,9 +3787,8 @@ month)\>\""}]}], "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]",
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{"13", ",", 
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
-                  "]"}]}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"13", ",", "\"\<Day\>\""}], "]"}]}], ",", 
+                "\[IndentingNewLine]", 
                 RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<Weather\>\""}], ",", 
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Inferred\>\"", "\[Rule]", 
@@ -3831,9 +3810,8 @@ month)\>\""}]}], "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]",
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{"14", ",", 
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
-                  "]"}]}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"14", ",", "\"\<Night\>\""}], "]"}]}], ",", 
+                "\[IndentingNewLine]", 
                 RowBox[{
                 "\"\<Type\>\"", "\[Rule]", "\"\<MoonriseToSunset\>\""}], ",", 
                 "\[IndentingNewLine]", 
@@ -3865,9 +3843,8 @@ month)\>\""}]}], "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]",
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{"14", ",", 
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
-                  "]"}]}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"14", ",", "\"\<Night\>\""}], "]"}]}], ",", 
+                "\[IndentingNewLine]", 
                 RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<Weather\>\""}], ",", 
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Inferred\>\"", "\[Rule]", 
@@ -3937,9 +3914,8 @@ month)\>\""}]}], "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]",
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{"14", ",", 
-                   RowBox[{"Missing", "[", "\"\<Destroyed\>\"", "]"}]}], 
-                  "]"}]}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"14", ",", "\"\<Day\>\""}], "]"}]}], ",", 
+                "\[IndentingNewLine]", 
                 RowBox[{
                 "\"\<Type\>\"", "\[Rule]", "\"\<SunriseToMoonset\>\""}], ",", 
                 "\[IndentingNewLine]", 
@@ -3969,9 +3945,8 @@ month)\>\""}]}], "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]",
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{"14", ",", 
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
-                  "]"}]}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"14", ",", "\"\<Day\>\""}], "]"}]}], ",", 
+                "\[IndentingNewLine]", 
                 RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<Weather\>\""}], ",", 
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Inferred\>\"", "\[Rule]", 
@@ -3994,9 +3969,8 @@ month)\>\""}]}], "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]",
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{"15", ",", 
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
-                  "]"}]}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"15", ",", "\"\<Night\>\""}], "]"}]}], ",", 
+                "\[IndentingNewLine]", 
                 RowBox[{
                 "\"\<Type\>\"", "\[Rule]", "\"\<SunsetToMoonrise\>\""}], ",", 
                 "\[IndentingNewLine]", 
@@ -4029,9 +4003,8 @@ month)\>\""}]}], "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]",
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{"15", ",", 
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
-                  "]"}]}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"15", ",", "\"\<Night\>\""}], "]"}]}], ",", 
+                "\[IndentingNewLine]", 
                 RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<Weather\>\""}], ",", 
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Inferred\>\"", "\[Rule]", 
@@ -4155,9 +4128,8 @@ month)\>\""}]}], "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]",
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{"17", ",", 
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
-                  "]"}]}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"17", ",", "\"\<Day\>\""}], "]"}]}], ",", 
+                "\[IndentingNewLine]", 
                 RowBox[{
                 "\"\<Type\>\"", "\[Rule]", "\"\<ZodiacalPosition\>\""}], ",", 
                 "\[IndentingNewLine]", 
@@ -4199,9 +4171,8 @@ month)\>\""}]}], "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]",
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{"17", ",", 
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
-                  "]"}]}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"17", ",", "\"\<Day\>\""}], "]"}]}], ",", 
+                "\[IndentingNewLine]", 
                 RowBox[{
                 "\"\<Type\>\"", "\[Rule]", "\"\<FirstAppearenceEast\>\""}], 
                 ",", "\[IndentingNewLine]", 
@@ -4245,9 +4216,8 @@ month)\>\""}]}], "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]",
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{"17", ",", 
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
-                  "]"}]}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"17", ",", "\"\<Day\>\""}], "]"}]}], ",", 
+                "\[IndentingNewLine]", 
                 RowBox[{
                 "\"\<Type\>\"", "\[Rule]", "\"\<RelativePosition\>\""}], ",", 
                 "\[IndentingNewLine]", 
@@ -4299,9 +4269,8 @@ west.\\\"\>\""}]}], "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]",
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{"20", ",", 
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
-                  "]"}]}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"20", ",", "\"\<Night\>\""}], "]"}]}], ",", 
+                "\[IndentingNewLine]", 
                 RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<Weather\>\""}], ",", 
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Inferred\>\"", "\[Rule]", 
@@ -4324,9 +4293,8 @@ west.\\\"\>\""}]}], "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]",
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{"20", ",", 
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
-                  "]"}]}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"20", ",", "\"\<Day\>\""}], "]"}]}], ",", 
+                "\[IndentingNewLine]", 
                 RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<Weather\>\""}], ",", 
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Inferred\>\"", "\[Rule]", 
@@ -4349,9 +4317,8 @@ west.\\\"\>\""}]}], "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]",
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{"20", ",", 
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
-                  "]"}]}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"20", ",", "\"\<Day\>\""}], "]"}]}], ",", 
+                "\[IndentingNewLine]", 
                 RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<Weather\>\""}], ",", 
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Inferred\>\"", "\[Rule]", 
@@ -4373,9 +4340,8 @@ west.\\\"\>\""}]}], "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]",
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{"21", ",", 
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
-                  "]"}]}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"21", ",", "\"\<Night\>\""}], "]"}]}], ",", 
+                "\[IndentingNewLine]", 
                 RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<Weather\>\""}], ",", 
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Inferred\>\"", "\[Rule]", 
@@ -4455,9 +4421,8 @@ west.\\\"\>\""}]}], "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]",
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{"27", ",", 
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
-                  "]"}]}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"27", ",", "\"\<Day\>\""}], "]"}]}], ",", 
+                "\[IndentingNewLine]", 
                 RowBox[{
                 "\"\<Type\>\"", "\[Rule]", "\"\<MoonriseToSunrise\>\""}], ",",
                  "\[IndentingNewLine]", 
@@ -4488,9 +4453,7 @@ west.\\\"\>\""}]}], "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]",
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}], ",", 
-                   
+                  RowBox[{"\"\<End\>\"", ",", 
                    RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
                   "]"}]}], ",", "\[IndentingNewLine]", 
                 RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<MarketRates\>\""}], 
@@ -4525,9 +4488,9 @@ west.\\\"\>\""}]}], "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]",
                     "\[IndentingNewLine]", 
                    RowBox[{"\"\<Wool\>\"", "\[Rule]", "5"}]}], 
                   "\[IndentingNewLine]", "|>"}]}], ",", "\[IndentingNewLine]", 
-                RowBox[{
-                "\"\<Notes\>\"", "\[Rule]", "\"\<End of month\>\""}]}], 
-               "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"\"\<Notes\>\"", "\[Rule]", 
+                 RowBox[{"Missing", "[", "]"}]}]}], "\[IndentingNewLine]", 
+               "|>"}], ",", "\[IndentingNewLine]", 
               RowBox[{"<|", "\[IndentingNewLine]", 
                RowBox[{
                 RowBox[{
@@ -4538,9 +4501,7 @@ west.\\\"\>\""}]}], "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]",
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}], ",", 
-                   
+                  RowBox[{"\"\<End\>\"", ",", 
                    RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
                   "]"}]}], ",", "\[IndentingNewLine]", 
                 RowBox[{
@@ -4571,37 +4532,19 @@ west.\\\"\>\""}]}], "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]",
                    RowBox[{"\"\<PositionInSign\>\"", "\[Rule]", 
                     RowBox[{"Missing", "[", "\"\<Destroyed\>\"", "]"}]}]}], 
                   "\[IndentingNewLine]", "|>"}]}], ",", "\[IndentingNewLine]", 
-                RowBox[{
-                "\"\<Notes\>\"", "\[Rule]", "\"\<End of month\>\""}]}], 
-               "\[IndentingNewLine]", "|>"}]}], "\[IndentingNewLine]", 
-             "}"}]}]}], "\[IndentingNewLine]", "|>"}], ",", 
-         "\[IndentingNewLine]", 
+                RowBox[{"\"\<Notes\>\"", "\[Rule]", 
+                 RowBox[{"Missing", "[", "]"}]}]}], "\[IndentingNewLine]", 
+               "|>"}]}], "\[IndentingNewLine]", "}"}]}]}], 
+          "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]", 
          RowBox[{"<|", "\[IndentingNewLine]", 
           RowBox[{
-           RowBox[{"\"\<DayZero\>\"", "\[Rule]", 
-            RowBox[{"DiaryDate", "[", 
-             RowBox[{"<|", "\[IndentingNewLine]", 
-              RowBox[{
-               RowBox[{"\"\<BabylonianYear\>\"", "\[Rule]", 
-                RowBox[{"{", "\[IndentingNewLine]", 
-                 RowBox[{"\"\<SE\>\"", ",", "\[IndentingNewLine]", "64"}], 
-                 "}"}]}], ",", "\[IndentingNewLine]", 
-               RowBox[{"\"\<BabylonianMonth\>\"", "\[Rule]", 
-                RowBox[{"Missing", "[", "\"\<Destroyed\>\"", "]"}]}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"\"\<BabylonianDay\>\"", "\[Rule]", "0"}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"\"\<JulianYear\>\"", "\[Rule]", 
-                RowBox[{"-", "246"}]}], ",", "\[IndentingNewLine]", 
-               RowBox[{"\"\<JulianMonth\>\"", "\[Rule]", 
-                RowBox[{"Missing", "[", "\"\<Destroyed\>\"", "]"}]}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"\"\<JulianDay\>\"", "\[Rule]", 
-                RowBox[{"Missing", "[", "\"\<Destroyed\>\"", "]"}]}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"\"\<Time\>\"", "\[Rule]", 
-                RowBox[{"Missing", "[", "]"}]}]}], "\[IndentingNewLine]", 
-              "|>"}], "]"}]}], ",", "\[IndentingNewLine]", 
+           RowBox[{"\"\<BabylonianYear\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<SE\>\"", ",", "64"}], "}"}]}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"\"\<BabylonianMonth\>\"", "\[Rule]", 
+            RowBox[{"Missing", "[", "\"\<Destroyed\>\"", "]"}]}], ",", 
+           "\[IndentingNewLine]", 
            RowBox[{"\"\<Observations\>\"", "\[Rule]", 
             RowBox[{"{", "\[IndentingNewLine]", 
              RowBox[{
@@ -4751,9 +4694,8 @@ west.\\\"\>\""}]}], "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]",
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{"14", ",", 
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
-                  "]"}]}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"14", ",", "\"\<Day\>\""}], "]"}]}], ",", 
+                "\[IndentingNewLine]", 
                 RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<Equinox\>\""}], ",", 
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Inferred\>\"", "\[Rule]", 
@@ -4782,9 +4724,8 @@ west.\\\"\>\""}]}], "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]",
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{"19", ",", 
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
-                  "]"}]}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"19", ",", "\"\<Day\>\""}], "]"}]}], ",", 
+                "\[IndentingNewLine]", 
                 RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<NamedPosition\>\""}], 
                 ",", "\[IndentingNewLine]", 
                 RowBox[{"\"\<Inferred\>\"", "\[Rule]", 
@@ -4816,9 +4757,8 @@ west.\\\"\>\""}]}], "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]",
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{"19", ",", 
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
-                  "]"}]}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"19", ",", "\"\<Day\>\""}], "]"}]}], ",", 
+                "\[IndentingNewLine]", 
                 RowBox[{
                 "\"\<Type\>\"", "\[Rule]", "\"\<FirstStationaryPoint\>\""}], 
                 ",", "\[IndentingNewLine]", 
@@ -4917,9 +4857,7 @@ west.\\\"\>\""}]}], "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]",
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}], ",", 
-                   
+                  RowBox[{"\"\<Middle\>\"", ",", 
                    RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
                   "]"}]}], ",", "\[IndentingNewLine]", 
                 RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<MarketRates\>\""}], 
@@ -4955,9 +4893,9 @@ west.\\\"\>\""}]}], "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]",
                    RowBox[{"\"\<Wool\>\"", "\[Rule]", 
                     RowBox[{"Missing", "[", "\"\<Destroyed\>\"", "]"}]}]}], 
                   "\[IndentingNewLine]", "|>"}]}], ",", "\[IndentingNewLine]", 
-                RowBox[{
-                "\"\<Notes\>\"", "\[Rule]", "\"\<Middle of month\>\""}]}], 
-               "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"\"\<Notes\>\"", "\[Rule]", 
+                 RowBox[{"Missing", "[", "]"}]}]}], "\[IndentingNewLine]", 
+               "|>"}], ",", "\[IndentingNewLine]", 
               RowBox[{"<|", "\[IndentingNewLine]", 
                RowBox[{
                 RowBox[{
@@ -4968,9 +4906,7 @@ west.\\\"\>\""}]}], "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]",
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}], ",", 
-                   
+                  RowBox[{"\"\<End\>\"", ",", 
                    RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
                   "]"}]}], ",", "\[IndentingNewLine]", 
                 RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<MarketRates\>\""}], 
@@ -5011,9 +4947,9 @@ west.\\\"\>\""}]}], "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]",
                    RowBox[{"\"\<Wool\>\"", "\[Rule]", 
                     RowBox[{"Missing", "[", "\"\<Destroyed\>\"", "]"}]}]}], 
                   "\[IndentingNewLine]", "|>"}]}], ",", "\[IndentingNewLine]", 
-                RowBox[{
-                "\"\<Notes\>\"", "\[Rule]", "\"\<End of month\>\""}]}], 
-               "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"\"\<Notes\>\"", "\[Rule]", 
+                 RowBox[{"Missing", "[", "]"}]}]}], "\[IndentingNewLine]", 
+               "|>"}], ",", "\[IndentingNewLine]", 
               RowBox[{"<|", "\[IndentingNewLine]", 
                RowBox[{
                 RowBox[{
@@ -5024,9 +4960,7 @@ west.\\\"\>\""}]}], "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]",
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}], ",", 
-                   
+                  RowBox[{"\"\<End\>\"", ",", 
                    RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
                   "]"}]}], ",", "\[IndentingNewLine]", 
                 RowBox[{
@@ -5058,9 +4992,9 @@ west.\\\"\>\""}]}], "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]",
                    RowBox[{"\"\<PositionInSign\>\"", "\[Rule]", 
                     RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}]}], 
                   "\[IndentingNewLine]", "|>"}]}], ",", "\[IndentingNewLine]", 
-                RowBox[{
-                "\"\<Notes\>\"", "\[Rule]", "\"\<End of month\>\""}]}], 
-               "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"\"\<Notes\>\"", "\[Rule]", 
+                 RowBox[{"Missing", "[", "]"}]}]}], "\[IndentingNewLine]", 
+               "|>"}], ",", "\[IndentingNewLine]", 
               RowBox[{"<|", "\[IndentingNewLine]", 
                RowBox[{
                 RowBox[{
@@ -5071,9 +5005,7 @@ west.\\\"\>\""}]}], "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]",
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}], ",", 
-                   
+                  RowBox[{"\"\<End\>\"", ",", 
                    RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
                   "]"}]}], ",", "\[IndentingNewLine]", 
                 RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<NotVisible\>\""}], 
@@ -5089,9 +5021,9 @@ west.\\\"\>\""}]}], "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]",
                     "\"Entity[\\\"Planet\\\", \\\"Venus\\\"]\"", "\"planet\""},
                     "Entity"]}], "\[IndentingNewLine]", "|>"}]}], ",", 
                 "\[IndentingNewLine]", 
-                RowBox[{
-                "\"\<Notes\>\"", "\[Rule]", "\"\<End of month\>\""}]}], 
-               "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"\"\<Notes\>\"", "\[Rule]", 
+                 RowBox[{"Missing", "[", "]"}]}]}], "\[IndentingNewLine]", 
+               "|>"}], ",", "\[IndentingNewLine]", 
               RowBox[{"<|", "\[IndentingNewLine]", 
                RowBox[{
                 RowBox[{
@@ -5102,9 +5034,7 @@ west.\\\"\>\""}]}], "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]",
                 "\[IndentingNewLine]", 
                 RowBox[{"\"\<Date\>\"", "\[Rule]", 
                  RowBox[{"DiaryInputDate", "[", 
-                  RowBox[{
-                   RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}], ",", 
-                   
+                  RowBox[{"\"\<End\>\"", ",", 
                    RowBox[{"Missing", "[", "\"\<Unmentioned\>\"", "]"}]}], 
                   "]"}]}], ",", "\[IndentingNewLine]", 
                 RowBox[{"\"\<Type\>\"", "\[Rule]", "\"\<NotVisible\>\""}], 
@@ -5121,12 +5051,42 @@ west.\\\"\>\""}]}], "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]",
                     
                     "Entity"]}], "\[IndentingNewLine]", "|>"}]}], ",", 
                 "\[IndentingNewLine]", 
+                RowBox[{"\"\<Notes\>\"", "\[Rule]", 
+                 RowBox[{"Missing", "[", "]"}]}]}], "\[IndentingNewLine]", 
+               "|>"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"<|", "\[IndentingNewLine]", 
+               RowBox[{
                 RowBox[{
-                "\"\<Notes\>\"", "\[Rule]", "\"\<End of month\>\""}]}], 
-               "\[IndentingNewLine]", "|>"}]}], "\[IndentingNewLine]", 
-             "}"}]}]}], "\[IndentingNewLine]", "|>"}]}], 
-        "\[IndentingNewLine]", "}"}]}]}], "\[IndentingNewLine]", "|>"}], 
-    "\[IndentingNewLine]", "}"}]}], ";"}]], "Input",
+                "\"\<UUID\>\"", "\[Rule]", 
+                 "\"\<96775cea-3ee2-4030-8e77-61250b4d4858\>\""}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"\"\<LineNumber\>\"", "\[Rule]", "40"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"\"\<Date\>\"", "\[Rule]", 
+                 RowBox[{"DiaryInputDate", "[", 
+                  RowBox[{
+                   RowBox[{"Missing", "[", "\"\<Destroyed\>\"", "]"}], ",", 
+                   RowBox[{"Missing", "[", "\"\<Destroyed\>\"", "]"}]}], 
+                  "]"}]}], ",", "\[IndentingNewLine]", 
+                RowBox[{
+                "\"\<Type\>\"", "\[Rule]", "\"\<HistoricalEvent\>\""}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"\"\<Inferred\>\"", "\[Rule]", 
+                 RowBox[{"{", "}"}]}], ",", "\[IndentingNewLine]", 
+                RowBox[{"\"\<Content\>\"", "\[Rule]", 
+                 RowBox[{"<|", "\[IndentingNewLine]", 
+                  RowBox[{
+                   RowBox[{"\"\<EndLine\>\"", "\[Rule]", "40"}], ",", 
+                   "\[IndentingNewLine]", 
+                   RowBox[{"\"\<Tags\>\"", "\[Rule]", 
+                    RowBox[{"{", "}"}]}]}], "\[IndentingNewLine]", "|>"}]}], 
+                ",", "\[IndentingNewLine]", 
+                RowBox[{"\"\<Notes\>\"", "\[Rule]", 
+                 RowBox[{"Missing", "[", "]"}]}]}], "\[IndentingNewLine]", 
+               "|>"}]}], "\[IndentingNewLine]", "}"}]}]}], 
+          "\[IndentingNewLine]", "|>"}]}], "\[IndentingNewLine]", "}"}]}]}], 
+     "\[IndentingNewLine]", "|>"}], "\[IndentingNewLine]", "}"}]}], 
+  ";"}]], "Input",
  CellChangeTimes->{{3.80833176932094*^9, 3.8083317888469667`*^9}, {
    3.8083321937840548`*^9, 3.808332211340687*^9}, {3.8083322491278563`*^9, 
    3.80833235927957*^9}, {3.8083324011832647`*^9, 3.8083325482255297`*^9}, {
@@ -5150,1424 +5110,61 @@ west.\\\"\>\""}]}], "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]",
    3.808340044637499*^9}, {3.80834019385366*^9, 3.8083403680980663`*^9}, 
    3.808340402679432*^9, {3.8083404399206057`*^9, 3.808340848224106*^9}, {
    3.808341184794281*^9, 3.8083411886958847`*^9}, {3.8084058458849993`*^9, 
-   3.808405863359372*^9}},
- CellLabel->"In[46]:=",ExpressionUUID->"842827b1-f0a0-49ca-b697-9b7af329921a"],
-
-Cell[CellGroupData[{
+   3.808405863359372*^9}, {3.808500779883625*^9, 3.8085008064827967`*^9}, {
+   3.808500930611377*^9, 3.808501005756176*^9}, {3.8085011513453493`*^9, 
+   3.808501239236228*^9}, {3.80850129954256*^9, 3.808501384474846*^9}, {
+   3.808501518917392*^9, 3.8085015201252537`*^9}, {3.808501756261898*^9, 
+   3.8085017574002037`*^9}, {3.8085018401938257`*^9, 3.808501898055941*^9}, {
+   3.808501930350997*^9, 3.8085019726677923`*^9}, {3.808502017364378*^9, 
+   3.808502067726062*^9}, {3.808502104990753*^9, 3.808502157442575*^9}, {
+   3.80850219515056*^9, 3.808502226407444*^9}, {3.808502264197682*^9, 
+   3.808502374573393*^9}, {3.808502438073617*^9, 3.808502448138125*^9}, {
+   3.808502482774571*^9, 3.808502483623754*^9}, {3.80850254353824*^9, 
+   3.808502577728078*^9}, {3.808502637137773*^9, 3.808502661471486*^9}, {
+   3.808502695697603*^9, 3.8085027083696547`*^9}, {3.808502742734977*^9, 
+   3.8085027835539303`*^9}, {3.8085048629583073`*^9, 
+   3.8085048724839783`*^9}, {3.8085049547311296`*^9, 3.808504955423118*^9}, {
+   3.808505022608111*^9, 3.808505024729312*^9}, {3.808507158514634*^9, 
+   3.808507193024766*^9}, 3.808507229184328*^9},
+ CellLabel->"In[29]:=",ExpressionUUID->"842827b1-f0a0-49ca-b697-9b7af329921a"],
 
 Cell[BoxData[
  RowBox[{
-  RowBox[{"d", "=", 
-   RowBox[{"DiaryParse", "[", "tabletData", "]"}]}], ";"}]], "Input",
+  RowBox[{"DiaryParse", "[", "inputObservations", "]"}], ";"}]], "Input",
  CellChangeTimes->{{3.808341046467366*^9, 3.808341047564941*^9}, {
-  3.8084058863200083`*^9, 3.808405888769031*^9}},
- CellLabel->"In[47]:=",ExpressionUUID->"7d4dc98d-bd7f-4183-a560-54100941f44b"],
+   3.8084058863200083`*^9, 3.808405888769031*^9}, {3.808504385370881*^9, 
+   3.8085043855107594`*^9}, 3.808504878656878*^9, 3.8085049604764843`*^9, {
+   3.808505033110244*^9, 3.808505036662619*^9}},
+ CellLabel->"In[30]:=",ExpressionUUID->"7d4dc98d-bd7f-4183-a560-54100941f44b"],
 
-Cell[BoxData[
- TemplateBox[{
-  "DateValue", "arg", 
-   "\"Argument \\!\\(\\*RowBox[{RowBox[{\\\"Missing\\\", \\\"[\\\", \
-\\\"]\\\"}], \\\"+\\\", TemplateBox[List[\\\"14\\\", \\\"\\\\\\\"days\\\\\\\"\
-\\\", \\\"days\\\", \\\"\\\\\\\"Days\\\\\\\"\\\"], \\\"Quantity\\\", \
-Rule[SyntaxForm, Mod]]}]\\) cannot be interpreted as a date or time input\"", 
-   2, 47, 1, 18740048813397883409, "Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.808341195972959*^9, 3.808405889216034*^9},
- CellLabel->
-  "During evaluation of \
-In[47]:=",ExpressionUUID->"2a2fffac-531c-41e4-93a3-026827c29ce1"],
-
-Cell[BoxData[
- TemplateBox[{
-  "DateValue", "arg", 
-   "\"Argument \\!\\(\\*RowBox[{RowBox[{\\\"Missing\\\", \\\"[\\\", \
-\\\"]\\\"}], \\\"+\\\", TemplateBox[List[\\\"14\\\", \\\"\\\\\\\"days\\\\\\\"\
-\\\", \\\"days\\\", \\\"\\\\\\\"Days\\\\\\\"\\\"], \\\"Quantity\\\", \
-Rule[SyntaxForm, Mod]]}]\\) cannot be interpreted as a date or time input\"", 
-   2, 47, 2, 18740048813397883409, "Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.808341195972959*^9, 3.8084058892365627`*^9},
- CellLabel->
-  "During evaluation of \
-In[47]:=",ExpressionUUID->"f7e53c26-8455-4fdd-88af-784c7ac99d52"],
-
-Cell[BoxData[
- TemplateBox[{
-  "DateValue", "arg", 
-   "\"Argument \\!\\(\\*RowBox[{RowBox[{\\\"Missing\\\", \\\"[\\\", \
-\\\"]\\\"}], \\\"+\\\", TemplateBox[List[\\\"14\\\", \\\"\\\\\\\"days\\\\\\\"\
-\\\", \\\"days\\\", \\\"\\\\\\\"Days\\\\\\\"\\\"], \\\"Quantity\\\", \
-Rule[SyntaxForm, Mod]]}]\\) cannot be interpreted as a date or time input\"", 
-   2, 47, 3, 18740048813397883409, "Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.808341195972959*^9, 3.808405889241621*^9},
- CellLabel->
-  "During evaluation of \
-In[47]:=",ExpressionUUID->"b981a3b3-6d1c-45ea-808a-8f6fe8201d64"],
-
-Cell[BoxData[
- TemplateBox[{
-  "General", "stop", 
-   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"DateValue\\\", \\\"::\\\
-\", \\\"arg\\\"}], \\\"MessageName\\\"]\\) will be suppressed during this \
-calculation.\"", 2, 47, 4, 18740048813397883409, "Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.808341195972959*^9, 3.8084058892459097`*^9},
- CellLabel->
-  "During evaluation of \
-In[47]:=",ExpressionUUID->"dcc60c2c-dd77-42e4-8804-07043daa06e9"],
-
-Cell[BoxData[
- TemplateBox[{
-  "DiaryDate", "invalid", 
-   "\"\\!\\(\\*InterpretationBox[RowBox[{TagBox[\\\"DiaryDate\\\", \
-\\\"SummaryHead\\\"], \\\"[\\\", DynamicModuleBox[{Typeset`open$$ = False, \
-Set[Typeset`embedState$$, \\\"Ready\\\"]}, \
-TemplateBox[List[PaneSelectorBox[List[Rule[False, GridBox[List[List[StyleBox[\
-\\\"\\\\\\\"\\\\|012000\\\\\\\"\\\", 24, Rule[StripOnInput, False]], \
-GridBox[List[List[TagBox[\\\"\\\\\\\"Julian date: \\\\\\\"\\\", \
-\\\"SummaryItem\\\"], TagBox[RowBox[List[RowBox[List[\\\"Missing\\\", \\\"[\\\
-\", \\\"\\\\\\\"InvalidDiaryDate\\\\\\\"\\\", \\\"]\\\"]], \\\"[\\\", \
-\\\"\\\\\\\"JulianDate\\\\\\\"\\\", \\\"]\\\"]], \\\"SummaryItem\\\"]], \
-List[TagBox[\\\"\\\\\\\"Babylonian month: \\\\\\\"\\\", \\\"SummaryItem\\\"], \
-TagBox[RowBox[List[RowBox[List[\\\"Missing\\\", \\\"[\\\", \
-\\\"\\\\\\\"InvalidDiaryDate\\\\\\\"\\\", \\\"]\\\"]], \\\"[\\\", \
-\\\"\\\\\\\"BabylonianMonth\\\\\\\"\\\", \\\"]\\\"]], \\\"SummaryItem\\\"]], \
-List[TagBox[\\\"\\\\\\\"Babylonian day: \\\\\\\"\\\", \\\"SummaryItem\\\"], \
-TagBox[RowBox[List[RowBox[List[\\\"Missing\\\", \\\"[\\\", \
-\\\"\\\\\\\"InvalidDiaryDate\\\\\\\"\\\", \\\"]\\\"]], \\\"[\\\", \
-\\\"\\\\\\\"BabylonianDay\\\\\\\"\\\", \\\"]\\\"]], \\\"SummaryItem\\\"]], \
-List[TagBox[\\\"\\\\\\\"Time: \\\\\\\"\\\", \\\"SummaryItem\\\"], \
-TagBox[RowBox[List[RowBox[List[\\\"Missing\\\", \\\"[\\\", \
-\\\"\\\\\\\"InvalidDiaryDate\\\\\\\"\\\", \\\"]\\\"]], \\\"[\\\", \
-\\\"\\\\\\\"Time\\\\\\\"\\\", \\\"]\\\"]], \\\"SummaryItem\\\"]]], \
-Rule[GridBoxAlignment, List[Rule[\\\"Columns\\\", List[List[Left]]], \
-Rule[\\\"Rows\\\", List[List[Automatic]]]]], Rule[AutoDelete, False], \
-Rule[GridBoxItemSize, List[Rule[\\\"Columns\\\", List[List[Automatic]]], \
-Rule[\\\"Rows\\\", List[List[Automatic]]]]], Rule[GridBoxSpacings, List[Rule[\
-\\\"Columns\\\", List[List[2]]], Rule[\\\"Rows\\\", List[List[Automatic]]]]], \
-Rule[BaseStyle, List[Rule[ShowStringCharacters, False], Rule[NumberMarks, \
-False], Rule[PrintPrecision, 3], Rule[ShowSyntaxStyles, False]]]]]], \
-Rule[GridBoxAlignment, List[Rule[\\\"Rows\\\", List[List[Top]]]]], \
-Rule[AutoDelete, False], Rule[GridBoxItemSize, List[Rule[\\\"Columns\\\", \
-List[List[Automatic]]], Rule[\\\"Rows\\\", List[List[Automatic]]]]], \
-Rule[BaselinePosition, List[1, 1]]]], Rule[True, \
-GridBox[List[List[StyleBox[\\\"\\\\\\\"\\\\|012000\\\\\\\"\\\", 24, \
-Rule[StripOnInput, False]], GridBox[List[List[TagBox[\\\"\\\\\\\"Julian date: \
-\\\\\\\"\\\", \\\"SummaryItem\\\"], \
-TagBox[RowBox[List[RowBox[List[\\\"Missing\\\", \\\"[\\\", \
-\\\"\\\\\\\"InvalidDiaryDate\\\\\\\"\\\", \\\"]\\\"]], \\\"[\\\", \
-\\\"\\\\\\\"JulianDate\\\\\\\"\\\", \\\"]\\\"]], \\\"SummaryItem\\\"]], \
-List[TagBox[\\\"\\\\\\\"Babylonian month: \\\\\\\"\\\", \\\"SummaryItem\\\"], \
-TagBox[RowBox[List[RowBox[List[\\\"Missing\\\", \\\"[\\\", \
-\\\"\\\\\\\"InvalidDiaryDate\\\\\\\"\\\", \\\"]\\\"]], \\\"[\\\", \
-\\\"\\\\\\\"BabylonianMonth\\\\\\\"\\\", \\\"]\\\"]], \\\"SummaryItem\\\"]], \
-List[TagBox[\\\"\\\\\\\"Babylonian day: \\\\\\\"\\\", \\\"SummaryItem\\\"], \
-TagBox[RowBox[List[RowBox[List[\\\"Missing\\\", \\\"[\\\", \
-\\\"\\\\\\\"InvalidDiaryDate\\\\\\\"\\\", \\\"]\\\"]], \\\"[\\\", \
-\\\"\\\\\\\"BabylonianDay\\\\\\\"\\\", \\\"]\\\"]], \\\"SummaryItem\\\"]], \
-List[TagBox[\\\"\\\\\\\"Time: \\\\\\\"\\\", \\\"SummaryItem\\\"], \
-TagBox[RowBox[List[RowBox[List[\\\"Missing\\\", \\\"[\\\", \
-\\\"\\\\\\\"InvalidDiaryDate\\\\\\\"\\\", \\\"]\\\"]], \\\"[\\\", \
-\\\"\\\\\\\"Time\\\\\\\"\\\", \\\"]\\\"]], \\\"SummaryItem\\\"]]], \
-Rule[GridBoxAlignment, List[Rule[\\\"Columns\\\", List[List[Left]]], \
-Rule[\\\"Rows\\\", List[List[Automatic]]]]], Rule[AutoDelete, False], \
-Rule[GridBoxItemSize, List[Rule[\\\"Columns\\\", List[List[Automatic]]], \
-Rule[\\\"Rows\\\", List[List[Automatic]]]]], Rule[GridBoxSpacings, List[Rule[\
-\\\"Columns\\\", List[List[2]]], Rule[\\\"Rows\\\", List[List[Automatic]]]]], \
-Rule[BaseStyle, List[Rule[ShowStringCharacters, False], Rule[NumberMarks, \
-False], Rule[PrintPrecision, 3], Rule[ShowSyntaxStyles, False]]]]]], \
-Rule[GridBoxAlignment, List[Rule[\\\"Rows\\\", List[List[Top]]]]], \
-Rule[AutoDelete, False], Rule[GridBoxItemSize, List[Rule[\\\"Columns\\\", \
-List[List[Automatic]]], Rule[\\\"Rows\\\", List[List[Automatic]]]]], \
-Rule[BaselinePosition, List[1, 1]]]]], Dynamic[Typeset`open$$], \
-Rule[ImageSize, Automatic]]], \\\"SummaryPanel\\\"], \
-RuleDelayed[DynamicModuleValues, List[]]], \\\"]\\\"}], \
-Missing[\\\"InvalidDiaryDate\\\"], Rule[Selectable, False], Rule[Editable, \
-False], Rule[SelectWithContents, True]]\\) is not a valid DiaryDate.\"", 2, 
-   47, 5, 18740048813397883409, "Local", "ComputationalDiaries`DiaryDate"},
-  "MessageTemplate2"]], "Message", "MSG",
- CellChangeTimes->{3.808341195972959*^9, 3.808405889267448*^9},
- CellLabel->
-  "During evaluation of \
-In[47]:=",ExpressionUUID->"b7030bd4-26b9-45b1-840d-0e8cc7a56e2e"],
-
-Cell[BoxData[
- TemplateBox[{
-  "DiaryDate", "invalid", 
-   "\"\\!\\(\\*InterpretationBox[RowBox[{TagBox[\\\"DiaryDate\\\", \
-\\\"SummaryHead\\\"], \\\"[\\\", DynamicModuleBox[{Typeset`open$$ = False, \
-Set[Typeset`embedState$$, \\\"Ready\\\"]}, \
-TemplateBox[List[PaneSelectorBox[List[Rule[False, GridBox[List[List[StyleBox[\
-\\\"\\\\\\\"\\\\|012000\\\\\\\"\\\", 24, Rule[StripOnInput, False]], \
-GridBox[List[List[TagBox[\\\"\\\\\\\"Julian date: \\\\\\\"\\\", \
-\\\"SummaryItem\\\"], TagBox[RowBox[List[RowBox[List[\\\"Missing\\\", \\\"[\\\
-\", \\\"\\\\\\\"InvalidDiaryDate\\\\\\\"\\\", \\\"]\\\"]], \\\"[\\\", \
-\\\"\\\\\\\"JulianDate\\\\\\\"\\\", \\\"]\\\"]], \\\"SummaryItem\\\"]], \
-List[TagBox[\\\"\\\\\\\"Babylonian month: \\\\\\\"\\\", \\\"SummaryItem\\\"], \
-TagBox[RowBox[List[RowBox[List[\\\"Missing\\\", \\\"[\\\", \
-\\\"\\\\\\\"InvalidDiaryDate\\\\\\\"\\\", \\\"]\\\"]], \\\"[\\\", \
-\\\"\\\\\\\"BabylonianMonth\\\\\\\"\\\", \\\"]\\\"]], \\\"SummaryItem\\\"]], \
-List[TagBox[\\\"\\\\\\\"Babylonian day: \\\\\\\"\\\", \\\"SummaryItem\\\"], \
-TagBox[RowBox[List[RowBox[List[\\\"Missing\\\", \\\"[\\\", \
-\\\"\\\\\\\"InvalidDiaryDate\\\\\\\"\\\", \\\"]\\\"]], \\\"[\\\", \
-\\\"\\\\\\\"BabylonianDay\\\\\\\"\\\", \\\"]\\\"]], \\\"SummaryItem\\\"]], \
-List[TagBox[\\\"\\\\\\\"Time: \\\\\\\"\\\", \\\"SummaryItem\\\"], \
-TagBox[RowBox[List[RowBox[List[\\\"Missing\\\", \\\"[\\\", \
-\\\"\\\\\\\"InvalidDiaryDate\\\\\\\"\\\", \\\"]\\\"]], \\\"[\\\", \
-\\\"\\\\\\\"Time\\\\\\\"\\\", \\\"]\\\"]], \\\"SummaryItem\\\"]]], \
-Rule[GridBoxAlignment, List[Rule[\\\"Columns\\\", List[List[Left]]], \
-Rule[\\\"Rows\\\", List[List[Automatic]]]]], Rule[AutoDelete, False], \
-Rule[GridBoxItemSize, List[Rule[\\\"Columns\\\", List[List[Automatic]]], \
-Rule[\\\"Rows\\\", List[List[Automatic]]]]], Rule[GridBoxSpacings, List[Rule[\
-\\\"Columns\\\", List[List[2]]], Rule[\\\"Rows\\\", List[List[Automatic]]]]], \
-Rule[BaseStyle, List[Rule[ShowStringCharacters, False], Rule[NumberMarks, \
-False], Rule[PrintPrecision, 3], Rule[ShowSyntaxStyles, False]]]]]], \
-Rule[GridBoxAlignment, List[Rule[\\\"Rows\\\", List[List[Top]]]]], \
-Rule[AutoDelete, False], Rule[GridBoxItemSize, List[Rule[\\\"Columns\\\", \
-List[List[Automatic]]], Rule[\\\"Rows\\\", List[List[Automatic]]]]], \
-Rule[BaselinePosition, List[1, 1]]]], Rule[True, \
-GridBox[List[List[StyleBox[\\\"\\\\\\\"\\\\|012000\\\\\\\"\\\", 24, \
-Rule[StripOnInput, False]], GridBox[List[List[TagBox[\\\"\\\\\\\"Julian date: \
-\\\\\\\"\\\", \\\"SummaryItem\\\"], \
-TagBox[RowBox[List[RowBox[List[\\\"Missing\\\", \\\"[\\\", \
-\\\"\\\\\\\"InvalidDiaryDate\\\\\\\"\\\", \\\"]\\\"]], \\\"[\\\", \
-\\\"\\\\\\\"JulianDate\\\\\\\"\\\", \\\"]\\\"]], \\\"SummaryItem\\\"]], \
-List[TagBox[\\\"\\\\\\\"Babylonian month: \\\\\\\"\\\", \\\"SummaryItem\\\"], \
-TagBox[RowBox[List[RowBox[List[\\\"Missing\\\", \\\"[\\\", \
-\\\"\\\\\\\"InvalidDiaryDate\\\\\\\"\\\", \\\"]\\\"]], \\\"[\\\", \
-\\\"\\\\\\\"BabylonianMonth\\\\\\\"\\\", \\\"]\\\"]], \\\"SummaryItem\\\"]], \
-List[TagBox[\\\"\\\\\\\"Babylonian day: \\\\\\\"\\\", \\\"SummaryItem\\\"], \
-TagBox[RowBox[List[RowBox[List[\\\"Missing\\\", \\\"[\\\", \
-\\\"\\\\\\\"InvalidDiaryDate\\\\\\\"\\\", \\\"]\\\"]], \\\"[\\\", \
-\\\"\\\\\\\"BabylonianDay\\\\\\\"\\\", \\\"]\\\"]], \\\"SummaryItem\\\"]], \
-List[TagBox[\\\"\\\\\\\"Time: \\\\\\\"\\\", \\\"SummaryItem\\\"], \
-TagBox[RowBox[List[RowBox[List[\\\"Missing\\\", \\\"[\\\", \
-\\\"\\\\\\\"InvalidDiaryDate\\\\\\\"\\\", \\\"]\\\"]], \\\"[\\\", \
-\\\"\\\\\\\"Time\\\\\\\"\\\", \\\"]\\\"]], \\\"SummaryItem\\\"]]], \
-Rule[GridBoxAlignment, List[Rule[\\\"Columns\\\", List[List[Left]]], \
-Rule[\\\"Rows\\\", List[List[Automatic]]]]], Rule[AutoDelete, False], \
-Rule[GridBoxItemSize, List[Rule[\\\"Columns\\\", List[List[Automatic]]], \
-Rule[\\\"Rows\\\", List[List[Automatic]]]]], Rule[GridBoxSpacings, List[Rule[\
-\\\"Columns\\\", List[List[2]]], Rule[\\\"Rows\\\", List[List[Automatic]]]]], \
-Rule[BaseStyle, List[Rule[ShowStringCharacters, False], Rule[NumberMarks, \
-False], Rule[PrintPrecision, 3], Rule[ShowSyntaxStyles, False]]]]]], \
-Rule[GridBoxAlignment, List[Rule[\\\"Rows\\\", List[List[Top]]]]], \
-Rule[AutoDelete, False], Rule[GridBoxItemSize, List[Rule[\\\"Columns\\\", \
-List[List[Automatic]]], Rule[\\\"Rows\\\", List[List[Automatic]]]]], \
-Rule[BaselinePosition, List[1, 1]]]]], Dynamic[Typeset`open$$], \
-Rule[ImageSize, Automatic]]], \\\"SummaryPanel\\\"], \
-RuleDelayed[DynamicModuleValues, List[]]], \\\"]\\\"}], \
-Missing[\\\"InvalidDiaryDate\\\"], Rule[Selectable, False], Rule[Editable, \
-False], Rule[SelectWithContents, True]]\\) is not a valid DiaryDate.\"", 2, 
-   47, 6, 18740048813397883409, "Local", "ComputationalDiaries`DiaryDate"},
-  "MessageTemplate2"]], "Message", "MSG",
- CellChangeTimes->{3.808341195972959*^9, 3.80840588927575*^9},
- CellLabel->
-  "During evaluation of \
-In[47]:=",ExpressionUUID->"bc44bc69-ff93-4412-9af1-031f33dcf8f0"],
-
-Cell[BoxData[
- TemplateBox[{
-  "DiaryDate", "invalid", 
-   "\"\\!\\(\\*InterpretationBox[RowBox[{TagBox[\\\"DiaryDate\\\", \
-\\\"SummaryHead\\\"], \\\"[\\\", DynamicModuleBox[{Typeset`open$$ = False, \
-Set[Typeset`embedState$$, \\\"Ready\\\"]}, \
-TemplateBox[List[PaneSelectorBox[List[Rule[False, GridBox[List[List[StyleBox[\
-\\\"\\\\\\\"\\\\|012000\\\\\\\"\\\", 24, Rule[StripOnInput, False]], \
-GridBox[List[List[TagBox[\\\"\\\\\\\"Julian date: \\\\\\\"\\\", \
-\\\"SummaryItem\\\"], TagBox[RowBox[List[RowBox[List[\\\"Missing\\\", \\\"[\\\
-\", \\\"\\\\\\\"InvalidDiaryDate\\\\\\\"\\\", \\\"]\\\"]], \\\"[\\\", \
-\\\"\\\\\\\"JulianDate\\\\\\\"\\\", \\\"]\\\"]], \\\"SummaryItem\\\"]], \
-List[TagBox[\\\"\\\\\\\"Babylonian month: \\\\\\\"\\\", \\\"SummaryItem\\\"], \
-TagBox[RowBox[List[RowBox[List[\\\"Missing\\\", \\\"[\\\", \
-\\\"\\\\\\\"InvalidDiaryDate\\\\\\\"\\\", \\\"]\\\"]], \\\"[\\\", \
-\\\"\\\\\\\"BabylonianMonth\\\\\\\"\\\", \\\"]\\\"]], \\\"SummaryItem\\\"]], \
-List[TagBox[\\\"\\\\\\\"Babylonian day: \\\\\\\"\\\", \\\"SummaryItem\\\"], \
-TagBox[RowBox[List[RowBox[List[\\\"Missing\\\", \\\"[\\\", \
-\\\"\\\\\\\"InvalidDiaryDate\\\\\\\"\\\", \\\"]\\\"]], \\\"[\\\", \
-\\\"\\\\\\\"BabylonianDay\\\\\\\"\\\", \\\"]\\\"]], \\\"SummaryItem\\\"]], \
-List[TagBox[\\\"\\\\\\\"Time: \\\\\\\"\\\", \\\"SummaryItem\\\"], \
-TagBox[RowBox[List[RowBox[List[\\\"Missing\\\", \\\"[\\\", \
-\\\"\\\\\\\"InvalidDiaryDate\\\\\\\"\\\", \\\"]\\\"]], \\\"[\\\", \
-\\\"\\\\\\\"Time\\\\\\\"\\\", \\\"]\\\"]], \\\"SummaryItem\\\"]]], \
-Rule[GridBoxAlignment, List[Rule[\\\"Columns\\\", List[List[Left]]], \
-Rule[\\\"Rows\\\", List[List[Automatic]]]]], Rule[AutoDelete, False], \
-Rule[GridBoxItemSize, List[Rule[\\\"Columns\\\", List[List[Automatic]]], \
-Rule[\\\"Rows\\\", List[List[Automatic]]]]], Rule[GridBoxSpacings, List[Rule[\
-\\\"Columns\\\", List[List[2]]], Rule[\\\"Rows\\\", List[List[Automatic]]]]], \
-Rule[BaseStyle, List[Rule[ShowStringCharacters, False], Rule[NumberMarks, \
-False], Rule[PrintPrecision, 3], Rule[ShowSyntaxStyles, False]]]]]], \
-Rule[GridBoxAlignment, List[Rule[\\\"Rows\\\", List[List[Top]]]]], \
-Rule[AutoDelete, False], Rule[GridBoxItemSize, List[Rule[\\\"Columns\\\", \
-List[List[Automatic]]], Rule[\\\"Rows\\\", List[List[Automatic]]]]], \
-Rule[BaselinePosition, List[1, 1]]]], Rule[True, \
-GridBox[List[List[StyleBox[\\\"\\\\\\\"\\\\|012000\\\\\\\"\\\", 24, \
-Rule[StripOnInput, False]], GridBox[List[List[TagBox[\\\"\\\\\\\"Julian date: \
-\\\\\\\"\\\", \\\"SummaryItem\\\"], \
-TagBox[RowBox[List[RowBox[List[\\\"Missing\\\", \\\"[\\\", \
-\\\"\\\\\\\"InvalidDiaryDate\\\\\\\"\\\", \\\"]\\\"]], \\\"[\\\", \
-\\\"\\\\\\\"JulianDate\\\\\\\"\\\", \\\"]\\\"]], \\\"SummaryItem\\\"]], \
-List[TagBox[\\\"\\\\\\\"Babylonian month: \\\\\\\"\\\", \\\"SummaryItem\\\"], \
-TagBox[RowBox[List[RowBox[List[\\\"Missing\\\", \\\"[\\\", \
-\\\"\\\\\\\"InvalidDiaryDate\\\\\\\"\\\", \\\"]\\\"]], \\\"[\\\", \
-\\\"\\\\\\\"BabylonianMonth\\\\\\\"\\\", \\\"]\\\"]], \\\"SummaryItem\\\"]], \
-List[TagBox[\\\"\\\\\\\"Babylonian day: \\\\\\\"\\\", \\\"SummaryItem\\\"], \
-TagBox[RowBox[List[RowBox[List[\\\"Missing\\\", \\\"[\\\", \
-\\\"\\\\\\\"InvalidDiaryDate\\\\\\\"\\\", \\\"]\\\"]], \\\"[\\\", \
-\\\"\\\\\\\"BabylonianDay\\\\\\\"\\\", \\\"]\\\"]], \\\"SummaryItem\\\"]], \
-List[TagBox[\\\"\\\\\\\"Time: \\\\\\\"\\\", \\\"SummaryItem\\\"], \
-TagBox[RowBox[List[RowBox[List[\\\"Missing\\\", \\\"[\\\", \
-\\\"\\\\\\\"InvalidDiaryDate\\\\\\\"\\\", \\\"]\\\"]], \\\"[\\\", \
-\\\"\\\\\\\"Time\\\\\\\"\\\", \\\"]\\\"]], \\\"SummaryItem\\\"]]], \
-Rule[GridBoxAlignment, List[Rule[\\\"Columns\\\", List[List[Left]]], \
-Rule[\\\"Rows\\\", List[List[Automatic]]]]], Rule[AutoDelete, False], \
-Rule[GridBoxItemSize, List[Rule[\\\"Columns\\\", List[List[Automatic]]], \
-Rule[\\\"Rows\\\", List[List[Automatic]]]]], Rule[GridBoxSpacings, List[Rule[\
-\\\"Columns\\\", List[List[2]]], Rule[\\\"Rows\\\", List[List[Automatic]]]]], \
-Rule[BaseStyle, List[Rule[ShowStringCharacters, False], Rule[NumberMarks, \
-False], Rule[PrintPrecision, 3], Rule[ShowSyntaxStyles, False]]]]]], \
-Rule[GridBoxAlignment, List[Rule[\\\"Rows\\\", List[List[Top]]]]], \
-Rule[AutoDelete, False], Rule[GridBoxItemSize, List[Rule[\\\"Columns\\\", \
-List[List[Automatic]]], Rule[\\\"Rows\\\", List[List[Automatic]]]]], \
-Rule[BaselinePosition, List[1, 1]]]]], Dynamic[Typeset`open$$], \
-Rule[ImageSize, Automatic]]], \\\"SummaryPanel\\\"], \
-RuleDelayed[DynamicModuleValues, List[]]], \\\"]\\\"}], \
-Missing[\\\"InvalidDiaryDate\\\"], Rule[Selectable, False], Rule[Editable, \
-False], Rule[SelectWithContents, True]]\\) is not a valid DiaryDate.\"", 2, 
-   47, 7, 18740048813397883409, "Local", "ComputationalDiaries`DiaryDate"},
-  "MessageTemplate2"]], "Message", "MSG",
- CellChangeTimes->{3.808341195972959*^9, 3.8084058892824173`*^9},
- CellLabel->
-  "During evaluation of \
-In[47]:=",ExpressionUUID->"430f551a-b963-404d-95c4-46301857676f"],
-
-Cell[BoxData[
- TemplateBox[{
-  "General", "stop", 
-   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"DiaryDate\\\", \\\"::\\\
-\", \\\"invalid\\\"}], \\\"MessageName\\\"]\\) will be suppressed during this \
-calculation.\"", 2, 47, 8, 18740048813397883409, "Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.808341195972959*^9, 3.808405889288987*^9},
- CellLabel->
-  "During evaluation of \
-In[47]:=",ExpressionUUID->"943a8ff0-f515-4598-a71e-a89cd0108c5d"]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"Length", "[", "d", "]"}]], "Input",
- CellChangeTimes->{{3.808341049001237*^9, 3.808341054367475*^9}},
- CellLabel->"In[51]:=",ExpressionUUID->"5c375b99-add1-4d71-98cd-00afab42d6cb"],
-
-Cell[BoxData["108"], "Output",
- CellChangeTimes->{{3.8083410509262657`*^9, 3.808341054566647*^9}, 
-   3.808341201690383*^9},
- CellLabel->"Out[51]=",ExpressionUUID->"a91754fe-d286-49c0-8fbb-5448e7d732f3"]
-}, Open  ]],
-
-Cell[BoxData["d"], "Input",
- CellChangeTimes->{3.808341055482039*^9},
- CellLabel->"In[52]:=",ExpressionUUID->"d57c31ba-14e3-421e-af79-c0900201320c"],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
+Cell[BoxData[{
  RowBox[{
-  RowBox[{
-   RowBox[{"processInputFormat", "[", "tabletData", "]"}], ";"}], "//", 
-  "RepeatedTiming"}]], "Input",
- CellChangeTimes->{{3.8083408832892942`*^9, 3.808340916212233*^9}},
- CellLabel->"In[34]:=",ExpressionUUID->"e659f116-8b4f-46de-bd4f-119b566b6eab"],
-
-Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{"0.0474233499999999961`2.", ",", "Null"}], "}"}]], "Output",
- CellChangeTimes->{3.808340918464621*^9},
- CellLabel->"Out[34]=",ExpressionUUID->"cccdc7dd-a553-48e7-bb3a-08219a5a75bf"]
-}, Open  ]],
-
-Cell[BoxData[
- RowBox[{"showTablet", "[", "\"\<X202470\>\"", "]"}]], "Input",ExpressionUUID->"9529dfaa-eb64-42e9-8b43-33b9e757b1e8"],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
+  RowBox[{"Export", "[", 
+   RowBox[{
+    RowBox[{"FileNameJoin", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"NotebookDirectory", "[", "]"}], ",", 
+       "\"\<observations.mx\>\""}], "}"}], "]"}], ",", 
+    RowBox[{"DiaryParse", "[", "inputObservations", "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{
-   RowBox[{"Total", "[", 
-    RowBox[{"Length", "/@", 
-     RowBox[{"getTabletLines", "[", "]"}]}], "]"}], "/", 
-   RowBox[{"Length", "[", 
-    RowBox[{"getTabletLines", "[", "\"\<X202470\>\"", "]"}], "]"}]}], "//", 
-  "N"}]], "Input",
- CellChangeTimes->{{3.8083409568428288`*^9, 3.808340996515267*^9}},
- CellLabel->"In[44]:=",ExpressionUUID->"d1f750aa-f8fd-43fe-9a5e-5952564c55b4"],
-
-Cell[BoxData["290.95348837209303`"], "Output",
- CellChangeTimes->{{3.808340995114998*^9, 3.808340996915536*^9}},
- CellLabel->"Out[44]=",ExpressionUUID->"d229e088-03b9-48c4-9da7-62362cfab806"]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"Length", "[", 
-  RowBox[{"getTabletLines", "[", "\"\<X202470\>\"", "]"}], "]"}]], "Input",
- CellChangeTimes->{{3.8083409714864407`*^9, 3.808340974684412*^9}},
- CellLabel->"In[40]:=",ExpressionUUID->"8a97786a-274a-494b-8bd6-d7b6353c4196"],
-
-Cell[BoxData["43"], "Output",
- CellChangeTimes->{3.808340974927412*^9},
- CellLabel->"Out[40]=",ExpressionUUID->"330df140-c78f-48b5-9ebd-b2e27238f0b7"]
-}, Open  ]],
-
-Cell[BoxData[
- GraphicsBox[
-  TagBox[RasterBox[CompressedData["
-1:eJztvcWWJEnWbvmv7h70sF+h3+KunvWwh8nMzMzMzMyVkczMEMnMzJ4MlVRJ
-RVmV2rX1v59fCQk1MzVzD6fYey0J8zBTFFUVOZ+cI0f/7y13W3Pb/+2//uu/
-9vo///PPmlvs9//uuecWB6z1f/3nP+vsutcO2+26zdb/3657b7PdNnv+jy3/
-9/98+cd/yv/znz/+j/98NiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIi
-IiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIi
-IiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIi
-IiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiKyKPjj
-jz9GFhERERERWbysjjb/6njOIiIiIiKrE6ujzc85/fvf/x5aRERERERk8TLK
-3lfniIiIiIjIYqO07X/77bfmvvvuaw488MDm0EMPbY488sjmySefnNY6f/3r
-X5u777574n397W9/az777LPm008/bbc1X3Cuf/nLX5qpqakVCsf3r3/9qy0i
-IiIiIrJ4SWzaJ5980my55ZbNqaee2nz99dftd2iRBx54oDnllFOaf/7zn82D
-Dz7YHH744RPv56233mrWW2+9Zs0112yefvrpeYuPY1/vvvtuc9VVVzWXXnpp
-ezyUzz//fMnG6omIiIiIrE5g0+Nf2WKLLZrNNtus+fXXX1fSH++8805z0EEH
-NYcccsiMdA5lo402ajXFCy+8MK86pyycuzpHRERERGTpgE2///77t3b+XXfd
-NTAXwY033tgug86ZRJ/UOufVV19dMDrnqKOOUueIiIiIiCwhXnrppdbGX3vt
-tds4tUE6h7k7+Hu6dM44JTqHGLZVpXPGPaYTTzxRnSMiIiIisoQ4+eSTWxt/
-1113HagDkqfgwgsvbHVOV062cXXOBx98MLYe6ctc6ZzZOl4REREREZlddt55
-59bGP+OMM0bqHOLaap3zyy+/NDfddFObq+CEE05oTj/99KEaJjrn448/Xuk3
-8p2xLbQXmuqjjz4aWztM4mMapnPwcZGzgDlKKRxn332JiIiIiMjcQo7n5Bq7
-7bbbRuqcDz/8sHn88cen///nP/+52WqrrZozzzyzufnmm5tly5Y1m2yySVvQ
-Bl0+n+icL7/8coV9/PTTT81ee+3VnHbaae22KOQHICcaeZ6jgy677LJmrbXW
-assNN9zQ6o7jjjuunT/E+uSM4zhrnxN5pPfbb79mww03bK644orm+uuvb+fl
-vPjii80xxxzTqXN+/vnnZtttt21zMNxyyy3NBRdc0O73iCOOWKmOOHeOl/g/
-luH/u+22W5ube9NNN20eeuiheb7aIiIiIiKrB88///y0zsl7cro0Tt4pU5fn
-nnuuXfeZZ56Z1hPJ01z7fWqd8+23366gcfbcc89m9913X2GdbIsc1OX7O3fc
-ccf2e3RNcl5DdNtZZ521wnbQR2yf38iTnf3+8MMPbbzeoLzSaC2+R1sFNFV9
-zmVhDlO2d+6557bb2nrrrVstJSIiIiIiq55S57z55psz0jn57tprr22/22ef
-fVZYttY5+Ffy3fnnn99+h++m1Azku05MXbQSsG2+Z1v1+0aJw9tggw3a/NjZ
-9/Lly9vlef/p77//voLu4rwH6ZycS6lz3nvvvfY73pc6TOfssMMO0/tR54iI
-iIiIzB3JtRat0me+SZknjXk4zKV5//33p7+77rrr2u3tu+++Q+fnkL8t3x1/
-/PHtd8SFPfHEEyuUjTfeuNUn5Taic9h3vf3kiP7mm2+mv7v11lvb7+64446V
-lkf3sI9a51DwI62zzjqtTsp36BuWJWau6/yic4hbi0Ykjs5cbiIiIiIicwPx
-XPg+sMvvueeekRoHmx2/RPkdc3TQEczR+f7773vrHPRFrXO22267NhatLsSh
-dekc/C319o8++uiBOoc5Ml3HdOihh3bqHAr+oi+++KLVgeiwxL9dfvnlQ3XO
-ww8/PK1z6tg9ERERERFZtTDvH7ucnGN9fDnl+3Pi70Cf4Bvq8uf84x//aEup
-c5inX243Oqf0m3TFz9U6h1wCs6Fzol1qncP/iTlbf/3123XRZomlO++88zqP
-LTrnkUceUeeIiIiIiMwT5BvDLsevM+w9oRRiscgbzd/4ONA42PX4dLJMrXOY
-i896pc5hX10657777uvc75133tk8+uijq0TnkAOBHGm1zuH80Djrrbde8/LL
-L09/zzZYlvwH/P/iiy9uXnjhBXWOiIiIiMgCArv7yiuvbG3zBx98cKDGIecA
-ucl4Xw7/z3z8OqYs2yp1Djqj1DnknS7XIR6Mdc4555yV9sv+yBX9448/Tqxz
-XnnllYGxedEttc5hWb67+uqrV1g+OROYBxRfUJmrTp0jIiIiIjL/lPoEPfHJ
-J590ahz8Gvfff//0d+Rk5ju0Dz6RaJ/DDjusWXfddVudQ5wXeqB8Vw46h3fu
-lNsnrm2nnXZq9U90VArvuqn1zx577NGpQdhO3nta6hw0BjmrKbwTp9RQvB8n
-Oqd8d2lytPHenHzHe0s5L77ff//92++Y21PqI3WOiIiIiMj8U+oEcomhBXhv
-DO+ZoRCHtv322zdPPfXUSvqHODPm2pCvDH2BZuBdNryzEw3E+zGx91mW2C+W
-YXni3fi79K+gpdBZ+GrQS6+++mpz0kkntbop2gcdg/5gG2gJ3svJfJn8llxr
-FHw4ZTzd22+/3Z7H3nvv3f7GuXG8aCVyQCd/9ddffz2tjfBFEWPH+fAuH+Lb
-2D+51njfKJ/kXmB5/E0cC1qNbVGHaEbyZ6tzRERERETmllq7kIMNvYN/B1/G
-G2+8sUIegbqQHxodQslyaJ18l+Xw7eS7evlBy5S5pyn4RuptcLyDtl/PNxq0
-fbbRtQ7a5PXXX2/fM0QpfV3MFyJuLufw97//faX94zti2+ocEREREZG5ZZB+
-scxOKfWNOkdERERERERERERERERERERERERERERERERERERERERERERERERE
-RERERERERERERERERERERERERERERERERERERERERERERERERERERERERERE
-RERERERERERERERERERERERERERERERERERERERERERERERERERERERERERE
-RERERERERERERERERERERERERERERERERERERERERERERERERERERERERERW
-Jf/+979Hlj/++GPG5V//+lfnNkVERERERGYbdY6IiIiIiCw11DkiIiIiIrLU
-iO7429/+1jz++OPN1Vdf3UxNTQ3VOV9//XXz6aefjlU++eST9jN6p0vn9NFL
-fZiNbcjSwHtKZPExV8/bYnuuF0q92G6KyGIBzXHHHXc02267bXPppZc2V1xx
-RXPGGWc0Rx55ZPPLL7+0v997773No48+Ot02vfnmm83zzz/fliOOOKJZc801
-mwMOOGD6u6eeeqq57rrrmmOPPbZZe+21299Tfv3117F1Dsu/+OKLzc0339zc
-dNNNzauvvjr0nOr1P//8c9vWBcCDDz7YXj/KjTfeuELhnsr14V6rf6f88MMP
-I/vNb7/9dmxfYx9mazsiS5U6DmAc0s7n77l61rriDPgux7PQnuu51jnUQepj
-3H3ZZorIQuCuu+5q1ltvvebdd99dob2PHnnnnXfa3996663Oduqcc85p9csJ
-J5zQ+Tvb3W677XrrnLqv/Omnn1q9tOeeezYnnXRSc/LJJzc77rhjq726qLdx
-zz33NAceeOBKfZnMPegXNPWtt946fT+grW+//fb2Pss98eSTT7bfUbLc7rvv
-3vzzn/9svvzyy+a4445r9t9//2bfffdt9tprr2aHHXZott9++/Y+23rrrZsP
-Pvig3c5nn33W3jssVxf0+bJly3rbY13xnOjtJ554oj1e7muR1ZE8t3//+9+b
-v/71r23h73HaWmzpf/zjHyvY1ym///77SmU22nP2ybF+//33zTfffNOWP//5
-z+2znH3Q/7DcQqDUHWVdlFqtqy5KDVn+f1i9lXVPHZX1zf5qfTjseMtjzrr5
-W0RkVbPLLrs0Z5555sC5OX/6059aOxPfziQ6h/Lxxx+3WmmUzuna/6GHHtrs
-vPPO0+3qjz/+2P5/rbXWar744ouVzqdsW7GJ119//dYmVucsLDbffPP2fkAr
-DLpvuOYsg0/wvffeW+E37KgbbrhhWgfxd9c2uN7EWaKFsiz7HHfcub4vie88
-/vjjW+3Gvg8++OD2mERWN9IuE/f8yCOPtGNQ999/f/vcMTYxyp4Gnu/nnnuu
-Xb5+1vDj4qctC9qE8t1330303HFM9EU8v6effnrrLyZegL7wvvvua/fB72ef
-ffYKfuT5JO0Z58uxpS5+/vnnFeLB63WAdVgO3faXv/ylPafUdRfZHvHmjz32
-WKtB8x3rEefOJ9vjOgzTV2ga1mefFJbnGPhuXL+fiMi4oHPolwbpHPoubMM3
-3nhjbJ1DP5e/L7744rF1ztNPP93qmdtuu236u1tuuWXaXn3ttddWOp+yL9hn
-n33a5dQ5Cw90QfTJoHvvww8/bJe54IILOn8n1i33An6iQduhHHXUUdPLZqx5
-Up2Dxtlss82m72XKnXfe2RxzzDGOUcpqQ9pSbOHTTjutOe+885qXX365ueii
-i5pNN9207Vtow4dpnfhN6D8Y0yp9KbGr8ePjt8UPS5tO4W/a9T322KN55pln
-pmOr+pC+B23DfolVyD6xw9Fq6B38yYyTYctnvfkkdUK798ADD7R1QJzDtdde
-22qGup5znmgKfM6JGeb6nHjiic2zzz470A+d+jj//PObU045pfXpRBfRrxOb
-zrU99dRT25j13377bXqf5f7jD3rllVdaPYkdgM1w1llnteNNtMXzXa8isvQo
-tQh90RZbbNH2VV32Ie3guuuu27ar4+gc/P/0I/n/22+/PZbOYexpo402ajbY
-YIP273yPb2jjjTdut8XfXefGcueee+60XavOWXhE9x5++OEDtQmaFnsJO2OU
-zhl0f862zvnoo4869Rnjqmhy9I7IYmWQ36LrO2xu7Ntdd9219YuUWoO2n7Yb
-P/7777/f2e7m2SG+lLaemGT8BIlpit+AOGWeLZZhfCFlk002aZ9FfEexy/ue
-H88r26Nfir8huopPdAH7oK+h/ynrYL7ml+TYXn/99ba923LLLdvzZz5t/Cvl
-MbI8cRj0zWib+E/QcvisiPHFh9WlQ7MvliGmuIyR++qrr9q2eauttmr3P0gL
-sg00Dtdnm222ae8JYgO53uhW6hY/nn2yiMwGXbYfbVbsP7QOfh3ay9pWZAwI
-n8o4Ouf6669fQecQ14DeSKxvVz9Rrs94UTRKvU/G+QfZtRRsTebksG7XNmT+
-YcyUa4MdxD3RdR0Z32Uuz6DrHO1MwS7pIsuWOqecBzDO/YC9s9tuu7U2F2Ok
-NYwtE4/nXB1ZjJR9Q5fdWz4z2Lx84vNgrIIx/nq+CPqE543YL/qVchuJZ8IO
-xy/BcvEb8H18B/iH2A7z86655pq23Vi+fHkbS4UfA62CXyHzPgY91/ku2828
-VNoQvitzD8Tuv+yyy9plSp2Tc6/nxMxGGeca8cncRo4PnwttWq4JJefzwgsv
-tHoNbVLnOr3wwgvbMcyumHSgjUPnEMvRdU889NBDrZZFb9U6J/YF1woddNBB
-B63QzjMOyrbx1aG7BuU6sL8Wkb4M0jl33333CvnQaBNpP6emplZap6/Oyfhc
-qXP6vD+n3C5+7fR96VvQN8Rwl/FwdeF3dA19Ff2iOmdhwjUsNUp9Hel7yQGY
-uIZROod8fF3Mps5hzJr1N9xww87fyY/A72gzkcVIX52TZ4h2er/99mtjS/Hb
-pJ3n9+SfIbaq9uNH42AHY++yHP6c6Jz4XNEyxLjGFk6/xTaIW2auJmNoXf1T
-Sa1z6Pew8dEyrF/Okc9+eA8C43/8XvabbKOeU1/vv56rX65f9r+T6Jz4nvCJ
-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
-EVkYqHNkdadLeyQ3wbBS64lSC9T5Dbp8NLWdHft9Jjqn9C2Vf9el6/s+30WH
-kVuB2K7yfZuDzmmSazCORhz2W46NnNPJ89xnu6PKqPVFRERk/lHnyOrOJDb2
-bJdSo8xE59Tv6yxt/j52+ih7PvnNiOdC5+ADqfVZ32Ovz2MSXVHqytLnUuo0
-/k/+AeLbkhNt2La6NG3X9uv8E+VvIiIiIiLyv5jJ+MJsj010aQ/m3RCrRp4B
-8o0RI5ac0gvRzo9vjrk55GWIZhmGYz8iIiIiIkuX2k9EQSvgyyEHAbkIyK3A
-vJr4SRaSzokmmZqaat+d+u677zp3RkRERERkNacr9u21115r349DfjPyjZG3
-Ou+4WWg6J/NknnzyyfZdSMkPLSIiIiIiqy994rfqOSwLKa4rx4G++eabb9Q4
-IiIiIiLS0jVXv9Q25bycheTLERERERERmZQypm2hapyFfGwiIiIiIiIiIiIi
-IiIiIiIiIiIiIiIiSxHm05Kb59dff21+++235p133mkeeOCBlQrvkCjn5j7z
-zDMrLUP+VX5je5999lln+fbbb1fYDu/cq5f5/PPPmy+//HL6Pd28p4L3Vfz4
-44/NTz/91L63L/A7y/KO8r7MxrvcZ5vMcU5+pMwBmMtzGlXq+djJNzXuu+Dn
-4lidn7B6wbXO+27SbpQ5A8rna6b3y2zdd+Nuo3wO836fPsdS10v5/zKfwqg5
-R/P5rNXtUH0OfUpXuzWqzNaxjzq2hdSWzWX73KfPGXV/2k+IyDBoY9ERaBy0
-xKefftq+83vNNddsy5FHHtn8/PPPbSnbBZbnu0svvbRdbq211mpef/319je0
-yHPPPdfcdNNNzfrrrz+9rR122KG5+eab29+zHXQVGmrnnXeeXo5y3HHHtcdS
-6xz2edRRRzU77rhjs/vuuzfrrLNOc9BBB7Xv7uOY+tDVzqHzli9f3jz11FPt
-ezHmul0s7ZbyGPvCsmjNY445ZoXCNbj33ntXOHbeA1IvFx1LnbPOjTfe2Fk+
-+OCD1naMrfD222+vtAzrU7hWg451roqsHpS2ZPQNzzT3YP5P+zFK6/Td12zc
-d+XyXVps0PIsm2cw7cawcxqlc/JdPdYy7JxrnbWq81fXNm95/NQFbXbXudXL
-lW1XbUN3fTdbx95Hay6Utmwu2+fy/umqg/q6dNWF/YSIDIO2g7YfLUGhDeZd
-eNEbu+2229D2AZuZ5c4555zO3y+++OLpbaFpBm0H/1CWO/TQQ6fbNo6HPoxj
-w25B76BHsux11103sG8eRL3vN998s9VMJ510UnPCCSc0e+65Z/PFF1/MebtY
-bnfc/bAs9YAuLfUidVYfe7RiluEd719//fX07z/88EOrjTbaaKP2d7QqdcN9
-ga+u7KdfeeWVZu21157eFu9gZ1nK999/P/BYuwrX9eSTT24222yzZu+9926u
-vfba1t837Do88sgjrdamXH755e07Q+y/Vj9Km4jxjvfff7954okn2nuK9gN/
-L/cHzzr+4EFj6H33Nco+G3c7GTeilOMdg86RsSLaQp5F1uEcB9nKpR2PP722
-56Nvcgy0taPOmeWpx3qsfSYMq7uvvvqqHWPhuvKMl/qAeuD6RkN0+WVoB1n/
-vffe66yDUjutCp3Tpc+6jnOYb2euKPc5jt9plM9qlBbnvqu/zxjFsDGA+t7s
-quNBz4X9hMjqQfqtxHjQf2266abTfprvvvtuYPt06qmntnZp6aPp0kGjdA59
-LL4Zlrv66qtXaLMyDpcxO+Ljsk1s4Rx3X2qNs/nmm7exb/mO7W+99dZDz3u2
-GNZmpw7GOSc0ygYbbDBdP+V51ds9+uij22Vuv/32zmXiY6Mu6r6s7JufffbZ
-6f3dc889vY+1LFxz/EqPP/54e8wff/xxc/jhh7fncuedd3b2Vdxbm2yySat1
-0GnPP/98s//++7c2j/3X6kVsItqRu+66q9lmm22axx57rPXh0G7QRjz99NPN
-tttu21x//fVte9U3XmiUbcd+J2kf8hxybPfdd187JnTRRRe1dniXPZf2kDEY
-2r033nijXfbWW29tXnzxxXZcoetY8pzyXFx22WXtWEX5DPO8ES9MvXEMPM/5
-vTzWnC/9A205+8U25f8cU8ZUJiVtS/0dMP5EnMG6667bthXsN9ru1VdfbY+b
-eGc0T3lusY2JNaCtYEzmmmuuaden3svlqAfOpfT3zAa5BtGG1FXuv+yH40HL
-RTtO2ud02fwz2Qb1yTElrn2YZmBZlhtUBt2bfFIfL7/88nRfnt/YN9qb9fmb
-37v6zFxH7gmWo+9GD/M393t93KUmtp8QWfqU7USee+KPYrvWc3PKgt1w9913
-D/y9r84BfEe1zqnH2fiePqvUOeV7yfueL4V2EF/GaaedttLxHHzwwc2FF144
-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
-Y/MwpwaNgk0T3dK1Xnya6CJsesZyM1bP3BpsQ+7naJaMS+MLYT5E5jizTvw5
-0TnJr4wW6Xse48zPwQbGb4E/IWMzrMczh22c9iy5ELI+djFz88t5biV9dE5Z
-7zyTzA3CV0xdR+uMMz+n1Dnx5wzTOdjKg3RObNbSj1Wv30fnZHvxhaDnci+V
-16HczzCdk3g+6pV+k/mC+Nv66ByuJctnbAf/GeePzuGac03ZB/NL0EPEpMXv
-xPfcE9yb+CLzHZ/jjNlNqnMS50e8GOMIXfkPy21jW3A+wxilc7hOnCv9NmNi
-6H/8+en7aBeYn5P40twz6FDmLjGGgYZX54isfuR5p82ivaC963qXzmLTOaW9
-zFhSvQ/aPvom2uhVXb8ldY7bmeQhCIxVpb7IPzDbOie+sUl1Dv02+6Bfr9/P
-UN4X2JOl9hmkc5hLwTjipH44WdiUtmHsTnyV+HK47oPis2JfYjNiA2JPkgM5
-3zNPG62EXZoYmsR9RdskNo1CPqxS5/Ab9hr+0r7n0Ufn5Ph4dvHL5JjLdoJn
-EDuU4ynjmvgdfys+5C7bHvrqnNQhNmX0DcuhcSj4FPAbY3uPmgcyrs6hzcdm
-rfNKj2IcnRN9gp1M209uhD59Xb2NXJPsgz4quSOSb63WSrXOyXhi9GzypzGG
-wz1WzmWJpsq9Qj2SSzk6JxqctpU4rb5MonNy33I/c68yrtY17ybbxiZAk3Af
-DGPU/Bz6cOat0f8knpLnk7g5nivqnniJ8tkodQ73rjpHZPUkzzt9V3LA9NU4
-lLyvciHqHMbWaL/RO/U+mG86F3FPXTHL+W62dA4xctQVY7pdY55hvnQO1yHr
-1zm+s23GMqOB6McYA+Ta1fEkbAsbgXfx2E8tTWqbKnYP8zOSF6DLn5B4Gu4p
-bEDasvJ9kby/g3uKcfzEfmVsOrZ8mf+KNqvUOfyGHYnvoe95jKNzyJmGlsMm
-LH0Z8UfRXnHvx9+RuRp8TxvXpSNSLzBqfk7O+ZprrpnOvZD6Ydu0meQpyHzv
-UecOo3RO/n/SSSe1x0Y7MCwvV01fnZPtEWuFH4A2Dzu5KzdaX52Te7Ccu4QG
-79I5+T9am/g0/I1o91zDaCV0TnITZF3qLfFt8SGVOifXCD8fcXh9mUTn5JyZ
-/8+1Ys7MMJ3DvcaxDro3w7B8a1NTU62GYV+1r4y4DXy2HD/3kDpHRGrKtoT2
-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
-Qcc5an5L7LVsI+vXx4QdR7wXPoCuue+j9t+1TGmzxsfT14c16DzYFvP5iE0q
-7f36XMdhkms4ahxn0O/jHM+g/ZTLDdtG1zUcdFz19+PostloV4fVI7FnxKyh
-L7p0ziQl58f20MjJRTPofsdXxfsyiBNNvqNJ7jUREVkczFb/JjIfrErbbNwy
-F8c7yMaNzYi/gNiuvGtypjZkaSeX9uKk7UJ5rMSPMXeFuC7s0/hfyjlKmXNR
-2sTj1O2k/ulB9vRMr3WpL7NM3230Pf5JNHjXcZbzlfocZ+LOBt2bxAkS/5d5
-Y4OOv5xPVp7LIGpdPKzeifljThs+ovI+ExEREZH5Z5BtyyfzNsiRjc6Zjf2M
-66/qs80cL9smLoo8EeRMSXxaad+W/iNZ+Ay7N7nWzPXpmpszyZhB174HHQv3
-Gn5D5uSQp6HM6SoiIiIiC4NhtiR5svKumJnG48yG7TlomxlfR98wl6JPHJMs
-fAbdm1xv3tGU/Gdzca3re41cBryr6Omnn544NlJEREREVh3D4qqICerzrplJ
-9jUbdMVhxeYtfTZ1DJQ26eJg0H3JtSRejDx6feZFzfaxxJ9DPr/kUhQREZH/
-phwXTNy6zA11/FQ9Ttu1nCxs6mtYa5muuSiyuEmOPhEREVlYlBonuWq1vVYt
-pX07yIdRj8uu7jqnjyZQN8jqive9iIjIyiTOPPmfzNWzaqFuB9Vxn3rXD9CN
-9SLzhfeciIjIwqQrbs1+e9VB3eIzq78r6z++nEH5j8tlZNXkFRAREZFuhs1D
-HKfM1r5EhlFqHePMVz31OzHw7/CeFXImk7MpWhM9VOZwKt/9oc75b+pYP+tF
-RERk1aLOkcWG98v8gF0ePcNn6cvJ97kmtX9H/pdGV+eIiIjMDV197ySlD6O2
-oU0ksjDp0pWlfyLvXklbUOat1aZfMd6vz/vlRUREZOa89957zdZbb91sttlm
-02XZsmUr6A/iVG655ZZmq622ml6Gd43NVOew3TfeeKN9f/iPP/6ozhFZgMRG
-L59P/k/sGgWNw/tivv322/bdMdjyP//8c1tK/89C9MF1jfP0OcZy2VHr5byp
-M94bEp2TuMs6nm3Ydka982Sh1a+IiMh8Qr/4/PPPN+uuu26z5pprtuW8885b
-oS9O2XDDDZt11lmn1Tj1b332Uy7PO7j322+/5oorrmhuvvnmZp999mnOPvvs
-1g4QkYVDnU8AXfPDDz80H374YfPJJ5+0YyU8v3vuuWf7+cUXX0wXtM+zzz7b
-PP744+1YRq2X5hvOBW1G4Zy+//77lXIv1FAPtFMsy3sPKazbdW6lhkH3PfPM
-M+3249fJ3CaOA82Y7Qw6Vuow854GlYVUvyIiIvNJ+uFHH320WWuttVqds+WW
-W7b9eDkOiU2DxsFemen8HPr7vffeu7nmmmumv2N/u+22W/udiCwsymecv7Gn
-8cfy3H700UetjzfjJF999VXrw6H88ssvzVNPPdXstNNOzVlnndW888477ffz
-+f7J0i9Cu3bsscc2hx9+eHPEEUc0hx12WPPKK69Mj8fU7Vx8Mvfff39z8skn
-NzfeeGNz3XXXte+Zxy+deUvlOvn/Y4891my++eZtneS7X3/9tXnttdfafd5w
-ww3NkUce2erD0reTGLf333+/OeWUU5rnnnuueemll5qXX365Laybwv+pXxER
-EVlxTvdVV101batcffXVK/TT55xzTvPQQw+t0IdPuq8TTzyx1Uz09+X+8Stt
-vPHG7fcisvCJFjjppJPaZ3qDDTZovvnmm5XiurDd99hjj2aLLbZo/Tt5L/t8
-65y33367uffee5tTTz21WXvttZs11lijbedK30ipcdAQDz/8cLPNNts0t912
-W9tWff31181GG23UbLvttm0cbnxfWS//P+SQQ1qfdZmXDv8MY0xnnnlm61Nn
-/+++++60til9aa+++mpbv7TPLFeWfIeOov6NYRMREWlW6scPPvjgts/EZnnr
-rbfa7/lkrLG0XSbVOWwLv9EBBxyw0lgpY5vsW5+OyOIg9voJJ5zQ6oT11ltv
-JZ0TO/3zzz9v5/jtsMMO7XyeUkfMJV2+FvzUaAjaJnRHrXNynvhS1l9//daf
-k3eoErfGedF24dfJHJxyXbZ14IEHNnfdddd0zobyONBLaEDqEL9Nl86h7URP
-4W/fcccdVyoc+6WXXjqtIUVERFZ3aq1BjDjjkvTZjC8yd+ayyy5baZ7upDrn
-qKOOard98cUXr7Rv+nN+w1bSpyOy8Kl1Dhqg1jll7BV+C8ZQiBVjjl79btH6
-72HtzKB5+aMol43muO+++6b9KY888sgKOifnwtyZvfbaq52nSGxe9AdxuMTl
-oT/iC6pzFBAfhz8LX039O/tHKxH7x/6Z79Slc84999x2fAgfFHWXuUG0lVNT
-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
-eYMZD0n7wLtriF9j3/ikaTuIJ7v99tvbZYfNxy91Du0b4zrsJ3FnzEdkm8lz
-kBzOFHxI6BGOF32G3kCb0X4xV4YclWV+AnzX6LuuHASAHmIuEnnoNtlkk7YO
-0Vxffvllq12G6Rx83yxPHoe8s8h2U0QWM+ocmW0GxamVpb7vukof+mxHnSOy
-8MHOZj4+Pl1i1o444ojWnueTuDK+53fm9BNHhu5Jvufy2S7j2liGd3Xhk+Hd
-OOgdNBKxbOiBsi0idzO5xnifMP4h3sHJ/+PXGKVzcgz4j9EszBfMOfAOILbJ
-b2VMHJ/4XdBYaIvbbrut1TiM17Au24kfJ3kIyLvC/KNor/IYAC3FeaOz8HHj
-06YO2D9ap/bp5G+OhTg//Gh5j2qdi1pEZLGhzpHZpq/OSd89qPRBnSOyNOC5
-xHdBPBaFvyn4Qfg/MWT4SernudQfXYX59KxPvoHEhLFu5u3Uy7NPlqWkLRrV
-fpQ6B73EusTe5RyIlSNOjt/K9+jkE98JuQbwJeF7YU4Sx1zmoeYTzUUObLRQ
-Vw4C4LzYP/tje+SrY+4S/il8TYPGkPgeXYd/Ke9Wtd0UkcVOV78gMlNmw6cz
-W/vxHhdZHIxqG+rfRj3j9TL5jhLNM2yfpcYY1n70adtK3TCsdJ1jPvHHkFsA
-7TdsrtCwbfepf9tMEREREZHZY1WMUYy77kxt+0mPv/y9XjbjPsS1keuFvATD
-dMukdaemERERERGRuSJxvMyzoWTOjoiIiIiIyGIlmob8A+Q0SI4AERERERGR
-xUri1shRkPz8xpeJiIiIiMhSYFi+NBEREREREREREREREZl/jFUTERERERER
-ERGRLrrefZd3eA8aV8z7w8t1yndC5Dco351X73fSY1zs77ar6zd1VDKX70Gd
-9D2si/kayPxTthUU8ijnvZ6Q93zme3OPiYiIyDh0vdsbGzx2OCX/j57h79gn
-WT42CH//9a9/Xen3rMv32Czj2C1Lzc6OrsmxRzdC/t/nneqzhTpH5oNyjKRu
-V6AccynHSsr2SkRERGQQXTqntLPRI7/++mvzyy+/tOOq+b7035Q6CI1DvqC/
-/e1v08uVGufvf/97uy0Kf4/z/u6lYmfX70QvbTj+/u2339p6V+dIX2ZyPfou
-P9vXPG1DF3U7U5JxgVITLVWW+vmJiIisSmqd86c//ak59thjm/3226/Zc889
-m91337355ptvmh9//LHVMGidZcuWNaeffnpz3HHHNYccckiz1157NUcccURr
-d6CJfvjhh/YTrfPVV181X3/9dVv4G33D73/5y1/a31dHnVPy3HPPNcuXL28e
-eeSR5tFHH21eeOGFtn6iEym8S+O1115rvv3221b/fPrpp83U1NSs7H82NM5i
-rv+lQD1OMe416auZZ7KPmnLcg3u69PnyyffofT7r4yvHYZY6g7TeuPiciojI
-6kitc55++ulmvfXWa9Zcc83pgn0d/wvL3H///c0666zT/rbhhhs2Z555ZvP6
-66+v5M95//33m0022WR6O1tssUXzwQcftBqH7WHbjHOMFDTXOeec05x44olt
-ufjii1vttdhInV977bUr1DW68fvvv19B56Bx0J7U+UYbbdTstttuzVNPPdV7
-P3X5/PPPW6163XXXtZpKnbM4Sd2jB7788sv2ulJ4tkotMqowBpF5MXUpfbxf
-fPFFu30+uUdnojOiZWgrKM8//3zz2GOPNY8//njz4osvtuMqf/7zn9v7s/b7
-zpe+matnoNwmdUCbOtN9DbofREREljK1PUN59tlnp3UMJXZQGR+PtjnppJNa
-eyRjscDf0UPYRrfccsv0du677752O/TbfI57jGic7bffvjn++ONb+wd9c8MN
-N7THsZj67HIOFOdwwgknTNfRdttt19Zp6jAFfw+/H3nkka2vrK+tV9o0XFfq
-6vzzz2/1FXW5/vrrN5deeum0b60u+Pfw6WGLnnHGGc1mm23W2qHaS/NLntn3
-3ntvWiM89NBD7RjATTfd1Lz55pvTz+ww/YImuuiii9qxjHrZPMM8d08++WRz
-++23tz7HW2+9tdXJ+Bkn9TdkTIR7nXEPnmPGQdDxBx54YGvf4//97rvvWh1X
-z82Z63uu3O8777zTjgdR7/hj33333V4xdPmdOn/11VcHzk8s90U9v/XWW9M+
-LL575ZVX2v2zbwrHQXtRbyOFNoZ6pM0sfWE5l5lcRxERkYVMl86hL7z33nun
-be8777xzhXXQPRdeeOH0uqXOgfT59XYYq8334/Sp2c8xxxzT2tn02/kO+3zj
-jTdurrjiilmrk1VNcjFE62D37LrrrtP1dNddd03XaQpxgeihct5OH7IsvrXD
-Djts+l3rlI8//njad3fuueeuZAvfeOONzeabb97anPkOrco6b7zxhjpnnsjz
-yjU9++yzWw1MLCOaBx3L84BWwMdT30d1rhHuNcY0pqampue8lPP/0TiXXXZZ
-q695ftkPOod7AF9q3zl2XeeQuX98omW23nrr9l4kDjb6h9/zvEOd12SuKNs5
-xm6I2WVMYsstt2xOO+20th0alVcl9Yoe3WeffQbG7WY5fid2GB2TvC0UxiWO
-OuqoZptttmm22mqrtt64TuWzWGol9CLtI4UxCnQS5aWXXmrbFK5r3YaLiIgs
-BQbpHL479dRTW7sDbcF4b2yT66+/fqV8bGUfWf5W65zsc9xjxIZjG8wLqu1x
-/AzYXdjwi4GufGuffPJJGwPIOaItsPFyPbBJ0Dl1boK++6JgDzOGXNu72D7s
-c6211mrefvvt6WPCBuK7U045ZYW6xq6lrvfee+9Zmach45FnFfufuE18LNEB
-3B+M26NJ1l577eaaa65p76M6f1/yl6GTsJO5/uiXUudkGfx52NHPPPPMdCwl
-MZP4XXbeeedWo096Hmw/Maf8vcMOO7THsu+++66gb8r7q26r5ureq/1b+Fjy
-vFLf+KaGxeFmfeoZHYdGSjxaTa4BvhbiVfHDpI3lN2IHiRMmfpVnlIKmrXVO
-1qH92GCDDZo11lij2WmnnZpddtmlHVfZY489mssvv7y9Z9Q4IiKyFOnSOenz
-fv7553a8kr6c2CX8OOgM9ERp+5Y6h89y/JXx/y6dM45Ph+Xo79kG8Va1ziEe
-i9+w5RcDte1GnWGjPvzww9N1RVwg31PX+GEy52IcnZN6pjDOT/0Tz1Tmq+L/
-2SfjxDk2dAzfMVZd1/fhhx/e/ka9q3Pmllx3bF30ANqV8foynzvzrohHxLZF
-u8Z3GB8Nzye2M/fEuuuu29q/+Pbi48ny2OTMr8Mu5z6MLU/sGttGe+OHmdSf
-k2MB9ontz32Fr6PWDePeZ13LzuQ+zbOUeuR5ZPyH48XPPEznpH1Fc+IHx3+G
-zhjkz6FO2Ae+Nvw2yb+YZzbjSLTFbItxB+6BQTqHmEA0KdeR55r65ZP4VY7J
-Z1hERFYnSpv2gQcemLaD6VMZ/+8bhw7kLKh1zrjQX2e+EDZcbXfTV+f4sDfG
-OcdoBuYf3HPPPWMXYtsnoT6HFGyX1Bf25KGHHrqCn2XcWLGc30EHHdRuk3H+
-0q9DXojsjzikbJu5O4N0zs0339z+xjwpbaSZk/rLe6Xq30r/aMYHyAWw//77
-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
-rYT2Y92U5JgfVIfJQ599Zp2U6BN8VGiXrnfrpKTeymNIPZbL57rxe7QvmhY/
-Ej6kcXzqIiI1o/oi2xcREZmEPlpnUB8z7jpd+mMm/dcwLdN3vdrvM84xzWff
-O0hPZt4Mc5fwmSU/3KTjCqXWGXSvaIOIyEzoM94mIiIiqwfDfGbEiPIusOQC
-H/ZOr3H3U84ZMueAiMwG6hwREREJg3w5fJKDgZyLiaWbSZyosaYisqpR54iI
-iEgYpHOY20N+CPLHj9I5M9mXOkdERERERGabrnxyya9ArmjyPIuIiIiIiCwm
-Sj9K3jma+TJonVHv/RUREREREVlolO+rQd+QDxutIyIiIiIisljh3Tvom4Af
-J7nVkgtNRERERERkMdH13hr+j9bhHaI//fTTPB2ZiIiIiIjIzCjf4Vn+n7xr
-IiIiIiIii5Fa55Tfi4iIiIiILCYyF6fWM+U8HRERERERkcVE3hHe5cfx/eEi
-IiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIi
-IiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIisrrxxx9/DC0iIiIiIiKL
-jVE6R60jIiIiIiKLDXWOiIiIiIgsNf79738PLeocERERERFZbIzSORQRERER
-EZHFxL/+9a+hRZ0jIiIiIvPN6jKnIueov0FEREREZOmjzhERERERkaWGOkdE
-RERERJYa6hwREREREVnKLOV3oahzRERERERWT2otsJTeh6LOERERERFZPam1
-QPIEq3NERERERGSxUmuc33//vS3qHBERERERWazUMWtL0Z+zlOYciYiIiIiI
-iIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiI
-iIiIiExC/Z5232cuIiIiIiKLmWic33//vfnnP//Z/OMf/2j/FhERERERWaxE
-5+DHidZR54iIiIiIyGIGnVNrHT5FREREREQWM7XWcX6OiIiIiIgsBaJ1UkRE
-RERERERERERERERERERERERERERERERERERERERERERERERERERERERERERE
-RERERERERERWF/5/rynF9Q==
-    "], {{0, 127.}, {413., 0}}, {0, 255},
-    ColorFunction->RGBColor,
-    ImageResolution->144],
-   BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
-   Selectable->False],
-  DefaultBaseStyle->"ImageGraphics",
-  ImageSize->Automatic,
-  ImageSizeRaw->{413., 127.},
-  PlotRange->{{0, 413.}, {0, 127.}}]], "Input",ExpressionUUID->"10f0552e-6688-\
-409b-b8e1-837b3916f643"],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"$DiaryChronology", "=", 
-   RowBox[{"DeleteDuplicates", "[", 
-    RowBox[{"Join", "[", 
-     RowBox[{"$DiaryChronology", ",", 
-      RowBox[{"{", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"{", 
-         RowBox[{
-          RowBox[{"DiaryBabylonianDate", "[", 
-           RowBox[{"{", 
-            RowBox[{
-             RowBox[{"{", 
-              RowBox[{"\"\<SE\>\"", ",", "64"}], "}"}], ",", "\"\<VII\>\"", 
-             ",", "0"}], "}"}], "]"}], ",", 
-          RowBox[{"DiaryJulianDate", "[", 
-           RowBox[{"{", 
-            RowBox[{
-             RowBox[{"-", "247"}], ",", "9", ",", "19"}], "}"}], "]"}]}], 
-         "}"}], ",", "\[IndentingNewLine]", 
-        RowBox[{"{", 
-         RowBox[{
-          RowBox[{"DiaryBabylonianDate", "[", 
-           RowBox[{"{", 
-            RowBox[{
-             RowBox[{"{", 
-              RowBox[{"\"\<SE\>\"", ",", "64"}], "}"}], ",", "\"\<VIII\>\"", 
-             ",", "0"}], "}"}], "]"}], ",", 
-          RowBox[{"DiaryJulianDate", "[", 
-           RowBox[{"{", 
-            RowBox[{
-             RowBox[{"-", "247"}], ",", "10", ",", "19"}], "}"}], "]"}]}], 
-         "}"}], ",", "\[IndentingNewLine]", 
-        RowBox[{"{", 
-         RowBox[{
-          RowBox[{"DiaryBabylonianDate", "[", 
-           RowBox[{"{", 
-            RowBox[{
-             RowBox[{"{", 
-              RowBox[{"\"\<SE\>\"", ",", "64"}], "}"}], ",", "\"\<X\>\"", ",",
-              "0"}], "}"}], "]"}], ",", 
-          RowBox[{"DiaryJulianDate", "[", 
-           RowBox[{"{", 
-            RowBox[{
-             RowBox[{"-", "247"}], ",", "12", ",", "17"}], "}"}], "]"}]}], 
-         "}"}], ",", "\[IndentingNewLine]", 
-        RowBox[{"{", 
-         RowBox[{
-          RowBox[{"DiaryBabylonianDate", "[", 
-           RowBox[{"{", 
-            RowBox[{
-             RowBox[{"{", 
-              RowBox[{"\"\<SE\>\"", ",", "64"}], "}"}], ",", "\"\<XI\>\"", 
-             ",", "0"}], "}"}], "]"}], ",", 
-          RowBox[{"DiaryJulianDate", "[", 
-           RowBox[{"{", 
-            RowBox[{
-             RowBox[{"-", "246"}], ",", "1", ",", "15"}], "}"}], "]"}]}], 
-         "}"}]}], "\[IndentingNewLine]", "}"}]}], "]"}], "]"}]}], 
-  ";"}]], "Input",
- CellChangeTimes->{{3.8084456432374287`*^9, 3.808445802027306*^9}, {
-  3.808494261292077*^9, 3.808494274406739*^9}},
- CellLabel->"In[4]:=",ExpressionUUID->"877697b2-3eb3-4b98-aa9a-c8405b05a346"],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"DiaryCheckChronology", "[", "]"}]], "Input",
- CellChangeTimes->{{3.808445835071754*^9, 3.8084458361543627`*^9}, {
-  3.808494239300508*^9, 3.80849424050007*^9}},
- CellLabel->"In[5]:=",ExpressionUUID->"d5c5c1eb-4eec-4b40-a0b0-86d09770ffe1"],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{
-   TagBox["Success",
-    "SummaryHead"], "[", 
-   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
-    
-    TemplateBox[{
-      PaneSelectorBox[{False -> GridBox[{{
-            FrameBox[
-             StyleBox["\"\[Checkmark]\"", 
-              Directive[
-               RGBColor[
-               0.3607843137254902, 0.596078431372549, 0.3803921568627451], 
-               25], StripOnInput -> False], ContentPadding -> False, 
-             FrameStyle -> None, FrameMargins -> {{0, 0}, {0, 0}}, 
-             StripOnInput -> False], 
-            GridBox[{{
-               RowBox[{
-                 TagBox[
-                  TemplateBox[{"\"Message\"", "\": \""}, "RowDefault"], 
-                  "SummaryItemAnnotation"], "\[InvisibleSpace]", 
-                 TagBox["\"Chronology is consistent.\"", "SummaryItem"]}]}, {
-               RowBox[{
-                 TagBox[
-                  TemplateBox[{"\"Tag\"", "\": \""}, "RowDefault"], 
-                  "SummaryItemAnnotation"], "\[InvisibleSpace]", 
-                 TagBox["\"ValidChronology\"", "SummaryItem"]}]}}, 
-             GridBoxAlignment -> {
-              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
-             False, GridBoxItemSize -> {
-              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
-             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
-              BaseStyle -> {
-              ShowStringCharacters -> False, NumberMarks -> False, 
-               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
-          GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
-          GridBoxItemSize -> {
-           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
-          BaselinePosition -> {1, 1}], True -> GridBox[{{
-            FrameBox[
-             StyleBox["\"\[Checkmark]\"", 
-              Directive[
-               RGBColor[
-               0.3607843137254902, 0.596078431372549, 0.3803921568627451], 
-               25], StripOnInput -> False], ContentPadding -> False, 
-             FrameStyle -> None, FrameMargins -> {{0, 0}, {0, 0}}, 
-             StripOnInput -> False], 
-            GridBox[{{
-               RowBox[{
-                 TagBox[
-                  TemplateBox[{"\"Message\"", "\": \""}, "RowDefault"], 
-                  "SummaryItemAnnotation"], "\[InvisibleSpace]", 
-                 TagBox["\"Chronology is consistent.\"", "SummaryItem"]}]}, {
-               RowBox[{
-                 TagBox[
-                  TemplateBox[{"\"Tag\"", "\": \""}, "RowDefault"], 
-                  "SummaryItemAnnotation"], "\[InvisibleSpace]", 
-                 TagBox["\"ValidChronology\"", "SummaryItem"]}]}}, 
-             GridBoxAlignment -> {
-              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
-             False, GridBoxItemSize -> {
-              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
-             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
-              BaseStyle -> {
-              ShowStringCharacters -> False, NumberMarks -> False, 
-               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
-          GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
-          GridBoxItemSize -> {
-           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
-          BaselinePosition -> {1, 1}]}, 
-       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
-     "SummaryPanel"],
-    DynamicModuleValues:>{}], "]"}],
-  Success["ValidChronology", 
-   Association["Message" -> "Chronology is consistent."]],
-  Editable->False,
-  SelectWithContents->True,
-  Selectable->False]], "Output",
- CellChangeTimes->{
-  3.808445836327262*^9, {3.808447497609124*^9, 3.808447499170327*^9}, 
-   3.808492415675139*^9, 3.80849399557135*^9, 3.8084941451803513`*^9, {
-   3.8084942407603207`*^9, 3.808494252349969*^9}, {3.808494299842771*^9, 
-   3.8084943059831944`*^9}, 3.808495395428059*^9, 3.808496951847494*^9},
- CellLabel->"Out[5]=",ExpressionUUID->"b191451c-3c70-4aec-a4fb-519fade092fa"]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"?", "ComputationalDiaries`*"}]], "Input",
- CellChangeTimes->{{3.808495401700018*^9, 3.8084954048605633`*^9}},
- CellLabel->"In[38]:=",ExpressionUUID->"87bf9aa7-228a-4d43-9d2e-2fcae2e86e9a"],
-
-Cell[BoxData[
- StyleBox[
-  FrameBox[GridBox[{
-     {
-      DynamicModuleBox[{Typeset`open$$ = True}, 
-       PaneSelectorBox[{False->
-        ButtonBox[
-         RowBox[{
-          
-          DynamicBox[FEPrivate`FrontEndResource[
-           "FEBitmaps", "RightPointerOpener"]], " ", 
-          StyleBox["ComputationalDiaries`", "InformationGridGroupHeader"]}],
-         Appearance->None,
-         BaseStyle->"InformationGridLink",
-         ButtonFunction:>FEPrivate`Set[Typeset`open$$, True],
-         Evaluator->Automatic,
-         Method->"Preemptive"], True->
-        PaneBox[GridBox[{
-           {
-            ButtonBox[
-             RowBox[{
-              
-              DynamicBox[FEPrivate`FrontEndResource[
-               "FEBitmaps", "DownPointerOpener"],
-               ImageSizeCache->{10., {3., 7.}}], " ", 
-              
-              StyleBox["ComputationalDiaries`", 
-               "InformationGridGroupHeader"]}],
-             Appearance->None,
-             BaseStyle->"InformationGridLink",
-             ButtonFunction:>FEPrivate`Set[Typeset`open$$, False],
-             Evaluator->Automatic,
-             Method->"Preemptive"]},
-           {
-            PaneBox[GridBox[{
-               {
-                ButtonBox[
-                 
-                 StyleBox["DiaryAstronomicalPosition", 
-                  "InformationGridButton"],
-                 Appearance->None,
-                 BaseStyle->"InformationGridLink",
-                 
-                 ButtonData:>{
-                  "Info-ba69e2e4-131b-4201-8705-744c9df9cfc4", {
-                   "DiaryAstronomicalPosition", "ComputationalDiaries`"}, 
-                   False},
-                 ButtonNote->"ComputationalDiaries`",
-                 Evaluator->Automatic], 
-                ButtonBox[
-                 StyleBox["DiaryDuration", "InformationGridButton"],
-                 Appearance->None,
-                 BaseStyle->"InformationGridLink",
-                 
-                 ButtonData:>{
-                  "Info-ba69e2e4-131b-4201-8705-744c9df9cfc4", {
-                   "DiaryDuration", "ComputationalDiaries`"}, False},
-                 ButtonNote->"ComputationalDiaries`",
-                 Evaluator->Automatic], 
-                ButtonBox[
-                 StyleBox["DiaryParse", "InformationGridButton"],
-                 Appearance->None,
-                 BaseStyle->"InformationGridLink",
-                 
-                 ButtonData:>{
-                  "Info-ba69e2e4-131b-4201-8705-744c9df9cfc4", {
-                   "DiaryParse", "ComputationalDiaries`"}, False},
-                 ButtonNote->"ComputationalDiaries`",
-                 Evaluator->Automatic]},
-               {
-                ButtonBox[
-                 StyleBox["DiaryBabylonianDate", "InformationGridButton"],
-                 Appearance->None,
-                 BaseStyle->"InformationGridLink",
-                 
-                 ButtonData:>{
-                  "Info-ba69e2e4-131b-4201-8705-744c9df9cfc4", {
-                   "DiaryBabylonianDate", "ComputationalDiaries`"}, False},
-                 ButtonNote->"ComputationalDiaries`",
-                 Evaluator->Automatic], 
-                ButtonBox[
-                 StyleBox["DiaryInputDate", "InformationGridButton"],
-                 Appearance->None,
-                 BaseStyle->"InformationGridLink",
-                 
-                 ButtonData:>{
-                  "Info-ba69e2e4-131b-4201-8705-744c9df9cfc4", {
-                   "DiaryInputDate", "ComputationalDiaries`"}, False},
-                 ButtonNote->"ComputationalDiaries`",
-                 Evaluator->Automatic], 
-                ButtonBox[
-                 StyleBox["DiaryTabletData", "InformationGridButton"],
-                 Appearance->None,
-                 BaseStyle->"InformationGridLink",
-                 
-                 ButtonData:>{
-                  "Info-ba69e2e4-131b-4201-8705-744c9df9cfc4", {
-                   "DiaryTabletData", "ComputationalDiaries`"}, False},
-                 ButtonNote->"ComputationalDiaries`",
-                 Evaluator->Automatic]},
-               {
-                ButtonBox[
-                 StyleBox["DiaryCapacity", "InformationGridButton"],
-                 Appearance->None,
-                 BaseStyle->"InformationGridLink",
-                 
-                 ButtonData:>{
-                  "Info-ba69e2e4-131b-4201-8705-744c9df9cfc4", {
-                   "DiaryCapacity", "ComputationalDiaries`"}, False},
-                 ButtonNote->"ComputationalDiaries`",
-                 Evaluator->Automatic], 
-                ButtonBox[
-                 StyleBox["DiaryInputTemplate", "InformationGridButton"],
-                 Appearance->None,
-                 BaseStyle->"InformationGridLink",
-                 
-                 ButtonData:>{
-                  "Info-ba69e2e4-131b-4201-8705-744c9df9cfc4", {
-                   "DiaryInputTemplate", "ComputationalDiaries`"}, False},
-                 ButtonNote->"ComputationalDiaries`",
-                 Evaluator->Automatic], 
-                ButtonBox[
-                 StyleBox["DiaryTabletTable", "InformationGridButton"],
-                 Appearance->None,
-                 BaseStyle->"InformationGridLink",
-                 
-                 ButtonData:>{
-                  "Info-ba69e2e4-131b-4201-8705-744c9df9cfc4", {
-                   "DiaryTabletTable", "ComputationalDiaries`"}, False},
-                 ButtonNote->"ComputationalDiaries`",
-                 Evaluator->Automatic]},
-               {
-                ButtonBox[
-                 StyleBox["DiaryCheckChronology", "InformationGridButton"],
-                 Appearance->None,
-                 BaseStyle->"InformationGridLink",
-                 
-                 ButtonData:>{
-                  "Info-ba69e2e4-131b-4201-8705-744c9df9cfc4", {
-                   "DiaryCheckChronology", "ComputationalDiaries`"}, False},
-                 ButtonNote->"ComputationalDiaries`",
-                 Evaluator->Automatic], 
-                ButtonBox[
-                 StyleBox["DiaryJulianDate", "InformationGridButton"],
-                 Appearance->None,
-                 BaseStyle->"InformationGridLink",
-                 
-                 ButtonData:>{
-                  "Info-ba69e2e4-131b-4201-8705-744c9df9cfc4", {
-                   "DiaryJulianDate", "ComputationalDiaries`"}, False},
-                 ButtonNote->"ComputationalDiaries`",
-                 Evaluator->Automatic], 
-                ButtonBox[
-                 StyleBox["DiaryTabletText", "InformationGridButton"],
-                 Appearance->None,
-                 BaseStyle->"InformationGridLink",
-                 
-                 ButtonData:>{
-                  "Info-ba69e2e4-131b-4201-8705-744c9df9cfc4", {
-                   "DiaryTabletText", "ComputationalDiaries`"}, False},
-                 ButtonNote->"ComputationalDiaries`",
-                 Evaluator->Automatic]},
-               {
-                ButtonBox[
-                 StyleBox["DiaryCombinedDate", "InformationGridButton"],
-                 Appearance->None,
-                 BaseStyle->"InformationGridLink",
-                 
-                 ButtonData:>{
-                  "Info-ba69e2e4-131b-4201-8705-744c9df9cfc4", {
-                   "DiaryCombinedDate", "ComputationalDiaries`"}, False},
-                 ButtonNote->"ComputationalDiaries`",
-                 Evaluator->Automatic], 
-                ButtonBox[
-                 StyleBox["DiaryMergeMissing", "InformationGridButton"],
-                 Appearance->None,
-                 BaseStyle->"InformationGridLink",
-                 
-                 ButtonData:>{
-                  "Info-ba69e2e4-131b-4201-8705-744c9df9cfc4", {
-                   "DiaryMergeMissing", "ComputationalDiaries`"}, False},
-                 ButtonNote->"ComputationalDiaries`",
-                 Evaluator->Automatic], 
-                ButtonBox[
-                 StyleBox["$DiaryChronology", "InformationGridButton"],
-                 Appearance->None,
-                 BaseStyle->"InformationGridLink",
-                 
-                 ButtonData:>{
-                  "Info-ba69e2e4-131b-4201-8705-744c9df9cfc4", {
-                   "$DiaryChronology", "ComputationalDiaries`"}, False},
-                 ButtonNote->"ComputationalDiaries`",
-                 Evaluator->Automatic]},
-               {
-                ButtonBox[
-                 StyleBox["DiaryCurationPalette", "InformationGridButton"],
-                 Appearance->None,
-                 BaseStyle->"InformationGridLink",
-                 
-                 ButtonData:>{
-                  "Info-ba69e2e4-131b-4201-8705-744c9df9cfc4", {
-                   "DiaryCurationPalette", "ComputationalDiaries`"}, False},
-                 ButtonNote->"ComputationalDiaries`",
-                 Evaluator->Automatic], 
-                ButtonBox[
-                 StyleBox["DiaryNormalStar", "InformationGridButton"],
-                 Appearance->None,
-                 BaseStyle->"InformationGridLink",
-                 
-                 ButtonData:>{
-                  "Info-ba69e2e4-131b-4201-8705-744c9df9cfc4", {
-                   "DiaryNormalStar", "ComputationalDiaries`"}, False},
-                 ButtonNote->"ComputationalDiaries`",
-                 Evaluator->Automatic], ""},
-               {
-                ButtonBox[
-                 StyleBox["DiaryDistance", "InformationGridButton"],
-                 Appearance->None,
-                 BaseStyle->"InformationGridLink",
-                 
-                 ButtonData:>{
-                  "Info-ba69e2e4-131b-4201-8705-744c9df9cfc4", {
-                   "DiaryDistance", "ComputationalDiaries`"}, False},
-                 ButtonNote->"ComputationalDiaries`",
-                 Evaluator->Automatic], 
-                ButtonBox[
-                 StyleBox["DiaryObservation", "InformationGridButton"],
-                 Appearance->None,
-                 BaseStyle->"InformationGridLink",
-                 
-                 ButtonData:>{
-                  "Info-ba69e2e4-131b-4201-8705-744c9df9cfc4", {
-                   "DiaryObservation", "ComputationalDiaries`"}, False},
-                 ButtonNote->"ComputationalDiaries`",
-                 Evaluator->Automatic], ""}
-              },
-              DefaultBaseStyle->"Text",
-              
-              GridBoxAlignment->{
-               "Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
-              GridBoxItemSize->{"Columns" -> {{
-                   Scaled[0.31666666666666665`]}}}],
-             ImageMargins->{{10, 0}, {0, 2}}]}
-          },
-          GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}],
-         FrameMargins->{{0, 0}, {8, 0}}]}, Dynamic[Typeset`open$$],
-        ImageSize->Automatic]]}
-    },
-    GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
-    GridBoxDividers->{"ColumnsIndexed" -> {{False}}, "RowsIndexed" -> {}},
-    GridBoxSpacings->{"Columns" -> {
-        Offset[0.27999999999999997`], {
-         Offset[0.5599999999999999]}, 
-        Offset[0.27999999999999997`]}, "Rows" -> {
-        Offset[0.2], {
-         Offset[0.8]}, 
-        Offset[0.2]}}],
-   BaseStyle->"InformationTitleFrame"], "InformationGridPlain"]], "Output",
- CellChangeTimes->{3.808495405208335*^9},
- CellLabel->"Out[38]=",ExpressionUUID->"e42be52b-ba4c-4250-8528-9a24d0e51dae"]
+  RowBox[{"Export", "[", 
+   RowBox[{
+    RowBox[{"FileNameJoin", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"NotebookDirectory", "[", "]"}], ",", 
+       "\"\<chronology.mx\>\""}], "}"}], "]"}], ",", "chronology"}], "]"}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.808504440297242*^9, 3.8085044740671043`*^9}, {
+  3.808504879748476*^9, 3.8085048841993523`*^9}, {3.80850496225086*^9, 
+  3.808504965248951*^9}, {3.808505012182276*^9, 3.808505041454302*^9}},
+ CellLabel->"In[33]:=",ExpressionUUID->"de8fcd23-80fb-4537-8eaa-8cc998d61fa5"]
 }, Open  ]]
 },
 WindowSize->{808, 905},
-WindowMargins->{{Automatic, 415}, {Automatic, 39}},
+WindowMargins->{{Automatic, 20}, {Automatic, 0}},
 TaggingRules->{"TryRealOnly" -> False},
 FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (June 9, 2020)",
 StyleDefinitions->"Default.nb",
@@ -6584,60 +5181,23 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 160, 3, 35, "Text",ExpressionUUID->"212fa99a-a478-4ad0-870e-30e84403b47c"],
-Cell[721, 25, 630, 14, 73, "Input",ExpressionUUID->"da447a00-1215-4da6-8bba-54afb85cba84"],
-Cell[1354, 41, 151, 3, 35, "Text",ExpressionUUID->"e77e1caa-206a-47fe-b7a3-211e4bfaf2f4"],
-Cell[1508, 46, 166, 3, 35, "Text",ExpressionUUID->"c62d1acd-f96d-4f80-ab64-16ac1210d462"],
-Cell[1677, 51, 151, 3, 35, "Text",ExpressionUUID->"d772d491-7f7d-456a-9ea7-9781adce0626"],
-Cell[1831, 56, 167, 3, 35, "Text",ExpressionUUID->"70cc62ad-792f-4530-b8ec-3124cba06b5a"],
-Cell[2001, 61, 36957, 611, 140, "Input",ExpressionUUID->"7e39a5c8-5645-439c-bc34-f12b80d3bdcf"],
-Cell[38961, 674, 6267, 108, 46, "Input",ExpressionUUID->"ff7b0eb1-5725-4ca1-8b51-aae35dfdfc32"],
-Cell[45231, 784, 2420, 63, 136, "Input",ExpressionUUID->"428da3d3-8402-4eef-8332-fbf041ede472"],
 Cell[CellGroupData[{
-Cell[47676, 851, 262, 4, 30, "Input",ExpressionUUID->"820d100a-7712-4053-bb34-dfc96aacd304"],
-Cell[47941, 857, 3831, 80, 62, "Output",ExpressionUUID->"f3d7e377-d99f-49b3-90c7-889ddf862e22"]
+Cell[580, 22, 126, 3, 98, "Title",ExpressionUUID->"03ae04e5-94ad-4882-99ca-60aaa5a42156"],
+Cell[709, 27, 153, 3, 53, "Subtitle",ExpressionUUID->"44a553b1-75b1-4c8f-9cc4-e347b13ba4ab"],
+Cell[865, 32, 151, 3, 35, "Text",ExpressionUUID->"e77e1caa-206a-47fe-b7a3-211e4bfaf2f4"],
+Cell[1019, 37, 166, 3, 35, "Text",ExpressionUUID->"c62d1acd-f96d-4f80-ab64-16ac1210d462"],
+Cell[1188, 42, 151, 3, 35, "Text",ExpressionUUID->"d772d491-7f7d-456a-9ea7-9781adce0626"],
+Cell[1342, 47, 167, 3, 35, "Text",ExpressionUUID->"70cc62ad-792f-4530-b8ec-3124cba06b5a"],
+Cell[1512, 52, 36957, 611, 140, "Input",ExpressionUUID->"7e39a5c8-5645-439c-bc34-f12b80d3bdcf"],
+Cell[38472, 665, 6267, 108, 46, "Input",ExpressionUUID->"ff7b0eb1-5725-4ca1-8b51-aae35dfdfc32"],
+Cell[44742, 775, 2180, 60, 136, "Input",ExpressionUUID->"428da3d3-8402-4eef-8332-fbf041ede472"],
+Cell[CellGroupData[{
+Cell[46947, 839, 446, 9, 30, "Input",ExpressionUUID->"820d100a-7712-4053-bb34-dfc96aacd304"],
+Cell[47396, 850, 3983, 83, 62, "Output",ExpressionUUID->"13d15da8-58c8-43eb-9241-455da94af5fc"]
 }, Open  ]],
-Cell[51787, 940, 255, 4, 30, "Input",ExpressionUUID->"dcd06dac-3d19-46bc-b33d-4f48c4817a54"],
-Cell[52045, 946, 261, 6, 30, "Input",ExpressionUUID->"d109a0c1-a29f-4092-9e80-e96d6f6623e4"],
-Cell[52309, 954, 225449, 4199, 32770, "Input",ExpressionUUID->"842827b1-f0a0-49ca-b697-9b7af329921a"],
-Cell[CellGroupData[{
-Cell[277783, 5157, 310, 6, 30, "Input",ExpressionUUID->"7d4dc98d-bd7f-4183-a560-54100941f44b"],
-Cell[278096, 5165, 605, 12, 26, "Message",ExpressionUUID->"2a2fffac-531c-41e4-93a3-026827c29ce1"],
-Cell[278704, 5179, 607, 12, 26, "Message",ExpressionUUID->"f7e53c26-8455-4fdd-88af-784c7ac99d52"],
-Cell[279314, 5193, 605, 12, 26, "Message",ExpressionUUID->"b981a3b3-6d1c-45ea-808a-8f6fe8201d64"],
-Cell[279922, 5207, 476, 10, 24, "Message",ExpressionUUID->"dcc60c2c-dd77-42e4-8804-07043daa06e9"],
-Cell[280401, 5219, 4905, 73, 81, "Message",ExpressionUUID->"b7030bd4-26b9-45b1-840d-0e8cc7a56e2e"],
-Cell[285309, 5294, 4904, 73, 81, "Message",ExpressionUUID->"bc44bc69-ff93-4412-9af1-031f33dcf8f0"],
-Cell[290216, 5369, 4907, 73, 81, "Message",ExpressionUUID->"430f551a-b963-404d-95c4-46301857676f"],
-Cell[295126, 5444, 478, 10, 24, "Message",ExpressionUUID->"943a8ff0-f515-4598-a71e-a89cd0108c5d"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[295641, 5459, 204, 3, 30, "Input",ExpressionUUID->"5c375b99-add1-4d71-98cd-00afab42d6cb"],
-Cell[295848, 5464, 203, 3, 34, "Output",ExpressionUUID->"a91754fe-d286-49c0-8fbb-5448e7d732f3"]
-}, Open  ]],
-Cell[296066, 5470, 148, 2, 30, "Input",ExpressionUUID->"d57c31ba-14e3-421e-af79-c0900201320c"],
-Cell[CellGroupData[{
-Cell[296239, 5476, 286, 6, 30, "Input",ExpressionUUID->"e659f116-8b4f-46de-bd4f-119b566b6eab"],
-Cell[296528, 5484, 220, 4, 34, "Output",ExpressionUUID->"cccdc7dd-a553-48e7-bb3a-08219a5a75bf"]
-}, Open  ]],
-Cell[296763, 5491, 132, 1, 30, "Input",ExpressionUUID->"9529dfaa-eb64-42e9-8b43-33b9e757b1e8"],
-Cell[CellGroupData[{
-Cell[296920, 5496, 417, 10, 30, "Input",ExpressionUUID->"d1f750aa-f8fd-43fe-9a5e-5952564c55b4"],
-Cell[297340, 5508, 191, 2, 34, "Output",ExpressionUUID->"d229e088-03b9-48c4-9da7-62362cfab806"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[297568, 5515, 261, 4, 30, "Input",ExpressionUUID->"8a97786a-274a-494b-8bd6-d7b6353c4196"],
-Cell[297832, 5521, 150, 2, 34, "Output",ExpressionUUID->"330df140-c78f-48b5-9ebd-b2e27238f0b7"]
-}, Open  ]],
-Cell[297997, 5526, 36957, 611, 140, "Input",ExpressionUUID->"10f0552e-6688-409b-b8e1-837b3916f643"],
-Cell[334957, 6139, 2420, 63, 136, "Input",ExpressionUUID->"877697b2-3eb3-4b98-aa9a-c8405b05a346"],
-Cell[CellGroupData[{
-Cell[337402, 6206, 262, 4, 30, "Input",ExpressionUUID->"d5c5c1eb-4eec-4b40-a0b0-86d09770ffe1"],
-Cell[337667, 6212, 4099, 84, 62, "Output",ExpressionUUID->"b191451c-3c70-4aec-a4fb-519fade092fa"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[341803, 6301, 212, 3, 30, "Input",ExpressionUUID->"87bf9aa7-228a-4d43-9d2e-2fcae2e86e9a"],
-Cell[342018, 6306, 11350, 259, 224, "Output",ExpressionUUID->"e42be52b-ba4c-4250-8528-9a24d0e51dae"]
+Cell[51394, 936, 225381, 4192, 33162, "Input",ExpressionUUID->"842827b1-f0a0-49ca-b697-9b7af329921a"],
+Cell[276778, 5130, 442, 7, 30, "Input",ExpressionUUID->"7d4dc98d-bd7f-4183-a560-54100941f44b"],
+Cell[277223, 5139, 901, 23, 73, "Input",ExpressionUUID->"de8fcd23-80fb-4537-8eaa-8cc998d61fa5"]
 }, Open  ]]
 }
 ]

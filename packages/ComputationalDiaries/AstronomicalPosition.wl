@@ -75,7 +75,10 @@ DiaryAstronomicalPosition[obj_, jd_?NumberQ] :=
 		True,Message[DiaryAstronomicalPosition::invalidObject, obj];$Failed
 	]
 DiaryAstronomicalPosition[obj_, date_?DateObjectQ] := DiaryAstronomicalPosition[obj,JulianDate[date]]
-DiaryAstronomicalPosition[obj_, date_DiaryDate] := DiaryAstronomicalPosition[obj,date["JulianDate"]]
+DiaryAstronomicalPosition[obj_, date_DiaryCombinedDate] := DiaryAstronomicalPosition[obj,date["DateObject"]]
+DiaryAstronomicalPosition[obj_, date_DiaryJulianDate] := DiaryAstronomicalPosition[obj,date["DateObject"]]
+DiaryAstronomicalPosition[obj_, date_DiaryBabylonianDate] :=
+	Enclose[DiaryAstronomicalPosition[obj,Confirm[DiaryJulianDate[date]]["DateObject"]],"Expression"]
 DiaryAstronomicalPosition[obj_, date_?MissingQ] := date
 
 

@@ -40,7 +40,7 @@ DiaryJulianDate[dbd_DiaryBabylonianDate] := DiaryJulianDate[dbd, $DiaryChronolog
 
 
 DiaryCombinedDate[dbd_DiaryBabylonianDate, time_] :=
-	DiaryBabylonianDate[<|
+	DiaryCombinedDate[<|
 		"JulianDate"->Missing[],
 		"BabylonianDate"->dbd,
 		"Time"->time
@@ -83,6 +83,8 @@ DiaryCombinedDate[data_]["JulianDate"] :=
 	]
 DiaryCombinedDate[data_]["BabylonianDate"] := data["BabylonianDate"]
 DiaryCombinedDate[data_]["Time"] := data["Time"]
+dcd_DiaryCombinedDate["DateObject"] :=
+	Enclose[Confirm[dcd["JulianDate"]]["DateObject"],"Expression"]
 
 
 (* ::Subsubsection:: *)
