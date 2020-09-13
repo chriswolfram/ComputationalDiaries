@@ -7,6 +7,26 @@ Begin["`Private`"];
 
 
 (* ::Subsection:: *)
+(*Inferred*)
+
+
+InferredPattern[patt_] := patt | Inferred[patt]
+
+
+IgnoreInferred[d_] := d/.Inferred[e_]:>e
+
+
+inferredTag
+SetAttributes[WrapInferred,HoldFirst];
+WrapInferred[expr_] :=
+	With[{o = Reap[expr,inferredTag]},
+		If[o[[2]] === {}, o[[1]], Inferred[o[[1]]]]
+	]
+CheckInferred[Inferred[expr_]] := (Sow[True, inferredTag]; expr)
+CheckInferred[expr_] := expr
+
+
+(* ::Subsection:: *)
 (*DiaryChronology*)
 
 
@@ -28,7 +48,7 @@ DiaryCheckChronology[chron:{{_DiaryBabylonianDate,_DiaryJulianDate}...}] :=
 	], "Information"]
 DiaryCheckChronology[_] :=
 	Failure["InvalidChronology",
-		<|"Message"->"Chronology is not a list of pairs of Babylonian and Julian dates.."|>]
+		<|"Message"->"Chronology is not a list of pairs of Babylonian and Julian dates."|>]
 DiaryCheckChronology[] := DiaryCheckChronology[$DiaryChronology]
 
 

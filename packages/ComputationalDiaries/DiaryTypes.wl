@@ -34,7 +34,7 @@ DiaryJulianDate[dbd_DiaryBabylonianDate, chron_] :=
 				Confirm[alignment[[2]]["DateObject"]],
 				ConfirmMatch[dbd["Day"],_Integer]-Confirm[alignment[[1]]["Day"]]]
 		],
-		Missing["CouldNotInferJulianDate"]&
+		Missing["CouldNotComputeJulianDate"]&
 	]
 DiaryJulianDate[dbd_DiaryBabylonianDate] := DiaryJulianDate[dbd, $DiaryChronology]
 
@@ -55,15 +55,11 @@ DiaryJulianDate[{year_,month_,day_}]["Year"] := year
 DiaryJulianDate[{year_,month_,day_}]["Month"] := month
 DiaryJulianDate[{year_,month_,day_}]["Day"] := day
 djd_DiaryJulianDate["DateObject"] :=
-	If[MissingQ[djd["Year"]]||MissingQ[djd["Month"]]||MissingQ[djd["Day"]],
-		DiaryMergeMissing[{djd["Year"],djd["Month"],djd["Day"]}],
-		DateObject[{
-				djd["Year"]-Boole[djd["Year"] <= 0],
-				djd["Month"],
-				djd["Day"]
-			},"Day",
-			CalendarType->"Julian",
-			TimeZone->3 (*time zone of Babylon*)
+	With[{y=djd["Year"],m=djd["Month"],d=djd["Day"]},
+		If[AnyTrue[{y,m,d}, MissingQ],
+			DiaryMergeMissing[{y,m,d}],
+			DateObject[{y-Boole[y <= 0],m,d}, "Day", CalendarType->"Julian", TimeZone->3]
+			(*UTC+3 is the time zone of Babylon*)
 		]
 	]
 
@@ -84,7 +80,7 @@ DiaryCombinedDate[data_]["JulianDate"] :=
 DiaryCombinedDate[data_]["BabylonianDate"] := data["BabylonianDate"]
 DiaryCombinedDate[data_]["Time"] := data["Time"]
 dcd_DiaryCombinedDate["DateObject"] :=
-	Enclose[Confirm[dcd["JulianDate"]]["DateObject"],"Expression"]
+	Enclose[Confirm[dcd["JulianDate"]]["DateObject"], "Expression"]
 
 
 (* ::Subsubsection:: *)
@@ -101,17 +97,17 @@ djd:DiaryJulianDate[Except[{_Integer|_Missing, _Integer|_Missing, _Integer|_Miss
 
 
 dbd:DiaryBabylonianDate[Except[{
-		{_String|_Missing, _Integer|_Missing},
-		(Alternatives@@months)|_Missing,
-		_Integer|"Middle"|"End"|_Missing
+		{InferredPattern[_String]|_Missing, InferredPattern[_Integer]|_Missing},
+		InferredPattern[(Alternatives@@months)]|_Missing,
+		InferredPattern[_Integer|"Beginning"|"Middle"|"End"]|_Missing
 	}]] :=
 	(Message[DiaryBabylonianDate::invalid, HoldForm[dbd]]; Missing["DiaryBabylonianDate"])
 
 
 dcd:DiaryCombinedDate[Except[KeyValuePattern[{
 		"JulianDate"->_DiaryJulianDate|_Missing,
-		"BabylonianDate"->_DiaryBabylonianDate|_Missing,
-		"Time"->(Alternatives@@times)|_Missing
+		"BabylonianDate"->InferredPattern[_DiaryBabylonianDate]|_Missing,
+		"Time"->InferredPattern[(Alternatives@@times)]|_Missing
 	}]]] :=
 	(Message[DiaryCombinedDate::invalid, HoldForm[dcd]]; Missing["DiaryCombinedDate"])
 
@@ -135,15 +131,17 @@ DiaryDistance[data_]["Data"] := data
 DiaryDistance[{cubits_,fingers_}]["Cubits"] := cubits
 DiaryDistance[{cubits_,fingers_}]["Fingers"] := fingers
 DiaryDistance[{cubits_,fingers_}]["TotalCubits"] :=
-	Module[{cubitsM,fingersM},
+	WrapInferred@Module[{cubitsM,fingersM},
 		{cubitsM,fingersM} = {cubits,fingers}/.Missing["Unmentioned"]->0;
 		Enclose[
-			Confirm[cubitsM] + Confirm[fingersM]*1/24,
+			CheckInferred[Confirm[cubitsM]] + CheckInferred[Confirm[fingersM]]*1/24,
 			DiaryMergeMissing[{cubitsM,fingersM}]&
 		]
 	]
-dd_DiaryDistance["IdealDegrees"] := Enclose[2*Confirm[dd["TotalCubits"]], "Information"]
-dd_DiaryDistance["RealDegrees"] := Enclose[2.27*Confirm[dd["TotalCubits"]], "Information"]
+dd_DiaryDistance["IdealDegrees"] :=
+	WrapInferred@Enclose[2*CheckInferred@Confirm[dd["TotalCubits"]], "Information"]
+dd_DiaryDistance["RealDegrees"] :=
+	WrapInferred@Enclose[2.27*CheckInferred@Confirm[dd["TotalCubits"]], "Information"]
 
 
 DiaryDistance["ALittle"]["Cubits"] := Missing[]
@@ -156,7 +154,8 @@ DiaryDistance["ALittle"]["TotalCubits"] := Missing[]
 
 
 dd:DiaryDistance[Except[
-		{_Rational|_Integer|_Missing,_Rational|_Integer|_Missing}|
+		{InferredPattern[_Rational|_Integer]|_Missing,
+		InferredPattern[_Rational|_Integer]|_Missing}|
 		"ALittle"]] :=
 	(Message[DiaryDistance::invalid, HoldForm[dd]]; Missing["InvalidDiaryDistance"])
 
@@ -180,7 +179,8 @@ DiaryDuration[data_]["Data"] := data
 DiaryDuration[{deg_,nin_}]["Degrees"] := deg
 DiaryDuration[{deg_,nin_}]["ArcMinutes"] := nin
 DiaryDuration[{deg_,nin_}]["Minutes"] :=
-	If[MissingQ[deg]&&MissingQ[nin],
+	WrapInferred@
+	If[MemberQ[{deg,nin}, Missing[]|Missing[Except["Unmentioned"]]],
 		DiaryMergeMissing[{deg,nin}],
 		Quantity[4*(If[MissingQ[deg],0,deg]+If[MissingQ[nin],0,nin/60]),"Minutes"]
 	]
@@ -190,7 +190,9 @@ DiaryDuration[{deg_,nin_}]["Minutes"] :=
 (*Verifiers*)
 
 
-dd:DiaryDuration[Except[{_Rational|_Integer|_Missing,_Rational|_Integer|_Missing}]] :=
+dd:DiaryDuration[Except[{
+		InferredPattern[_Rational|_Integer]|_Missing,
+		InferredPattern[_Rational|_Integer]|_Missing}]] :=
 	(Message[DiaryDuration::invalid, HoldForm[dd]]; Missing["InvalidDiaryDuration"])
 
 
@@ -215,7 +217,7 @@ DiaryCapacity[{kur_,pan_,sut_,qa_}]["Pan"] := pan
 DiaryCapacity[{kur_,pan_,sut_,qa_}]["Sut"] := sut
 DiaryCapacity[{kur_,pan_,sut_,qa_}]["Qa"] := qa
 DiaryCapacity[q:{kur_,pan_,sut_,qa_}]["TotalQa"] :=
-	If[AllTrue[q,MissingQ],
+	If[MemberQ[q, Missing[]|Missing[Except["Unmentioned"]]],
 		DiaryMergeMissing[q],
 		Replace[{kur,pan,sut,qa},_Missing->0,{1}].{180,36,6,1}
 	]
@@ -225,7 +227,7 @@ DiaryCapacity[q:{kur_,pan_,sut_,qa_}]["TotalQa"] :=
 (*Verifiers*)
 
 
-dc:DiaryCapacity[Except[{Repeated[_Rational|_Integer|_Missing,{4}]}]] :=
+dc:DiaryCapacity[Except[{Repeated[InferredPattern[_Rational|_Integer]|_Missing,{4}]}]] :=
 	(Message[DiaryCapacity::invalid, HoldForm[dc]]; Missing["InvalidDiaryCapacity"])
 
 

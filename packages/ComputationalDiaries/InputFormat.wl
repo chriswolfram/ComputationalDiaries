@@ -17,7 +17,6 @@ DiaryParse[tablets_] :=
 						"Type"->observation["Type"],
 						"Content"->observation["Content"],
 						"Date"->observation["Date"],
-						"Inferred"->observation["Inferred"],
 						"UUID"->observation["UUID"],
 						"Provenance"-><|
 							"Creator"->creator,
@@ -25,12 +24,18 @@ DiaryParse[tablets_] :=
 							"LineNumber"->observation["LineNumber"],
 							"Notes"->observation["Notes"]
 						|>
-					|>]/.
-						DiaryInputDate[day_,time_:Missing[]]:>
-							DiaryCombinedDate[
-								DiaryBabylonianDate[{month["BabylonianYear"],month["BabylonianMonth"],day}],
-								time
-							]
+					|>] /. {
+							Inferred[DiaryInputDate[day_,time_:Missing[]]] :>
+								DiaryCombinedDate[
+									DiaryBabylonianDate[{month["BabylonianYear"],month["BabylonianMonth"],Inferred[day]}],
+									Inferred[time]
+								],
+							DiaryInputDate[day_,time_:Missing[]]:>
+								DiaryCombinedDate[
+									DiaryBabylonianDate[{month["BabylonianYear"],month["BabylonianMonth"],day}],
+									time
+								]
+							}
 						]
 					]
 				]

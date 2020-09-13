@@ -15,7 +15,6 @@ DiaryObservation[data_]["Type"] := data["Type"]
 DiaryObservation[data_]["Content"] := data["Content"]
 DiaryObservation[data_]["Date"] := data["Date"]
 DiaryObservation[data_]["Provenance"] := data["Provenance"]
-DiaryObservation[data_]["Inferred"] := data["Inferred"]
 DiaryObservation[data_][other_] /; KeyExistsQ[data["Content"],other] :=
 	data["Content"][other]
 

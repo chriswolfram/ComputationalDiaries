@@ -1,8 +1,5 @@
 (* ::Package:: *)
 
-pink 
-
-
 BeginPackage["ComputationalDiaries`"];
 
 
@@ -26,8 +23,29 @@ dates in Babylonian and Julian calendars."];
 
 GeneralUtilities`SetUsage[DiaryCheckChronology, "
 DiaryCheckChronology[chron$] checks whether the chronology chron$ is consistent.
-DiaryCheckChronology[] checks $DiaryChronology.
-"];
+DiaryCheckChronology[] checks $DiaryChronology."];
+
+
+GeneralUtilities`SetUsage[Inferred, "
+Inferred[data$] represents data that has been partially or totally inferred."];
+
+
+GeneralUtilities`SetUsage[InferredPattern, "
+InferredPattern[patt$] matches patt$ and Inferred[patt$]."];
+
+
+GeneralUtilities`SetUsage[IgnoreInferred, "
+IgnoreInferred[expr$] replaces all instances of Inferred[e$] with e$."];
+
+
+GeneralUtilities`SetUsage[WrapInferred, "
+WrapInferred[expr$] evaluates expr$, wrapping the result in Inferred if CheckInferred \
+was applied to anything with head Inferred."];
+
+
+GeneralUtilities`SetUsage[CheckInferred, "
+CheckInferred[expr$] returns expr$
+CheckInferred[Inferred[expr$]] returns expr$, notifying WrapInferred that it was inferred."];
 
 
 (* ::Subsection:: *)
