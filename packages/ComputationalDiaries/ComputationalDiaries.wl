@@ -85,6 +85,14 @@ DiaryObservation[$$] represents an observation in the Astronomical Diaries."];
 
 
 (* ::Subsection:: *)
+(*DatasetConstruction*)
+
+
+GeneralUtilities`SetUsage[DiaryDataset, "
+DiaryDataset[obs$] constructs a Dataset from a list of DiaryObservations obs$."];
+
+
+(* ::Subsection:: *)
 (*AstronomicalPosition*)
 
 
@@ -153,6 +161,7 @@ Needs["ComputationalDiaries`Constants`"];
 Needs["ComputationalDiaries`DiaryTypes`"];
 Needs["ComputationalDiaries`DiaryObservation`"];
 Needs["ComputationalDiaries`AstronomicalPosition`"];
+Needs["ComputationalDiaries`DatasetConstruction`"];
 Needs["ComputationalDiaries`InputFormat`"];
 Needs["ComputationalDiaries`ReferenceText`"];
 

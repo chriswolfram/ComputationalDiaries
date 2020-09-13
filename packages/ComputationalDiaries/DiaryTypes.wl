@@ -139,9 +139,9 @@ DiaryDistance[{cubits_,fingers_}]["TotalCubits"] :=
 		]
 	]
 dd_DiaryDistance["IdealDegrees"] :=
-	WrapInferred@Enclose[2*CheckInferred@Confirm[dd["TotalCubits"]], "Information"]
+	WrapInferred@Enclose[2*CheckInferred@Confirm[dd["TotalCubits"]], "Expression"]
 dd_DiaryDistance["RealDegrees"] :=
-	WrapInferred@Enclose[2.27*CheckInferred@Confirm[dd["TotalCubits"]], "Information"]
+	WrapInferred@Enclose[2.27*CheckInferred@Confirm[dd["TotalCubits"]], "Expression"]
 
 
 DiaryDistance["ALittle"]["Cubits"] := Missing[]
