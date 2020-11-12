@@ -97,17 +97,17 @@ djd:DiaryJulianDate[Except[{_Integer|_Missing, _Integer|_Missing, _Integer|_Miss
 
 
 dbd:DiaryBabylonianDate[Except[{
-		{InferredPattern[_String]|_Missing, InferredPattern[_Integer]|_Missing},
-		InferredPattern[(Alternatives@@months)]|_Missing,
-		InferredPattern[_Integer|"Beginning"|"Middle"|"End"]|_Missing
+		{InferredPattern[_String|_Missing], InferredPattern[_Integer|_Missing]},
+		InferredPattern[(Alternatives@@months)|_Missing],
+		InferredPattern[_Integer|"Beginning"|"Middle"|"End"|_Missing]
 	}]] :=
 	(Message[DiaryBabylonianDate::invalid, HoldForm[dbd]]; Missing["DiaryBabylonianDate"])
 
 
 dcd:DiaryCombinedDate[Except[KeyValuePattern[{
 		"JulianDate"->_DiaryJulianDate|_Missing,
-		"BabylonianDate"->InferredPattern[_DiaryBabylonianDate]|_Missing,
-		"Time"->InferredPattern[(Alternatives@@times)]|_Missing
+		"BabylonianDate"->InferredPattern[_DiaryBabylonianDate|_Missing],
+		"Time"->InferredPattern[(Alternatives@@times)|_Missing]
 	}]]] :=
 	(Message[DiaryCombinedDate::invalid, HoldForm[dcd]]; Missing["DiaryCombinedDate"])
 
@@ -154,8 +154,8 @@ DiaryDistance["ALittle"]["TotalCubits"] := Missing[]
 
 
 dd:DiaryDistance[Except[
-		{InferredPattern[_Rational|_Integer]|_Missing,
-		InferredPattern[_Rational|_Integer]|_Missing}|
+		{InferredPattern[_Rational|_Integer|_Missing],
+		InferredPattern[_Rational|_Integer|_Missing]}|
 		"ALittle"]] :=
 	(Message[DiaryDistance::invalid, HoldForm[dd]]; Missing["InvalidDiaryDistance"])
 
@@ -191,8 +191,8 @@ DiaryDuration[{deg_,nin_}]["Minutes"] :=
 
 
 dd:DiaryDuration[Except[{
-		InferredPattern[_Rational|_Integer]|_Missing,
-		InferredPattern[_Rational|_Integer]|_Missing}]] :=
+		InferredPattern[_Rational|_Integer|_Missing],
+		InferredPattern[_Rational|_Integer|_Missing]}]] :=
 	(Message[DiaryDuration::invalid, HoldForm[dd]]; Missing["InvalidDiaryDuration"])
 
 
@@ -227,7 +227,7 @@ DiaryCapacity[q:{kur_,pan_,sut_,qa_}]["TotalQa"] :=
 (*Verifiers*)
 
 
-dc:DiaryCapacity[Except[{Repeated[InferredPattern[_Rational|_Integer]|_Missing,{4}]}]] :=
+dc:DiaryCapacity[Except[{Repeated[InferredPattern[_Rational|_Integer|_Missing],{4}]}]] :=
 	(Message[DiaryCapacity::invalid, HoldForm[dc]]; Missing["InvalidDiaryCapacity"])
 
 
